@@ -1,0 +1,88 @@
+= WebLibre Browser
+:description: User documentation for WebLibre, the privacy-focused Android browser.
+
+WebLibre is a privacy-focused browser for Android built on Mozilla's Gecko engine -- the same browser engine used by Firefox.
+
+If you are used to other Android browsers, WebLibre will feel familiar in the basics, but it gives you more control over privacy, browsing separation, and customization.
+
+NOTE: This documentation is public early so you can start using it right away. Expect some missing pages, incomplete details, and step changes while WebLibre and its docs are still evolving.
+
+== What Makes WebLibre Different?
+
+If you are used to mainstream Android browsers, these are the features most people notice first:
+
+**Strong privacy defaults**::
+WebLibre starts with strict tracking protection and also includes privacy features such as xref:privacy/dns-over-https.adoc[DNS over HTTPS], xref:privacy/https-only.adoc[HTTPS-only protection], query parameter stripping, Global Privacy Control, and site isolation.
+Some sites may need an exception or a less strict setting to work normally.
+
+**Containers with real separation**::
+Use xref:tabs/containers.adoc[Containers] to split browsing by activity, such as work, shopping, or social media.
+With *Cookie Isolation* enabled, containers keep cookies and logins separate, can open assigned sites automatically, can clear their data on exit, and can route only that container through Tor.
+
+**Isolated tabs**::
+Use xref:tabs/tab-management.adoc[isolated tabs] when you want a fresh one-off session without creating a profile or container first.
+Each isolated tab gets its own separate session, which is useful for second accounts, temporary logins, or testing how a site behaves for a new visitor.
+
+**Built-in Tor proxy**::
+WebLibre includes a built-in xref:tor.adoc[Tor] option.
+You can route all regular tabs through Tor, or use container-based routing so only selected cookie-isolated containers use it.
+
+**Firefox-compatible extensions on Gecko**::
+WebLibre is built on Mozilla's Gecko engine.
+That gives it a strong browser-engine foundation and support for xref:extensions.adoc[Firefox-compatible extensions], including local `.xpi` installs and custom extension collections. uBlock Origin is also offered during onboarding.
+
+**Profiles**::
+Create separate xref:profiles.adoc[Profiles] with their own bookmarks, history, settings, extensions, and saved logins.
+This is useful for sharing a device, creating a guest setup, or separating work from personal browsing. Sensitive profiles can also be locked and backed up.
+
+**Search your device before the web**::
+The address bar can show matches from your open tabs, bookmarks, browsing history, and saved feed articles before you choose a web search.
+You can also customize which sections appear in search results and on the start screen.
+
+**Bang providers**::
+Pick a bang provider from the search chips or bang browser to send a search straight to a specific site.
+Built-in providers are available, and you can create your own custom entries.
+
+**Page translation**::
+Use xref:page-translation.adoc[Translate Page] to translate a website on your device.
+The first use may download language models, but the page content itself is translated locally.
+
+**Optional on-device tab organization**::
+xref:on-device-ai.adoc[On-Device AI] is optional.
+When enabled, it can suggest draft tab groups and container names based on your open tab titles, and the processing happens on your phone.
+
+**Built-in reading and saving tools**::
+WebLibre also includes xref:reader-mode.adoc[Reader Mode], xref:web-feeds.adoc[web feeds], xref:web-apps.adoc[web apps], and xref:page-export.adoc[page export] options such as PDF and Markdown.
+
+**Sync**::
+Sign in to xref:firefox-sync.adoc[Sync] to synchronize tabs, bookmarks, and history with your other devices.
+
+== Good to Know
+
+* Some privacy features can make a site behave differently. If a page does not load correctly, try changing the relevant privacy setting or adding an exception.
+* Features such as page translation or xref:on-device-ai.adoc[On-Device AI] may need to download models before first use.
+* Tor, Sync, DNS over HTTPS, and extensions can improve privacy or convenience, but they each connect to their own networks or services when you use them.
+
+== Getting Started
+
+New to WebLibre? Start here:
+
+* **xref:quick-start.adoc[Privacy Setup]** -- The essential privacy checks and setup steps
+* **xref:getting-started.adoc[First Launch Guide]** -- Walkthrough of the setup wizard
+* **xref:workflows.adoc[Common Workflows]** -- Step-by-step guides for everyday tasks
+* **xref:migration.adoc[Switching from Another Browser]** -- Move bookmarks, habits, and settings over in stages
+
+[#where-to-get-weblibre]
+== Where to Get WebLibre
+
+* https://github.com/FaFre/WebLibre/releases[GitHub Releases] -- Preferred option for direct downloads and updates with https://obtainium.imranr.dev/[Obtainium]
+* https://play.google.com/store/apps/details?id=eu.weblibre.gecko[Google Play] -- Automatic updates
+* https://f-droid.org/en/packages/eu.weblibre.gecko/[F-Droid] -- Open-source app store
+
+WARNING: F-Droid builds are not compatible with our Google Play or GitHub release builds. F-Droid updates usually take around one week to become available. When you use the F-Droid build, both building and signing are handled entirely by the F-Droid team, and we do not control that process.
+
+== Community & Support
+
+* https://feedback.weblibre.eu/[Feedback Platform] -- Vote on features and share ideas
+* https://matrix.to/#/#weblibre:unredacted.org[Matrix Chat] -- Get help from the community
+* https://github.com/FaFre/WebLibre/issues[GitHub Issues] -- Report bugs

@@ -1,0 +1,95 @@
+= Error Logs & Troubleshooting Tools
+:description: How to use WebLibre's built-in logs and a few advanced troubleshooting tools when something goes wrong.
+
+When WebLibre behaves unexpectedly, the built-in troubleshooting tools can help you confirm whether the problem is only visual, site-specific, or a deeper browser issue.
+
+You can find the main tools in **Settings > Advanced**.
+
+== Error Logs
+
+WebLibre includes a dedicated **Error Logs** screen.
+
+Use it when you want to:
+
+* review recent problems
+* collect details before reporting a bug
+* check whether a problem shows up as a warning or error
+
+== Open Error Logs
+
+. Go to **Settings > Advanced**
+. Open **Error Logs**
+
+The newest entries appear first.
+
+== Filter by Severity
+
+The logs screen can filter entries by severity.
+
+Current levels include:
+
+* **TRACE**
+* **DEBUG**
+* **INFO**
+* **WARNING**
+* **ERROR**
+* **FATAL**
+
+If you only want the more serious issues, switch the filter to **ERROR** or **FATAL**.
+
+If you are trying to understand a behavior change in detail, a broader level such as **INFO** or **DEBUG** may be more useful.
+
+== Open Log Details
+
+Tap a log entry to open its full details.
+
+That can include:
+
+* the message
+* the time
+* the related error text
+* stack trace information when available
+
+This is usually the best view to use when you are preparing a bug report.
+
+== Copy Logs
+
+The logs screen also includes **Copy logs**.
+
+Use it when you want to paste logs into:
+
+* an issue report
+* a feedback thread
+* a support message
+
+If there are no matching log entries, WebLibre shows **No logs available**.
+
+== Other Troubleshooting Tools in Advanced Settings
+
+**Settings > Advanced** also includes a few additional tools:
+
+* **Icon Cache** -- useful when a site's favicon looks stale or wrong
+* **Reset UI** -- useful when part of the app looks visually stuck
+* **Experimental Features** -- useful only when you are intentionally testing lower-level behavior
+
+These are not everyday settings.
+Use them when you have a clear reason.
+
+== A Practical Workflow
+
+If WebLibre is acting strangely:
+
+. Reproduce the problem once more if you safely can
+. Open **Error Logs**
+. Filter to **WARNING**, **ERROR**, or **FATAL**
+. Tap the relevant entry and review the details
+. Copy the logs if you want to report the issue
+
+If the issue looks purely visual, also consider **Reset UI** or the **Icon Cache** tools in **Settings > Advanced**.
+
+== Tips
+
+* Use logs to confirm patterns, not just one-off guesses
+* Prefer copying logs right after reproducing the problem so the relevant entries are still easy to find
+* If a site alone is broken, also check xref:site-controls.adoc[Site Controls] and xref:privacy/tracking-protection.adoc[Tracking Protection]
+* If the whole browser feels unstable after changing low-level options, turn off the related experimental setting and restart

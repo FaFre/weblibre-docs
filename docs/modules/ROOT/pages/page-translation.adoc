@@ -1,0 +1,46 @@
+= Page Translation
+:description: How to translate web pages directly in WebLibre using on-device translation.
+
+WebLibre includes built-in page translation powered by an on-device translation engine.
+You can translate many web pages directly in the browser without sending the page text to a cloud translation service.
+
+== How to Translate a Page
+
+. Open the page you want to translate.
+. Open the browser menu.
+. Tap *Translate Page*.
+. In the translation sheet, choose the language the page is currently in under *From*.
+. Choose the language you want under *To*.
+. Tap *Translate*.
+
+WebLibre tries to detect the page language for you, so the *From* field may already be filled in.
+
+TIP: If the page has already been translated, the menu entry changes from *Translate Page* to *Translated*.
+
+== Restoring the Original
+
+If you want to switch back to the untranslated page:
+
+. Open the translation sheet again.
+. Tap *Show Original*.
+
+If the page is already translated and you open the translation sheet again, you can also use *Retranslate* to change the language pair.
+
+== Model Downloads
+
+The first time you translate a language, WebLibre may need to download one or more language models.
+This requires an internet connection.
+
+After the download finishes, the models stay on your device so future translations for the same languages can work without downloading them again.
+
+== Privacy
+
+Translation happens on your device using downloaded language models.
+Your page content is not sent to an external translation service.
+
+== When Translation Is Not Available
+
+Page translation is not available while Reader Mode is active.
+Switch back to the normal page view first, then try again.
+
+If you do not see *Translate Page*, translation may also be unavailable for that page, language pair, or device.

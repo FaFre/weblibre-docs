@@ -1,0 +1,98 @@
+= URL Cleaning
+:description: How WebLibre cleans links by removing tracking parameters and resolving some shortened URLs.
+
+WebLibre includes two link tools under **Settings > Browsing**:
+
+* **URL Cleaner** removes known tracking parameters from links
+* **Unshortener** resolves supported short links to their destination
+
+These tools are separate from xref:privacy/tracking-protection.adoc[Query Parameter Stripping] in **Settings > Privacy & Security**.
+
+== URL Cleaner
+
+=== What it does
+
+Many links include extra text after the main address.
+That extra text often tells the destination site where you came from, which ad or post you clicked, or which campaign sent you there.
+
+For example:
+
+----
+https://example.com/article?fbclid=abc123&utm_source=facebook&utm_campaign=summer
+----
+
+URL Cleaner removes known tracking parameters and keeps the useful address:
+
+----
+https://example.com/article
+----
+
+WebLibre uses a catalog of known rules and can remove well over 100 common tracking parameters.
+
+=== What you may see in the app
+
+When URL Cleaner is enabled and WebLibre finds removable tracking parameters in an HTTP or HTTPS link, you may see:
+
+* **Tracking detected** before the cleaned link is applied
+* **URL cleaned** after the cleaned link has been applied
+
+You can tap that row to review the detected parameters.
+
+=== Settings
+
+In **Settings > Browsing > URL Cleaner**, you can change these options:
+
+* **Enable URL Cleaner** -- turns URL Cleaner on or off
+* **Auto-apply** -- automatically replace the original link with the cleaned version
+* **Allow referral marketing** -- keep referral and affiliate parameters instead of removing them
+* **Auto-update catalog** -- check weekly for rule updates
+* **Update catalog** -- manually check for updates now
+* **Restore defaults** -- reset the bundled catalog and URL Cleaner settings
+
+If **Auto-apply** is off, WebLibre keeps the original link until you choose to apply the cleaned version.
+
+=== What to expect
+
+URL Cleaner is designed to remove tracking and similar unnecessary parameters.
+It does not guarantee that every long URL will become short, and some parameters may stay if they are needed for the link to work.
+
+If **Allow referral marketing** is enabled, affiliate or referral codes may remain in the link.
+
+== Unshortener
+
+=== What it does
+
+Some links use shortener services so the real destination is hidden until the link is resolved.
+The **Unshortener** can look up supported short links and show their final destination before you open them.
+
+This can help you:
+
+* see where a short link really goes
+* spot misleading links before opening them
+* decide whether you still want to visit the destination
+
+=== How it works in WebLibre
+
+When **Enable Unshortener** is turned on, WebLibre can show an **Unshorten** action for supported short links.
+Using it resolves the short link and replaces it with the final URL.
+
+=== Important privacy note
+
+Unshortener sends the link to the `unshorten.me` service to resolve it.
+The app also links to that service's privacy policy in the Unshortener settings.
+
+Avoid using Unshortener for links that contain private, personal, or sensitive information.
+
+=== Settings
+
+In **Settings > Browsing > Unshortener**, you can change these options:
+
+* **Enable Unshortener** -- turns the feature on or off
+* **API Token** -- optional token for higher API limits
+
+The built-in free API is rate-limited to 10 requests per hour for new checks.
+
+== Where to find these tools
+
+* **Settings > Browsing > URL Cleaner**
+* **Settings > Browsing > Unshortener**

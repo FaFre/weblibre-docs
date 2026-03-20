@@ -1,0 +1,86 @@
+= Sync
+:description: How to sync your data between WebLibre and your other devices.
+
+WebLibre supports sync through a Firefox account, so you can keep your data aligned across WebLibre and your other signed-in devices.
+
+This is useful if you want your browsing activity to follow you between your phone and desktop.
+
+== What Can You Sync?
+
+In WebLibre, the sync settings currently let you sync:
+
+* **Sync Open Tabs** -- Share your open tabs between devices
+* **Sync Bookmarks** -- Keep bookmarks aligned across devices
+* **Sync History** -- Keep browsing history available across devices
+
+If you do not want to sync one of these, you can turn it off in the sync settings.
+
+== Setting Up Sync
+
+=== Sign In With Your Account
+
+. Go to **Settings > Firefox Sync**
+. Tap the account row to sign in
+. Complete the sign-in flow
+. Review the sync switches for **Sync History**, **Sync Bookmarks**, and **Sync Open Tabs**
+. Tap **Sync Now** if you want to start a sync immediately
+
+If you are already signed in on your other devices with the same account, WebLibre can sync with them after sign-in completes.
+
+=== QR Code Pairing
+
+If you would rather pair from a desktop browser, WebLibre also supports QR code pairing.
+
+. On your computer, open Firefox and go to `firefox.com/pair`
+. In WebLibre, go to **Settings > Firefox Sync**
+. Tap **Scan QR Code to pair**
+. Scan the QR code shown on your computer
+
+If the code does not work, generate a new one and try again. Pairing codes can expire.
+
+== Managing Sync
+
+After you sign in, the sync screen gives you the main controls for your account:
+
+* **Sync Now** -- starts a sync right away
+* **Device Name** -- changes how this phone or tablet appears on your other synced devices
+* **Sign Out** -- disconnects WebLibre from your account on this device
+
+The screen also shows whether sync is in progress and when the last sync finished.
+
+== Synced Tabs
+
+If **Sync Open Tabs** is enabled, WebLibre can show tabs from your other synced devices.
+
+You can use this to continue reading something you opened on your computer, or to check what is open on another phone or tablet connected to the same account.
+
+WebLibre can also receive tabs sent from another device. When that happens, the tab can open in WebLibre the next time the app resumes or after you run **Sync Now**.
+
+If you want to send the current page from WebLibre to another synced device, see xref:page-export.adoc[Page Export and Sharing].
+
+== Device Management
+
+You can rename this device from **Settings > Firefox Sync > Device Name**.
+
+This helps you recognize it when you send tabs or check synced devices elsewhere.
+
+Managing the full list of linked devices may still be easier from your account page on another device.
+
+== Custom Sync Server
+
+Most people should leave these settings alone.
+
+For advanced users who run their own sync infrastructure, WebLibre includes these server override fields in **Settings > Firefox Sync**:
+
+* **FxA Server Override** -- replaces the default account server
+* **Sync Token Server Override** -- replaces the token server used for sync
+
+WebLibre requires valid HTTPS addresses for these fields.
+
+After changing either override, restart the app before trying to sign in or sync.
+
+== Privacy Note
+
+Sync is designed to encrypt synced data end-to-end before it is stored on the server.
+
+In practice, this means your open tabs, bookmarks, and history are meant to stay readable only to devices signed in to your account, not to the sync server itself.

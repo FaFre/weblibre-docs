@@ -1,0 +1,117 @@
+= Extensions
+:description: How to install and manage extensions in WebLibre.
+
+Most mobile browsers on Android either do not support extensions at all or only support a very small set.
+WebLibre uses Mozilla's Gecko engine, so it can run Firefox add-ons.
+
+This page explains what you can do, where to find the right menu, and what to expect on mobile.
+
+== Install an Extension
+
+There are three practical ways to install an extension in WebLibre:
+
+* During xref:getting-started.adoc[first launch], when WebLibre offers to install uBlock Origin
+* From the browser menu under *Extensions* -> *Get Extensions*
+* From a local `.xpi` file in *Settings* -> *Extensions* -> *Install from File*
+
+If you want to browse available add-ons inside the app, use *Get Extensions* from the browser menu.
+The *Settings* -> *Extensions* screen is mainly for installing from a file or changing the extension collection source.
+
+== Recommended: uBlock Origin
+
+If you install only one extension, make it *uBlock Origin*.
+
+WebLibre offers it during the xref:getting-started.adoc[initial setup], and it is usually the most useful first add-on for everyday browsing.
+
+uBlock Origin helps block:
+
+* Ads and many pop-ups
+* Tracking scripts
+* Some known malicious domains
+* Many annoyances that make pages slower or harder to use
+
+In practice, this usually means faster page loads, less data usage, and fewer distractions.
+
+NOTE: WebLibre already includes its own privacy protections, such as tracking protection, HTTPS-only protection, and Global Privacy Control. uBlock Origin complements those protections, but it does not replace them.
+
+== Install from a File
+
+If you already have an extension file on your device, you can install it directly.
+Compatible add-ons use the `.xpi` file format.
+
+. Go to *Settings* -> *Extensions*
+. In *Install from File*, tap *Install*
+. Select the `.xpi` file
+
+Most people will only need this if they already downloaded an add-on file elsewhere.
+
+WebLibre also shows an *Allow unsigned extensions* option during file installation.
+Unsigned extensions have not been verified by Mozilla.
+Only use that option if you trust the source of the file.
+
+If the file does not install, the most common reasons are:
+
+* the file is not really a compatible `.xpi` add-on
+* the add-on depends on desktop-only interfaces
+* the add-on is unsigned and you did not explicitly allow that
+
+== Use a Custom Extension Collection
+
+WebLibre can use a custom add-on collection instead of the default source.
+This is for people who know exactly which collection they want to use.
+
+. Go to *Settings* -> *Extensions*
+. In *Custom Collection*, tap *Configure*
+. Enter the collection details
+. Tap *Save & Restart Browser*
+
+The screen asks for three values:
+
+* *Server URL* - usually `https://services.addons.mozilla.org`
+* *Collection User* - the account name from the collection URL
+* *Collection Name* - the collection slug from the collection URL
+
+For example, if the collection page is:
+
+`https://addons.mozilla.org/en-US/firefox/collections/example-user/privacy-tools/`
+
+then the values are:
+
+* *Collection User*: `example-user`
+* *Collection Name*: `privacy-tools`
+
+NOTE: WebLibre restarts after you save a custom collection.
+
+If you later want to go back to the default add-on source, open the same screen and remove the custom collection again.
+
+== Manage Installed Extensions
+
+To manage extensions you already installed:
+
+. Open the browser menu
+. Open *Extensions*
+. Use *Manage Extensions* for the installed add-on list
+
+Depending on the extension, you may also see:
+
+* *Extension settings* for that add-on
+* Buttons or menu entries provided by the extension itself
+* Shortcuts in browser menus or toolbars if the add-on exposes them
+
+Exact options can vary from one extension to another.
+
+== What Works and What May Not
+
+Not every desktop-oriented extension works well on Android.
+Some add-ons depend on desktop-only interfaces or features that are not practical on a phone.
+
+If an add-on does not work well, you might notice that:
+
+* It installs but does not do much
+* Its interface is difficult to use on a small screen
+* Some features are missing or unreliable
+
+If you install from a file or switch to a custom collection, be extra careful.
+Those routes make it easier to try add-ons that were not chosen with mobile use in mind.
+
+When in doubt, start with well-known add-ons that mention Android or mobile support.

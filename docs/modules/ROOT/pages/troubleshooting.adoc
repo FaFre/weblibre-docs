@@ -1,0 +1,241 @@
+= Troubleshooting
+:description: Practical fixes for common WebLibre problems.
+
+Something not working the way you expected?
+Start with the problem that looks closest to yours and try the steps in order.
+
+== A Website Will Not Load or Looks Broken
+
+The page stays blank, loads incorrectly, or some buttons and media do not work.
+
+Try these steps:
+
+. Reload the page once.
+Temporary network or page errors often clear on a second load.
+
+. Check whether **Enhanced Tracking Protection** is too strict for that site.
+If this happens on only one or two sites, try lowering protection just for that site instead of changing your global setting.
+For more background, see xref:privacy/tracking-protection.adoc[Tracking Protection].
+
+. If you use **uBlock Origin** or another extension, test without it.
+Open the browser menu, open **Extensions**, then use **Manage Extensions** or the extension's own settings.
+
+. Try the same page in a different tab context.
+If you opened it in a container, try an unassigned tab or a different container.
+If the tab is routed through Tor, the site may be slower or may block Tor exit nodes.
+
+. If the page still fails only in WebLibre, try another browser.
+That usually points to a site compatibility problem rather than a problem with your connection.
+
+NOTE: Some websites break when trackers, third-party cookies, or extension filters are blocked. If changing one setting fixes the page, keep that change as limited as possible.
+
+== I Cannot Log In to a Website
+
+You enter your username and password, but the site keeps asking again, signs you out right away, or never finishes login.
+
+Common causes:
+
+**Container cleanup**::
+If the site is in a cookie-isolated container with **Clear Data on Exit** turned on, its cookies and site data are cleared when WebLibre closes.
+That means you may need to sign in again next time.
+
+**Tracking or cookie blocking**::
+Some login flows depend on redirects, embedded content, or third-party cookies.
+If login fails, try the site with fewer blockers temporarily:
+
+* try **Standard** instead of **Strict** tracking protection
+* test without **uBlock Origin** or another extension
+* try the site outside the current container
+
+**Old site data**::
+The site's saved cookies or site data may be stuck in a bad state.
+Clear that site's data and then sign in again.
+
+**Tor-related checks**::
+Some sites challenge or block Tor traffic during sign-in.
+If you are using Tor, try the same login without Tor to confirm whether that is the cause.
+
+== Tor Is Slow or Not Working
+
+Tor is much slower than a direct connection, so some slowdown is expected.
+
+What is normal:
+
+* page loads can be about 2-5x slower
+* video streaming may buffer more often
+* some sites may challenge or block Tor connections entirely
+
+If Tor does not connect or is unusably slow:
+
+. Open the Tor screen and watch the bootstrap progress.
+The first connection can take a little while. If progress is still moving, wait a bit longer.
+
+. If Tor is having trouble connecting, try a different transport.
+In Tor settings, **Auto Configure Transport** is the easiest first choice.
+If needed, try **obfs4** or **Snowflake**.
+
+. If Tor is already connected but one site fails, use **Request New Identity**.
+That asks Tor for a fresh circuit and a different exit IP.
+
+. Check whether your network is the issue.
+Try switching between Wi-Fi and mobile data.
+
+. If you use country restrictions, return **Entry Country** and **Exit Country** to **Automatic** while troubleshooting.
+Restricting countries can reduce the number of usable relays.
+
+For a full overview, see xref:tor.adoc[Tor Integration].
+
+== An Extension Does Not Work
+
+The extension installs, but nothing obvious happens, or part of it seems missing.
+
+Try these checks:
+
+. Confirm what the extension is supposed to do on Android.
+Some desktop-oriented extensions do not fully support mobile browsers.
+
+. Open the browser menu, then open **Extensions**.
+If the add-on appears there, try its own action or open its **Extension settings**.
+
+. Use **Manage Extensions** from the browser menu.
+That is the main place to review installed add-ons.
+
+. If needed, remove the extension and install it again.
+Use a well-known mobile-friendly extension first to compare behavior.
+
+If the extension still does not work, the most likely reason is limited Android support rather than a broken installation.
+See xref:extensions.adoc[Extensions] for the supported installation and management paths in WebLibre.
+
+== Sync Is Not Working
+
+Your tabs, bookmarks, or history are not updating between WebLibre and your other devices.
+
+Check these basics:
+
+. Go to **Settings > Firefox Sync** and make sure you are signed in.
+If the screen says authentication expired, sign in again.
+
+. Make sure every device uses the same account.
+
+. Check the sync switches you want:
+
+* **Sync History**
+* **Sync Bookmarks**
+* **Sync Open Tabs**
+
+. Tap **Sync Now** and wait for the status to update.
+The screen shows **Synchronization in progress**, **Never synced**, or the time of the last successful sync.
+
+If QR pairing does not work:
+
+* make sure you opened the current pairing flow on your other device
+* confirm both devices are online
+* generate a fresh QR code and try again, because pairing codes can expire
+
+See xref:firefox-sync.adoc[Sync] for the full setup flow.
+
+== Battery Use or Performance Feels Poor
+
+WebLibre can use more battery or memory when you keep many heavy features active at once.
+
+Most common causes:
+
+**Many open tabs**::
+Every tab uses memory.
+Close tabs you no longer need, especially media-heavy pages.
+
+**Tor routing**::
+Tor adds extra network and encryption work.
+Use it only where you need it instead of leaving all regular tabs routed through Tor.
+
+**Extensions**::
+Some add-ons inspect every page and use noticeable CPU or memory.
+Try disabling one extension at a time.
+
+**Fission (Site Isolation)**::
+This improves isolation between sites, but it can increase memory use on some devices.
+
+**On-Device AI**::
+The feature is optional. Local model work can increase CPU use while those features are active.
+See xref:on-device-ai.adoc[On-Device AI] for the setup flow and feature scope.
+
+Quick things to try:
+
+* restart WebLibre
+* close old tabs
+* clear cached data from **Settings > Privacy & Security > Delete Browsing Data** if the app feels stuck
+* turn off features you are not actively using
+
+== Profile Lock Asks for Authentication Too Often
+
+This usually means the selected profile is using a stricter lock behavior than you want.
+
+To adjust it:
+
+. Open **Manage Profiles**.
+. Open the profile that is asking for authentication.
+. In **Authentication**, review **Auto-lock Behavior**.
+
+What the choices mean:
+
+* **Lock on Background** asks again whenever WebLibre goes to the background
+* **Lock After Timeout** waits for the selected **Timeout Duration** before locking
+
+If the prompts feel too frequent, **Lock After Timeout** is usually the more convenient choice.
+The default timeout is 5 minutes.
+
+See xref:app-lock.adoc[App Lock] and xref:profiles.adoc[Profiles] for more detail.
+
+== Website Notifications Are Not Working
+
+You are not getting notifications from a website that should be able to send them.
+
+Check these items:
+
+. Make sure Android notifications are allowed for WebLibre.
+If Android blocks the app entirely, websites cannot alert you through the browser.
+
+. Check the website's own permission.
+If you previously blocked notifications for that site, open the site again and review its **Permissions** in the site information panel.
+
+. If the site lives in a cookie-isolated container with **Clear Data on Exit**, remember that saved site state may be cleared when the app closes.
+
+. Some Android devices limit background activity aggressively.
+If notifications work only while WebLibre is open, battery optimization on your device may be interfering.
+
+For more on permission choices, see xref:site-permissions.adoc[Site Permissions].
+
+== Translate Page Is Missing or Unavailable
+
+The **Translate Page** option does not appear, is unavailable, or does nothing.
+
+Try these checks:
+
+. Make sure **Reader Mode** is not active.
+Page translation is unavailable while Reader Mode is on.
+
+. Open the browser menu and look for **Translate Page**.
+If the page is already translated, the menu entry changes to **Translated**.
+
+. Make sure you have an internet connection the first time you translate a language pair.
+WebLibre may need to download language models before translation can start.
+
+. If translation is still unavailable, the page language, target language, or your device may not currently be supported.
+
+Translation happens on your device after the needed models are available.
+See xref:page-translation.adoc[Page Translation] for the normal workflow.
+
+== Still Need Help?
+
+If your problem is not listed here:
+
+* search existing issues at https://github.com/FaFre/WebLibre/issues[GitHub Issues]
+* ask in the https://matrix.to/#/#weblibre:unredacted.org[Matrix chat]
+* report a new bug if you found a reproducible issue
+
+When reporting a problem, include:
+
+* your device model and Android version
+* the exact steps that trigger the issue
+* what you expected to happen
+* what happened instead

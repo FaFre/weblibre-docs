@@ -1,0 +1,100 @@
+= Site Permissions
+:description: How to manage what websites can access on your device in WebLibre.
+
+Some websites ask to use parts of your device or browser, such as your camera, microphone, location, or notifications.
+
+WebLibre saves these choices per site, so allowing one website does not automatically allow others.
+
+Use site permissions when you want to:
+
+* let a trusted site use something it needs, such as your camera for a video call
+* block a site that asks for more access than you want to give
+* reset an old decision so the site asks again later
+
+== Permission Types
+
+WebLibre can store permission choices for these site controls:
+
+[cols="1,2"]
+|===
+|Permission |What It Controls
+
+|**Camera**
+|Whether a website can access your device's camera
+
+|**Microphone**
+|Whether a website can record audio
+
+|**Location**
+|Whether a website can see your geographic location
+
+|**Notifications**
+|Whether a website can send you notifications
+
+|**Persistent Storage**
+|Whether a website can ask to keep site data stored more permanently
+
+|**Cross-Origin Storage**
+|Whether a website can request access to some storage across related site origins
+
+|**Media Key System (DRM)**
+|Whether a website can use DRM to play protected content, such as some streaming video or audio
+|===
+
+[NOTE]
+====
+The last three are more technical than camera or location. Most people only need to change them when a site feature is not working as expected.
+====
+
+== How Permissions Work
+
+When a website asks for a permission, WebLibre can remember your choice for that site.
+
+The saved choices you will see in the site panel are:
+
+* **Ask** -- do not keep a fixed decision; let the site ask again
+* **Allow** -- let that site use the permission
+* **Block** -- deny that permission for that site
+
+If you change a saved permission back to **Ask**, the site may prompt again the next time it needs that access.
+
+== Change Permissions For One Site
+
+You can change permissions for the site you are currently visiting:
+
+. Open the current site's page panel while you are on that website
+. Find the **Permissions** section
+. Change a permission to **Ask**, **Allow**, or **Block**
+
+If no permissions have been saved yet, WebLibre may show **No permissions set for this site**. Use **Show all** to view the full list.
+
+Changes apply to that site only.
+
+== Reset All Saved Site Permissions
+
+If you want WebLibre to forget all saved site permission decisions at once:
+
+. Go to **Settings > Privacy & Security > Delete Browsing Data**
+. Select **Site permissions**
+. Tap **Delete**
+
+This clears saved site permission decisions. Websites can ask again the next time they need access.
+
+== Autoplay For A Site
+
+WebLibre also lets you control autoplay per site in the same site panel.
+
+The available options are:
+
+* **Allow All** -- let media start automatically
+* **Block Audible** -- allow muted media, but block media with sound
+* **Block All** -- block autoplay completely
+
+Autoplay appears separately from the other site permissions.
+
+== Tips
+
+* If you are unsure, leave a permission on **Ask** or choose **Block** until a site proves it needs access
+* Blocking camera, microphone, location, or DRM can stop parts of a site from working until you allow them
+* Resetting **Site permissions** in **Delete Browsing Data** only clears saved permission decisions; it is separate from clearing cookies or cache
+* xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode] can help limit what stays saved between sessions

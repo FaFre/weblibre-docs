@@ -1,0 +1,177 @@
+= Tab Management
+:description: How to manage tabs in WebLibre, including tab types, tab views, filters, and bulk actions.
+
+WebLibre gives you more control over tabs than most mobile browsers.
+You can choose different tab types, switch between tab views, filter large tab lists, and change how tab controls appear on screen.
+
+== Choose the Right Tab Type
+
+WebLibre supports three tab types:
+
+=== Regular
+
+Regular tabs are for normal day-to-day browsing.
+History is saved, and websites can keep using the same cookies and site data for that browsing context.
+
+Use regular tabs for sites you visit often and want to stay signed in to.
+
+=== Private
+
+Private tabs are for browsing you do not want added to your normal history.
+WebLibre describes these as **Private** tabs.
+
+Use private tabs when you want a temporary session that stays separate from your regular tabs.
+
+=== Isolated
+
+Isolated tabs are more separated than regular or private tabs.
+Each isolated tab gets its own separate session.
+Even two isolated tabs opened to the same site are kept apart from each other.
+
+Use isolated tabs when you want to:
+
+* sign in to the same site with multiple accounts
+* open a one-off session that should not mix with your other tabs
+* test how a site behaves for a fresh visitor
+
+If you do not see isolated-tab options in the app, turn on **Settings > Browsing > Show Isolated Tab UI**.
+
+== Open the Tab View
+
+To manage tabs in one place, open the tab view by tapping the tab count in the browser.
+
+This is where you can:
+
+* switch between tab views
+* search inside tabs
+* filter and sort tabs
+* close groups of tabs
+
+== Switch Between Tab Views
+
+WebLibre has three tab views:
+
+**List**::
+Shows tabs in a compact vertical list.
+Good when you want to scan titles quickly.
+
+**Grid**::
+Shows tabs as larger preview cards.
+Good when page thumbnails help you recognize the right tab faster.
+
+**Tree**::
+Shows parent-child relationships between tabs.
+Good for research sessions and link trails.
+
+You switch views from the tab view header.
+
+Learn more: xref:tabs/tree-view.adoc[Tree View Navigation]
+
+== Use Child Tabs with Tree View
+
+Tree view works best when **Create Child Tabs** is enabled.
+This setting adds a way to create a child tab under the current tab, so related pages stay grouped in the tree.
+
+Find it in **Settings > Browsing > Create Child Tabs**.
+
+If you do not use tree view, you may not need this setting.
+
+== Find Tabs Faster
+
+In **List** and **Grid** view, WebLibre lets you narrow down long tab lists.
+
+**Search inside tabs**::
+Use the search button in the tab view to look through your open tabs.
+
+**Tab Type**::
+Filter tabs by **All Tabs**, **Regular**, **Private**, or **Isolated**.
+
+**Sort**::
+Choose **Default**, **Title A-Z**, **Title Z-A**, **URL A-Z**, **URL Z-A**, **Newest First**, or **Oldest First**.
+
+**Filter Date**::
+Pick a custom date range.
+
+**Quick Interval**::
+Filter by recent activity such as **Last Hour**, **Last Day**, **Last Week**, or similar built-in ranges.
+
+**Reset Filter**::
+Clear the active tab filters and return to the full list.
+
+Tree view does not show the search and filter tools, so switch back to **List** or **Grid** if you need them.
+
+== Close Multiple Tabs at Once
+
+In the tab view menu, open **Close Tabs** for bulk actions.
+
+Available options include:
+
+* **All Tabs** -- closes all displayed tabs
+* **Private Tabs** -- closes displayed private tabs
+* **Isolated Tabs** -- closes displayed isolated tabs when isolated-tab UI is enabled
+* **Filtered Tabs** -- closes only the tabs that match your current filters
+
+This is useful when you want to quickly clean up private tabs or remove older tabs after using **Filter Date** or **Quick Interval**.
+
+== Quick Tab Switcher
+
+The quick tab switcher adds an extra bar so you can jump between tabs without opening the full tab view.
+
+Turn it on in **Settings > Toolbar & Layout > Show Quick Tab Switcher Bar**.
+
+You can then adjust:
+
+* **Quick Tab Switcher Mode** -- choose **Recently Used Tabs** or **Container Tabs**
+* **History Fallback in Quick Tab Switcher** -- shows history suggestions when there are no tab chips available
+* **Show Titles in Quick Tab Switcher** -- shows tab titles next to icons
+
+The **Container Tabs** mode only appears if container UI is enabled.
+
+== Tab Bar and Tab View Layout
+
+You can change how tab controls look and where they appear in **Settings > Toolbar & Layout**.
+
+Common options include:
+
+* **Tab Bar Position** -- **Top** or **Bottom**
+* **Tab Bar Style** -- **With Title** or **Compact**
+* **Auto Hide Tab Bar** -- hides the tab bar while scrolling
+* **Bottom Sheet Tab View** -- opens the tab view as a bottom sheet instead of full screen
+* **Show Favicons in List View** -- shows website icons instead of page thumbnails in list view
+
+If you browse one-handed, **Bottom** is usually easier to reach.
+
+== Opening Links Sent from Other Apps
+
+When another app sends a link to WebLibre, **External Link Handling** decides how that link opens.
+
+Choices are:
+
+* **Prompt** -- ask each time
+* **Regular** -- always open in a regular tab
+* **Private** -- always open in a private tab
+
+Find it in **Settings > Browsing > External Link Handling**.
+
+This is different from **Open Links in Apps**, which controls whether links tapped inside WebLibre should open another app on your device.
+
+== Quick Comparison
+
+[cols="1,3,2"]
+|===
+|Tab Type |Best For |Privacy Level
+
+|Regular
+|Everyday browsing, sites you want to keep using normally
+|Lowest
+
+|Private
+|Temporary browsing that should stay out of your normal history
+|Medium
+
+|Isolated
+|Multiple accounts, fresh sessions, one-off visits
+|Highest per tab
+|===
+
+For more separation inside one profile, combine tab types with xref:tabs/containers.adoc[containers].

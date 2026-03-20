@@ -1,0 +1,5 @@
+name: weblibre
+title: WebLibre
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

@@ -1,0 +1,183 @@
+= Containers
+:description: How to use containers in WebLibre to organize tabs and optionally isolate cookies and site data.
+
+Containers help you separate different kinds of browsing inside WebLibre.
+You can use them to keep work sites away from personal sites, send one container through Tor, or make certain sites always open in the same place.
+
+Important: containers do not isolate cookies by default.
+A new container starts as an organization and routing tool.
+It only gets its own cookie and site-data context when you turn on *Cookie Isolation*.
+
+== Why Containers Matter
+
+Many websites and trackers try to connect your activity across different sites.
+If you use the same browser identity everywhere, it is easier for them to link your shopping, social media, work tools, and other browsing together.
+
+Containers help you split that activity into separate spaces.
+That can mean simple tab organization, or full site-data separation if you enable *Cookie Isolation* for the container.
+
+For example, you might use:
+
+* *Personal* for social media and news
+* *Work* for company tools and work email
+* *Shopping* for stores and price comparisons
+* *Banking* for financial sites
+
+That makes it easier to stay organized, and when you turn on *Cookie Isolation*, it also separates cookies and site data between containers.
+
+== What Containers Do
+
+Some container features always work:
+
+* *Name* and color
+* *Assigned Sites*
+* selecting the container for new tabs
+* grouping tabs under that container in the UI
+
+Other features only work when *Cookie Isolation* is enabled for that container:
+
+* *Cookie Isolation*
+* *Use Tor(TM) Proxy*
+* *Clear Data on Exit*
+* separate cookies, saved logins, and site data
+* *Clear Container Data*
+
+Important: a container only keeps separate logins, cookies, and site data when *Cookie Isolation* is enabled for that container.
+A non-isolated container is still useful for organization and site assignment, but it does not get its own cookie jar.
+
+With *Cookie Isolation* turned on, websites in one container cannot use the cookies or site data from another container.
+For example, if you sign in to a site in your *Work* container, that sign-in does not automatically carry over to your *Personal* container.
+
+== A Practical Example
+
+Suppose you create these containers:
+
+* *Personal* -- social media, news, entertainment
+* *Work* -- company tools and work email
+* *Shopping* -- online stores
+* *Banking* -- your bank and payment sites
+
+Then you can:
+
+* keep work logins in *Work*
+* keep store tracking in *Shopping*
+* reserve *Banking* for sensitive sites
+* optionally send only one container through Tor
+
+This does not make you invisible, but it can reduce how much different sites learn from each other.
+
+== Create and Manage Containers
+
+One reliable way to manage containers is:
+
+. Open the browser menu
+. Go to *Containers*
+. Tap *Manage Containers*
+. Tap *Container* to create a new one
+
+When creating a container, you can set:
+
+* *Name* -- a label such as `Work` or `Shopping`
+* *Select Color* -- helps you recognize the container quickly
+* *Cookie Isolation* -- gives the container its own cookies and site data
+* *Use Tor(TM) Proxy* -- routes this container through Tor
+* *Clear Data on Exit* -- clears cookies and site data when the app closes
+* *Assigned Sites* -- automatically sends chosen sites to this container
+
+When editing an existing container, always expect name, color, and assigned-site management to be available.
+Tor and per-container data clearing only make sense for containers that already have *Cookie Isolation*.
+
+Note: *Use Tor(TM) Proxy* and *Clear Data on Exit* depend on *Cookie Isolation*. If cookie isolation is off, those options are not active for that container because there is no separate browsing context to route or clear.
+
+== Use a Container for Tabs
+
+You can use containers in two main ways:
+
+* Select a container first, then open new tabs inside it.
+* Assign an already open tab to a container.
+
+To select a container for new tabs:
+
+. Open the browser menu
+. Go to *Containers*
+. Tap *Manage Containers*
+. On the container you want, use *Select*
+
+To move an existing tab into a container:
+
+. Open the browser menu for that tab
+. Go to *Containers*
+. Tap *Assign Container*
+. Choose the container
+
+If needed, you can also remove a tab from a container with *Unassign Container*.
+
+If moving a tab changes its cookie-isolation context, WebLibre may reopen that tab in the new context so it uses the right cookies and site data.
+
+== Site Assignments
+
+*Assigned Sites* let you tell WebLibre that a site should always use a specific container.
+This is useful for sites you visit often and always want to keep separated.
+
+Examples:
+
+* `github.com` -> *Work*
+* `facebook.com` -> *Personal*
+* `amazon.com` -> *Shopping*
+
+When possible, WebLibre will open or move that site into the assigned container automatically.
+
+To set this up:
+
+. Open *Manage Containers*
+. Open the container you want to edit
+. Tap *Assigned Sites*
+. Add the site, such as `example.com`
+
+Helpful notes:
+
+* WebLibre stores the site as a site origin, such as `https://example.com`.
+* A site can only be assigned to one container at a time.
+* If a site is already assigned somewhere else, WebLibre warns you.
+* Site assignment works even when *Cookie Isolation* is off. In that case the site still opens in that container, but it does not get separate cookies or site data.
+
+== Per-Container Tor
+
+If you enable *Use Tor(TM) Proxy* for a cookie-isolated container, tabs in that container use Tor while your other containers can keep using your normal connection.
+
+Example:
+
+* *Personal* uses your regular connection
+* *Sensitive* uses *Cookie Isolation* plus *Use Tor(TM) Proxy*
+
+This lets you mix regular and Tor-routed browsing in the same browser.
+
+Learn more: xref:tor.adoc[Tor Integration]
+
+== Clear Data on Exit
+
+If you enable *Clear Data on Exit* for a cookie-isolated container, WebLibre clears that container's cookies and site data when the app closes.
+
+This is useful for:
+
+* temporary accounts
+* short research sessions
+* containers where you do not want sign-ins to persist
+
+It is a good choice when you want a container to start fresh the next time you use it.
+
+== Things to Expect
+
+* Containers help with separation, but a plain container is not the same as an isolated browsing context.
+* Turn on *Cookie Isolation* for any container where separate logins or cookies matter.
+* If you need one-off isolation without creating a container first, use xref:tabs/tab-management.adoc[isolated tabs].
+* You can combine containers with private tabs.
+* Colors help you recognize containers in container lists and related tab UI.
+
+== Tips
+
+* Start with two or three containers, such as *Personal*, *Work*, and *Shopping*.
+* Turn on *Cookie Isolation* for any container where separate logins matter.
+* Use *Assigned Sites* for sites you open repeatedly.
+* Use *Clear Data on Exit* for temporary or sensitive browsing.
+* Use *Assign Container* when a tab was opened in the wrong place.

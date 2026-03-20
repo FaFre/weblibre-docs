@@ -1,0 +1,105 @@
+= On-Device AI
+:description: How WebLibre uses on-device AI to suggest container groups for your tabs.
+
+WebLibre includes optional on-device AI features to help you organize tabs.
+The processing happens locally on your phone, using a model stored on your device.
+
+This feature is mainly useful when you have many open tabs and want help turning them into xref:tabs/containers.adoc[containers].
+
+== What It Helps With
+
+=== Draft Containers
+
+WebLibre can look at your open, unassigned tabs and suggest draft containers.
+Each draft groups together tabs that seem related and suggests a container name.
+
+For example, a mixed tab session might turn into suggestions such as:
+
+* Shopping
+* Research
+* News
+
+These are only suggestions.
+WebLibre does not automatically create containers or move tabs without your confirmation.
+
+=== Suggested Names and Topics
+
+When WebLibre creates a draft suggestion, it also tries to suggest a useful name for that group.
+If the name is not right, you can change it before saving the container.
+
+=== Container Tab Suggestions
+
+The same on-device AI setting also powers container topic and tab suggestions elsewhere in the xref:tabs/tab-management.adoc[tab UI].
+If no suggestions appear, that usually just means WebLibre did not find a confident match.
+
+== What the AI Uses
+
+For the tab-grouping features in the current app, WebLibre uses your open tab titles.
+
+It does not need to send those titles to a remote server.
+The page you are viewing stays on your device while suggestions are generated.
+
+[NOTE]
+====
+The app wording refers to "container topic and tab suggestions". In practice, this means suggested names for groups of tabs and suggested tab groupings for containers.
+====
+
+== Before You Start
+
+Keep these expectations in mind:
+
+* Suggestions can be helpful, but they are not always perfect.
+* Some tabs may not be grouped at all.
+* Suggested names may be too broad, too specific, or simply wrong.
+* The first use may trigger an AI model download.
+
+The in-app dialog also warns that the download size and progress cannot be determined in advance.
+
+== Turn It On
+
+Check the main setting first:
+
+. Open *Settings > Web Content*
+. Make sure *On-Device AI* is enabled
+
+If you want to work with containers, also make sure container controls are visible:
+
+. Open *Settings > Browsing*
+. Make sure *Show Container UI* is enabled
+
+Learn more: xref:tabs/containers.adoc[Containers]
+
+== Use Draft Containers
+
+. Open the tab overview
+. Turn on *AI tab suggestions* when prompted
+. If WebLibre finds matches, open *Draft Containers*
+. Review the suggested groups
+. Remove tabs you do not want in a group
+. Create the container when you are happy with it
+
+You stay in control the whole time.
+Nothing is applied until you confirm it.
+
+If you need a refresher on the tab overview and related controls, see xref:tabs/tab-management.adoc[Tab Management].
+
+== Privacy and Storage
+
+* Processing happens on your device
+* The AI model may need to be downloaded the first time you use these features
+* After download, the model is stored on your device
+* Using the feature can take extra storage, CPU time, and some battery
+
+If you do not want these features, turn off *On-Device AI* in *Settings > Web Content*.
+
+== When It Is Most Useful
+
+* You have many open tabs and want a faster starting point
+* You finished a research session and want rough groups
+* You use containers already and want help sorting unassigned tabs
+
+== When to Skip It
+
+* You prefer to organize every tab yourself
+* Your device is low on storage
+* You want to avoid the extra processing used for suggestions

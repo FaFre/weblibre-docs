@@ -1,0 +1,137 @@
+= Site Controls
+:description: How to review and change controls for the site you are currently visiting in WebLibre.
+
+WebLibre includes a site panel for the page you are currently viewing.
+This is where per-site controls live.
+
+Use it when you want to:
+
+* check whether the connection is secure
+* disable or re-enable tracking protection for one site
+* review saved permissions for that site
+* change autoplay behavior
+* clear site-specific data without clearing the whole browser
+
+== Open the Current Site Panel
+
+While you are on a website, open the current site's page panel or site information view.
+
+That panel can show controls tied to the site you are visiting, not the whole browser.
+
+If a setting only affects one site, this is usually where WebLibre exposes it.
+
+== Connection Information
+
+At the top of the site panel, WebLibre can show connection status such as:
+
+* **Connection is secure**
+* **Connection is not secure**
+* the certificate issuer when the connection is verified
+
+This helps you tell the difference between:
+
+* normal secure HTTPS pages
+* insecure HTTP pages
+* pages where WebLibre could not verify the connection properly
+
+If a page is not secure, avoid entering sensitive information there.
+
+== Per-Site Tracking Protection
+
+The site panel includes a per-site **Enhanced Tracking Protection** switch.
+
+When it is on, trackers for that site are blocked according to your global protection mode.
+When it is off, that site becomes an exception.
+
+This is useful when:
+
+* one site breaks under strict protection
+* you want to test whether tracking protection is the cause
+* you want to keep your global setting strong but relax it for one difficult site
+
+Sites where you turn this off appear in **Settings > Privacy & Security > Tracking Protection Exceptions**.
+
+== Site Permissions
+
+The same panel can show saved permissions for the current site.
+
+These may include permissions such as:
+
+* camera
+* microphone
+* location
+* notifications
+* persistent storage
+* cross-origin storage
+* DRM or protected media
+
+For each permission, WebLibre can show:
+
+* **Ask**
+* **Allow**
+* **Block**
+
+If there are no saved decisions yet, WebLibre may show **No permissions set for this site**.
+You can still use **Show all** to review the full list.
+
+For general permission behavior, see xref:site-permissions.adoc[Site Permissions].
+
+== Autoplay For One Site
+
+The site panel also includes per-site autoplay control.
+
+The current options are:
+
+* **Allow All**
+* **Block Audible**
+* **Block All**
+
+Use this when one site should behave differently from your normal browsing expectations.
+
+== Clear Site Data
+
+WebLibre can clear data for just the current site without wiping the whole browser.
+
+In the site panel, expand **Clear Site Data** and choose what to remove.
+
+The available data types are:
+
+* **Cookies**
+* **Cached Files**
+* **Site Data**
+* **Auth Sessions**
+
+Then tap **Clear Now** and confirm the action.
+
+This is useful when:
+
+* a site is stuck in a bad login state
+* one site is misbehaving after an update
+* you want to sign out of one site without clearing everything else
+
+[NOTE]
+====
+This is narrower than **Delete Browsing Data** in settings.
+It targets the current site's data instead of the whole browser.
+====
+
+== Global Setting or Site Control?
+
+Use the global settings when:
+
+* many sites are affected
+* you want a default privacy policy for all browsing
+* you want automatic cleanup behavior
+
+Use the site panel when:
+
+* only one site is broken
+* one site needs a different permission decision
+* you want to clear data for one site only
+
+== Tips
+
+* If one site breaks, try the site-level tracking protection toggle before lowering protection everywhere
+* If login loops or stale sessions happen, clear only that site's data first
+* If a permission looks wrong, set it back to **Ask** so the site can request it again later
+* Use xref:privacy/data-management.adoc[Data Management] for browser-wide cleanup and xref:site-permissions.adoc[Site Permissions] for the broader permission model

@@ -1,0 +1,89 @@
+= Page Export & Sharing
+:description: How to export, print, and share the current page from WebLibre.
+
+WebLibre includes separate **Export** and **Share** sections in the browser menu. You can save a page for later, copy it in a simpler text format, print it, or send the link to another app or device.
+
+The export and share tools are for the current page.
+If you want to save many open pages at once, see xref:bookmarks.adoc[Bookmarks] for **Bookmark all** from the tab view.
+
+== Export
+
+To export the current page:
+
+. Open the browser menu
+. Expand **Export**
+. Choose the option you want
+
+=== Export as PDF
+
+**Export as PDF** saves the current page as a PDF.
+
+Use this when you want to keep the page layout, archive a receipt or article, or share a version that is easy to print.
+
+=== Export as Markdown
+
+**Export as Markdown** saves the page as a Markdown file (`.md`).
+
+Markdown is a plain-text format that keeps useful structure such as headings, links, and lists, while leaving out most of the visual styling of the original page.
+
+On pages where WebLibre has Reader Mode-style extracted content available, you may be asked to choose between:
+
+* **Extracted Content** -- Reader-optimized content without navigation and ads
+* **Full Content** -- The complete page content and structure
+
+This is useful if you want cleaner notes for reading, or a fuller export for later editing.
+
+=== Copy as Markdown
+
+**Copy as Markdown** copies the page content to your clipboard instead of saving a file.
+
+You can paste it into a notes app, document, email, or chat message.
+
+If extracted content is available for the page, WebLibre may first ask whether you want **Extracted Content** or **Full Content**.
+
+=== Print
+
+**Print** opens Android's print flow for the current page.
+
+From there, you can print to a printer or use your device's available save-to-PDF option, if supported.
+
+== Share
+
+To share the current page:
+
+. Open the browser menu
+. Open the **Share** section
+. Choose how you want to share it
+
+=== Share Link
+
+**Share Link** sends the current page URL to any Android app that accepts shared links, such as messaging, email, or notes apps.
+
+=== Share Screenshot
+
+**Share Screenshot** captures an image of the current page view and opens Android's share sheet so you can send that image to another app.
+
+This is useful when you want to share what the page looks like, not just its link.
+
+=== Show QR Code
+
+**Show QR Code** displays the current page URL as a QR code.
+
+This can be handy if you want to open the same page on another nearby device by scanning the code.
+
+== Send To Device
+
+If you have xref:firefox-sync.adoc[Sync] set up, WebLibre can send the current page to another synced device that supports tab sending.
+
+. Open the browser menu
+. Open the **Share** section
+. Tap **Send To Device**
+. Choose a device from the list
+
+If no eligible devices appear, check that your other device is signed in to the same account and supports receiving sent tabs.
+
+== Notes
+
+* The labels in the menu are **Export as PDF**, **Export as Markdown**, **Copy as Markdown**, **Print**, **Share Link**, **Share Screenshot**, **Show QR Code**, and **Send To Device**.
+* Markdown options depend on WebLibre having page content available to export. On some pages, the result may be limited or there may be no extracted-content choice.
+* If you want to preserve many tabs for later reading instead of exporting one page, use **Bookmark all** from the tab view actions.

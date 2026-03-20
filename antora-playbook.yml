@@ -1,0 +1,20 @@
+site:
+  title: WebLibre Browser
+  url: https://docs.weblibre.eu
+  start_page: weblibre::index.adoc
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+
+content:
+  sources:
+    - url: .
+      start_path: docs
+      branches: HEAD
+
+ui:
+  bundle:
+    url: https://gitlab.com/FaFre/antora-weblibre-ui/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui

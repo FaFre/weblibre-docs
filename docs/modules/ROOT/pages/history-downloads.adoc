@@ -1,0 +1,151 @@
+= History & Downloads
+:description: How to browse, search, filter, and delete history and download records in WebLibre.
+
+WebLibre gives you two related library screens:
+
+* **History** for pages you visited
+* **Downloads** for files the browser recorded as downloads
+
+These screens are useful when you want to reopen something you saw earlier, clean up older entries, or remove download records without going through the full privacy settings flow.
+
+== Open History or Downloads
+
+You can reach both screens from the browser menu:
+
+. Open the browser menu
+. Tap **History** or **Downloads**
+
+The two screens use the same general layout, but they focus on different data.
+
+== What History Shows
+
+The **History** screen shows pages WebLibre recorded during browsing.
+
+Entries are grouped by time so older and newer visits are easier to scan.
+Each entry shows:
+
+* the page title when available
+* the page address
+* the visit time
+* the visit type
+
+The visit types currently exposed in the filter menu are:
+
+* **Followed Links**
+* **Page Reloads**
+* **Downloads**
+
+If you tap a history entry, WebLibre opens it again in a regular tab.
+
+== What Downloads Shows
+
+The **Downloads** screen shows download records saved by WebLibre.
+
+This is the list of downloads the browser remembers.
+It is not the same thing as browsing your whole device storage in a file manager.
+
+If you tap a download entry, WebLibre opens its recorded address in a regular tab.
+
+[NOTE]
+====
+Deleting a download entry from WebLibre does not always delete the file itself.
+If the file still exists on your device, WebLibre can ask whether you also want to remove the actual downloaded file.
+====
+
+== Search and Text Filter
+
+Both screens support a text filter.
+
+To use it:
+
+. Open the screen you want
+. Tap the filter button
+. Choose **Text Filter**
+. Type part of the title, file name, or address
+
+This helps when you know roughly what something was called but do not want to scroll through everything.
+
+== Filter by Date
+
+Both screens can filter entries by a date range.
+
+To do that:
+
+. Open the filter menu
+. Choose **Filter Date**
+. Pick the start and end dates
+
+This is useful when you only want to review downloads from one project, or history from one specific day or week.
+
+== Filter History by Visit Type
+
+The **History** screen also lets you narrow the list by visit type.
+
+From the filter menu, you can turn the available visit types on or off.
+That makes it easier to answer questions such as:
+
+* pages I actually followed from links
+* pages I reloaded repeatedly
+* download-related visits
+
+The **Downloads** screen does not show these history-specific visit-type filters because it is already scoped to download entries.
+
+== Reset Filters
+
+If the list looks incomplete after filtering:
+
+. Open the filter menu
+. Tap **Reset Filter**
+
+That clears the text filter and any active date or visit-type filters.
+
+== Delete One Entry
+
+To remove a single entry:
+
+* tap the delete icon on that row
+
+On **History**, this removes that visit from the browser's saved history.
+On **Downloads**, this removes the download record from WebLibre.
+
+If the download still exists on your device, WebLibre may ask whether you also want to delete the file itself.
+
+== Delete Multiple Entries
+
+You can also remove several entries together:
+
+. Long-press an item to enter selection mode
+. Tap any other entries you want to include
+. Tap the delete button in the top app bar
+
+This is useful when clearing one browsing session or cleaning up several related downloads at once.
+
+== Clear the Whole Category
+
+If you want to clear history or downloads more broadly:
+
+. Open **History** or **Downloads**
+. Tap the delete button when nothing is selected
+
+WebLibre then opens the regular delete-browsing-data flow with that category already selected.
+
+This is a good option when you want to remove all history entries or all download records at once.
+
+== Relationship to Privacy Cleanup
+
+The library screens are for reviewing and managing entries directly.
+WebLibre also has broader cleanup tools under xref:privacy/data-management.adoc[Data Management], such as:
+
+* **Delete Browsing Data**
+* **Incognito Mode**
+* **Auto-Clear History**
+
+Use the library screens when you want to inspect what is there first.
+Use privacy cleanup settings when you already know you want automatic or broader deletion behavior.
+
+== Tips
+
+* Use **History** when you want to reopen a page you forgot to bookmark
+* Use **Downloads** when you want to clean up WebLibre's download list without opening Android's file manager
+* Use the date filter before bulk deletion when you only want to remove one time window
+* If something should stay permanently easy to find, save it as a xref:bookmarks.adoc[bookmark] instead of relying only on history

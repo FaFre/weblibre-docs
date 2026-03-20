@@ -1,0 +1,145 @@
+= Switching from Another Browser
+:description: How to move bookmarks, habits, and settings from another browser to WebLibre.
+
+Moving to WebLibre is usually simple:
+
+* Bring over your bookmarks
+* Sign in to xref:firefox-sync.adoc[Sync] if you already use it on other devices
+* Recreate a few habits such as search, layout, and privacy settings
+
+Most browsers on Android do *not* offer a full export option on the phone itself, so bookmark migration often starts on a desktop browser.
+
+== Before You Start
+
+What usually moves easily:
+
+* **Bookmarks** -- Import from an HTML file
+* **Synced browser data** -- Tabs, bookmarks, and history through xref:firefox-sync.adoc[Sync] if you already use a compatible account
+
+What usually needs to be set up again:
+
+* **Extensions**
+* **Tab and toolbar layout**
+* **Privacy settings**
+* **Containers and profiles**
+
+TIP: In WebLibre, open **Bookmarks** and use **Import > HTML** to bring in a bookmarks file. During import, you can choose **Merge** to keep existing bookmarks or **Replace** to erase them first.
+
+== Bring Over Your Bookmarks
+
+The most reliable path is usually:
+
+. Export bookmarks from your current browser as an HTML file
+. Transfer that HTML file to your phone
+. In WebLibre, open **Bookmarks** and choose **Import > HTML**
+
+If your current browser does not offer bookmark export on Android, the desktop version or a synced desktop copy is usually the easiest place to create that HTML file.
+
+== If You Already Use Sync Elsewhere
+
+If your other devices already use a Firefox account for browser sync, you can usually reuse that setup in WebLibre.
+
+. Go to **Settings > Firefox Sync**
+. Sign in with the same account, or use QR pairing
+. Choose what to sync
+. Tap **Sync Now** if you want to start immediately
+
+WebLibre currently syncs:
+
+* Tabs
+* Bookmarks
+* History
+
+If you do not want to use sync, you can still import bookmarks manually and rebuild the rest of your setup over time.
+
+== Recreate Your Everyday Setup
+
+Most people settle in faster if they adjust a few habits early:
+
+**Search and suggestions**::
+Choose your default search provider and optional autocomplete source in **Settings > Search**.
+
+**Extensions**::
+If you rely on a content blocker or password manager, set that up early in **Settings > Extensions**.
+Many people start with xref:extensions.adoc[one trusted extension] and expand later.
+
+**Privacy defaults**::
+Review xref:quick-start.adoc[Privacy Setup] so you know how WebLibre handles DNS, tracking protection, and browser-wide cleanup.
+
+**Layout and tab handling**::
+Check **Settings > Toolbar & Layout** if you want the tab bar, tab overview, or general controls to feel closer to your previous setup.
+
+**Containers and profiles**::
+Use xref:tabs/containers.adoc[containers] when you want separate logins for different activities, and turn on *Cookie Isolation* in the containers where that separation matters.
+Use xref:profiles.adoc[profiles] when you need stronger separation between people or use cases.
+
+== Features That May Feel Different
+
+These are the differences people usually notice first:
+
+**Cleanup rules instead of private tabs only**::
+xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode] in WebLibre is a browser-wide cleanup feature.
+It is different from the separate private-tab model used by many other browsers.
+
+**Containers**::
+xref:tabs/containers.adoc[Containers] can separate cookies, logins, and site data by activity when *Cookie Isolation* is enabled instead of keeping everything in one shared browser identity.
+
+**Profiles**::
+xref:profiles.adoc[Profiles] give you a larger separation boundary for different people or distinct setups.
+
+**Optional built-in Tor routing**::
+WebLibre can route all regular tabs through xref:tor.adoc[Tor] or only selected containers.
+
+**Local search and feed integration**::
+The address bar can search your own tabs, bookmarks, history, and feed articles before you fall back to a web search.
+
+== Make WebLibre Feel Familiar
+
+If you want the browser to feel settled quickly, these are the highest-value adjustments:
+
+* **Settings > Toolbar & Layout** -- Pick the tab bar position and overall layout that fit your grip and tab habits
+* **Settings > Privacy & Security > DNS over HTTPS** -- Check that the default privacy posture matches what you want
+* **Settings > Privacy & Security > Enhanced Tracking Protection** -- Use **Standard** or **Strict** based on how aggressive you want the blocking to be
+* **Settings > Extensions** -- Install the few extensions you actually depend on
+* **Settings > Firefox Sync** -- Sign in if you want tabs, bookmarks, and history on your other devices
+* xref:tabs/containers.adoc[Containers] -- Create two or three containers for the activities you want to separate
+
+== Quick Migration Checklist
+
+[cols="1,2"]
+|===
+|Task |How
+
+|Import bookmarks
+|Open **Bookmarks**, then choose **Import > HTML**
+
+|Set your search engine
+|Go to **Settings > Search > Default Search Provider**
+
+|Install your first extension
+|Go to **Settings > Extensions**
+
+|Set up sync
+|Go to **Settings > Firefox Sync**
+
+|Improve privacy defaults
+|Follow the xref:quick-start.adoc[Privacy Setup]
+
+|Adjust tab layout
+|Go to **Settings > Toolbar & Layout**
+
+|Try containers
+|Create 2-3 containers for work, personal, shopping, or banking
+|===
+
+== A Practical Setup Order
+
+Start small and keep the changes practical:
+
+. Install WebLibre, import bookmarks, and follow the xref:quick-start.adoc[Privacy Setup]
+. Adjust search, toolbar layout, and one or two extensions you actually use
+. Create a few containers for your regular activities
+. Explore Tor, profiles, feeds, and optional AI features if they fit your workflow
+
+For many people, containers are the biggest long-term change.
+They can feel unusual at first, but cookie-isolated containers are one of WebLibre's most useful privacy features.

@@ -1,0 +1,78 @@
+= Reader Mode
+:description: How to use Reader Mode in WebLibre for cleaner article reading.
+
+Reader Mode simplifies article-style pages so they are easier to read.
+It can remove much of the surrounding clutter and focus on the main text.
+
+This is most useful for:
+
+* long articles
+* blog posts
+* news stories
+* pages where ads or navigation make reading harder
+
+== Turn Reader Mode On for a Page
+
+When Reader Mode is available for the current page, WebLibre can show it from places such as:
+
+* the browser menu
+* the contextual toolbar, if you use that toolbar
+
+Tap **Reader Mode** to switch the current page into the reader view.
+Tap it again to return to the normal page view.
+
+== Enable Reader Mode in Settings
+
+Reader Mode behavior is controlled from **Settings > Web Content**.
+
+The related settings are:
+
+* **Enable Reader Mode** -- makes Reader Mode available when WebLibre thinks a page is suitable
+* **Enforce Reader Mode** -- makes the feature available on more pages, even if the results may be less reliable
+
+If **Enable Reader Mode** is off, the reader tools do not appear for normal use.
+
+== What Enforce Reader Mode Means
+
+**Enforce Reader Mode** does not mean every page automatically opens in reader view.
+
+It means WebLibre is willing to offer Reader Mode more aggressively on pages that might still work in reader view.
+
+This can help on pages that are almost article-like, but it can also increase the chance of rough or incomplete results.
+
+== What to Expect
+
+On supported pages, Reader Mode usually gives you:
+
+* a cleaner reading layout
+* fewer visual distractions
+* a better source for exporting simplified text
+
+It is a reading-focused view, not an exact copy of the original website design.
+
+== When Reader Mode Is Not a Good Fit
+
+Reader Mode is usually not ideal for:
+
+* dashboards or app-like sites
+* forms
+* shopping pages
+* pages that depend heavily on interactive widgets
+
+If a page looks incomplete in Reader Mode, switch back to the normal page.
+
+== Reader Mode and Other Features
+
+Reader Mode also affects a few nearby features:
+
+* xref:page-export.adoc[Page Export & Sharing] may offer cleaner extracted content when article-style content is available
+* xref:page-translation.adoc[Page Translation] is unavailable while Reader Mode is active
+
+If you do not see **Translate Page**, turn Reader Mode off first and try again.
+
+== Tips
+
+* Use Reader Mode when the original page feels visually noisy
+* Keep **Enable Reader Mode** on if you read articles often
+* Turn on **Enforce Reader Mode** only if you often want Reader Mode on pages that WebLibre normally would not treat as readable
+* If a page looks wrong in reader view, switch back to the original page instead of troubleshooting the site itself

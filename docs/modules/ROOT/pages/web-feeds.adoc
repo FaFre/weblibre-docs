@@ -1,0 +1,127 @@
+= RSS Feeds
+:description: How to use WebLibre's built-in web feed reader.
+
+WebLibre includes a built-in feed reader for websites that publish RSS or Atom feeds.
+It lets you follow updates from sites you care about and read them in one place on your device.
+
+== What feeds are
+
+A web feed is a regularly updated list of a site's new posts, articles, episodes, or releases.
+Instead of checking a site manually, you subscribe once and WebLibre keeps a local list of new items for you.
+
+Feeds are commonly offered by:
+
+* news sites
+* blogs
+* podcasts
+* software projects and release notes
+* some forums and channel-style pages
+
+Not every site offers a feed.
+If a site does not publish one, WebLibre cannot create one for it.
+
+== Why use feeds
+
+Feeds are useful when you want updates without relying on a social platform or recommendation algorithm.
+
+With feeds:
+
+* you choose the sources
+* items arrive in time order
+* no separate feed-reader account is required
+* your subscriptions stay inside the current xref:profiles.adoc[profile]
+
+== Subscribe from a website you are visiting
+
+If the current page exposes one or more feeds, WebLibre can detect them.
+
+. Open the browser menu on that page.
+. Tap *Fetch Feeds on Page*.
+. If feeds are found, tap *Available Web Feeds*.
+. Choose the feed you want.
+. Review the *New Feed* screen, then tap the checkmark to save it.
+
+[NOTE]
+====
+Some pages do not advertise their feeds clearly, even when a site has one.
+If WebLibre does not find a feed automatically, you can still add it manually if you know the feed URL.
+====
+
+== Add a feed manually
+
+. Open *Feeds* from the main menu.
+. Tap the add button.
+. In the *Add Feed* dialog, paste the feed URL.
+. Tap *Add*.
+. Review the *New Feed* screen, then tap the checkmark.
+
+This is useful when a site gives you a direct feed link such as `https://example.com/feed.xml`.
+
+== What you see in Feeds
+
+Open *Feeds* from the main menu to see your subscriptions.
+
+Each feed card shows:
+
+* the feed name and description, if available
+* when it was last fetched
+* an unread article count
+
+Tap a feed to open its article list.
+Tap the edit icon on a feed card to change feed details or delete that feed.
+
+[NOTE]
+====
+Deleting a feed also deletes the articles stored for that feed.
+====
+
+== Read articles
+
+Inside a feed, WebLibre shows saved articles from that source.
+
+You can:
+
+* tap an article to read it inside WebLibre
+* use the *Search* field to search within that feed's saved articles
+* tap author or tag chips to narrow the list when that information is available
+* tap the browser icon on an article to open the original page in a browser tab
+
+Opening an article marks it as read.
+If you want to mark a read item as unread again, use the eye button shown on that article's card.
+
+== Search across all feeds
+
+WebLibre indexes saved feed articles for local search on your device.
+
+You can search:
+
+* in a feed's article list with the built-in *Search* field
+* from the main xref:search/local-search.adoc[address bar search], where feed articles appear alongside other local results
+
+Search can match article titles, summaries, and saved article text.
+This makes feeds useful as a personal archive, not just a stream of the newest posts.
+
+== Refresh feeds
+
+To check for new items right away:
+
+* open *Feeds* and tap the sync button in the top bar, or
+* pull down to refresh while viewing feeds or articles
+
+WebLibre also tries to refresh feeds in the background.
+The exact timing depends on Android and your device's battery restrictions, so background updates are best treated as helpful rather than guaranteed.
+
+== Privacy and network expectations
+
+WebLibre stores your feed list and saved feed articles locally in the current profile.
+There is no separate WebLibre account or cloud feed service required.
+
+However, feed updates still come from the websites you subscribe to.
+That means those sites, and your network connection, can still see requests for their feed URLs just like normal website requests.
+
+== Practical tips
+
+* start with a small number of feeds so the list stays manageable
+* use separate xref:profiles.adoc[profiles] if you want different subscriptions for work, personal use, or shared-device browsing
+* if a feed looks wrong after adding it, open its edit screen and review the title, site link, or feed URL
+* use address bar search before searching the web because a saved article may already have the answer

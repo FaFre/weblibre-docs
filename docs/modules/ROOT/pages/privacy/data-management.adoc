@@ -1,0 +1,138 @@
+= Data Management
+:description: How to control what browsing data WebLibre keeps, clears automatically, or deletes on demand.
+
+WebLibre includes both manual and automatic cleanup tools. You can wipe data right away, remove older history and tabs over time, or have selected data cleared after you restart the app.
+
+[[_incognito_mode]]
+== Incognito Mode
+
+WebLibre's **Incognito Mode** is a browser-wide auto-clear feature. It is not the same as opening a special private tab in some other browsers.
+
+When this feature is on, WebLibre clears the data types you choose after you close the app and start it again.
+
+To set it up:
+
+. Go to **Settings > Privacy & Security**
+. Turn on **Incognito Mode**
+. Choose what to clear:
+** **Open tabs**
+** **Browsing history**
+** **Cookies and site data**
+** **Cached images and files**
+** **Site permissions**
+** **Downloads**
+
+This is useful if you want WebLibre to start each session with less stored data without having to clear it manually.
+
+[NOTE]
+====
+If you select **Cookies and site data**, most websites will sign you out.
+If you select **Open tabs**, your current tabs will be closed.
+====
+
+=== How this differs from private tabs in other browsers
+
+In many browsers, incognito or private mode only applies to tabs opened in that mode.
+
+In WebLibre, **Incognito Mode** is a cleanup rule for the whole browser. After a restart, the selected data types are cleared across your regular browsing, not only in a separate set of tabs.
+
+== Per-Container Clearing
+
+If you use xref:tabs/containers.adoc[containers], each cookie-isolated container can have its own **Clear Data on Exit** setting.
+
+This setting is narrower than browser-wide Incognito Mode. It clears that container's **cookies and site data** after the app is closed and started again, while other containers can keep their data.
+
+Typical examples:
+
+* Keep your **Banking** container signed in
+* Clear your **Shopping** container after each restart
+* Use a **Research** container that starts fresh each time
+
+To configure it:
+
+. Open or create a container with **Cookie Isolation** enabled
+. Turn on **Clear Data on Exit**
+
+[NOTE]
+====
+For containers, **Clear Data on Exit** refers to cookies and site data for that container. It is not the same as clearing all tabs, history, cache, permissions, or downloads for the whole browser.
+If **Cookie Isolation** is off, the container does not have a separate cookie jar to clear.
+====
+
+=== A practical setup
+
+One simple approach is:
+
+. Put sites you want to keep signed in to their own containers
+. Turn on **Incognito Mode** for browser-wide cleanup such as history, cache, or open tabs
+. Turn on **Clear Data on Exit** only for containers that should never keep login state
+
+That gives you persistent logins where you need them and automatic cleanup elsewhere.
+
+[[_auto_clear_history]]
+== Auto-Clear History
+
+If you do not want old history to build up, you can tell WebLibre to remove history entries older than a set age.
+
+Available options are:
+
+* **Never**
+* **1 Day**
+* **3 Days**
+* **1 Week**
+* **2 Weeks**
+* **1 Month**
+* **3 Months**
+
+Newer history stays available. Older history is deleted automatically.
+
+Find this in **Settings > Privacy & Security > Auto-Clear History**.
+
+[[_auto_clear_unassigned_tabs]]
+== Auto-Clear Unassigned Tabs
+
+This setting automatically closes older tabs that are not in any xref:tabs/containers.adoc[container].
+
+It can be helpful if your regular tab list grows over time but you want to keep intentionally organized container tabs untouched.
+
+Available options are:
+
+* **Never**
+* **1 Day**
+* **3 Days**
+* **1 Week**
+* **2 Weeks**
+* **1 Month**
+* **3 Months**
+
+Find this in **Settings > Privacy & Security > Auto-Clear Unassigned Tabs**.
+
+[NOTE]
+====
+This only affects tabs that are not assigned to a container. Tabs inside containers are handled separately.
+====
+
+[[_delete_browsing_data]]
+== Delete Browsing Data
+
+If you want to clear data immediately, go to **Settings > Privacy & Security > Delete Browsing Data**.
+
+You can choose any combination of:
+
+* **Open tabs** -- closes all open tabs
+* **Browsing history** -- deletes saved browsing history
+* **Cookies and site data** -- signs you out of most sites and removes stored website data
+* **Cached images and files** -- removes temporary files stored to speed up browsing
+* **Site permissions** -- resets saved permission choices such as camera, microphone, or location access
+* **Downloads** -- removes download entries from WebLibre
+
+[NOTE]
+====
+Clearing **Downloads** removes the download records shown in WebLibre. Downloaded files already saved on your device may still remain unless you delete those files separately.
+====
+
+== Tips
+
+* Use **Delete Browsing Data** when you want to clear something right now
+* Use **Incognito Mode** when you want the browser to clean itself after each restart
+* Use containers with **Cookie Isolation** when you want some sites to stay signed in while other browsing stays separate or gets cleared

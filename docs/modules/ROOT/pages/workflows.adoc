@@ -1,0 +1,254 @@
+= Common Workflows
+:description: Step-by-step guides for everyday browsing tasks in WebLibre.
+
+Here are step-by-step guides for things you might want to do with WebLibre.
+Each one shows you which features to use and how to set them up.
+
+NOTE: If you do not see container options in the tab or menu UI, turn on **Show Container UI** in **Settings > Browsing** first.
+
+== Browse Anonymously
+
+You want to research a sensitive topic, visit a site privately, or browse without being tracked.
+
+**Setup:**
+
+. Enable xref:tor.adoc[Tor] in settings
+. Create a container called "Anonymous"
+. Turn on **Cookie Isolation** for that container
+. Turn on the Tor proxy option for that container
+. Enable xref:privacy/fingerprint-protection.adoc#_resist_fingerprinting[Resist Fingerprinting]
+
+**When browsing:**
+
+. Open tabs in the "Anonymous" container
+. Don't log into any personal accounts
+. Use xref:tor.adoc#_request_new_identity[Request New Identity] if you want a fresh Tor circuit
+
+**What this achieves:**
+
+* Your internet provider sees Tor use instead of your destination websites
+* Websites see a Tor exit IP instead of your normal IP address
+* Cookies and logins in this container stay separate from your regular browsing
+* Fingerprinting is harder, though not impossible
+
+[NOTE]
+====
+Tor does not make you anonymous if you sign into personal accounts or otherwise identify yourself.
+Some sites may be slower or may block Tor traffic.
+====
+
+== Separate Work and Personal Life
+
+You use your phone for both work and personal stuff, and want to keep them completely separate.
+
+**Setup:**
+
+. Create two containers: "Work" and "Personal"
+. Turn on **Cookie Isolation** for both containers
+. Edit the Work container and add **Assigned Sites** for your work tools, such as team chat, code hosting, or shared docs
+. Use different colors so you can recognize each container quickly
+
+**Daily use:**
+
+. Work tabs open in the Work container automatically
+. Open personal sites in the Personal container or in regular tabs
+. Work cookies and logins stay separate from personal ones
+
+**Optional enhancements:**
+
+* Turn on **Clear Data on Exit** for a container if you do not want it to stay signed in after the app restarts
+* Use xref:profiles.adoc[profiles] instead if you want a full split with separate bookmarks, history, feeds, extensions, and settings
+
+== Research a Sensitive Topic
+
+You want to research something without it being connected to your identity or regular browsing.
+
+**Setup:**
+
+. Create a container such as "Research" or "Sensitive"
+. Turn on **Cookie Isolation** for that container
+. Turn on the Tor proxy option for that container
+. Enable xref:privacy/fingerprint-protection.adoc#_resist_fingerprinting[Resist Fingerprinting]
+
+**The workflow:**
+
+. Open the sites you want to research in that container
+. Avoid signing in to personal accounts during that session
+. When you are done, close the tabs in that container
+. If you want the container to start fresh next time, turn on **Clear Data on Exit** or use **Clear Container Data**
+
+**Alternative: Isolated tabs**
+
+For even more separation, use isolated tabs instead:
+
+. Open an xref:tabs/tab-management.adoc#_isolated[isolated tab]
+. Use it for a one-off session you do not plan to keep
+. Close it when you are done so that isolated session ends
+
+== Share a Device with Family
+
+Multiple people use the same phone or tablet, and you want privacy from each other.
+
+**Setup:**
+
+. Create xref:profiles.adoc[profiles] for each person:
+** Your profile
+** Partner's profile
+** Kid's profile
+. For any profile you want to protect, open **Manage Profiles** and turn on xref:app-lock.adoc[Require Authentication]
+. Choose an **Auto-lock Behavior** such as **Lock After Timeout** if you want a grace period
+
+**Daily use:**
+
+. When you hand the phone to someone, they switch to their profile
+. WebLibre restarts into that selected profile
+. They only see their own bookmarks, history, tabs, feeds, and saved logins
+. Your data stays in your protected profile
+
+**For kids:**
+
+. Use a separate profile
+. Consider stricter tracking protection settings
+. They do not get access to your logins or browsing data in your own profile
+
+[NOTE]
+====
+Profile locking depends on your device's built-in authentication being available and set up.
+====
+
+== Shop Without Being Tracked
+
+You want to shop online without advertisers following you around, and without prices being personalized based on your history.
+
+**Setup:**
+
+. Create a "Shopping" container
+. Turn on **Cookie Isolation** for that container
+. Don't log into accounts unless necessary (guest checkout)
+. Turn on **Clear Data on Exit** if you want that container to start fresh after each app restart
+
+**The workflow:**
+
+. Open shopping sites in the Shopping container
+. Browse and buy
+. After you're done:
+** Close those shopping tabs
+** Use **Clear Container Data** if you want to remove that session immediately
+
+**What this achieves:**
+
+* Shopping sites get a separate cookie jar from your regular browsing
+* Ad and login data from other containers does not carry into your shopping session
+* After clearing that container's data, shopping sites treat it more like a new browser session
+
+**Even more privacy:**
+
+. Use xref:tor.adoc[Tor] for the Shopping container
+. This also hides your normal IP address from the shopping site, but may make checkout or fraud checks harder
+
+== Read News Without Algorithms
+
+You want to follow news sources without an algorithm deciding what you see.
+
+**Setup:**
+
+. Subscribe to xref:web-feeds.adoc[RSS feeds] from your preferred sources:
+** News sites (national, local, or specialist sources)
+** Blogs you like
+** Podcasts
+. Open **Feeds** from the main menu instead of relying on social feeds
+
+**Daily use:**
+
+. Open **Feeds** from the main menu
+. See all new articles, in chronological order
+. Read what interests you
+. Search your saved feed articles later if you want to find something again
+
+**Benefits:**
+
+* You choose your sources
+* You see everything they publish
+* No social-media ranking deciding what appears first
+* No separate feed-reader account required
+
+== Stay Logged In Where It Matters, Private Elsewhere
+
+You want to stay logged into email and banking, but have everything else auto-clear.
+
+**Setup:**
+
+. Create containers for sites you want to stay logged into:
+** "Essentials" container for email, banking, etc.
+. Turn on **Cookie Isolation** for those containers so their login state is separate
+. Enable xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode]
+. Choose the browser-wide cleanup items you want, such as **Browsing history**, **Cached images and files**, or **Open tabs**
+. Leave **Clear Data on Exit** turned off for the "Essentials" container
+
+**Daily use:**
+
+. Email, banking in the Essentials container (you stay logged in)
+. Everything else in regular tabs or in throwaway containers
+. After you close and reopen the app, WebLibre clears whatever data types you selected in Incognito Mode
+
+This gives you the convenience of saved logins where it matters, with the privacy of auto-clearing everywhere else.
+
+[NOTE]
+====
+If you include **Cookies and site data** in Incognito Mode, regular sites will usually sign you out on restart.
+Container **Clear Data on Exit** is separate and only affects that container's cookies and site data.
+====
+
+== Log Into Multiple Accounts on the Same Site
+
+You have two (or more) accounts on a website and want to use them simultaneously.
+
+**Option 1: Containers**
+
+. Create a container for each account (e.g., "Work Email", "Personal Email")
+. Turn on **Cookie Isolation** in each container
+. Open the site in each container
+. Log into different accounts in each
+. Each container keeps its own cookies and login state
+
+**Option 2: Isolated Tabs**
+
+. Open an xref:tabs/tab-management.adoc#_isolated[isolated tab]
+. Log into account A
+. Open another isolated tab
+. Log into account B
+. Each tab has its own session
+
+Isolated tabs are faster for one-time use.
+Containers are better if you do this regularly or want site assignments.
+
+== Summary
+
+[cols="1,2"]
+|===
+|Goal |Key Features
+
+|Anonymous browsing
+|Tor, Resist Fingerprinting, Containers or Isolated Tabs
+
+|Work/Personal separation
+|Containers, Profiles
+
+|Sensitive research
+|Tor-enabled container, Resist Fingerprinting, Isolated Tabs
+
+|Family device sharing
+|Profiles, App Lock
+
+|Shopping privacy
+|Shopping container, Clear Data on Exit
+
+|Algorithm-free news
+|RSS Web Feeds
+
+|Selective login persistence
+|Containers + Incognito Mode
+
+|Multiple accounts
+|Containers or Isolated Tabs
+|===

@@ -1,0 +1,224 @@
+= Who You're Protecting Against
+:description: A practical guide to common privacy threats and which WebLibre features help with each one.
+
+Privacy features solve different problems.
+Some hide what your network can see, some reduce tracking by websites, and some protect data stored on your phone.
+
+This page helps you match the threat to the tool.
+It is not about maximum privacy at all times. It is about using the right protection for the situation you are actually in.
+
+== Start Here
+
+Ask yourself which of these sounds most like your concern:
+
+* *My internet provider or Wi-Fi network can see where I connect*
+* *Websites and advertisers follow me across sites*
+* *Someone might pick up my phone and open the browser*
+* *I need to browse more privately on a hostile or censored network*
+
+You may care about more than one.
+That is normal.
+
+== Your Internet Provider Or Local Network
+
+Your internet provider, employer network, or public Wi-Fi operator can often see which domains you connect to.
+If a site uses insecure HTTP, they may also be able to read or modify the traffic itself.
+
+What helps:
+
+* xref:privacy/dns-over-https.adoc[DNS over HTTPS] -- encrypts the site-name lookups your browser makes
+* xref:privacy/https-only.adoc[HTTPS-Only Mode] -- in the app this appears as *Block insecure HTTP connections* and helps keep traffic encrypted
+* xref:tor.adoc[Tor Integration] -- hides your destinations from the network by routing traffic through Tor
+
+What to expect:
+
+* DNS over HTTPS helps with DNS lookups, but it does not make you anonymous
+* *Block insecure HTTP connections* protects against plain HTTP, not against tracking by the site you visit
+* Tor gives much stronger network privacy, but it is slower
+
+Best fit: everyday privacy from your ISP or safer browsing on networks you do not trust.
+
+== Websites, Trackers, And Ad Networks
+
+Websites can track you directly.
+Advertising and analytics companies can also follow you across many different sites using cookies, embedded scripts, redirect links, and browser fingerprinting.
+
+What helps:
+
+* xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection] -- blocks many known trackers, tracking cookies, cryptominers, and known fingerprinters
+* xref:privacy/tracking-protection.adoc#_query_parameter_stripping[Query Parameter Stripping] -- removes many link-based identifiers such as `fbclid` and `gclid`
+* xref:privacy/fingerprint-protection.adoc[Fingerprint Protection] -- reduces how uniquely your browser stands out
+* xref:tabs/containers.adoc[Containers] -- with *Cookie Isolation* enabled, keeps site data separate between activities such as social media, shopping, and work
+* `uBlock Origin` -- optional extension that can block many ads and page elements more aggressively
+
+What to expect:
+
+* Tracking protection reduces tracking, but it does not stop a site from knowing who you are if you sign in
+* Containers help separate identities when *Cookie Isolation* is enabled, but they do not hide your network connection from your ISP
+* Stronger fingerprint protections can break some sites
+
+Best fit: reducing cross-site profiling, personalized ads, and unwanted tracking by large ad networks.
+
+== Someone With Your Phone
+
+If someone can physically use your phone, network privacy features do not help much.
+The main risk is local access to tabs, history, cookies, and signed-in sessions.
+
+What helps:
+
+* xref:app-lock.adoc[App Lock] -- in current WebLibre builds this is configured per profile through *Require Authentication*
+* xref:profiles.adoc[Profiles] -- keeps different people or contexts in separate browser spaces
+* xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode] -- clears selected browser data after you close and reopen the app
+* xref:privacy/data-management.adoc[Delete Browsing Data and auto-clear tools] -- useful if you want less data left on the device
+
+What to expect:
+
+* Profile locking depends on device authentication being available on your phone
+* Incognito Mode in WebLibre is a browser-wide cleanup feature, not a separate private-tab mode
+* If someone unlocks the same profile you use, they can still see whatever that profile keeps
+
+Best fit: shared devices, travel, or any situation where someone else may handle your phone.
+
+== Public Wi-Fi Operators
+
+Coffee shops, hotels, airports, and other hotspot operators can observe network traffic that passes through their connection.
+Their visibility is similar to your ISP's, and the risk is often higher on older or poorly managed networks.
+
+What helps:
+
+* xref:privacy/dns-over-https.adoc[DNS over HTTPS]
+* xref:privacy/https-only.adoc[Block insecure HTTP connections]
+* xref:tor.adoc[Tor Integration]
+
+Best fit: browsing on networks you do not control.
+
+== Censorship Or Stronger Surveillance
+
+In higher-risk situations, the goal is not just reducing ads or trackers.
+It is making it harder to connect your browsing to you, and in some places, getting connected at all.
+
+What helps:
+
+* xref:tor.adoc[Tor Integration] -- hides your network destination and IP address from the site you visit
+* Tor bridge transports such as `obfs4` or `Snowflake` -- useful when direct Tor connections are blocked
+* *Auto Configure Transport* in Tor settings -- lets WebLibre choose a transport automatically when needed
+* xref:privacy/fingerprint-protection.adoc[Resist Fingerprinting] -- makes browser-based identification harder
+
+What to expect:
+
+* Tor is slower and some sites block Tor exits
+* If you log in to your normal accounts, those accounts can still identify you
+* Fingerprint protection helps, but it does not make you invisible against a strong attacker by itself
+
+Best fit: sensitive research, hostile networks, or places where Tor access may need bridge transports.
+
+== Data Brokers And Search Providers
+
+Some companies build profiles by combining browsing signals, ad-tech data, and search activity.
+The goal here is to leak less information over time.
+
+What helps:
+
+* xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection and related tracking defenses]
+* xref:privacy/tracking-protection.adoc#_query_parameter_stripping[Query Parameter Stripping]
+* xref:search/local-search.adoc[Personal Local Search Engine] -- address-bar results for your own tabs, bookmarks, feeds, and history stay on your device
+
+What to expect:
+
+* Local search is private because it is on-device, but web searches still go to the search engine you choose
+* If you enable external search suggestions, those suggestions use outside providers
+
+Best fit: shrinking your overall data trail, especially during normal day-to-day browsing.
+
+== Feature Guide
+
+[cols="2,1,1,1,1"]
+|===
+|Feature |Network privacy |Tracker reduction |On-device privacy |Trade-off
+
+|DNS over HTTPS
+|Strong for DNS lookups
+|Low
+|None
+|Relies on a DNS provider
+
+|Block insecure HTTP connections
+|Strong against plain HTTP
+|Low
+|None
+|Some old sites may fail
+
+|Enhanced Tracking Protection
+|None
+|Strong
+|None
+|Some sites may break in *Strict*
+
+|Fingerprint Protection
+|None
+|Medium to strong
+|None
+|Compatibility issues on some sites
+
+|Containers
+|None
+|Medium
+|Low
+|Needs setup and habits
+
+|Profiles with *Require Authentication*
+|None
+|None
+|Strong
+|Depends on device authentication
+
+|Incognito Mode
+|None
+|None
+|Medium to strong
+|Signs you out or clears tabs, depending on what you choose
+
+|Tor Integration
+|Strong
+|Low by itself
+|None
+|Much slower; some sites block it
+|===
+
+== Practical Setups
+
+=== Most People
+
+Start with:
+
+* xref:privacy/dns-over-https.adoc[DNS over HTTPS]
+* xref:privacy/https-only.adoc[Block insecure HTTP connections]
+* xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection] on *Strict* unless a site breaks
+* `uBlock Origin` if you want stronger ad blocking
+
+=== You Want Less Tracking Without Major Hassle
+
+Add:
+
+* xref:privacy/fingerprint-protection.adoc[Resist Fingerprinting] if the sites you use still work well
+* xref:tabs/containers.adoc[Containers] for things like social, shopping, work, or banking
+* xref:privacy/tracking-protection.adoc#_query_parameter_stripping[Query Parameter Stripping] left enabled
+
+=== You Need Stronger Local Privacy On Your Phone
+
+Add:
+
+* xref:profiles.adoc[Profiles] for separate browsing spaces
+* xref:app-lock.adoc[Require Authentication] on sensitive profiles
+* xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode] or other auto-clear settings if you do not want browsing data left behind
+
+=== You Need Stronger Network Anonymity
+
+Add:
+
+* xref:tor.adoc[Tor Integration] for the browsing that truly needs it
+* *Request New Identity* when you want a fresh Tor circuit
+* `obfs4`, `Snowflake`, or *Auto Configure Transport* if Tor is blocked where you are
+
+Choose the smallest set of protections that matches your real risk.
+More protection can mean more friction, slower browsing, or more site breakage.

@@ -1,0 +1,177 @@
+= Tor Integration
+:description: How to use WebLibre's built-in Tor proxy for more private browsing.
+
+WebLibre includes a built-in Tor proxy, so you do not need a separate Tor app just to get started.
+
+You can use it in two ways:
+
+* for all regular tabs
+* only for selected xref:tabs/containers.adoc[containers]
+
+That makes it practical to keep everyday browsing fast while sending more sensitive browsing through Tor.
+
+== What Tor Does
+
+Tor sends your connection through multiple relays before it reaches a website.
+
+----
+Your device -> Tor relay -> Tor relay -> Tor relay -> website
+----
+
+This helps hide your IP address from the website you visit.
+It also makes it harder for your network provider or people on the same Wi-Fi network to see exactly which sites you are opening.
+
+Tor helps most when you want to separate your browsing from your home, work, or mobile network identity.
+
+== What Tor Does Not Do
+
+Tor is useful, but it is not magic.
+
+* If you sign in to your normal accounts, those services still know it is you.
+* Websites can still try to identify you using browser fingerprinting.
+* Some websites block or challenge Tor exits.
+* Tor does not make unsafe downloads or unsafe websites safe.
+
+For better privacy, combine Tor with WebLibre's xref:privacy/fingerprint-protection.adoc[Fingerprint Protection] and browse without logging into personal accounts when possible.
+
+== Open Tor Settings
+
+In WebLibre, open the browser menu and tap *Tor(TM) Proxy*.
+
+The main switch on that screen is *Tor(TM) Service*.
+Turn it on to start Tor.
+
+While Tor is connecting, WebLibre shows a progress bar.
+The first connection may take a little longer than later reconnects.
+
+== Choose How Tabs Use Tor
+
+The *Routing* section controls which tabs go through Tor.
+
+=== Container-Based Routing
+
+*Container-Based Routing* sends only tabs in containers that have both *Cookie Isolation* and *Use Tor(TM) Proxy* enabled through Tor.
+
+This is the most flexible option if you want a mix of normal browsing and Tor browsing in one app.
+
+Example:
+
+* your everyday container uses a normal connection
+* a research container with *Cookie Isolation* uses Tor
+* a shopping container uses a normal connection
+
+If you do not see container options in the app, enable *Show Container UI* in browsing settings first.
+
+=== Global Routing
+
+*Global Routing* sends all regular tabs through Tor.
+
+This is simpler, but usually slower than routing only selected containers.
+
+=== Proxy Private Tabs
+
+Turn on *Proxy Private Tabs* if you want all private tabs to use Tor too.
+
+Private tabs and Tor are different features:
+
+* private tabs mainly limit what is kept locally on your device
+* Tor changes how your traffic leaves the app
+
+Using both together can be useful, but one does not replace the other.
+
+== Use Tor With Containers
+
+To route only one container through Tor:
+
+. Open your containers
+. Create a new container and turn on *Cookie Isolation*, or open one that already has *Cookie Isolation*
+. Turn on *Use Tor(TM) Proxy*
+. Keep *Container-Based Routing* selected in *Tor(TM) Proxy*
+
+If you select a Tor-enabled container while Tor is not already running, WebLibre can prompt you to enable it.
+
+== Connection Options
+
+The *Circumvention* section is for places or networks where Tor is harder to connect.
+
+=== Auto Configure Transport
+
+*Auto Configure Transport* lets WebLibre automatically choose a transport when needed.
+
+If you know your network blocks normal Tor connections, you can also enable *I'm sure I cannot connect without a bridge*.
+
+This is the safest starting point if Tor will not connect and you are not sure which option to pick.
+
+=== Manual Options
+
+If you turn off *Auto Configure Transport*, WebLibre shows manual choices:
+
+* *Direct Connection* - best when Tor is not blocked
+* *obfs4* - for lighter censorship and better bandwidth
+* *Snowflake* - for heavier censorship
+
+You can also enable *Fetch fresh Bridges before connecting* when using bridge-based options.
+
+NOTE: These options help Tor connect. They do not guarantee that every network or country restriction can be bypassed.
+
+== Country Restrictions
+
+You can optionally set *Entry Country* and *Exit Country*.
+
+* *Entry Country* chooses where your traffic enters the Tor network.
+* *Exit Country* chooses where websites see your traffic coming from.
+
+Leaving both on *Automatic* is usually the best choice for reliability.
+
+Restricting countries reduces the number of relays Tor can use, which can make connections slower or less reliable.
+
+Also, choosing an exit country does not guarantee access to region-locked services, and many such services block Tor traffic altogether.
+
+=== Using the Country Picker
+
+When you change *Entry Country* or *Exit Country*, WebLibre opens a searchable picker.
+
+The picker includes:
+
+* **Automatic** if you do not want to force a country
+* country names
+* country flags where available
+
+Search the picker when you already know the country you want.
+Leave it on **Automatic** if reliability matters more than location control.
+
+== Request New Identity
+
+When Tor is connected, you can tap *Request New Identity*.
+
+This asks Tor for a new circuit, which may give you a different exit IP address.
+
+Use it when:
+
+* a site is blocking your current Tor exit
+* you want to reduce linkability between one Tor session and the next
+
+It is helpful, but it is not a full reset of every website session by itself.
+
+== What to Expect
+
+Tor is usually slower than a normal connection.
+
+You may notice:
+
+* slower page loads
+* more CAPTCHAs or site challenges
+* video streaming that buffers more often
+* large downloads taking much longer
+
+That tradeoff is normal.
+For most people, Tor works best for browsing that needs extra privacy, not for everything all the time.
+
+== Practical Tips
+
+* Prefer HTTPS websites whenever possible.
+* Avoid signing in to personal accounts if you want anonymity from that service.
+* Use *Container-Based Routing* if only some browsing needs Tor.
+* Combine Tor with xref:privacy/fingerprint-protection.adoc[Fingerprint Protection] for better privacy.
+* If Tor will not connect, try *Auto Configure Transport* first.
+* If a site breaks on Tor, try *Request New Identity* or open that site outside Tor.

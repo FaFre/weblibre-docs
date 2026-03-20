@@ -1,0 +1,61 @@
+= App Lock
+:description: How to lock a WebLibre profile with your device's authentication.
+
+WebLibre can lock a profile so someone using your phone cannot open that profile without authenticating first.
+This is useful if you share a device or want extra protection for a sensitive profile.
+
+NOTE: In the current app, this protection is configured per profile, not as one global browser-wide setting.
+
+== Turn It On
+
+. Open the profile manager in WebLibre.
+. Open the profile you want to protect.
+. In the **Authentication** section, turn on **Require Authentication**.
+. Choose an **Auto-lock Behavior**.
+. If you choose **Lock After Timeout**, also choose a **Timeout Duration**.
+
+WebLibre then uses your phone's built-in authentication when that profile is locked.
+
+== Available Options
+
+=== Require Authentication
+
+Turning on **Require Authentication** adds a lock to that profile.
+When the profile is locked, WebLibre shows a lock screen instead of your browsing data.
+
+=== Auto-lock Behavior
+
+WebLibre offers two lock modes:
+
+* **Lock on Background** -- locks as soon as WebLibre goes into the background, such as when you switch apps or return to the home screen.
+* **Lock After Timeout** -- keeps the profile unlocked for a limited time, then locks it after the selected timeout expires.
+
+If you switch in and out of WebLibre often, **Lock After Timeout** is usually more convenient.
+If you want the strongest protection, use **Lock on Background**.
+
+=== Timeout Duration
+
+If you use **Lock After Timeout**, the available timeout choices are:
+
+* 1 minute
+* 5 minutes
+* 15 minutes
+* 1 hour
+
+The default timeout is 5 minutes.
+
+== What To Expect
+
+When a protected profile is locked, WebLibre shows **Profile is locked** with an **Unlock** button.
+The app may also try to start authentication automatically when that screen appears.
+
+Authentication uses the method your device offers for secure unlock, such as fingerprint, face unlock, or another system-approved screen lock method.
+WebLibre does not create a separate password for this feature.
+
+== Important Notes
+
+* This feature protects the selected xref:profiles.adoc[profile], not every profile at once
+* Each profile has its own authentication setting
+* Protected xref:tabs/containers.adoc[containers] are a separate feature and can be locked independently
+* If you switch to a different profile, WebLibre restarts into that profile; if that profile is protected, you will need to unlock it before use
+* You need device authentication set up on your phone for this feature to be useful

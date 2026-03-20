@@ -1,0 +1,152 @@
+= Bookmarks
+:description: How to save, organize, import, export, and manage bookmarks in WebLibre.
+
+Bookmarks let you save pages you want to return to later without keeping them open as tabs.
+In WebLibre, the bookmark manager is more than a flat list.
+It supports folders, search, sorting, import and export, and actions on multiple bookmarks at once.
+
+== Open Bookmarks
+
+You can open the bookmark manager from the browser menu:
+
+. Open the browser menu
+. Tap **Bookmarks**
+
+This opens the main bookmark tree.
+From there, you can browse folders, search, sort entries, and manage saved pages.
+
+== Bookmark the Current Page
+
+If you want to save the page you are currently viewing:
+
+. Open the browser menu
+. Tap **Add Bookmark**
+
+WebLibre then saves the page as a bookmark.
+If you want to move it later, you can do that from the bookmark manager.
+
+== How Bookmarks Are Organized
+
+WebLibre stores bookmarks in a tree.
+That means you can keep simple flat lists, or build folders and subfolders when you want more structure.
+
+Common ways to organize them:
+
+* one folder for reading later
+* one folder for work or school
+* separate folders for shopping, travel, research, or projects
+
+Inside the bookmark manager, you can:
+
+* open folders
+* add subfolders
+* add bookmarks inside a folder
+* move bookmarks or folders to another folder
+* rename or edit entries
+* delete entries you no longer need
+
+== Search, Visibility, and Sort
+
+The bookmark manager includes tools that help when your saved pages start to grow:
+
+* **Filter bookmarks** lets you search by title or address
+* **Folders Only** hides bookmark entries and shows only the folder structure
+* **Hide Empty Folders** can reduce clutter in the main tree
+* **Sort** can use **Default**, **Title A-Z**, **Title Z-A**, **URL A-Z**, **URL Z-A**, **Newest First**, or **Oldest First**
+
+This is useful when you want to quickly clean up old bookmarks, find a saved site by name, or review the newest items you added.
+
+== Bookmark Actions
+
+Open the menu for a bookmark entry to use actions such as:
+
+* **Open**
+* **Open in New Tab**
+* **Open in Background**
+* **Share**
+* **Move**
+* **Edit**
+* **Delete**
+
+For folders, WebLibre can also show actions such as:
+
+* **Add Subfolder**
+* **Add Bookmark**
+* **Move**
+* **Edit**
+* **Delete**
+
+If a folder contains other folders and bookmarks, WebLibre may also offer **Flatten** to move its contents up one level.
+
+== Select Multiple Bookmarks
+
+If you long-press a bookmark or folder, WebLibre enters selection mode.
+
+That lets you work with multiple items at once, such as:
+
+* opening several bookmark entries in background tabs
+* moving several items into another folder
+* deleting several items together
+
+This is helpful when cleaning up imported bookmarks or reorganizing a large folder.
+
+== Import Bookmarks
+
+WebLibre can import bookmarks from:
+
+* **HTML**
+* **JSON**
+
+To import:
+
+. Open **Bookmarks**
+. Open the menu in the top app bar
+. Choose **Import**
+. Select **HTML** or **JSON**
+. Pick the file from your device
+. Choose whether to **Merge** with existing bookmarks or **Replace** them
+
+Use **Merge** when you want to keep your current bookmarks and add the imported ones.
+Use **Replace** when you want to erase your current bookmarks first and start from the imported set.
+
+If you are moving from another browser, xref:migration.adoc[Switching from Another Browser] explains the HTML import path in more detail.
+
+== Export Bookmarks
+
+WebLibre can also export bookmarks as:
+
+* **HTML**
+* **JSON**
+
+To export:
+
+. Open **Bookmarks**
+. Open the menu in the top app bar
+. Choose **Export**
+. Select **HTML** or **JSON**
+. Choose where to save the file
+
+HTML export is useful when moving bookmarks to another browser.
+JSON export is more useful as a structured backup or for tools that expect WebLibre's own bookmark data format.
+
+== Bookmark All Open Tabs
+
+If you want to save many open tabs at once:
+
+. Open the tab view
+. Open the tab view menu
+. Tap **Bookmark all**
+
+WebLibre offers two approaches:
+
+* **Fast** -- choose a destination folder and save the tabs there right away
+* **Detailed** -- review the bookmark data one tab at a time before saving
+
+This is useful after a research session, a shopping comparison, or a long reading session you want to revisit later.
+
+== Tips
+
+* Use folders if you regularly save bookmarks for different kinds of work or browsing
+* Use **Newest First** after an import to quickly review what was added
+* Use **Open in Background** when you want to reopen a saved set without losing your current page
+* Use xref:search/local-search.adoc[Local Search in the Address Bar] when you want to find bookmarks without opening the bookmark manager first

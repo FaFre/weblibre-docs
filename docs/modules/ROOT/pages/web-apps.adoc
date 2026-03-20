@@ -1,0 +1,64 @@
+= Web Apps (PWA)
+:description: How to add supported websites to your Android home screen in WebLibre.
+
+Some websites can work more like apps on your phone. These are often called Progressive Web Apps, or PWAs.
+
+In WebLibre, supported sites can be added to your Android home screen so you can open them more like a separate app.
+
+== What a Web App Is
+
+A web app is still a website, but it is built to feel more app-like.
+When you open it from your home screen, it can launch in its own app-style window instead of a normal browser tab.
+
+This can be useful for things like messaging services, calendars, music players, maps, or other sites you open often.
+
+== Add a Site to Your Home Screen
+
+WebLibre only shows the install option when the current site supports it.
+
+. Open the website you want to install
+. Open the browser menu for the current tab
+. Tap *Add to Home Screen*
+. In the confirmation dialog, tap *Add*
+
+After that, Android adds a shortcut for the site to your home screen.
+
+== What to Expect After Installing
+
+* The site gets its own home screen shortcut and icon when the site provides one
+* Opening it from the shortcut can feel more like opening an app than reopening a normal tab
+* It is still the website, so its content and features come from the site itself
+
+== When the Option Appears
+
+Not every website can be installed.
+
+In practice, the site needs to meet web app requirements such as:
+
+* using a secure connection (`https://`)
+* providing the information needed for installation
+* supporting an app-style display mode
+
+WebLibre checks this automatically.
+If you do not see *Add to Home Screen*, that site probably does not currently support installation in a compatible way.
+
+== Web Apps and Containers
+
+If you install a web app from a tab that is inside a xref:tabs/containers.adoc[container] with *Cookie Isolation* enabled, the installed web app keeps that isolated browsing context.
+That means its cookies and site data stay separated just like regular tabs from that same cookie-isolated container.
+
+== Web Apps and Profiles
+
+Installed web apps also stay tied to the profile they came from.
+
+In practice, that means a web app shortcut can reopen with the same broader browsing context, not only the same site.
+This is useful if you use xref:profiles.adoc[profiles] to separate work, personal, or shared-device browsing.
+
+Taken together, profile context and container context help the installed web app behave more like a continuation of the original tab you installed it from.
+
+== Tips
+
+* If the site changes later, the shortcut still opens the live website, not a separate downloaded app
+* To remove a web app, delete its shortcut from Android the same way you remove other home screen shortcuts
+* Site permissions you allow still depend on the website and Android, just like when you use the site in the browser
+* If you care about separation, install the web app from the right profile and container the first time

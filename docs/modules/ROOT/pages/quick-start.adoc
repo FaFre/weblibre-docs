@@ -1,0 +1,118 @@
+= Privacy Setup
+:description: Check the most important privacy settings in WebLibre and set up a practical everyday browsing setup.
+
+New to WebLibre?
+This page helps you confirm the most useful privacy features, install one recommended extension, and create a simple browsing setup you can keep using every day.
+
+NOTE: Many privacy protections are already enabled by default in WebLibre, including DNS over HTTPS and blocking insecure HTTP connections. If you chose *Quick Start* during first launch, *uBlock Origin* is also installed automatically.
+
+== Step 1: Check DNS over HTTPS
+
+DNS is the system that looks up website addresses.
+Without DNS over HTTPS, those lookups may be visible to your internet provider, local network, or public Wi-Fi operator.
+
+. Go to **Settings > Privacy & Security > DNS over HTTPS**
+. Make sure DNS over HTTPS is still on
+. If you want to choose a provider yourself, review the built-in options or enter a custom resolver
+
+For most people, the default protection level is a sensible choice.
+You usually only need to change it if a network blocks external DNS services or you know you want stricter behavior.
+
+== Step 2: Check Block Insecure HTTP Connections
+
+This setting makes WebLibre prefer encrypted website connections.
+In the app, this appears as **Block insecure HTTP connections**.
+
+. Go to **Settings > Privacy & Security**
+. Find **Block insecure HTTP connections**
+. Make sure it is set to **Enabled**
+
+Most modern sites already use HTTPS, so you may never notice this setting until it protects you from an older insecure page.
+
+== Step 3: Check your content blocker
+
+A trusted content blocker helps block ads, trackers, and other unwanted page elements.
+For many users, this is the biggest day-to-day quality-of-life improvement.
+
+. Go to **Settings > Extensions**
+. Check whether your preferred content blocker is already installed
+. If it is not, install one
+
+If you used *Quick Start* during setup, this step may already be done with *uBlock Origin*.
+
+== Step 4: Create Your First Container
+
+Containers help organize browsing by activity.
+If you also turn on *Cookie Isolation* while creating the container, that container gets its own cookies, logins, and site data too.
+This is useful when you want shopping, work, social media, or banking to stay apart.
+
+. Open the tab overview
+. Tap the option to create a new container
+. Give it a name such as *Shopping* or *Work*
+. Pick a color and icon
+. Turn on *Cookie Isolation* if you want that container to keep a separate login state
+. Save the container
+
+Start simple.
+One or two containers are enough to feel the benefit right away.
+
+Learn more: xref:tabs/containers.adoc[Containers]
+
+== Step 5: Add Tor to One Container (Optional)
+
+Tor is useful when you want stronger network privacy for a specific kind of browsing.
+It is much slower than a normal connection, so it is usually best to keep it for the tabs that really need it.
+
+. Open **Settings** or the browser menu and go to **Tor**
+. Turn on **Tor™ Service**
+. Wait for the connection to finish bootstrapping
+. Create a container for sensitive browsing and turn on **Cookie Isolation**, or use one that already has **Cookie Isolation**
+. Turn on **Use Tor™ Proxy** for that container
+
+This gives you a practical split: regular browsing stays fast, while one container uses Tor when needed.
+
+Learn more: xref:tor.adoc[Tor Integration]
+
+== Done
+
+After these steps, you have:
+
+* encrypted DNS lookups
+* protection against insecure HTTP pages
+* stronger ad and tracker blocking with a content blocker
+* container-based organization for different activities
+* optional cookie-isolated browsing contexts for activities that need separate logins
+* optional Tor routing for one cookie-isolated container
+
+This is a strong, practical everyday setup without changing advanced settings.
+
+== What's Next
+
+When you are ready, these pages are useful next steps:
+
+* **xref:privacy/overview.adoc[Privacy & Security Overview]** -- understand what WebLibre already protects by default
+* **xref:search/local-search.adoc[Local Search]** -- search your tabs, bookmarks, and history privately on your device
+* **xref:search/bangs.adoc[Bang Providers]** -- send searches straight to specific websites from the address bar
+* **xref:firefox-sync.adoc[Sync]** -- sync bookmarks, tabs, and more with your other devices
+
+== Quick Checklist
+
+[cols="1,1"]
+|===
+|Setting or feature |Where to find it
+
+|DNS over HTTPS
+|**Settings > Privacy & Security**
+
+|Block insecure HTTP connections
+|**Settings > Privacy & Security**
+
+|Content blocker
+|**Settings > Extensions**
+
+|First container
+|Tab overview
+
+|Tor for one container (optional)
+|**Tor** plus the container's **Use Tor™ Proxy** option
+|===

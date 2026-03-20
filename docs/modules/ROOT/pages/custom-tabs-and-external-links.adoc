@@ -1,0 +1,105 @@
+= Custom Tabs & External Links
+:description: How WebLibre handles links from other apps, links to other apps, and custom-tab style browsing.
+
+WebLibre can sit in the middle of several Android link flows:
+
+* another app sends a link into WebLibre
+* a link inside WebLibre could open a native app instead
+* WebLibre is used as a lightweight browser overlay
+
+These are related, but they are not the same setting.
+
+== Links Sent To WebLibre
+
+When another Android app sends a link to WebLibre, **External Link Handling** decides how that link opens.
+
+You can set it in **Settings > Browsing > External Link Handling**.
+
+The choices are:
+
+* **Prompt** -- ask each time
+* **Regular** -- always open in a regular tab
+* **Private** -- always open in a private tab
+
+This is useful for links that come from messaging apps, email apps, social apps, or Android share targets.
+
+== Links That Could Open Another App
+
+Some links inside WebLibre match apps already installed on your device, such as maps, video apps, shopping apps, or social apps.
+
+The **Open Links in Apps** setting controls that behavior.
+
+Find it in **Settings > Browsing > Open Links in Apps**.
+
+The choices are:
+
+* **Always** -- open the matching app without asking
+* **Ask before opening** -- show a prompt first
+* **Never** -- stay inside WebLibre
+
+Choose **Never** if you want WebLibre to stay in control.
+Choose **Always** if you usually prefer the dedicated app.
+
+== Open in App
+
+WebLibre also exposes **Open in App** as an explicit action in places such as:
+
+* context menus on links
+* the open-link sheet for shared or detected links
+* sharing or page actions when relevant
+
+This is useful when your default preference is to stay in WebLibre, but a specific link makes more sense in its native app.
+
+== Open in Custom Tab
+
+In current WebLibre builds, shared or externally opened links can also offer **Open in custom tab**.
+
+A custom tab is a lighter browser window meant for short visits.
+It is useful when you want to:
+
+* check one page without fully moving into your main tab workflow
+* keep the visit feeling tied to the app that launched it
+* return quickly after reading or confirming something
+
+WebLibre can also offer a private variant of that custom-tab flow where supported.
+
+== When WebLibre Is Used as a Lightweight Browser
+
+Some Android apps can open links in WebLibre as a custom-tab style overlay instead of sending you to the full browser experience.
+
+In practice, that usually means:
+
+* a simpler browser surface
+* a close button to return to the calling app
+* less context switching than opening a full browser session
+
+This is useful for one-off reads, sign-in confirmations, or checking a page without leaving the original app for long.
+
+== Which Setting Matters When
+
+Use this rule of thumb:
+
+* **External Link Handling** -- a link is coming *into* WebLibre from another app
+* **Open Links in Apps** -- a link inside WebLibre might leave the browser for another app
+* **Open in App** -- one-time manual action for a specific link
+* **Open in custom tab** -- one-time action for a lighter browser window
+
+== Practical Examples
+
+"I tap a link in a messenger app and want WebLibre to ask me each time"::
+Use **Settings > Browsing > External Link Handling > Prompt**.
+
+"I want map links to keep opening in the browser instead of the Maps app"::
+Use **Settings > Browsing > Open Links in Apps > Never**.
+
+"I usually stay in WebLibre, but this one video should open in the video app"::
+Use **Open in App** for that specific link.
+
+"I only need a temporary browser window and want to return quickly"::
+Use **Open in custom tab** when WebLibre offers it.
+
+== Related Pages
+
+* xref:customization/browsing.adoc[Browsing Behavior]
+* xref:context-menu.adoc[Context Menu]
+* xref:site-controls.adoc[Site Controls]

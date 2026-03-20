@@ -1,0 +1,85 @@
+= DNS over HTTPS
+:description: How to encrypt your DNS lookups in WebLibre.
+
+== What Is DNS?
+
+When you type a website address like `example.com`, your device first needs to find the server address for that site.
+That lookup is done through the Domain Name System (DNS).
+
+Without DNS over HTTPS, those DNS lookups may be visible to your internet provider, your local network, or a public Wi-Fi operator -- even when the website itself uses HTTPS.
+
+== What Does DNS over HTTPS Do?
+
+DNS over HTTPS (DoH) encrypts your DNS lookups.
+Instead of sending them in plain text, WebLibre sends them over an encrypted HTTPS connection to the DNS provider you choose.
+
+This means:
+
+* People on the same network have a harder time seeing which site names you look up
+* Your DNS requests are harder to intercept or tamper with
+* Your selected DoH provider handles those DNS lookups instead of your network's default resolver
+
+DoH improves privacy for DNS lookups, but it does not make browsing anonymous.
+Websites you visit can still see your connection, and the DoH provider can still see the DNS requests it handles.
+
+== Protection Levels
+
+WebLibre lets you choose a *Protection Level*:
+
+* *Default Protection* -- DoH used only when default DNS fails
+* *Increased Protection* -- DoH preferred, default DNS as fallback
+* *Max Protection* -- DoH only, no fallback
+* *Off* -- Use your default DNS resolver
+
+If you are unsure which to use, *Increased Protection* is the current default and is a practical starting point for most people.
+
+== Built-In Providers
+
+WebLibre includes several built-in providers under *DoH Provider*:
+
+[cols="1,2"]
+|===
+|Provider |Description
+
+|**Quad9**
+|Non-profit DNS service focused on security and privacy. Blocks known malicious domains.
+
+|**Mullvad**
+|From the makers of Mullvad VPN. Strong privacy focus.
+
+|**AdGuard**
+|Includes ad and tracker blocking at the DNS level.
+
+|**Freifunk Muenchen**
+|Community-operated DNS service based in Germany.
+|===
+
+You can also enter a *Custom Resolver URL* if you use another compatible DoH service.
+
+== How to Configure
+
+. Go to **Settings > Privacy & Security > DNS over HTTPS**
+. Choose a *Protection Level*
+. Choose a *DoH Provider*
+. Optional: enter a *Custom Resolver URL* instead of a built-in provider
+
+DoH is also offered during the xref:getting-started.adoc[onboarding wizard] when you first set up WebLibre.
+
+== What To Expect
+
+After you turn DoH on, most browsing should keep working normally.
+
+You may notice differences if:
+
+* your chosen provider blocks malicious, ad, or tracking domains
+* your network interferes with external DNS services
+* the custom resolver URL you entered is unavailable or incorrect
+
+== Troubleshooting
+
+If a website stops loading after you enable DoH, try these steps:
+
+* Try a different provider
+* Switch from *Max Protection* to *Increased Protection* to allow fallback
+* Check any *Custom Resolver URL* for typing mistakes
+* Temporarily turn DoH *Off* to confirm whether it is the cause

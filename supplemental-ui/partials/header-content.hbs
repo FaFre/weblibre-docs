@@ -1,0 +1,41 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item brand-home" href="{{{or site.url siteRootPath}}}">
+        <span class="navbar-brand-mark">
+          <img src="{{{uiRootPath}}}/img/weblibre-logo.svg" alt="" aria-hidden="true">
+        </span>
+        <span class="navbar-brand-lockup">
+          <span class="navbar-brand-title">{{site.title}}</span>
+          <span class="navbar-brand-subtitle">Documentation</span>
+        </span>
+      </a>
+      {{#if env.SITE_SEARCH_PROVIDER}}
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search docs"{{#if page.home}} autofocus{{/if}}>
+        </div>
+      </div>
+      {{/if}}
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/FaFre/WebLibre" target="_blank" rel="noopener">GitHub</a>
+        <a class="navbar-item" href="https://feedback.weblibre.eu" target="_blank" rel="noopener">Feedback</a>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="{{{relativize (or (resolvePageURL 'index.adoc') (resolvePageURL 'index.adoc' component='weblibre' module='ROOT'))}}}#where-to-get-weblibre">Get WebLibre</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="doc-stage-banner" role="note" aria-label="Documentation status notice" style="background: #f3efe2; border-top: 1px solid #d9cfab; border-bottom: 1px solid #d9cfab; color: #4f431b; font-size: 0.95rem; line-height: 1.45; padding: 0.75rem 1rem; text-align: center;">
+    <strong>Preview:</strong> These docs are available early so you can start using them now. Some pages may still be incomplete, outdated, or change as WebLibre develops.
+  </div>
+</header>

@@ -1,0 +1,102 @@
+= Tree View Navigation
+:description: How to use WebLibre's Tree view to follow how tabs are related.
+
+Tree view helps you understand how your tabs are connected.
+Instead of one long flat list, WebLibre groups related tabs into trees so you can see which page led to which.
+
+It is especially useful when you are researching, comparison shopping, or following links through several pages.
+
+== Open Tree View
+
+. Open the tab overview by tapping the tab count.
+. Open the view menu.
+. Choose **Tree**.
+
+NOTE: Tree view is for local tabs. When you are viewing synced tabs from another device, WebLibre uses list view instead.
+
+== What Tree View Shows
+
+Each top-level card represents one tab tree.
+If a tree contains more than one tab, WebLibre shows a count badge on the card.
+
+Tap a stacked tree card to open the full tree and inspect the relationship between tabs.
+This makes it easier to answer questions like:
+
+* How did I get here?
+* Which tabs belong to the same browsing session?
+* Can I close this whole group now?
+
+== How Tabs Become Related
+
+WebLibre can remember parent-child relationships between tabs when a new tab is opened from the current tab.
+For example, if you open a link in a new tab, the new tab can appear under the page you opened it from.
+
+That means a session can look like this:
+
+----
+Reference Article: Climate Change
+  ├── Agency Overview Page
+  ├── News Article: Recent Study
+  │     └── Related: Author Interview
+  └── Scientific Paper PDF
+        └── Citation: Earlier Study
+              └── Research Group Page
+----
+
+In Tree view, you can quickly see the path that led to the last page.
+
+== Create Child Tabs Setting
+
+If you want a manual way to start a child tab from the current tab, enable **Create Child Tabs**:
+
+. Go to **Settings > Browsing**.
+. Turn on **Create Child Tabs**.
+
+This adds the **Add Child Tab** option when creating a new tab.
+It is helpful when you want to keep a new search or page attached to the current tab on purpose.
+
+NOTE: The setting adds the child-tab creation option. Tree view can also show relationships created when you open links in new tabs.
+
+== Using Tree View Day to Day
+
+* **Follow your browsing path** -- See which tab started a line of reading.
+* **Close a full tree faster** -- Closing a tree from the Tree view overview closes that tab and its descendants together.
+* **Review a branch before switching** -- Tap a stacked tree card to open the full tree dialog.
+* **Keep projects separated** -- Tree view also works alongside containers, so related tabs stay grouped inside the container you are using.
+
+== Practical Example
+
+Imagine you are researching a new laptop:
+
+----
+Laptop Buying Guide 2024
+  ├── Review: Model A
+  ├── Review: Model B
+  │     └── Reddit Discussion: Model B Issues
+  │           └── Manufacturer Response
+  ├── Comparison Chart
+  └── Store Product Page
+        └── Customer Reviews
+----
+
+With Tree view, you can tell at a glance that:
+
+* the reviews and store page all started from the buying guide,
+* the manufacturer response came from the Reddit discussion, and
+* the tabs belong to one topic instead of several unrelated tasks.
+
+== Good Times to Use It
+
+* **Research projects** -- Follow references, citations, and side reading.
+* **Comparison shopping** -- Keep each product path connected to the page that started it.
+* **Learning a topic** -- Track tutorials, documentation, examples, and follow-up pages.
+* **News reading** -- Keep related stories grouped under the article or homepage they came from.
+
+== What to Expect
+
+* **Tree** is best when tabs are related to each other.
+* **List** is better when you just want to scan many unrelated tabs quickly.
+* **Grid** is better when page previews matter more than relationships.
+* Search and filter controls are not shown in Tree view.
+
+Tree view works best when your tabs tell a story of how you explored a topic.

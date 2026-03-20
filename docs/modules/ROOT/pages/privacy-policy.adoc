@@ -1,0 +1,75 @@
+= Privacy Policy
+:page-pagination: false
+:description: Privacy information for the WebLibre documentation website at docs.weblibre.eu.
+
+_Last updated: March 2026_
+
+This privacy policy applies to the documentation website at `docs.weblibre.eu`.
+It explains what data may be processed when you visit this site and where to find privacy information for related services.
+
+For the provider details of this website, see the xref:imprint.adoc[Imprint].
+
+== Controller
+
+The controller for this documentation website is the provider named in the xref:imprint.adoc[Imprint].
+
+== Hosting
+
+This documentation website is hosted via GitHub Pages.
+When you access the site, GitHub may process technical request data that is necessary to deliver the pages and keep the hosting service secure and reliable.
+This can include data such as your IP address, requested URL, date and time of access, referrer, and browser or operating-system information.
+
+This processing is typically carried out to provide the website and to protect the hosting infrastructure.
+The legal basis is Art. 6 para. 1 lit. f GDPR.
+Our legitimate interest is the secure and reliable delivery of this documentation website.
+
+GitHub, Inc. is based in the United States.
+Data transfers to the US may occur on the basis of EU Standard Contractual Clauses (Art. 46 para. 2 lit. c GDPR) or other applicable safeguards as described in GitHub's privacy documentation.
+
+For more information about GitHub's own data processing, see the GitHub Privacy Statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement[GitHub Privacy Statement].
+
+== Server Logs
+
+We do not run our own analytics system on `docs.weblibre.eu`.
+However, technical access data may still be processed in server logs by the hosting provider as described above.
+We only use such processing to operate the site, maintain security, and investigate faults or abuse when necessary.
+We do not store server logs ourselves.
+For GitHub's data retention practices, please refer to the GitHub Privacy Statement linked above.
+
+== Search and Site Functionality
+
+This documentation site uses site-local JavaScript for standard page behavior and for the built-in documentation search.
+Based on the current site setup, search runs in your browser against a search index delivered with the site.
+We do not intentionally use this feature to create usage profiles or track you across websites.
+
+This site does not intentionally use analytics or marketing tools on `docs.weblibre.eu`.
+
+== Cookies and Similar Technologies
+
+Based on the current site setup, we do not intentionally set non-essential cookies on `docs.weblibre.eu` for analytics, advertising, or cross-site tracking.
+If technically necessary cookies or similar data are processed by the hosting platform, that processing is limited to providing and securing the website.
+
+== External Links and Other Services
+
+This documentation website links to external websites and services, such as GitHub, the main WebLibre website, and the feedback portal.
+When you open an external link, the privacy policy of that external provider applies.
+
+The feedback portal has its own privacy policy here: https://feedback.weblibre.eu/p/2-privacy[Feedback privacy policy].
+
+== No Contact Forms or Newsletters on This Site
+
+This documentation website does not currently provide its own contact form, newsletter signup, or user account system.
+If you contact us by e-mail or use a separate service linked from this site, the privacy information for that specific communication channel or service applies.
+
+== Your Rights Under GDPR
+
+Under the GDPR, you may have the right to request access to your personal data, rectification, erasure, restriction of processing, data portability, and to object to processing where the legal requirements are met.
+You also have the right to lodge a complaint with a supervisory authority.
+The competent supervisory authority for the provider of this website is the Landesbeauftragter für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW), https://www.baden-wuerttemberg.datenschutz.de[www.baden-wuerttemberg.datenschutz.de].
+
+If you have questions about privacy for this documentation website, use the contact details listed in the xref:imprint.adoc[Imprint].
+
+== Changes to This Privacy Policy
+
+We may update this page if the technical setup or legal requirements for this documentation website change.
+The current version published on this site applies.

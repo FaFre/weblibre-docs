@@ -1,0 +1,33 @@
+= QR Code Scanner
+:description: How to scan a QR code in WebLibre.
+
+WebLibre includes a built-in QR code scanner. You can use it to read a QR code with your camera and place the result into the address bar, so you can open a website without switching to a separate app.
+
+== Scan a QR code from the address bar
+
+. Tap the address bar.
+. If the field is empty, tap the scanner icon on the right.
+. Point your camera at the QR code.
+. When WebLibre reads the code, it closes the scanner and fills in the address bar.
+. If the result is a web address, tap your keyboard's action button to open it.
+
+[NOTE]
+====
+WebLibre does not automatically open the scanned result from the address bar scanner. It places the scanned text into the address bar first, so you can check it before opening it.
+====
+
+== What you can expect
+
+* **Flash toggle** -- Turn the camera light on or off for dark rooms.
+* **Camera switch** -- Change between available cameras on your device.
+* **Simple full-screen scanner** -- The scanner opens as a full-screen page titled **Scan code**.
+
+== Permissions
+
+The scanner needs camera permission.
+
+The first time you use it, Android may ask for permission. If you deny access, WebLibre cannot scan QR codes until camera permission is allowed again in your device settings.
+
+== Other places you may see it
+
+WebLibre also uses the same scanner for some other tasks, such as sync pairing, where the app checks that the scanned QR code contains a valid link.

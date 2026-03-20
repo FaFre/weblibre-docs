@@ -1,0 +1,93 @@
+= Appearance & Themes
+:description: How to adjust WebLibre's look, motion, and page display settings.
+
+This page covers settings that change how WebLibre looks, as well as a few display settings that affect websites.
+
+== Theme
+
+WebLibre offers three theme modes:
+
+* **System** -- Matches your Android light or dark setting
+* **Light** -- Always use the light theme
+* **Dark** -- Always use the dark theme
+
+In practice, this mainly changes the browser interface. Websites that follow your preferred color scheme may also switch between light and dark styles.
+
+Find this in **Settings > General > Theme**.
+
+== User Interface Zoom
+
+**User Interface Zoom** changes the size of WebLibre's own interface, such as buttons, menus, and settings screens. It does not directly change the size of text inside websites.
+
+You can set it from **50%** to **150%** in **5%** steps.
+
+This can help if:
+
+* buttons or labels feel too small
+* you want more items to fit on screen
+* you prefer a larger interface for easier tapping
+
+Find this in **Settings > General > User Interface Zoom**.
+
+== Disable Animations
+
+Turn on **Disable Animations** to reduce motion across the app and turn off app animations.
+
+This is useful if you are sensitive to motion or want a more static interface.
+
+Find this in **Settings > General > Disable Animations**.
+
+== Web Page Display
+
+The following settings affect how websites are shown inside WebLibre.
+
+=== Web Fonts
+
+**Web Fonts** lets websites use their own custom fonts.
+
+If you turn it off, websites fall back to more basic fonts. This can improve readability on some sites, but it may also make pages look less like the designer intended.
+
+=== Automatic Font Size
+
+When **Automatic Font Size** is enabled, WebLibre adjusts website text size based on your system settings.
+
+If you turn it off, you can manually control:
+
+* **Font Size Factor** -- scales website text size
+* **Font Inflation** -- enlarges text on pages that do not properly declare a mobile viewport
+
+=== Font Size Factor
+
+Use **Font Size Factor** when you want website text to stay consistently larger or smaller than normal.
+
+This setting is only available when **Automatic Font Size** is turned off.
+
+=== Font Inflation
+
+**Font Inflation** can make hard-to-read text larger on older or poorly optimized websites.
+
+This setting is only available when **Automatic Font Size** is turned off.
+
+=== Input Auto Zoom
+
+When **Input Auto Zoom** is enabled, WebLibre automatically zooms in when you focus a text field on a webpage.
+
+This can make forms easier to read and fill out on small screens.
+
+Find these settings in **Settings > Web Content**.
+
+== Browser Languages
+
+**Browser Languages** controls which language preferences WebLibre exposes to websites. Sites may use this to decide which language version of a page to show.
+
+You can enable one or more suggested languages, or add a custom locale such as `en-US`.
+
+If you enable more than one language, WebLibre can present multiple preferences to websites instead of only one.
+This can be useful if you regularly read sites in more than one language.
+
+You can also add a custom locale manually.
+If the locale identifier is not valid, WebLibre asks you to correct it before saving.
+
+This setting affects website language preference, not just the text shown in the browser interface.
+
+Find this in **Settings > Privacy & Security > Browser Languages**.

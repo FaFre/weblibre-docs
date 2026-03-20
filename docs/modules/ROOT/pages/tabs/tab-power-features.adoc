@@ -1,0 +1,103 @@
+= Advanced Tab Actions
+:description: How to use WebLibre's advanced tab workflows such as pinning, cloning, reordering, bookmarking all tabs, and container shortcuts.
+
+WebLibre's main tab guide explains the basics.
+This page focuses on the extra workflows that matter once you use a lot of tabs.
+
+== Pin Tabs
+
+WebLibre can pin tabs so they are easier to keep around as important or long-lived tabs.
+
+Pinned tabs are useful for things like:
+
+* music players
+* reference pages
+* work dashboards
+* tabs you reopen constantly
+
+When sorting tabs, WebLibre can also use **Sort Pinned First** so pinned tabs stay grouped ahead of the rest of the list.
+
+== Clone a Tab
+
+The tab menu can clone the current page into another tab.
+
+This is useful when you want to:
+
+* keep one copy of the page where it is
+* open a second copy for a different task
+* move the duplicate into another tab type or context
+
+Use this when comparing the same page in different states or when you want to branch a browsing path without losing your original tab.
+
+== Reorder Tabs Manually
+
+In **List** and **Grid** tab view, WebLibre can let you drag and drop tabs to reorder them.
+
+To do that:
+
+. Open the tab view
+. Turn on reordering mode
+. Drag tabs into the order you want
+
+This works only in the normal manual tab workflow.
+If WebLibre says reordering is unavailable, switch back to the default manual tab mode first.
+
+== Create a Container by Dragging Tabs Together
+
+WebLibre can also create a new container by dragging one tab onto another.
+
+In that workflow:
+
+* WebLibre collects both tab titles
+* it prepares a new container
+* you can confirm or edit the container details
+* both tabs are assigned to that container after you save
+
+This is useful when two or more tabs clearly belong together and you decide mid-session that they should become a container.
+
+For more on containers themselves, see xref:tabs/containers.adoc[Containers].
+
+== Bookmark All Open Tabs
+
+If you want to save a whole tab set:
+
+. Open the tab view
+. Open the tab actions menu
+. Tap **Bookmark all**
+
+WebLibre offers:
+
+* **Fast** -- save all tabs into a chosen folder right away
+* **Detailed** -- review them one by one before saving
+
+This works well after research sessions, shopping comparisons, or travel planning sessions.
+
+== Clear Container Data
+
+If the currently selected container has **Cookie Isolation** enabled, WebLibre can offer **Clear Container Data** from the tab actions menu.
+
+This clears the container's stored site data and can also recreate the tabs afterward if you choose that option.
+
+Use this when:
+
+* one container is stuck in a bad login state
+* you want a fresh start for a specific container
+* you want to clear one browsing context without resetting the whole browser
+
+== Close Tabs in Bulk
+
+The advanced tab actions menu also supports bulk closing flows such as:
+
+* **All Tabs**
+* **Private Tabs**
+* **Isolated Tabs**
+* **Filtered Tabs**
+
+This works especially well together with the filters described in xref:tabs/tab-management.adoc[Tab Management].
+
+== Tips
+
+* Pin only the tabs you truly want to keep visible over time
+* Use reordering when your current tab order matters more than automatic recency
+* Use drag-to-create-container when a loose group of tabs turns into a project
+* Use **Bookmark all** before aggressively closing a large tab set

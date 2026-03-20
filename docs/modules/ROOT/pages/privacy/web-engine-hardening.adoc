@@ -1,0 +1,94 @@
+= Web Engine Hardening
+:description: Advanced browser engine security settings in WebLibre.
+
+WebLibre includes advanced browser engine preferences for people who want tighter control over privacy, network behavior, and attack-surface reduction.
+
+NOTE: These settings are for advanced users. The defaults already provide strong protection. If you're unsure what a setting does, leave it at the default.
+
+== How to Open It
+
+. Go to **Settings > Privacy & Security**.
+. Tap **Web Engine Hardening**.
+
+You can either apply a broad preset or open individual groups and change specific items.
+
+== What You See on This Screen
+
+**Complete Hardening**::
+Applies WebLibre's recommended hardening preferences across the available groups.
+This is the quickest way to turn on the non-optional recommendations.
+
+**Groups**::
+Settings are split into named groups such as **Safe Browsing**, **Telemetry**, **DNS**, **Secure Connections**, **Privacy**, **Resist Fingerprinting**, **WebRTC**, **Attack Surface Reduction**, and **PDFJS**.
+Open a group if you want to review or change one area at a time.
+
+**Optional items**::
+Some entries are marked **Optional** in the app.
+These are more aggressive changes that may cause compatibility problems, so they are not enabled by the one-tap hardening actions.
+
+**Reset all preferences**::
+The menu on the hardening screen includes **Reset all preferences**, which clears your user-defined web engine hardening changes and returns those preferences to their defaults.
+
+== What These Groups Control
+
+Here is the practical version of what the groups are for:
+
+**Safe Browsing**::
+Controls protections against dangerous sites and downloads.
+
+**Telemetry**::
+Reduces browser telemetry, studies, and other background data collection.
+
+**Block Implicit Outbound** and **DNS**::
+Reduce background connections, prefetching, and DNS behaviors that can leak information.
+
+**Certificate Revocation** and **Secure Connections**::
+Tighten certificate checks, HTTPS behavior, and secure connection rules.
+
+**Privacy** and **Resist Fingerprinting**::
+Reduce cross-site leakage and make your browser harder to identify uniquely.
+For more on fingerprinting defenses, see xref:privacy/fingerprint-protection.adoc[Fingerprint Protection].
+
+**WebGL**, **WebRTC**, **API Restrictions**, and **Attack Surface Reduction**::
+Limit or harden web features that can expose device details or increase the risk from malicious content.
+
+**Extension Security**, **Geolocation**, **Disk Avoidance**, **PDFJS**, and **Miscellaneous**::
+Cover extension behavior, location services, what gets written to disk, built-in PDF viewer behavior, and a few extra privacy and security tweaks.
+
+== A Good Way to Use It
+
+. Start with **Complete Hardening** if you want stronger defaults without reviewing every switch.
+. If a website stops working, open the most relevant group and look for a recently enabled setting.
+. Treat **Optional** items as troubleshooting or expert-only choices.
+. If you are not sure what caused a problem, use **Reset all preferences** and re-enable only what you need.
+
+CAUTION: Some hardening options can affect logins, video calls, PDFs, extensions, or how certain websites load. Stronger privacy often means a higher chance of site quirks.
+
+== Site Isolation
+
+In WebLibre, this setting appears separately as **Fission (Site Isolation)** on the **Privacy & Security** screen.
+
+Site Isolation runs each site in its own separate operating-system process.
+This adds protection if one site is compromised, because it helps isolate it from other sites you have open.
+
+Expectation-setting: it uses more memory, and changing it requires an app restart.
+
+== Local Network Protection
+
+These controls are also separate from the **Web Engine Hardening** screen.
+You can find them in the **Network Protection** section of **Settings > Privacy & Security**.
+
+They help limit how websites interact with devices on your local network, such as printers, routers, cameras, or smart-home devices.
+
+* **Local Network Access** -- Enables local network and device access blocking features
+* **Block Local Network Requests** -- Blocks web page requests to local network addresses
+* **Block Local Network Trackers** -- Blocks trackers from accessing local network resources
+
+This can reduce network probing and device discovery from websites, but it may also interfere with sites that legitimately need to talk to local devices.
+
+== When You Probably Don't Need This
+
+If you already use WebLibre's normal privacy features, many people do not need to manually change web engine hardening preferences.
+The screen is most useful when you want stricter behavior, want to review the browser's low-level privacy choices, or are following a specific threat model.
+
+If you just want stronger privacy with fewer decisions, start with the regular settings in **Privacy & Security** first, then come back here only if needed.

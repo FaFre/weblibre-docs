@@ -1,0 +1,114 @@
+= Search Modules
+:description: How WebLibre organizes search sections and start-screen modules, and how to customize them.
+
+WebLibre uses section-based search instead of one undifferentiated result list.
+The app groups related results into modules so you can see *what kind of thing* you are about to open.
+
+This applies both to:
+
+* address-bar search results while typing
+* the start or empty search view before you type
+
+Bang provider chips live alongside this search UI, but they are a separate control.
+The chip row decides where a web search should be sent.
+Search modules describe what local or saved data matched your text.
+
+== Search Result Modules
+
+When you type in the address bar, WebLibre can group matches into sections such as:
+
+* **Tabs**
+* **Bookmarks**
+* **Articles**
+* **History**
+
+These are the same sections described in xref:search/local-search.adoc[Local Search in the Address Bar].
+
+== Start-Screen Modules
+
+Before you type anything, WebLibre can also show quick sections in the start or empty search state.
+
+Current built-in sections include:
+
+* **Top Sites**
+* **Recent Tabs**
+* **Recent History**
+* **History Highlights**
+* **Recent Articles**
+* **Containers**
+
+These help you jump back into recent or important browsing without typing a search first.
+
+== What These Sections Mean
+
+**Top Sites**::
+Quick-launch tiles for frequently used, pinned, default, or suggested sites.
+
+**Recent Tabs**::
+Your recently active tabs, including their tab or container context where relevant.
+
+**Recent History**::
+Recently visited pages from browsing history.
+
+**History Highlights**::
+Prominent or reusable pages from your browsing history.
+
+**Recent Articles**::
+Recent items from xref:web-feeds.adoc[Web Feeds].
+
+**Containers**::
+Container shortcuts so you can jump into a specific browsing context quickly.
+
+== Customize Sections
+
+WebLibre lets you reorder sections and hide the ones you do not use.
+
+To customize them:
+
+. Open the search or start view
+. Tap **Customize Sections**
+. Reorder sections by dragging them
+. Turn visibility on or off for each section
+. Tap **Done**
+
+The order and visibility are saved for you.
+
+== Search Modules and Start Modules Are Separate
+
+WebLibre treats typed-search sections and empty-state sections as different groups.
+
+That means you can:
+
+* keep search-result modules focused on *Tabs*, *Bookmarks*, *Articles*, and *History*
+* keep the empty state focused on quick access areas like *Top Sites* or *Recent Tabs*
+
+This helps the browser feel useful both before and after you start typing.
+
+== Top Sites Inside Search Modules
+
+The **Top Sites** module has a few extra behaviors:
+
+* some tiles can be pinned
+* some can be edited or removed
+* persisted tiles can be reordered
+
+For more on that, see xref:home-screen-and-top-sites.adoc[Home Screen & Top Sites].
+
+== Related Features
+
+Search modules work alongside other search features such as:
+
+* xref:search/local-search.adoc[Local Search in the Address Bar]
+* xref:search/bangs.adoc[Bang Providers]
+* **Default Search Provider**
+* **Default Autocomplete Provider**
+* **Allow clipboard access for suggestions**
+
+Those live under **Settings > Search**.
+
+== Tips
+
+* Put the sections you use most at the top so they appear first
+* Hide sections you rarely use to reduce scanning noise
+* Keep **Top Sites** visible if you want a start page that feels more like a launch surface
+* Keep **Bookmarks** and **History** visible in typed search if you often remember only part of a page title or address

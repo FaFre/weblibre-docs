@@ -1,0 +1,59 @@
+= HTTPS-Only Mode
+:description: How WebLibre enforces secure connections to websites.
+
+== What Is HTTPS?
+
+HTTPS is the secure version of HTTP -- the protocol your browser uses to load websites.
+When a website uses HTTPS, the connection between your device and the website is encrypted.
+That makes it much harder for people in between -- such as a Wi-Fi hotspot operator or your internet provider -- to read or tamper with what loads in the browser.
+
+== What Does HTTPS-Only Mode Do?
+
+In WebLibre, this feature appears in settings as **Block insecure HTTP connections**.
+
+When it is turned on, WebLibre tries to use the secure HTTPS version of a site instead of plain HTTP.
+
+This helps you avoid visiting websites over an unencrypted connection by accident.
+
+In practice, WebLibre can:
+
+* Try to upgrade an `http://` address to `https://`
+* Stop pages that only support insecure HTTP, depending on the mode you choose
+* Reduce the chance of sending information over an unencrypted connection
+
+HTTPS-Only Mode does not make a website trustworthy by itself.
+It only helps make sure the connection to that website is encrypted.
+
+== Options
+
+WebLibre offers three options:
+
+* **Disabled** -- WebLibre allows both HTTP and HTTPS sites
+* **Enabled** -- WebLibre blocks insecure HTTP connections in all tabs
+* **Private mode only** -- WebLibre blocks insecure HTTP connections only in private tabs
+
+`Enabled` is the strongest everyday setting.
+If you only want the stricter behavior in private browsing, choose `Private mode only`.
+
+== How to Configure
+
+. Open **Settings > Privacy & Security**
+. Find **Block insecure HTTP connections**
+. Choose **Disabled**, **Enabled**, or **Private mode only**
+
+WebLibre currently defaults to **Enabled** unless you change it.
+
+== What to Expect
+
+Most modern websites already support HTTPS, so you usually will not notice any difference.
+
+If an older site only works over HTTP, it may fail to open when this setting is enabled.
+That usually means the site does not offer an encrypted connection.
+
+== When to Use Which Mode
+
+* Choose **Enabled** if you want WebLibre to prefer secure connections everywhere
+* Choose **Private mode only** if you want stricter protection only in private tabs
+* Choose **Disabled** only if you must access an older site that does not support HTTPS
+
+TIP: If a site works only over HTTP, treat it carefully. Avoid signing in, entering personal information, or sending payment details on an unencrypted page.

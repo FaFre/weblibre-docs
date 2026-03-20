@@ -1,0 +1,110 @@
+= Tracking Protection
+:description: How WebLibre blocks common web trackers and what each protection setting does.
+
+WebLibre includes several layers of tracking protection. Some work on the page itself, while others clean links before trackers can use them.
+
+This page covers the settings in **Settings > Privacy & Security** that help limit cross-site tracking.
+
+== Enhanced Tracking Protection
+
+Enhanced Tracking Protection is WebLibre's main built-in tracker blocker. It builds on long-running tracking-protection work in the Gecko ecosystem and blocks known tracking technologies such as:
+
+* Tracking scripts and resources
+* Cross-site tracking cookies
+* Cryptominers
+* Known fingerprinters
+
+In current versions, fresh installs default to **Strict** protection.
+
+=== Protection levels
+
+**Disabled**::
+Turns off Enhanced Tracking Protection.
+Sites may work normally, but trackers are also allowed.
+
+**Standard**::
+Blocks fewer trackers and is less likely to interfere with websites.
+Choose this if a lot of sites break under stricter settings.
+
+**Strict**::
+Applies stronger protections.
+This can improve privacy, but some logins, embedded media, comments, payment flows, or social widgets may stop working until you lower protection for that site.
+
+**Custom**::
+Lets you choose exactly what to block.
+The available controls in **Custom Tracking Protection** include cookies, tracking content, cryptominers, known fingerprinters, redirect trackers, and suspected fingerprinters.
+
+You can change this in **Settings > Privacy & Security > Enhanced Tracking Protection**.
+
+=== What Custom includes
+
+If you choose **Custom**, WebLibre shows more detailed options:
+
+* **Block Cookies** with a **Cookie Policy** such as **Total Cookie Protection (Recommended)** or **All third-party cookies**
+* **Block Tracking Content** in **All tabs** or **Private tabs only**
+* Toggles for **Cryptominers**, **Known Fingerprinters**, and **Redirect Trackers**
+* **Suspected Fingerprinters** protection in **All tabs** or **Private tabs only**
+* Compatibility options named **Fix website major issues** and **Fix website minor issues**
+
+If you are not sure what to pick, leave these at their defaults or use **Strict** instead.
+
+== Query Parameter Stripping
+
+Many links include extra text after the `?` in the address. Those extra parts are called query parameters. Some are useful, but many are only there to tell a site or ad network where you came from.
+
+Example:
+
+----
+https://example.com/article?utm_source=newsletter&utm_campaign=summer_sale&campaign_id=xyz789
+----
+
+With query parameter stripping enabled, WebLibre removes known tracking parameters and keeps the main address:
+
+----
+https://example.com/article
+----
+
+This helps with links shared from social apps, search engines, newsletters, and ad campaigns.
+
+The available modes are:
+
+**Disabled**::
+Do not remove tracking parameters.
+
+**Enabled**::
+Remove known tracking parameters in regular and private browsing.
+
+**Private mode only**::
+Remove known tracking parameters only in private tabs.
+
+Find this in **Settings > Privacy & Security > Query Parameter Stripping**.
+
+== Bounce Tracking Protection
+
+Some trackers do not track you on the page itself. Instead, they send you through an intermediate website before opening the page you actually wanted. That extra stop can be used to record your visit or set tracking data.
+
+WebLibre includes **Bounce Tracking Protection** to block those redirect trackers.
+
+You can turn it on or off in **Settings > Privacy & Security > Bounce Tracking Protection**.
+
+NOTE: When you change **Bounce Tracking Protection**, WebLibre asks you to restart so the change can fully apply.
+
+== Site Exceptions
+
+If a specific website does not work correctly with **Enhanced Tracking Protection**, you can disable that protection for just that site instead of lowering protection everywhere.
+
+Sites where Enhanced Tracking Protection is turned off appear in **Settings > Privacy & Security > Tracking Protection Exceptions**.
+
+You can do this directly from the current site's panel.
+If you turn off **Enhanced Tracking Protection** there, WebLibre adds that site as an exception.
+If you turn it back on, WebLibre removes the exception again.
+
+Before adding an exception:
+
+* Reload the page once
+* Try **Standard** instead of **Strict**
+* Check whether an extension is blocking the site separately
+
+Use exceptions sparingly, because trackers on those sites will no longer be blocked by Enhanced Tracking Protection.
+
+If you want the broader per-site workflow, including permissions and site-data clearing, see xref:site-controls.adoc[Site Controls].

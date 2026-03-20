@@ -1,0 +1,142 @@
+= Browsing Behavior
+:description: How to customize WebLibre's browsing behavior and navigation.
+
+WebLibre includes several settings that change how tabs, links, and page navigation behave.
+This page focuses on the options most people are likely to adjust for day-to-day browsing.
+
+== Pull to Refresh
+
+When **Pull to Refresh** is on, you can swipe down on a page to reload it.
+
+This is useful if a page looks stuck or you want to quickly refresh without opening a menu.
+If you often trigger it by accident while scrolling, turn it off.
+
+Find it in **Settings > Browsing > Pull to Refresh**.
+
+== Double Back to Close Tab
+
+When **Double Back to Close Tab** is enabled, pressing your device back button twice quickly closes the current tab.
+
+When it is off, the back button is used only for page navigation.
+This can feel safer if you do not want to close tabs by mistake.
+
+Find it in **Settings > Browsing > Double Back to Close Tab**.
+
+== Tab Bar Swipe Behavior
+
+If you use the tab bar, you can choose what a horizontal swipe does:
+
+* **Switch to Last Used Tab** -- jumps back and forth between your current tab and the tab you used just before it
+* **Navigate Sequential Tabs** -- moves through your open tabs in order
+
+Choose **Switch to Last Used Tab** if you often compare two pages.
+Choose **Navigate Sequential Tabs** if you want swiping to work like stepping through a list.
+
+Find it in **Settings > Browsing > Tab Bar Swipe Behavior**.
+
+== Open Links in Apps
+
+Some links can open in another app on your device, such as a video app, map app, or social app.
+**Open Links in Apps** controls what happens when you tap those links in WebLibre.
+
+* **Always** -- open the matching app right away
+* **Ask before opening** -- show a prompt first
+* **Never** -- keep the link in WebLibre
+
+If you want WebLibre to stay in control, choose **Never**.
+If you usually prefer the dedicated app, choose **Always**.
+
+Find it in **Settings > Browsing > Open Links in Apps**.
+
+== Opening Links From Other Apps
+
+**External Link Handling** is a different setting.
+It controls how links sent *to* WebLibre from other apps are opened.
+
+* **Prompt** -- ask each time
+* **Regular** -- always open in a regular tab
+* **Private** -- always open in a private tab
+
+This is useful if you regularly open links from messaging apps, email, or other Android apps.
+
+Find it in **Settings > Browsing > External Link Handling**.
+
+== New Tab Default
+
+**New Tab Default** chooses the tab type used when you manually create a new tab.
+
+* **Regular** -- normal browsing
+* **Private** -- does not save history for that tab
+* **Isolated** -- opens the tab with its own separate site identity
+
+If **Show Isolated Tab UI** is turned off, the **Isolated** option is hidden here too.
+
+Find it in **Settings > Browsing > New Tab Default**.
+
+For a closer look at the differences, see xref:tabs/tab-management.adoc[Tab Management].
+
+== New Tab Position
+
+**New Tab Position** controls where newly created tabs appear in your tab list.
+
+* **First** -- puts new tabs at the start
+* **End** -- puts new tabs at the end
+
+Choose the option that matches how you scan your tabs.
+
+Find it in **Settings > Browsing > New Tab Position**.
+
+== Container and Isolated Tab Controls
+
+WebLibre can show or hide some advanced tab controls:
+
+* **Show Container UI** -- shows container selectors, menus, and management options
+* **Show Isolated Tab UI** -- shows isolated-tab creation options
+
+These settings hide interface elements you may not need every day.
+They do not exist to change how normal tabs work.
+
+Find both in **Settings > Browsing**.
+
+If you are new to containers, start with xref:tabs/containers.adoc[Containers].
+
+== Child Tabs
+
+When **Create Child Tabs** is enabled, WebLibre can create parent-child relationships between tabs in tree view.
+This helps you keep research or link-opening sessions organized.
+
+If you do not use tree view, you may never need this setting.
+
+Find it in **Settings > Browsing > Create Child Tabs**.
+
+== External Download Manager
+
+If you already use a separate Android download app, you can let it handle downloads instead of WebLibre.
+
+The setting is called **Use external download manager**.
+
+Find it in **Settings > General > Use external download manager**.
+
+== Reader Mode
+
+Reader Mode can simplify some article pages by removing extra page clutter and showing a cleaner reading view.
+
+There are two related settings in **Settings > Web Content**:
+
+* **Enable Reader Mode** -- shows the Reader Mode tool when WebLibre thinks a page is suitable
+* **Enforce Reader Mode** -- makes Reader Mode available more aggressively, even on pages that may not work well with it
+
+**Enforce Reader Mode** does not mean every page will automatically switch into reader view.
+It mainly makes the feature available on more pages.
+
+== Home Screen Widget
+
+On Android, WebLibre includes a home screen search widget.
+Tapping it opens WebLibre ready for a search.
+
+To add it:
+
+. Long-press an empty area on your Android home screen
+. Tap **Widgets**
+. Look for WebLibre in the widget list
+. Drag it where you want it

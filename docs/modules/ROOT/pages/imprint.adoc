@@ -1,0 +1,26 @@
+= Imprint
+:page-pagination: false
+:description: Legal information for WebLibre documentation.
+
+*Managing director*::
+Fabian Freund
+
+*Legal address*::
+OnDevice UG (haftungsbeschränkt) +
+Römerstraße 21 +
+D-71540 Murrhardt Germany
+
+*Contact*::
+E-Mail: info (at) ondevice.eu +
+Phone: 07192 - 979 10 17
+
+*Register entry*::
+Commercial Register: HRB 800041 +
+Registration court: Amtsgericht Stuttgart
+
+*VAT-ID / USt-IdNr*::
+DE454942755
+
+== Liability Note
+
+Despite thorough content control we do not take responsibility for any content of external links. For the content of external links only their operators are reliable.

@@ -1,0 +1,63 @@
+= Context Menu
+:description: What you can do when you long-press on links, images, and other elements in WebLibre.
+
+When you long-press something on a page, WebLibre shows a context menu with actions that match that item.
+
+What you see depends on what you pressed:
+
+* A normal web link shows link actions
+* An image shows image actions
+* A downloadable file or media link can show save actions
+* An email link can show email-related actions
+
+You will not see every option every time.
+
+== Links and Downloadable Files
+
+Long-press a regular web link to see actions such as:
+
+* **Open in new tab** -- Opens the link in a background tab
+* **Open in container** -- Opens the link in a specific xref:tabs/containers.adoc[container]. This appears only when **Show Container UI** is enabled.
+* **Copy link** -- Copies the link address
+* **Copy link text** -- Copies the text you see on the page, not the address behind it
+* **Share link** -- Shares the link with Android apps. This row also includes a QR code button.
+* **Open in App** -- Opens the link in another app, if your device has one for that link
+
+For some downloadable links, audio, or video items, you may also see:
+
+* **Save file** -- Downloads the file to your device
+
+== Image Actions
+
+Long-pressing an image can show:
+
+* **Open image in new tab** -- Opens the image itself in a new background tab
+* **Copy image** -- Copies the image so you can paste it elsewhere
+* **Save image** -- Downloads the image to your device
+* **Copy image location** -- Copies the image's direct address
+* **Share image** -- Shares the image with another app
+
+You may also see **Copy link** or **Share link** if the image is also a link.
+
+== Email Links
+
+Long-pressing an email link can show:
+
+* **Share email address** -- Shares the address with another app
+* **Open in App** -- Opens your mail app, if Android offers one for that link
+
+Depending on the current app version, the copy action for email addresses may not be labeled clearly in the menu.
+
+== URL Cleaning Preview
+
+If xref:privacy/url-cleaning.adoc[URL Cleaner] is enabled, WebLibre can show a **Tracking detected** or **URL cleaned** entry for HTTP and HTTPS links.
+
+Tap it to review which tracking parameters were found before you open the link.
+If auto-apply is enabled in URL Cleaner settings, the cleaned link may already be applied.
+
+== Tips
+
+* Use **Open in container** when you want a link to open under a specific container, and make sure that container has **Cookie Isolation** enabled if you need separate logins or cookies
+* If you do not see **Open in container**, check whether **Show Container UI** is enabled in **Settings > Browsing**
+* If you do not see **Open in App**, Android may not have a matching app for that link type
+* The menu changes based on what you long-press, so different pages can show different actions

@@ -1,0 +1,121 @@
+= Fingerprint Protection
+:description: How WebLibre reduces browser fingerprinting and what the related settings actually do.
+
+Cookies are not the only way websites can recognize you.
+Some sites also build a "fingerprint" from details your browser exposes.
+
+== What Fingerprinting Means
+
+When you visit a site, your browser may reveal things like:
+
+* screen size
+* time zone
+* language preferences
+* supported fonts
+* graphics capabilities
+* CPU and input-device details
+
+Each detail by itself may seem harmless.
+Taken together, they can make your browser easier to recognize later, even without traditional cookies.
+
+That can let websites or tracking scripts:
+
+* recognize the same browser across visits
+* make private browsing less private than people expect
+* connect activity across different sites
+* build a profile without asking you directly
+
+NOTE: Fingerprint protection reduces how unique your browser looks. It does not guarantee anonymity or stop every kind of tracking.
+
+== Why This Is Tricky
+
+Unlike cookies, fingerprinting often uses information the browser normally needs in order to display pages correctly.
+For example, websites may rely on display size, language, graphics features, or input support.
+
+That means stronger protection can sometimes cause page quirks or broken features.
+
+== What WebLibre Offers
+
+=== Enhanced Tracking Protection
+
+WebLibre's xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection] helps by blocking known fingerprinting scripts.
+In *Strict* mode, it also blocks additional suspected fingerprinters.
+
+For most people, this is the first layer of defense and has the fewest side effects.
+
+Find it in *Settings > Privacy & Security > Enhanced Tracking Protection*.
+
+[[_resist_fingerprinting]]
+=== Resist Fingerprinting
+
+*Resist Fingerprinting* is a stronger setting.
+Instead of only blocking known scripts, it tries to make your browser reveal less identifying information.
+
+In practice, this can standardize or reduce exposed details such as:
+
+* timer precision
+* some hardware and browser-identifying values
+* some locale and display-related values
+* some font and graphics-related details
+
+This usually makes your browser harder to single out, but it can also cause site compatibility problems.
+
+Common trade-offs include:
+
+* layouts that look slightly off
+* sites choosing a different language or regional format than expected
+* media, graphics, or interactive features behaving differently
+* occasional breakage on sites that depend on detailed device information
+
+If a site starts behaving strangely after enabling this, try turning off *Resist Fingerprinting* first and test again.
+
+Find it in *Settings > Privacy & Security > Resist Fingerprinting*.
+
+=== Fingerprint Protection
+
+The separate *Fingerprint Protection* screen gives granular control over individual anti-fingerprinting protections.
+It is mainly useful if you know a specific protection is causing a problem or you want a more customized setup.
+
+This screen includes:
+
+* *Load Defaults* -- restores WebLibre's default fingerprint-protection overrides
+* *Load Hardened Defaults* -- loads a broader set of protections for stronger privacy, with a higher chance of site issues
+* a long list of individual protections you can turn on or off
+
+Many item names on this screen are technical because they map closely to browser-engine protections.
+Most users do not need to change them one by one.
+
+Find it in *Settings > Privacy & Security > Fingerprint Protection*.
+
+== What Most People Should Use
+
+[cols="1,3,2"]
+|===
+|Setting |Best for |Trade-offs
+
+|Enhanced Tracking Protection: Standard
+|Most users
+|Minimal
+
+|Enhanced Tracking Protection: Strict
+|People who want stronger blocking with limited setup
+|Some sites may break
+
+|Resist Fingerprinting
+|People who want stronger anti-fingerprinting protection
+|Higher chance of site quirks
+
+|Fingerprint Protection
+|Advanced users troubleshooting or fine-tuning protections
+|Technical and easy to over-adjust
+|===
+
+TIP: If you want a simple setup, start with *Enhanced Tracking Protection* and then add *Resist Fingerprinting* only if you want stronger protection and can tolerate occasional compatibility issues.
+
+== Works Best with Other Privacy Features
+
+Fingerprint protection is more effective when combined with:
+
+* xref:privacy/tracking-protection.adoc[Tracking Protection] -- blocks many trackers and fingerprinters before they run
+* xref:tabs/containers.adoc[Containers] -- separates activity between contexts
+* xref:tor.adoc[Tor] -- can further reduce how easily your browsing is linked, though site compatibility may decrease

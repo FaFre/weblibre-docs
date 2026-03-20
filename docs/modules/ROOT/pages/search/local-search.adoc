@@ -1,0 +1,141 @@
+= Local Search in the Address Bar
+:description: How to use WebLibre's address bar to search your tabs, bookmarks, articles, and history without relying on web suggestions.
+
+WebLibre can search your own data directly from the address bar.
+When you type in *Search or enter URL*, it can show matches from sections such as *Tabs*, *Bookmarks*, *Articles*, and *History*.
+
+Local results come from data already stored on your device.
+If you also enable a *Default Autocomplete Provider*, WebLibre can additionally fetch web suggestions from that provider.
+
+== What Local Search Can Find
+
+The address bar can show several kinds of results at the same time.
+
+=== Tabs
+
+The *Tabs* section can match:
+
+* page titles
+* page addresses
+* text saved from page content
+
+This is useful when you remember a phrase from a page, but not the site name.
+
+[NOTE]
+====
+Tab content search depends on what content WebLibre has already saved for that tab.
+Some pages may match by title or address only.
+====
+
+=== Bookmarks
+
+The *Bookmarks* section searches your saved bookmarks.
+Results open the bookmarked page directly.
+
+In search results, WebLibre shows the bookmark title and address.
+
+=== Articles
+
+If you use xref:web-feeds.adoc[Web Feeds], the *Articles* section can search across saved feed articles.
+Matches can come from article titles, summaries, or article text.
+
+This makes your feed list easier to reuse like a personal reading archive.
+
+=== History
+
+The *History* section shows pages from your browsing history that match what you typed.
+Results usually appear with the page title and address.
+
+=== Bang Providers
+
+Bang providers are not local results, but they appear in the same address-bar workflow.
+When you want to send a query to a specific site, choose a bang chip below the search field or open *Search Bangs* from the chevron button.
+
+If you are already on a page, WebLibre can also show separate *Search On This Site* and *All Providers* bang areas.
+
+Learn more: xref:search/bangs.adoc[Bang Providers]
+
+== How to Use It
+
+. Tap the address bar.
+. Type a word, phrase, site name, or address.
+. Review the grouped results such as *Tabs*, *Bookmarks*, *Articles*, or *History*.
+. Tap the result you want.
+
+You do not need to choose a search mode first.
+WebLibre checks the available sections automatically.
+
+== What to Expect While Typing
+
+* If your text looks like a web address, WebLibre treats it like an address.
+* If your text looks like a search, WebLibre can show local matches first.
+* If you enabled a *Default Autocomplete Provider*, web suggestions may also appear.
+
+If no local result matches, you can still submit the text as a normal web search.
+
+== Practical Examples
+
+"I still have that article open somewhere"::
+Type a phrase from the page. Check *Tabs* first, then *History*.
+
+"I saved that site months ago"::
+Type the site name or topic and look in *Bookmarks*.
+
+"I read this in one of my feeds"::
+Type a distinctive phrase and check *Articles*.
+
+"I visited this before, but I do not remember when"::
+Type part of the title or address and check *History*.
+
+== Customize Which Sections Appear First
+
+You can change the order of the search sections and hide sections you do not use.
+
+. Open the address bar.
+. Start typing to show search results.
+. Tap *Customize sections*.
+. Reorder the sections or hide the ones you do not want.
+
+This changes the order of sections such as *Tabs*, *Bookmarks*, *Articles*, and *History*.
+
+== Clipboard Suggestions
+
+If you copied a link before opening the address bar, WebLibre can offer *Fill link from clipboard*.
+Tapping it pastes that link into the address bar for you.
+
+It does not open the page immediately. You can still review or edit the link first.
+
+Enable this in *Settings > Search > Allow clipboard access for suggestions*.
+
+== Search Suggestions from the Web
+
+By default, you can keep autocomplete suggestions disabled for a more private setup.
+If you want web-based suggestions while typing, choose a *Default Autocomplete Provider* in **Settings > Search**.
+
+Built-in provider options are available, and you can also leave this disabled for a more local-first setup.
+
+This setting affects suggestions while typing.
+Your *Default Search Provider* can still be something different.
+
+== Custom Search Engines
+
+You can add your own site-specific bang providers from **Settings > Search > Custom Search Engines**.
+
+When creating one, enter:
+
+* a name
+* a trigger
+* a URL template
+
+Use `pass:[{{{s}}}]` as the placeholder for the search terms.
+
+Example:
+
+`pass:[https://example.com/search?q={{{s}}}]`
+
+After that, the provider appears in WebLibre's bang picker and bang browser, where you can select it for future searches.
+
+== Why People Use This
+
+Local search helps when you remember *something about a page*, but not exactly where it came from.
+Instead of checking tabs, bookmarks, feeds, and history one by one, you can search from one place and open the result you need.

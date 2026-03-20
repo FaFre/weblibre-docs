@@ -1,0 +1,123 @@
+= First Launch Guide
+:description: What to expect when you first open WebLibre and how to choose your setup options.
+
+When you open WebLibre for the first time, it guides you through a short setup flow.
+
+You start by choosing one of two setup modes:
+
+* *Quick Start* uses recommended defaults and installs uBlock Origin automatically when you finish setup.
+* *Custom Setup* shows extra pages so you can choose DNS, toolbar, and extension options yourself.
+
+If WebLibre asks you to review setup again after an update, your current settings are not changed unless you change them during that walkthrough.
+
+== Welcome
+
+The first screen asks you to:
+
+* choose *Quick Start* or *Custom Setup*
+* read and accept the *EULA* and *Privacy Policy*
+
+You cannot continue until those documents are accepted.
+
+== Search
+
+Next, WebLibre asks how search should work.
+
+You can choose a *Default Search Provider* for searches from the address bar.
+The first suggestions shown in setup focus on common privacy-oriented providers, and you can use *Search more* if you want a different one.
+
+You can also choose a *Default Autocomplete Provider*, which controls where search suggestions come from while you type.
+
+You can change both later in *Settings > Search*.
+
+== DNS over HTTPS
+
+This page appears in *Custom Setup*.
+
+DNS is what turns a site name like `example.com` into a network address.
+Without DNS over HTTPS, those lookups may be visible to your internet provider, local network, or public Wi-Fi operator.
+
+WebLibre lets you choose a *Protection Level* and a *DoH Provider*.
+Built-in providers are available, and you can also enter a custom resolver URL.
+
+If you are not sure what to choose, the default protection level is the safest starting point.
+
+Learn more: xref:privacy/dns-over-https.adoc[DNS over HTTPS]
+
+== Tab Bar, Toolbar, and Tab View
+
+This page appears in *Custom Setup*.
+
+Here you choose how browser controls are arranged.
+This page includes settings such as:
+
+* *Tab Bar Position*
+* *Tab Bar Style*
+* *Show Contextual Toolbar*
+* *Show Quick Tab Switcher Bar*
+* *Bottom Sheet Tab View*
+
+The most visible choice is *Tab Bar Position*:
+
+* *Top* keeps the tab bar at the top of the screen.
+* *Bottom* puts it within easier thumb reach and supports auto-hide.
+
+You can review the full set later in *Settings > Toolbar & Layout*.
+
+== Privacy & Hardening
+
+This page is where WebLibre asks about stronger privacy protections.
+It includes options such as:
+
+* *Browser Languages*
+* *Complete Web Engine Hardening*
+* *Hardened Fingerprint Protection*
+* *Local Network Protection*
+
+These settings can improve privacy, but stronger protection can also make some sites behave differently.
+If something breaks later, you can come back and make this page less strict.
+
+Learn more: xref:privacy/overview.adoc[Privacy & Security Overview]
+
+== AI Features
+
+WebLibre also asks whether to enable *On-Device AI*.
+
+This controls local features such as container topic and tab suggestions.
+According to the app, this processing happens on your device.
+
+If you do not want those suggestions, leave it off.
+You can change it later in *Settings > Web Content*.
+
+Learn more: xref:on-device-ai.adoc[On-Device AI]
+
+== uBlock Origin
+
+This page appears in *Custom Setup*.
+
+WebLibre can install *uBlock Origin*, a well-known content blocker that helps block ads, trackers, and other unwanted page elements.
+For many people, this makes sites cleaner and can reduce data use.
+
+If you choose *Quick Start*, WebLibre installs uBlock Origin automatically at the end of setup.
+
+== Permissions
+
+The last setup page covers a small number of Android-level permissions and integrations.
+At the moment, setup asks about:
+
+* *Notifications* for download status updates
+* *Default Browser* if you want links from other apps to open in WebLibre
+
+If you skip either option, you can still turn it on later in Android or WebLibre settings.
+
+== What To Do Next
+
+After setup, you are ready to browse.
+These pages are useful next steps:
+
+* xref:quick-start.adoc[Privacy Setup] -- check the most important protections
+* xref:tabs/containers.adoc[Containers] -- separate work, shopping, banking, and personal browsing
+* xref:search/bangs.adoc[Bang Providers] -- search specific websites directly from the address bar
+* xref:profiles.adoc[Profiles] -- create separate locked spaces for different people or use cases
+* xref:tor.adoc[Tor] -- route sensitive browsing through Tor when needed
+* xref:firefox-sync.adoc[Sync] -- sync bookmarks, tabs, and more with your other devices

@@ -1,0 +1,172 @@
+= Profiles
+:description: How to use WebLibre profiles to keep browsing data separate for different people or different parts of your life.
+
+Profiles give you separate browser spaces inside WebLibre.
+Each profile keeps its own browsing data, so switching profiles feels closer to switching to another browser than opening another tab.
+
+In the app, some screens use the word *User* for this feature.
+In this guide, *profile* and *user* mean the same thing.
+
+== What a profile keeps separate
+
+Each profile has its own data and settings, including things like:
+
+* bookmarks and browsing history
+* cookies and saved logins
+* open tabs
+* installed extensions
+* RSS feeds
+* bang providers and user bangs
+* many browser settings and preferences
+
+Nothing important is meant to carry over between profiles.
+For example, signing in to a website in one profile does not sign you in inside another profile.
+
+== When to use profiles
+
+Profiles are most useful when you want a clean split between people or between major parts of your life.
+
+Common examples:
+
+* *Shared device* -- one profile for you, one for a partner, one for a child, or one for guests
+* *Work and personal separation* -- keep work accounts, tabs, and settings away from personal browsing
+* *High-trust and low-trust browsing* -- keep your main accounts in one profile and use another profile for experiments, temporary sign-ins, or less trusted sites
+
+If you only need to separate a few sites or tabs, xref:tabs/containers.adoc[Containers] or isolated tabs are usually faster.
+Use profiles when you want the whole browsing space to be separate.
+
+== Open the profile switcher
+
+. Open the browser menu.
+. Tap the card with the current user name.
+. WebLibre opens the *Select user* sheet.
+
+From there, you can:
+
+* tap another user to switch
+* tap *Add user* to create a new one
+* tap *Manage Profiles* for the full list and backup tools
+
+== Create a profile
+
+. Open the browser menu.
+. Tap the current user card.
+. Tap *Add user*.
+. Enter a name.
+. Tap the checkmark in the top bar.
+
+The new profile starts empty, with its own fresh data and default settings.
+
+== Switch profiles
+
+You can switch from the *Select user* sheet or from *Manage Profiles*.
+
+When you confirm a switch, WebLibre tells you that the browser needs to restart.
+After that, the app closes so the next launch opens the selected profile.
+
+This is expected.
+It helps WebLibre load the selected profile's own data cleanly.
+
+== Edit, delete, or manage a profile
+
+Open *Manage Profiles* to see all profiles.
+There you can:
+
+* open a profile to rename it
+* turn profile authentication on or off
+* create a backup
+* switch to that profile if it is not active
+* delete that profile if it is not active
+
+The active profile is marked as *Active*.
+
+== Lock a profile with biometrics
+
+Profiles can require biometric authentication, such as fingerprint or face unlock.
+
+To enable it:
+
+. Open *Manage Profiles*.
+. Open the profile you want to protect.
+. Turn on *Require Authentication*.
+. Choose an *Auto-lock Behavior*:
+.. *Lock on Background* locks when WebLibre goes into the background.
+.. *Lock After Timeout* locks after inactivity, with a timeout such as 1 minute, 5 minutes, 15 minutes, or 1 hour.
+
+When a locked profile opens again, WebLibre shows *Profile is locked* until you unlock it.
+
+[NOTE]
+====
+This feature depends on biometric authentication being available on your device.
+If your phone or tablet does not support it, or it is not set up in Android, profile locking may not be available.
+====
+
+== Back up a profile
+
+You can create an encrypted backup of an individual profile.
+
+. Open *Manage Profiles*.
+. Open the profile you want to back up.
+. Tap *Backup*.
+. Enter a password.
+. Optionally leave *Verify Backup Integrity* turned on so WebLibre checks that the backup can be restored.
+. Tap *Backup*.
+
+You need that password later to restore the backup.
+Without it, the backup cannot be opened.
+
+== Restore a backup
+
+. Open *Manage Profiles*.
+. Open the *Backups* screen from the toolbar icon.
+. Tap the backup file you want to restore.
+. Enter the backup password.
+. Choose one of these options:
+.. *Create New User* restores the backup as a new profile with a new name.
+.. *Restore & Replace* restores the backup using the profile already stored inside the backup, and replaces that existing profile if it is already on the device.
+. Tap *Restore*.
+
+[NOTE]
+====
+You cannot use *Restore & Replace* on the profile that is currently active.
+If needed, switch to a different profile first.
+====
+
+== Profiles, containers, and isolated tabs
+
+[cols="1,2,2,2"]
+|===
+| |Profiles |Containers |Isolated tabs
+
+|Scope
+|Whole browser space
+|Selected groups of tabs
+|One tab at a time
+
+|Best for
+|Different people, work vs. personal, guest access
+|Keeping specific sites or topics separate inside one profile
+|Quick one-off sessions
+
+|Keeps separate
+|Browsing data, extensions, tabs, feeds, bang providers, and many settings
+|Site data for tabs opened in that container when *Cookie Isolation* is enabled; otherwise mainly tab grouping and routing
+|That tab's isolated session
+
+|Switching cost
+|Highest - browser restart required
+|Low
+|Low
+|===
+
+Use profiles for the biggest separation.
+Use containers when you want separation inside one profile.
+Use isolated tabs when you only need a temporary isolated session.
+
+== Practical tips
+
+* give profiles clear names such as `Personal`, `Work`, or `Guest`
+* create a guest profile before handing your device to someone else
+* put sensitive profiles behind *Require Authentication*
+* keep backup passwords somewhere safe
+* make a backup before deleting or replacing a profile

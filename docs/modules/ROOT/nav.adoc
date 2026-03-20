@@ -1,0 +1,60 @@
+* xref:index.adoc[Home]
+* Getting Started
+** xref:getting-started.adoc[First Launch Guide]
+** xref:quick-start.adoc[Privacy Setup]
+** xref:workflows.adoc[Common Workflows]
+** xref:migration.adoc[Switching from Another Browser]
+** xref:troubleshooting.adoc[Troubleshooting]
+** xref:error-logs-and-troubleshooting-tools.adoc[Error Logs & Tools]
+* Profiles & Security
+** xref:profiles.adoc[Multi-User Profiles]
+** xref:app-lock.adoc[App Lock]
+* Tabs & Containers
+** xref:tabs/tab-management.adoc[Tab Management]
+** xref:tabs/containers.adoc[Containers]
+** xref:tabs/tree-view.adoc[Tree View]
+** xref:tabs/tab-power-features.adoc[Advanced Tab Actions]
+* Browsing
+** xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links]
+* Privacy & Security
+** xref:privacy/overview.adoc[Overview]
+** xref:threat-model.adoc[Who You're Protecting Against]
+** xref:privacy/tracking-protection.adoc[Tracking Protection]
+** xref:privacy/fingerprint-protection.adoc[Fingerprint Protection]
+** xref:privacy/dns-over-https.adoc[DNS over HTTPS]
+** xref:privacy/https-only.adoc[HTTPS-Only Mode]
+** xref:privacy/url-cleaning.adoc[URL Cleaning]
+** xref:privacy/data-management.adoc[Data Management]
+** xref:site-controls.adoc[Site Controls]
+** xref:site-permissions.adoc[Site Permissions]
+** xref:privacy/web-engine-hardening.adoc[Web Engine Hardening]
+* Tor
+** xref:tor.adoc[Tor Integration]
+* Search
+** xref:search/local-search.adoc[Personal Local Search]
+** xref:search/bangs.adoc[Bang Providers]
+** xref:search/search-modules.adoc[Search Modules]
+* Library
+** xref:home-screen-and-top-sites.adoc[Home Screen & Top Sites]
+** xref:bookmarks.adoc[Bookmarks]
+** xref:history-downloads.adoc[History & Downloads]
+* Web Feeds
+** xref:web-feeds.adoc[RSS Feeds]
+* Content Tools
+** xref:reader-mode.adoc[Reader Mode]
+** xref:page-translation.adoc[Page Translation]
+** xref:page-export.adoc[Page Export & Sharing]
+** xref:qr-scanner.adoc[QR Code Scanner]
+** xref:web-apps.adoc[Web Apps]
+** xref:context-menu.adoc[Context Menu]
+* Extensions
+** xref:extensions.adoc[Extensions]
+* AI Features
+** xref:on-device-ai.adoc[On-Device AI]
+* Sync
+** xref:firefox-sync.adoc[Sync]
+* Customization
+** xref:customization/toolbar.adoc[Toolbar & Layout]
+** xref:customization/appearance.adoc[Appearance & Themes]
+** xref:customization/browsing.adoc[Browsing Behavior]
+** xref:advanced-settings.adoc[Advanced Settings]

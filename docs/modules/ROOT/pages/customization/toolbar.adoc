@@ -1,0 +1,96 @@
+= Toolbar & Layout
+:description: How to customize WebLibre's tab bar, toolbar, quick tab switcher, and tab view.
+
+Use **Settings > Toolbar & Layout** to change how WebLibre places tabs and toolbar controls on screen.
+These options mainly affect comfort, reachability, and how much page space the browser uses.
+
+== Tab Bar Position
+
+Open **Settings > Toolbar & Layout > Tab Bar Position** and choose one of these options:
+
+* **Top** -- Keeps the tab bar at the top of the screen.
+* **Bottom** -- Places the tab bar at the bottom for easier one-handed reach.
+
+If you prefer using the phone with one hand, **Bottom** is usually the easier option.
+
+== Tab Bar Style
+
+Open **Settings > Toolbar & Layout > Tab Bar Style** and choose how much information each tab shows:
+
+* **With Title** -- Shows the page title and URL breadcrumb.
+* **Compact** -- Shows a centered URL pill without the page title.
+
+Choose **Compact** if you want a cleaner look, or **With Title** if you want more context while switching tabs.
+
+== Auto Hide Tab Bar
+
+Turn on **Settings > Toolbar & Layout > Auto Hide Tab Bar** to hide the tab bar while you scroll.
+This gives more room to the page content.
+
+When you scroll back, the tab bar appears again.
+With the tab bar at the top, WebLibre describes the top position as persistent, so auto-hide is most useful with the bottom layout.
+
+== Contextual Toolbar
+
+Turn on **Settings > Toolbar & Layout > Show Contextual Toolbar** to show an additional bottom toolbar for navigation and actions.
+
+To change its buttons, open **Settings > Toolbar & Layout > Customize Toolbar Buttons**.
+On that screen you can:
+
+* drag buttons to change their order,
+* turn individual buttons on or off,
+* set a fallback for some buttons, and
+* use **Reset to Defaults** if you want to start over.
+
+Some buttons also show a long-press hint in the customization screen.
+That means pressing and holding the button in the browser can open extra actions.
+
+=== Fallback Buttons
+
+Some toolbar buttons are state-dependent.
+For example, a primary action may only make sense when a page is in a certain state.
+
+WebLibre can let you assign a fallback button for those cases.
+That means the toolbar space stays useful instead of becoming dead space when the main action is unavailable.
+
+=== Long-Press Actions
+
+Some buttons also support long-press actions.
+
+Examples can include:
+
+* history menus from the back or forward buttons
+* extra tab creation choices from tab buttons
+* add or remove bookmark actions
+* a hard refresh on reload
+
+The customization screen shows these hints so you know which buttons do more than a simple tap.
+
+== Quick Tab Switcher
+
+Turn on **Settings > Toolbar & Layout > Show Quick Tab Switcher Bar** to show an extra bar for jumping between tabs without opening the full tab view.
+
+You can then adjust these related options:
+
+* **Quick Tab Switcher Mode** -- Choose **Recently Used Tabs** or **Container Tabs**.
+* **History Fallback in Quick Tab Switcher** -- Shows browsing history suggestions when there are no tab chips to show.
+* **Show Titles in Quick Tab Switcher** -- Shows tab titles next to icons.
+
+The **Container Tabs** mode only appears if container UI is enabled elsewhere in the app.
+
+== Tab View
+
+The tab view is the screen that shows all open tabs.
+In **Settings > Toolbar & Layout**, you can change how it appears:
+
+* **Bottom Sheet Tab View** -- Opens the tab view as a sheet from the bottom instead of full screen.
+* **Show Favicons in List View** -- Uses website icons instead of page thumbnails in the tab list view.
+
+If **Bottom Sheet Tab View** is off, the tab view opens full screen.
+
+== Tips
+
+* Use the contextual toolbar if you want more navigation power without opening menus as often
+* Use fallbacks to avoid wasting space on state-dependent buttons
+* Keep long-press-capable buttons visible if you use their extra actions often
+* Use **Reset to Defaults** if the toolbar starts to feel harder to use than before

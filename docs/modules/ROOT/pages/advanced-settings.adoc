@@ -1,0 +1,84 @@
+= Advanced Settings
+:description: Advanced configuration options in WebLibre.
+
+These settings are for people who want more control over how WebLibre behaves.
+Most users can leave them at their defaults.
+
+Some options can break websites, reduce security, or require restarting the app before they take effect.
+
+== JavaScript
+
+JavaScript powers menus, sign-in forms, video players, shopping carts, and many other parts of modern websites.
+
+To turn it off for all websites:
+
+. Go to **Settings > Advanced**
+. Turn off **Enable JavaScript**
+
+When JavaScript is disabled, many websites will stop working properly or will only partly load.
+It can still be useful if you only want to read simple pages or if you are troubleshooting a site.
+
+NOTE: This is a global setting. WebLibre does not present it here as a per-site toggle.
+
+== Custom User Agent
+
+The user agent is the text your browser sends to websites to identify itself.
+Some websites use it to decide which version of a page to show.
+
+To set one:
+
+. Go to **Settings > Advanced**
+. Enter a value in **Custom User Agent**
+. Submit the field
+
+Leave the field empty to use the default.
+
+Changing the user agent can help if a website blocks WebLibre or shows the wrong layout.
+It can also make websites treat your browser as a different browser or device.
+
+NOTE: WebLibre asks you to restart after changing this setting. The new user agent takes effect after restart.
+
+== Third-Party Certificates
+
+By default, WebLibre only trusts certificate authorities built into its browser root store.
+If your workplace, school, or managed network uses certificates installed in Android, you may need to enable **Use third party CA certificates** in **Settings > Advanced**.
+
+When this is on, WebLibre can also trust certificate authorities from the Android CA store.
+
+NOTE: Only enable this if you know it is needed. Trusting additional certificate authorities can reduce security.
+
+If secure websites stop opening after you join a managed network, this setting may be relevant.
+
+== Experimental Features
+
+These settings change low-level browser behavior.
+They are mainly for troubleshooting or for users who specifically want to test them.
+
+To find them:
+
+. Go to **Settings > Advanced**
+. Open **Experimental Features**
+
+Available options include:
+
+* **Isolated Content Process** -- Runs web content in a separate process. WebLibre marks this as requiring an app restart.
+* **App Zygote Process** -- Preloads the content service for faster isolated-process startup. WebLibre marks this as requiring Android 10 or later and an app restart.
+
+CAUTION: Experimental settings may affect stability, compatibility, or performance. If you notice problems, turn them off again and restart the browser.
+
+== Troubleshooting Tools
+
+The **Developer Tools** section inside **Settings > Advanced** also includes a few items that can help when something is not working as expected:
+
+* **Icon Cache** -- Clears stored site icons if a favicon looks wrong or out of date.
+* **Error Logs** -- Lets you view and copy logs when reporting a problem.
+* **Reset UI** -- Rebuilds the browser interface, which may help if part of the app looks stuck or broken.
+
+The **Dart VM** item is only shown in debug builds, so most users will not see it.
+
+For the dedicated logs workflow, see xref:error-logs-and-troubleshooting-tools.adoc[Error Logs & Troubleshooting Tools].
+
+== Related Setting
+
+PDF handling is not in Advanced.
+If you want WebLibre to open PDF files directly in the browser, go to **Settings > Web Content > Built-in PDF Viewer**.

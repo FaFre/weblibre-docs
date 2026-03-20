@@ -1,0 +1,236 @@
+= Bang Providers
+:description: How WebLibre uses bang providers to send searches to specific sites, and how to manage built-in and custom bang sources.
+
+WebLibre uses *bangs* as site-specific search providers.
+Each bang points to one destination site, such as a reference site, code host, map service, shop, or assistant.
+
+The important difference from many bang systems is the user workflow:
+WebLibre does not primarily expect you to type `!w` or `!gh` into the address bar.
+Instead, the app lets you pick a provider from chips, search the bang catalog, or set a default provider.
+
+Some bang screens still show a trigger with a leading `!`.
+That trigger is part of the bang definition and helps WebLibre identify or search for the provider, but the day-to-day search flow is chip-based.
+
+== What a Bang Does
+
+When a bang is active, WebLibre sends your query to that bang's URL template instead of using the usual default search provider.
+
+Examples of bang destinations include:
+
+* a reference site such as Wikipedia
+* a code host such as GitHub
+* a map provider
+* a video or shopping site
+* a specialist assistant or search tool
+
+In the search UI, the selected bang also changes the icon shown inside the search field so you can see which provider will receive the query.
+
+== How Bang Search Works in WebLibre
+
+WebLibre combines several pieces:
+
+* a *Default Search Provider* in *Settings > Search*
+* a chip row below the search field for quick bang selection
+* a full *Search Bangs* screen when you want to search the whole catalog
+* optional *Search On This Site* bangs when you are already viewing a page
+
+If you do not choose a specific bang chip, WebLibre falls back to the configured default search provider.
+
+== Use a Bang from the Search Screen
+
+. Open the address bar or open a new tab.
+. Type a search query, or leave the field empty to see the default suggestions.
+. Pick a provider chip below the field.
+. If the provider you want is not shown, tap the chevron button to open *Search Bangs* and choose it there.
+. Submit the search.
+
+WebLibre then opens the results on the site connected to that provider.
+
+[NOTE]
+====
+When the field is empty, WebLibre shows a quick row based on your default or most-used providers.
+As you type, the bang results can change so you can search for providers by name, category, domain, or trigger.
+====
+
+== Search On This Site vs All Providers
+
+When you open search while already viewing a page, WebLibre can show two bang areas:
+
+* *Search On This Site*
+* *All Providers*
+
+*Search On This Site* is for domain-specific bangs related to the current site.
+*All Providers* is the normal global bang list used for general searches.
+
+Only one of these selections is active at a time.
+If you switch from one tab to the other, WebLibre clears the previous bang selection so the search goes to exactly one provider.
+
+This makes the workflow different from manual `!bang` typing:
+you choose the destination with UI controls first, then submit an ordinary search query.
+
+== Browse and Search the Full Bang Catalog
+
+To browse or search all available bang providers:
+
+. Open the browser menu.
+. Tap *Bangs*.
+. Choose one of these screens:
+
+* *Search Bangs* to look up a provider by name, trigger, site, or related text
+* *Browse Categories* to explore by topic
+* *Manage User Bangs* to edit your own entries
+
+You can also open *Search Bangs* directly from places where WebLibre lets you choose a provider, such as the default search selector or the bang chip row beside the address bar.
+
+Bang detail cards can show:
+
+* the provider name
+* the site domain
+* the category or subcategory
+* the bang trigger, displayed with a leading `!`
+
+== Default Search Provider
+
+WebLibre's default provider is configured in *Settings > Search > Default Search Provider*.
+
+That selector also uses chips:
+
+* frequently used providers appear first
+* the chevron opens the full *Search Bangs* picker
+* the selected provider is used whenever no other bang chip is active
+
+This is separate from the *Default Autocomplete Provider*.
+Autocomplete controls which service supplies suggestions while you type.
+The default bang provider controls where an actual web search is sent when you submit it.
+
+== Recommendations, Frequency, and History
+
+WebLibre keeps track of which bang providers you actually use so it can surface the most relevant ones first.
+
+In normal tabs, using a bang can:
+
+* increase that provider's frequency score
+* add the query to bang search history
+
+This affects:
+
+* which bang chips appear first
+* which providers show up in frequency-based selectors
+
+In private tabs, WebLibre does not update bang frequency or bang search history.
+
+You can control or clear this behavior from search settings:
+
+* *Settings > Search > Search History Limit* controls how many recent bang searches are remembered
+* *Settings > Search > Bang Settings > Bang Frequencies* lets you clear the learned ranking data
+
+== Manage Built-In Bang Repositories
+
+WebLibre ships with built-in bang collections that can be synced on demand.
+
+Go to *Settings > Search > Bang Settings* to manage them.
+
+Current repository sections include:
+
+* *General Bangs*
+* *Assistant Bangs*
+* *Kagi Bangs*
+
+On that screen you can:
+
+* see how many providers each repository currently contains
+* see the last sync time
+* tap *Sync* to refresh a repository from its source
+* clear *Bang Frequencies* to reset learned recommendations
+
+[NOTE]
+====
+The settings page uses the label *Repositories* for these built-in bang sources.
+This is about the source collections of providers, not about code repositories in the app itself.
+====
+
+== Create Your Own Search Engine
+
+Custom bang providers are managed under *Settings > Search > Custom Search Engines*.
+
+To add one:
+
+. Go to *Settings > Search > Custom Search Engines*.
+. Tap the add button.
+. Fill in at least *Name*, *Trigger*, and *URL*.
+. Optionally set a category, subcategory, or formatting flags.
+. Save the entry.
+
+After that, the provider appears in *User Bangs* and can be selected from the same bang search and chip-based workflows as built-in providers.
+
+== What the Trigger Is For
+
+Every bang has a *Trigger* field.
+This is still important, but not because you are expected to type it directly into the address bar.
+
+In WebLibre, the trigger is mainly used to:
+
+* uniquely identify the bang
+* help you search for the bang in the bang browser
+* label or describe the provider in detail views
+* support custom and user-created bang definitions
+
+You will often see the trigger displayed with a `!` prefix in bang detail cards.
+That reflects the bang's identity, not the primary search interaction model.
+
+== URL Template Format for User Bangs
+
+Custom bangs use the placeholder `pass:[{{{s}}}]` for the search query.
+
+Example:
+
+`pass:[https://example.com/search?q={{{s}}}]`
+
+If a site already has a search page, copy one of its result URLs and replace the search text with `pass:[{{{s}}}]`.
+
+Example:
+
+----
+https://mystore.com/search?q=shoes&category=all
+----
+
+becomes:
+
+`pass:[https://mystore.com/search?q={{{s}}}&category=all]`
+
+[NOTE]
+====
+WebLibre checks specifically for `pass:[{{{s}}}]`.
+Using `%s` does not match the app's expected format.
+====
+
+== Optional Format Flags for User Bangs
+
+The custom bang editor also exposes a few format flags:
+
+* *Open Base Path* opens the site's base path when no search query is provided
+* *URL Encode Placeholder* controls whether the query is URL-encoded before insertion
+* *URL Encode Space to Plus* switches space encoding between `+` and `%20`
+
+Most sites work with the default behavior.
+These flags are useful when a specific site expects search URLs in a non-standard format.
+
+== Edit or Remove User Bangs
+
+Open *Settings > Search > Custom Search Engines* to see your saved entries.
+
+From there you can:
+
+* open an entry to edit it
+* delete it
+* add another custom provider
+
+The same user-created entries are also exposed through *Bangs > Manage User Bangs*.
+
+== Practical Tips
+
+* Set a sensible default search provider first, then use bang chips when you want to temporarily search on a different site.
+* If the chip row does not show the provider you want, open *Search Bangs* instead of trying to memorize triggers.
+* Check *Search On This Site* when you are already on a page and want a same-site search flow.
+* Use custom user bangs for documentation sites, stores, forums, or internal tools you search repeatedly.
+* If recommendations feel stale, clear *Bang Frequencies* and let WebLibre learn again from current usage.

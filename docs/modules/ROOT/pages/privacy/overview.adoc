@@ -1,0 +1,102 @@
+= Privacy & Security Overview
+:description: A practical overview of WebLibre's privacy and security features.
+
+WebLibre starts with several privacy protections already enabled.
+You can keep the defaults, or tighten things further as your needs change.
+
+This page gives you a plain-language map of the main privacy features, what they help with, and what trade-offs to expect.
+
+== Privacy Layers
+
+WebLibre protects you in a few different ways.
+Some features protect your connection, some reduce tracking, and others limit what stays on your device.
+
+=== Connection Security
+
+These features protect traffic between your device and the network:
+
+* **xref:privacy/dns-over-https.adoc[DNS over HTTPS]** -- Encrypts DNS lookups so your network provider or public Wi-Fi operator cannot easily see the site names your browser is looking up
+* **xref:privacy/https-only.adoc[HTTPS-Only Mode]** -- In the app this appears as **Block insecure HTTP connections**. It upgrades sites to HTTPS when possible and warns or blocks when a site only offers insecure HTTP
+* **xref:tor.adoc[Tor Integration]** -- Routes browsing through the Tor network when you want stronger identity and network privacy. It is slower than a normal connection, so it is best used when you need it
+
+=== Tracking Protection
+
+These features reduce how websites, advertisers, and data brokers follow you across sites:
+
+* **xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection]** -- Blocks many trackers, cryptominers, fingerprinting scripts, and other known tracking techniques
+* **Bounce Tracking Protection** -- Blocks a common redirect-based tracking trick where you are briefly sent through a tracker before reaching the real site
+* **xref:privacy/url-cleaning.adoc[Query Parameter Stripping and URL Cleaning]** -- Removes many known tracking parameters from links. In **Privacy & Security**, this appears as **Query Parameter Stripping**. WebLibre also has a separate **URL Cleaner** under **Settings > Browsing**
+* **Global Privacy Control (GPC)** -- Sends a privacy preference to websites telling them not to sell or share your personal data. Some websites and jurisdictions recognize this signal, but support is not universal
+
+=== Fingerprinting and Identity Separation
+
+Even without cookies, websites can still try to recognize your browser.
+WebLibre includes features that make this harder:
+
+* **xref:privacy/fingerprint-protection.adoc[Fingerprint Protection]** -- Reduces how uniquely your browser stands out. Stronger modes can improve privacy, but may cause a few websites to behave oddly
+* **xref:tabs/containers.adoc[Containers]** -- Organize browsing by activity, and with *Cookie Isolation* enabled they separate cookies, logins, and site data into different browsing contexts
+
+=== Data Control
+
+These features help you decide what stays on your device and for how long:
+
+* **xref:privacy/data-management.adoc#_incognito_mode[Incognito Mode]** -- Automatically deletes selected browsing data when you restart the app
+* **xref:privacy/data-management.adoc#_auto_clear_history[Auto-Clear History]** -- Automatically removes browsing history older than the time period you choose
+* **xref:privacy/data-management.adoc#_auto_clear_unassigned_tabs[Auto-Clear Unassigned Tabs]** -- Automatically closes tabs that are not assigned to a container after they get old
+* **Clear Data on Exit for containers** -- In a cookie-isolated container's settings, you can enable **Clear Data on Exit** so that container's cookies and site data are wiped when the app closes
+* **xref:privacy/data-management.adoc#_delete_browsing_data[Delete Browsing Data]** -- Lets you manually clear tabs, history, cookies and site data, cache, permissions, and downloads whenever you want
+
+Learn more: xref:privacy/data-management.adoc[Data Management]
+
+=== Advanced Hardening
+
+For users who want extra protection beyond the usual privacy settings:
+
+* **xref:privacy/web-engine-hardening.adoc[Web Engine Hardening]** -- Advanced browser engine security and privacy options. Best left at defaults unless you know what you want to change
+* **Fission (Site Isolation)** -- Runs different sites in separate OS processes for stronger isolation. This improves security, but can use more memory and requires an app restart when changed
+
+== A Good Starting Setup
+
+If you want strong privacy without turning WebLibre into a project, this is a sensible setup:
+
+[cols="1,2"]
+|===
+|Setting |Practical recommendation
+
+|Enhanced Tracking Protection
+|Leave it on **Strict** unless a website breaks, then try **Standard** or add a site exception
+
+|DNS over HTTPS
+|Leave it enabled and pick a built-in provider or custom resolver that matches your privacy or filtering needs
+
+|Block insecure HTTP connections
+|Leave it **Enabled**
+
+|Global Privacy Control (GPC)
+|Leave it **Enabled**
+
+|Query Parameter Stripping
+|Leave it **Enabled**
+
+|Auto-Clear History
+|Keep the default or shorten it if you prefer less history stored on your device
+
+|Fission (Site Isolation)
+|Leave it enabled unless you are troubleshooting memory use or compatibility issues on your device
+
+|Content-blocking extension
+|Optional, but useful if you want stronger blocking for ads and unwanted page elements
+|===
+
+NOTE: Many privacy protections are already enabled by default in WebLibre, including strict tracking protection, DNS over HTTPS, HTTPS-only protection, Global Privacy Control, query parameter stripping, and site isolation. Onboarding highlights some choices, but not every engine behavior is surfaced there as a separate setting.
+
+== What to Expect
+
+Privacy features improve protection, but they can also change how the web behaves.
+
+* Stronger settings may break logins, embedded media, payments, or social widgets on some sites
+* Tor is much slower than direct browsing
+* Strong fingerprint protection can make some pages look or behave differently
+* Auto-clearing features may sign you out or remove data you expected to keep
+
+If a website stops working, try relaxing only the setting that seems related instead of turning everything off.

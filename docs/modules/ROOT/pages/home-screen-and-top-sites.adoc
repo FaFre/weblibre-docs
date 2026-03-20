@@ -1,0 +1,123 @@
+= Home Screen & Top Sites
+:description: How WebLibre's home surface, quotes, quick actions, and Top Sites work.
+
+WebLibre has two nearby but different "start" experiences:
+
+* the browser home surface you see in an empty tab or empty container
+* the searchable start view that can show **Top Sites** and other quick sections
+
+This page explains what appears there and how to make use of it.
+
+== Browser Home
+
+When WebLibre has no active page to show, it can open a simple home surface instead of a blank screen.
+
+Depending on context, you may see:
+
+* the normal WebLibre brand header
+* a container-specific header if you are inside a container
+* a quote card
+* quick actions such as **New tab**, **View tabs**, or **Resume last tab**
+
+The quote card includes **Refresh quote** if you want a different one.
+
+== Container-Aware Home State
+
+If you open the home surface while a specific xref:tabs/containers.adoc[container] is selected, WebLibre adapts the view to that container.
+
+For example, it can show:
+
+* the container name
+* a container-colored header
+* **Resume last tab** for that container when one exists
+
+That helps the empty state feel tied to the container you are working in instead of feeling like a generic browser screen.
+
+== Top Sites
+
+**Top Sites** are quick-launch tiles for pages you open often.
+
+In current WebLibre builds, Top Sites appear in the start or empty search experience, not as the same thing as bookmarks.
+They are meant for fast access, while xref:bookmarks.adoc[Bookmarks] are better for long-term saved pages and folder organization.
+
+Top Sites can come from different sources:
+
+* pinned sites you chose yourself
+* built-in default sites
+* history-based suggestions
+
+Some tiles may show a pin badge or a default-site badge so you can tell where they came from.
+
+== Open a Top Site
+
+To use one:
+
+. Open the start or search view
+. Find the **Top Sites** section
+. Tap the tile you want
+
+WebLibre opens that page directly.
+
+== Pin, Edit, or Remove a Top Site
+
+Top Site tiles support extra actions through their menu.
+
+Depending on the kind of tile, you may see:
+
+* **Pin**
+* **Edit**
+* **Remove**
+
+Pinned sites are good for pages you want to keep available even if your browsing history changes.
+
+If you edit a Top Site, you can change its title or address.
+If you remove one, WebLibre hides it from the Top Sites area.
+
+== Reorder Top Sites
+
+If you have enough persisted Top Sites, WebLibre can let you reorder them.
+
+To do that:
+
+. Open the **Top Sites** section
+. Turn on reordering mode
+. Drag and drop the tiles into the order you want
+
+Only persisted Top Sites take part in reordering.
+History-based suggestions may still appear, but they are not the same as your manually ordered pinned set.
+
+== How Top Sites Differ from Bookmarks
+
+Top Sites are best for:
+
+* frequently opened pages
+* a small quick-access set
+* pages you want available from the start screen
+
+Bookmarks are better for:
+
+* long-term saved pages
+* folders and subfolders
+* imports and exports
+* large organized collections
+
+If you want a page to stay permanently easy to find, save it as a xref:bookmarks.adoc[bookmark] even if it also appears in Top Sites.
+
+== Related Search Sections
+
+The same start area can also show other quick sections, such as:
+
+* **Recent Tabs**
+* **Recent History**
+* **History Highlights**
+* **Recent Articles**
+* **Containers**
+
+You can learn more about those in xref:search/search-modules.adoc[Search Modules].
+
+== Tips
+
+* Use Top Sites for quick access and bookmarks for long-term organization
+* Pin the pages you want to keep stable even when your browsing habits change
+* Refresh the quote if you use the home surface as a calm starting page
+* If you prefer fewer sections in the start area, reorder or hide them through xref:search/search-modules.adoc[Search Modules]
