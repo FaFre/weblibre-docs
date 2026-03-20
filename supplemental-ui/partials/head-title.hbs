@@ -1,0 +1,5 @@
+{{#if (eq (or page.title defaultPageTitle) site.title)}}
+    <title>{{{detag site.title}}} Documentation</title>
+{{else}}
+    <title>{{{detag (or page.title defaultPageTitle)}}} :: {{{detag site.title}}}</title>
+{{/if}}

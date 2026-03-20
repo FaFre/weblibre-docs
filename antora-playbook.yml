@@ -1,6 +1,11 @@
 site:
   title: WebLibre Browser
   url: https://docs.weblibre.eu
+  robots: |
+    User-agent: *
+    Allow: /
+
+    Sitemap: https://docs.weblibre.eu/sitemap.xml
   start_page: weblibre::index.adoc
 
 antora:
