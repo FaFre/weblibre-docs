@@ -1,0 +1,151 @@
+= Small Web
+:description: Discover personal blogs, independent creators, and handcrafted websites with Small Web mode in WebLibre.
+
+The internet is vast, but the most interesting corners are often the hardest to find.
+Beneath the surface of social media feeds and algorithm-driven content lies a quieter, more personal web -- thousands of independent blogs, personal websites, and small creative projects maintained by real people who write because they have something to say, not because they have something to sell.
+
+This is what people call the **Small Web**.
+
+Small Web mode in WebLibre helps you discover these sites.
+Instead of searching for something specific, you let the browser surprise you with a random page from a curated collection of independent voices.
+Each discovery takes you somewhere new -- a personal blog you have never heard of, a hand-drawn comic, an indie video, or a quiet corner of someone's homepage.
+
+== What Is the Small Web?
+
+The Small Web is an informal term for the part of the internet made up of personal websites, independent blogs, and small projects.
+These sites share a few things in common:
+
+* They are created by individuals, not companies
+* They do not contain ads or tracking
+* They are written for the love of sharing, not for profit
+* They often cover niche topics in depth -- from retro computing to birdwatching to homemade recipes
+
+The Small Web stands in contrast to the corporate web of platforms, algorithms, and engagement metrics.
+It is the web as it was originally imagined: a place where anyone can publish and anyone can discover.
+
+If you have ever wished you could just stumble onto something interesting the way you used to on the early internet, Small Web mode is built for exactly that.
+
+== How It Works
+
+You can enter Small Web mode from the browser menu.
+This opens a dedicated tab with its own interface, replacing the standard toolbar with controls designed for discovery.
+
+The core action is simple: tap **Discover** to load a random page from the current source.
+Each tap picks a page you have not seen recently.
+You can also bookmark pages you enjoy, view your recent discoveries, and switch between different content sources and modes.
+
+When you exit Small Web mode, the dedicated tab closes and you return to normal browsing.
+
+== Content Sources
+
+Small Web mode pulls content from two independent sources, each with a different approach to curation.
+
+=== Kagi Small Web
+
+https://kagi.com/smallweb[Kagi Small Web] is a curated feed maintained by Kagi.
+It indexes thousands of personal blogs, indie YouTube channels, and web comics.
+Sites are community-submitted and must meet strict quality guidelines: no ads, no AI-generated content, no corporate blogs, and YouTube channels must not post more than twice per week.
+
+Kagi Small Web offers five browsing modes:
+
+[cols="1,3"]
+|===
+|Mode |What You Will Find
+
+|**Web**
+|Recent posts from personal blogs across all topics
+
+|**Appreciated**
+|A curated selection of especially well-received posts from the community
+
+|**Videos**
+|Content from independent YouTube creators (channels with fewer than 400,000 subscribers)
+
+|**Code**
+|Open source projects, code snippets, and technical articles from personal sites
+
+|**Comics**
+|Independently created web comics and illustrations (no AI-generated art)
+|===
+
+You can switch between these modes from the Small Web menu.
+
+==== Category Filters
+
+When browsing the **Web** mode, you can narrow your discoveries by topic.
+Categories are grouped into three sections:
+
+Tech & Science::
+AI, Programming, Technology, Sysadmin & Security, Web & Internet, Hardware, DIY & Making, Science
+
+Culture & Creative::
+Art & Design, Essays, Humanities, Retro, Photography, Pop Culture, Gaming, Health & Fitness
+
+Life & World::
+Society, Life & Personal, Food & Drink, Travel & Outdoors, Politics, Economy
+
+Select a category to focus on a specific area of interest.
+Deselect it to return to unfiltered browsing across all categories.
+
+=== Wander
+
+https://codeberg.org/susam/wander[Wander] takes a different approach.
+Unlike Kagi Small Web which focuses on blogs, comics, and videos, Wander accepts any small websites.
+It is a decentralised network where each participating site hosts a "console" -- a list of pages the site owner recommends, along with links to other consoles.
+
+When you discover pages through Wander:
+
+* WebLibre starts at a seed console and fetches its list of recommended pages
+* Each console also links to neighboring consoles, forming a network
+* As you discover more pages, the network of known consoles grows
+* Each discovery takes you to a page recommended by one of these consoles
+
+This means the pages you see depend on which part of the Wander network you are exploring.
+Two users starting from different consoles may discover entirely different corners of the web.
+
+==== Browsing Consoles
+
+You can browse the list of consoles that WebLibre has discovered so far.
+Toggle between **Linked** consoles (direct neighbors of the current console) and **All** consoles (the entire discovered network), search by name, or jump to a random console.
+
+You can also add consoles manually by URL.
+Tap the add button and enter the URL of a Wander console -- this can be either the site root or the `/wander/` path.
+
+== Discovery History
+
+WebLibre keeps track of the pages you have visited during Small Web sessions.
+You can revisit any previous discovery from the menu, or clear your history for a specific mode or all at once.
+
+The discovery algorithm avoids showing you pages you have seen recently, so the more you explore, the deeper into the small web you go.
+
+== Settings
+
+You can choose what type of tab opens when you enter Small Web mode: Normal, Private, or Container.
+The default is Private, meaning your Small Web browsing is not saved to your regular history.
+Find this under **Settings > Browsing > Small Web Tab Default**.
+Using a Container isolates Small Web browsing from your other tabs.
+
+== Works Well With
+
+* xref:bookmarks.adoc[Bookmarks] -- Save interesting discoveries for later
+* xref:tabs/containers.adoc[Containers] -- Isolate Small Web browsing from your other sessions
+* xref:reader-mode.adoc[Reader Mode] -- Get a cleaner reading experience on article-style pages you discover
+
+== Tips
+
+* Start with **Kagi Web** mode if you are not sure where to begin -- it has the broadest selection
+* Use **Appreciated** mode when you want higher-quality, community-vetted posts
+* Try **Wander** for a more serendipitous experience -- the decentralised network means you never know quite where you will end up
+* Switch categories often to avoid getting stuck in one topic area
+* Bookmark pages you enjoy -- the Small Web is full of sites worth revisiting
+* If a page does not load in Wander mode, it may be because the site blocks embedding -- just discover the next one
+
+== Learn More
+
+Kagi Small Web::
+* https://kagi.com/smallweb[Kagi Small Web] -- Browse the directory online
+* https://blog.kagi.com/small-web[Kagi Small Web announcement] -- Read the blog post behind the initiative
+
+Wander::
+* https://codeberg.org/susam/wander[Wander] -- The Wander project on Codeberg
+* https://susam.net/wander/[Try a Wander console] -- Experience Wander in your browser

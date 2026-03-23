@@ -40,6 +40,8 @@
 ** xref:history-downloads.adoc[History & Downloads]
 * Web Feeds
 ** xref:web-feeds.adoc[RSS Feeds]
+* Small Web
+** xref:small-web.adoc[Small Web]
 * Content Tools
 ** xref:reader-mode.adoc[Reader Mode]
 ** xref:page-translation.adoc[Page Translation]
