@@ -92,3 +92,12 @@ If you already use WebLibre's normal privacy features, many people do not need t
 The screen is most useful when you want stricter behavior, want to review the browser's low-level privacy choices, or are following a specific threat model.
 
 If you just want stronger privacy with fewer decisions, start with the regular settings in **Privacy & Security** first, then come back here only if needed.
+
+== Attributions
+
+WebLibre's hardening preferences draw on research and configurations from several browser-hardening projects:
+
+* https://github.com/arkenfox/user.js[Arkenfox user.js] (MIT) -- a comprehensive `user.js` template for hardening Firefox privacy, security, and anti-tracking settings
+* https://codeberg.org/celenity/Phoenix[Phoenix] (GPL-3.0-or-later) -- a suite of configurations and advanced modifications for Firefox, focused on privacy, security, freedom, functionality, and usability
+* https://gitlab.com/ironfox-oss/IronFox[IronFox] (AGPL-3.0) -- a privacy-focused and security-hardened web browser for Android
+* https://github.com/yokoffing/Betterfox[Betterfox] (MIT) -- a `user.js` configuration applying privacy, security, and performance optimizations to Firefox

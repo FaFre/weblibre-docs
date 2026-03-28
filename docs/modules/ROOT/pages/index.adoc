@@ -86,3 +86,8 @@ WARNING: F-Droid builds are not compatible with our Google Play or GitHub releas
 * https://feedback.weblibre.eu/[Feedback Platform] -- Vote on features and share ideas
 * https://matrix.to/#/#weblibre:unredacted.org[Matrix Chat] -- Get help from the community
 * https://github.com/FaFre/WebLibre/issues[GitHub Issues] -- Report bugs
+
+== Attributions
+
+WebLibre is built on https://wiki.mozilla.org/Gecko[Mozilla's Gecko engine] (MPL-2.0).
+All builds -- including Google Play and GitHub releases -- are libre builds made possible through https://gitlab.com/relan/fennecbuild[Fennec F-Droid] (AGPL-3.0) via the https://gitlab.com/FaFre/fennec-components[fennec-components] fork.

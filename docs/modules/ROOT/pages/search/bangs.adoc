@@ -234,3 +234,8 @@ The same user-created entries are also exposed through *Bangs > Manage User Bang
 * Check *Search On This Site* when you are already on a page and want a same-site search flow.
 * Use custom user bangs for documentation sites, stores, forums, or internal tools you search repeatedly.
 * If recommendations feel stale, clear *Bang Frequencies* and let WebLibre learn again from current usage.
+
+== Attributions
+
+WebLibre's built-in bang provider data is based on a fork of the https://github.com/kagisearch/bangs[Kagi Bangs] repository (MIT license).
+The WebLibre bang repository is maintained at https://github.com/FaFre/bangs[FaFre/bangs].
