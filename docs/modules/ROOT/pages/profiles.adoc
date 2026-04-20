@@ -115,6 +115,13 @@ You can create an encrypted backup of an individual profile.
 You need that password later to restore the backup.
 Without it, the backup cannot be opened.
 
+[NOTE]
+=====
+You cannot back up the profile that is currently active.
+If you need to back up your current profile, switch to a different one first.
+If no other profile exists, create a new profile (it can be temporary), switch to it, then back up the original profile from *Manage Profiles*.
+=====
+
 == Restore a backup
 
 . Open *Manage Profiles*.
