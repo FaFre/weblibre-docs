@@ -9,6 +9,14 @@ WebLibre can sit in the middle of several Android link flows:
 
 These are related, but they are not the same setting.
 
+== Intent Gatekeeper
+
+Before *External Link Handling* even runs, the *Intent Gatekeeper* decides whether the source app is allowed to push the link into WebLibre at all.
+
+When a new app sends a link, WebLibre asks whether to *Allow once*, *Always allow*, or *Block* it. You can manage saved decisions per app from *Settings > Privacy & Security > Intent Gatekeeper*, and respond to blocked-link notifications without opening the browser.
+
+For the full feature, see xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper].
+
 == Links Sent To WebLibre
 
 When another Android app sends a link to WebLibre, **External Link Handling** decides how that link opens.
@@ -44,7 +52,7 @@ Choose **Always** if you usually prefer the dedicated app.
 
 == Open in App
 
-WebLibre also exposes **Open in App** as an explicit action in places such as:
+WebLibre also exposes **Open in App** as a top-level item in the browser menu, and as an action in places such as:
 
 * context menus on links
 * the open-link sheet for shared or detected links
@@ -81,7 +89,8 @@ This is useful for one-off reads, sign-in confirmations, or checking a page with
 
 Use this rule of thumb:
 
-* **External Link Handling** -- a link is coming *into* WebLibre from another app
+* **Intent Gatekeeper** -- controls *whether* another app is allowed to send a link into WebLibre at all
+* **External Link Handling** -- a link is coming *into* WebLibre from another app and was already allowed in; decide which tab type to use
 * **Open Links in Apps** -- a link inside WebLibre might leave the browser for another app
 * **Open in App** -- one-time manual action for a specific link
 * **Open in custom tab** -- one-time action for a lighter browser window

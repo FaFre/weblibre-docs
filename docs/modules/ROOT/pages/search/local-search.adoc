@@ -73,6 +73,8 @@ WebLibre checks the available sections automatically.
 
 If no local result matches, you can still submit the text as a normal web search.
 
+If you have not configured a default search engine, highlighting text on a page and choosing to search still works: WebLibre opens the search screen with your text pre-filled so you can pick a provider, instead of failing silently.
+
 == Practical Examples
 
 "I still have that article open somewhere"::

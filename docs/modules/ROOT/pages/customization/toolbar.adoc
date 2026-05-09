@@ -70,6 +70,7 @@ Examples can include:
 * a hard refresh on reload
 * the *(...)* menu button: long-press to jump straight to *Settings* without opening the menu sheet
 * the tab count button: long-press to open the tab management menu
+* the *Quit* button (in the profile menu): long-press to exit immediately without the confirmation dialog
 
 The customization screen shows these hints so you know which buttons do more than a simple tap.
 

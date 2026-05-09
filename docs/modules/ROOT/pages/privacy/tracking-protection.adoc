@@ -16,6 +16,16 @@ Enhanced Tracking Protection is WebLibre's main built-in tracker blocker. It bui
 
 In current versions, fresh installs default to **Strict** protection.
 
+=== Shield Indicator
+
+The shield icon next to the address bar shows your tracking-protection status for the current site at a glance:
+
+* **Green shield** -- you have *tightened* privacy for this site (for example by enabling extra protections)
+* **Yellow alert shield** -- you have *loosened* privacy for this site, such as adding a tracking-protection exception or allowing autoplay
+* **No shield** -- everything is at default settings for that site
+
+Tap the shield to open the site panel and review or adjust protection for the current site.
+
 === Protection levels
 
 **Disabled**::
@@ -89,6 +99,14 @@ You can turn it on or off in **Settings > Privacy & Security > Bounce Tracking P
 
 NOTE: When you change **Bounce Tracking Protection**, WebLibre asks you to restart so the change can fully apply.
 
+== Third-Party Redirect Blocking
+
+Third-party redirect blocking prevents websites from silently redirecting you through external services that could track or harm you.
+This is different from bounce tracking protection, which targets intermediate redirect pages that briefly appear before the destination.
+
+Third-party redirect blocking is enabled by default.
+You can find it in **Settings > Privacy & Security > Enhanced Tracking Protection > Custom > Redirect Trackers**, or via the *Safe Browsing* group of xref:privacy/web-engine-hardening.adoc[Web Engine Hardening].
+
 == Site Exceptions
 
 If a specific website does not work correctly with **Enhanced Tracking Protection**, you can disable that protection for just that site instead of lowering protection everywhere.
@@ -98,6 +116,8 @@ Sites where Enhanced Tracking Protection is turned off appear in **Settings > Pr
 You can do this directly from the current site's panel.
 If you turn off **Enhanced Tracking Protection** there, WebLibre adds that site as an exception.
 If you turn it back on, WebLibre removes the exception again.
+
+When you add an exception, the shield icon turns yellow so you can see at a glance that protection is reduced on that site.
 
 Before adding an exception:
 

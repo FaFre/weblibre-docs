@@ -29,7 +29,7 @@ WebLibre can store permission choices for these site controls:
 |Whether a website can see your geographic location
 
 |**Notifications**
-|Whether a website can send you notifications
+|Whether a website can send you notifications. WebLibre also has early experimental support for *Web Push* so granted sites can deliver push notifications even when WebLibre is in the background
 
 |**Persistent Storage**
 |Whether a website can ask to keep site data stored more permanently

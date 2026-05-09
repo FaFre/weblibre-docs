@@ -121,7 +121,7 @@ You can choose any combination of:
 
 * **Open tabs** -- closes all open tabs
 * **Browsing history** -- deletes saved browsing history
-* **Cookies and site data** -- signs you out of most sites and removes stored website data
+* **Cookies and site data** -- signs you out of most sites and removes stored website data. Affected tabs are closed first so old data does not reappear
 * **Cached images and files** -- removes temporary files stored to speed up browsing
 * **Site permissions** -- resets saved permission choices such as camera, microphone, or location access
 * **Downloads** -- removes download entries from WebLibre
@@ -130,6 +130,26 @@ You can choose any combination of:
 ====
 Clearing **Downloads** removes the download records shown in WebLibre. Downloaded files already saved on your device may still remain unless you delete those files separately.
 ====
+
+== Custom Backup Directory
+
+You can choose where WebLibre stores profile backups instead of relying on the default internal location.
+
+To change the backup location:
+
+. Open *Manage Profiles*
+. Open the profile you want to back up
+. Tap *Change Backup Directory*
+. Select a folder on your device or external storage
+
+Backups stored outside the app survive even if you uninstall WebLibre. Old backups in the previous location are migrated automatically when you select a new directory.
+
+== Skip Cache Directories
+
+When creating a backup, you can enable *Skip Cache Directories* to exclude temporary browser data such as page caches, icons, and thumbnails.
+
+This significantly reduces the backup file size and speeds up backup creation.
+The trade-off is that cached images and other temporary data will not be restored from that backup; the browser will rebuild them as you browse.
 
 == Tips
 

@@ -46,6 +46,8 @@ Some links can open in another app on your device, such as a video app, map app,
 If you want WebLibre to stay in control, choose **Never**.
 If you usually prefer the dedicated app, choose **Always**.
 
+You can also use the **Open in App** menu item for one-time overrides regardless of this setting. **Open in App** is a top-level item in the browser menu, so it is easy to find.
+
 Find it in **Settings > Browsing > Open Links in Apps**.
 
 == Opening Links From Other Apps
@@ -82,9 +84,12 @@ For a closer look at the differences, see xref:tabs/tab-management.adoc[Tab Mana
 * **First** -- puts new tabs at the start
 * **End** -- puts new tabs at the end
 
-Choose the option that matches how you scan your tabs.
+Choose the option that matches how you scan your tabs. This setting also affects the horizontal order in the Quick Tab Switcher: with *First*, new tabs appear to the left; with *End*, to the right.
 
-Find it in **Settings > Browsing > New Tab Position**.
+You can also set the overall **Tab Direction** to control whether tabs flow from top to bottom or from left to right, depending on your layout preference.
+
+Find **New Tab Position** in **Settings > Browsing > New Tab Position**.
+Find **Tab Direction** in **Settings > Browsing > Tab Direction**.
 
 == Container and Isolated Tab Controls
 

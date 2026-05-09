@@ -54,6 +54,8 @@ These features help you decide what stays on your device and for how long:
 * **Clear Data on Exit for containers** -- In a cookie-isolated container's settings, you can enable **Clear Data on Exit** so that container's cookies and site data are wiped when the app closes
 * **xref:privacy/data-management.adoc#_delete_browsing_data[Delete Browsing Data]** -- Lets you manually clear tabs, history, cookies and site data, cache, permissions, and downloads whenever you want
 
+When you clear cookies or site data, WebLibre closes the affected tabs first so old data does not reappear immediately from a still-running session.
+
 Learn more: xref:privacy/data-management.adoc[Data Management]
 
 === Safe Browsing
@@ -101,6 +103,12 @@ If you want strong privacy without turning WebLibre into a project, this is a se
 
 |Content-blocking extension
 |Optional, but useful if you want stronger blocking for ads and unwanted page elements
+
+|Intent Gatekeeper
+|Leave it on. Allow apps you regularly open links from once, and block apps that should never push links into the browser
+
+|Screenshot Protection
+|Enable it if you regularly view sensitive content and want to prevent accidental captures
 |===
 
 NOTE: Many privacy protections are already enabled by default in WebLibre, including strict tracking protection, DNS over HTTPS, HTTPS-only protection, Global Privacy Control, query parameter stripping, and site isolation. Onboarding highlights some choices, but not every engine behavior is surfaced there as a separate setting.

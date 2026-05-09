@@ -239,3 +239,16 @@ When reporting a problem, include:
 * the exact steps that trigger the issue
 * what you expected to happen
 * what happened instead
+
+== Alpha and Stable Side by Side
+
+You can keep both the *stable* and *alpha* builds of WebLibre installed on the same device.
+They appear as separate apps (the alpha build is named *WebLibre Alpha*) with their own icons, profiles, settings, and data, so they do not interfere with each other.
+
+This is useful for:
+
+* trying upcoming features in alpha while keeping a stable version for daily browsing
+* reproducing a bug in the alpha to confirm whether a fix has landed
+* comparing behavior between the two channels
+
+If you need to share a profile between them, create an encrypted backup in one and restore it in the other.

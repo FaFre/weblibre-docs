@@ -1,5 +1,5 @@
 = Tree View Navigation
-:description: How to use WebLibre's Tree view to follow how tabs are related.
+:description: How to use WebLibre's Tree view and hierarchical tab structure to follow how tabs are related.
 
 Tree view helps you understand how your tabs are connected.
 Instead of one long flat list, WebLibre groups related tabs into trees so you can see which page led to which.
@@ -7,6 +7,24 @@ Instead of one long flat list, WebLibre groups related tabs into trees so you ca
 It is especially useful when you are researching, comparison shopping, or following links through several pages.
 
 Tree relationships are no longer limited to the dedicated **Tree** view. The **List** and **Grid** views can also display tabs hierarchically when *Hierarchical Tab View* is enabled, so you can stay in the layout you prefer.
+
+== Hierarchical View in List and Grid
+
+Tree structure is not limited to the dedicated Tree view.
+You can also enable a hierarchical display in **List** and **Grid** views.
+
+When enabled, child tabs appear indented under their parent tabs in these views too.
+This means you can see tab relationships and still use search and filter tools, which are not available in the dedicated Tree view.
+
+To enable this:
+
+. Open the tab view
+. Open the view menu or settings
+. Turn on **Show hierarchy in List/Grid views**
+
+When you turn the hierarchy display off, child tabs flatten back into normal tab positions.
+
+In List and Grid views, child tabs appear indented beneath their parent with a connecting line, so tree relationships are visible without switching to the dedicated Tree view.
 
 == Open Tree View
 
@@ -59,6 +77,19 @@ It is helpful when you want to keep a new search or page attached to the current
 
 NOTE: The setting adds the child-tab creation option. Tree view can also show relationships created when you open links in new tabs.
 
+== Reorder Tabs in Groups
+
+You can manually reorder tabs within a group even when they are in a hierarchical structure.
+
+To reorder tabs:
+
+. Open a tab view that supports reordering (List or Grid)
+. Turn on reordering mode
+. Drag tabs within their group into the order you want
+
+This works the same whether the hierarchy display is on or off.
+For more on reordering, see xref:tabs/tab-power-features.adoc[Advanced Tab Actions].
+
 == Using Tree View Day to Day
 
 * **Follow your browsing path** -- See which tab started a line of reading.
@@ -96,10 +127,9 @@ With Tree view, you can tell at a glance that:
 
 == What to Expect
 
-* **Tree** is best when tabs are related to each other.
-* **List** is better when you just want to scan many unrelated tabs quickly.
-* **Grid** is better when page previews matter more than relationships.
-* Search and filter controls are not shown in Tree view.
-* If you turn off the hierarchical view, child tabs flatten back into normal tabs instead of staying stuck in tree mode.
+* **Tree** is best when tabs are related to each other and you want the full dedicated view.
+* **List** is better for scanning many tabs quickly while still seeing relationships.
+* **Grid** is better when page previews matter more than relationships, but still shows groupings.
+* Search and filter controls are not shown in the dedicated Tree view, but are available in List and Grid views.
 
-Tree view works best when your tabs tell a story of how you explored a topic.
+Tree relationships work best when your tabs tell a story of how you explored a topic.

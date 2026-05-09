@@ -127,6 +127,12 @@ This is narrower than **Delete Browsing Data** in settings.
 It targets the current site's data instead of the whole browser.
 ====
 
+== Third-Party Redirect Blocking
+
+WebLibre blocks third-party redirects by default. This security hardening prevents websites from quietly bouncing you through intermediate domains that could track or harm you.
+
+If a site that relies on third-party redirects for legitimate functionality stops working, you can adjust the behavior from the *Safe Browsing* group in xref:privacy/web-engine-hardening.adoc[Web Engine Hardening] or from the **Redirect Trackers** toggle under *Custom* tracking protection.
+
 == Global Setting or Site Control?
 
 Use the global settings when:

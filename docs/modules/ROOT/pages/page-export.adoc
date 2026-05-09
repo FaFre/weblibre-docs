@@ -26,6 +26,8 @@ Use this when you want to keep the page layout, archive a receipt or article, or
 
 Unlike *Export as PDF*, the result is a single image file. That makes it convenient when you want to share the captured page in apps that handle images more naturally than PDFs, or when you want a quick visual archive of how the page looked.
 
+This is also different from **Share Screenshot**, which only captures the visible portion of the page and immediately opens the Android share sheet. *Export as Image* saves the full page to your device.
+
 === Export as Markdown
 
 **Export as Markdown** saves the page as a Markdown file (`.md`).

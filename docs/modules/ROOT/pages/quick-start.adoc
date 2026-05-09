@@ -40,6 +40,9 @@ For many users, this is the biggest day-to-day quality-of-life improvement.
 
 If you used *Quick Start* during setup, this step may already be done with *uBlock Origin*.
 
+If you also chose *Optimized Defaults* during setup, WebLibre enabled recommended hardening filter lists on top of the default uBlock Origin configuration -- adding stronger ad, tracker, cookie, and annoyance blocking.
+You can review or change these lists later from *Settings > Extensions > uBlock Origin Filter Lists*.
+
 == Step 4: Create Your First Container
 
 Containers help organize browsing by activity.

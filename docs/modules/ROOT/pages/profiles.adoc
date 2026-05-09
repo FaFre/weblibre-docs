@@ -119,6 +119,8 @@ You can create an encrypted backup of an individual profile.
 . Tap *Backup*.
 . Enter a password.
 . Optionally leave *Verify Backup Integrity* turned on so WebLibre checks that the backup can be restored.
+. Optionally enable *Skip Cache Directories* to exclude temporary data like page caches, icons, and thumbnails. This makes backups smaller and faster, but cached data will not be restored.
+. Optionally tap *Change Backup Directory* to store the backup outside the app's internal storage. Backups stored outside the app survive even if you uninstall WebLibre.
 . Tap *Backup*.
 
 You need that password later to restore the backup.

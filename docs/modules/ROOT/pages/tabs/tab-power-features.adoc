@@ -17,6 +17,8 @@ Pinned tabs are useful for things like:
 
 When sorting tabs, WebLibre can also use **Sort Pinned First** so pinned tabs stay grouped ahead of the rest of the list.
 
+Pinned tabs are respected across **List**, **Grid**, and the **Quick Tab Switcher**, so your important tabs stay visible no matter which view you use.
+
 == Clone a Tab
 
 The tab menu can clone the current page into another tab.
@@ -39,7 +41,9 @@ To do that:
 . Turn on reordering mode
 . Drag tabs into the order you want
 
-This works only in the normal manual tab workflow.
+Reordering works alongside tab pinning: pinned tabs stay grouped at the top while you reorder the rest of the list underneath them.
+You can also reorder tabs *within* a group when grouping or hierarchical view is active, so you keep full control even when tabs are organized into trees or containers.
+
 If WebLibre says reordering is unavailable, switch back to the default manual tab mode first.
 
 == Create a Container by Dragging Tabs Together
@@ -98,6 +102,8 @@ This works especially well together with the filters described in xref:tabs/tab-
 == Tips
 
 * Pin only the tabs you truly want to keep visible over time
+* Pinned tabs stay at the top in all views, so reserve them for tabs that really earn that space
 * Use reordering when your current tab order matters more than automatic recency
+* Reordering works alongside pinning, so you can rearrange the unpinned section without losing pinned positions
 * Use drag-to-create-container when a loose group of tabs turns into a project
 * Use **Bookmark all** before aggressively closing a large tab set

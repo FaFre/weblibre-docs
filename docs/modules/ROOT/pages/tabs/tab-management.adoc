@@ -172,6 +172,9 @@ If you browse one-handed, **Bottom** is usually easier to reach.
 
 When a tab is inside a xref:tabs/containers.adoc[container], the address/title bar shows a subtle colored border that matches that container's color. This makes it easier to tell at a glance which container you are in.
 
+Long-pressing the URL in the tab bar copies it to your clipboard.
+This is useful when you want to share or save the current page address without opening the address bar or menu.
+
 == New Tab Position
 
 You can decide where new tabs appear in your lists, both for the main tab views and for the Quick Tab Switcher.
@@ -201,21 +204,24 @@ This is different from **Open Links in Apps**, which controls whether links tapp
 
 == Quick Comparison
 
-[cols="1,3,2"]
+[cols="1,3,2,2"]
 |===
-|Tab Type |Best For |Privacy Level
+|Tab Type |Best For |Privacy Level |Survives App Restart
 
 |Regular
 |Everyday browsing, sites you want to keep using normally
 |Lowest
+|Yes
 
 |Private
 |Temporary browsing that should stay out of your normal history
 |Medium
+|No (cleared on quit)
 
 |Isolated
 |Multiple accounts, fresh sessions, one-off visits
 |Highest per tab
+|Yes
 |===
 
 For more separation inside one profile, combine tab types with xref:tabs/containers.adoc[containers].

@@ -32,7 +32,7 @@ For some downloadable links, audio, or video items, you may also see:
 Long-pressing an image can show:
 
 * **Open image in new tab** -- Opens the image itself in a new background tab
-* **Copy image** -- Copies the image so you can paste it elsewhere
+* **Copy image** -- Copies the image directly to your clipboard so you can paste it into another app
 * **Save image** -- Downloads the image to your device
 * **Copy image location** -- Copies the image's direct address
 * **Share image** -- Shares the image with another app
@@ -46,8 +46,6 @@ Long-pressing an email link can show:
 * **Share email address** -- Shares the address with another app
 * **Open in App** -- Opens your mail app, if Android offers one for that link
 
-Depending on the current app version, the copy action for email addresses may not be labeled clearly in the menu.
-
 == URL Cleaning Preview
 
 If xref:privacy/url-cleaning.adoc[URL Cleaner] is enabled, WebLibre can show a **Tracking detected** or **URL cleaned** entry for HTTP and HTTPS links.
@@ -55,8 +53,14 @@ If xref:privacy/url-cleaning.adoc[URL Cleaner] is enabled, WebLibre can show a *
 Tap it to review which tracking parameters were found before you open the link.
 If auto-apply is enabled in URL Cleaner settings, the cleaned link may already be applied.
 
+== Minimal Menu in PWA and Custom Tabs
+
+In xref:web-apps.adoc[PWA] windows and xref:custom-tabs-and-external-links.adoc[custom tabs], WebLibre shows a slimmed-down context menu with only the most relevant actions.
+This keeps the interface lightweight for these focused browsing modes.
+
 == Tips
 
+* Use **Copy image** to quickly move an image between apps without saving a file first
 * Use **Open in container** when you want a link to open under a specific container, and make sure that container has **Cookie Isolation** enabled if you need separate logins or cookies
 * If you do not see **Open in container**, check whether **Show Container UI** is enabled in **Settings > Browsing**
 * If you do not see **Open in App**, Android may not have a matching app for that link type

@@ -33,6 +33,7 @@ Some container features always work:
 * *Assigned Sites*
 * selecting the container for new tabs
 * grouping tabs under that container in the UI
+* subtle colored border on the address bar when browsing in that container
 
 Other features only work when *Cookie Isolation* is enabled for that container:
 
@@ -47,6 +48,11 @@ A non-isolated container is still useful for organization and site assignment, b
 
 With *Cookie Isolation* turned on, websites in one container cannot use the cookies or site data from another container.
 For example, if you sign in to a site in your *Work* container, that sign-in does not automatically carry over to your *Personal* container.
+
+== Container Colors on the Address Bar
+
+When you browse in a container, the address bar shows a subtle colored border matching the container's theme color.
+This makes it easy to recognize which container you are in without checking the container menu.
 
 == A Practical Example
 
@@ -78,7 +84,7 @@ One reliable way to manage containers is:
 When creating a container, you can set:
 
 * *Name* -- a label such as `Work` or `Shopping`
-* *Select Color* -- helps you recognize the container quickly
+* *Select Color* -- helps you recognize the container quickly on the address bar and in the UI
 * *Cookie Isolation* -- gives the container its own cookies and site data
 * *Use Tor(TM) Proxy* -- routes this container through Tor
 * *Clear Data on Exit* -- clears cookies and site data when the app closes
@@ -148,6 +154,8 @@ Site rules support wildcards so you can match a domain and all of its subdomains
 * Enter `*.example.com` to match the apex domain *and* every subdomain (`example.com`, `mail.example.com`, `app.example.com`, ...)
 * Exact-origin entries still win over wildcard matches when both apply, so you can fine-tune routing for specific subdomains
 
+For example, if you have `mail.example.com` assigned to *Work* and `*.example.com` assigned to *Personal*, links to `mail.example.com` open in *Work* and all other `example.com` subdomains open in *Personal*.
+
 This is convenient for services that span many subdomains, such as cloud providers or company tools.
 
 == Unsaved Changes Warning
@@ -191,12 +199,15 @@ It is a good choice when you want a container to start fresh the next time you u
 * Turn on *Cookie Isolation* for any container where separate logins or cookies matter.
 * If you need one-off isolation without creating a container first, use xref:tabs/tab-management.adoc[isolated tabs].
 * You can combine containers with private tabs.
-* Colors help you recognize containers in container lists and related tab UI.
+* Colors help you recognize containers on the address bar, in container lists, and in related tab UI.
+* The address bar border color changes to match your active container.
 
 == Tips
 
 * Start with two or three containers, such as *Personal*, *Work*, and *Shopping*.
 * Turn on *Cookie Isolation* for any container where separate logins matter.
 * Use *Assigned Sites* for sites you open repeatedly.
+* Use wildcard patterns in assigned sites to cover multiple related domains.
 * Use *Clear Data on Exit* for temporary or sensitive browsing.
 * Use *Assign Container* when a tab was opened in the wrong place.
+* Watch the address bar color to confirm you are in the right container.

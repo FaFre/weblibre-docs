@@ -15,6 +15,9 @@ You can reach both screens from the browser menu:
 . Open the browser menu
 . Tap **History** or **Downloads**
 
+For even quicker access, add the **History** button to your contextual toolbar.
+Open *Settings > Toolbar & Layout > Customize Toolbar Buttons* and move *History* from the *Disabled* section into *Enabled*.
+
 The two screens use the same general layout, but they focus on different data.
 
 == What History Shows

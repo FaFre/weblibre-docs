@@ -35,6 +35,8 @@ Here is the practical version of what the groups are for:
 
 **Safe Browsing**::
 Controls protections against dangerous sites and downloads.
+In *Settings > Privacy & Security*, Safe Browsing is exposed as separate **Malware Protection** and **Phishing Protection** switches so you can enable or disable each independently.
+This group also covers **Third-Party Redirect Blocking**, which is enabled by default and blocks unwanted third-party redirects used for tracking or malicious purposes. Turn it off only if a trusted site that relies on third-party redirects stops working.
 
 **Telemetry**::
 Reduces browser telemetry, studies, and other background data collection.

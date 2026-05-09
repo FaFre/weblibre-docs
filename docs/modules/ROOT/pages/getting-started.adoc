@@ -118,7 +118,7 @@ If you choose *Quick Start*, WebLibre installs uBlock Origin automatically at th
 The last setup page covers a small number of Android-level permissions and integrations.
 At the moment, setup asks about:
 
-* *Notifications* for download status updates
+* *Notifications* for download status updates and Intent Gatekeeper alerts
 * *Default Browser* if you want links from other apps to open in WebLibre
 
 If you skip either option, you can still turn it on later in Android or WebLibre settings.
@@ -141,3 +141,4 @@ These pages are useful next steps:
 * xref:profiles.adoc[Profiles] -- create separate locked spaces for different people or use cases
 * xref:tor.adoc[Tor] -- route sensitive browsing through Tor when needed
 * xref:firefox-sync.adoc[Sync] -- sync bookmarks, tabs, and more with your other devices
+* xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper] -- decide which Android apps can send links into WebLibre

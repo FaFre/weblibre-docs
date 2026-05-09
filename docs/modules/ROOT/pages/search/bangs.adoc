@@ -133,7 +133,6 @@ Go to *Settings > Search > Bang Settings* to manage them.
 Current repository sections include:
 
 * *General Bangs*
-* *Assistant Bangs*
 * *Kagi Bangs*
 
 On that screen you can:
