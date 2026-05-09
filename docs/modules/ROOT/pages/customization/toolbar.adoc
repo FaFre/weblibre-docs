@@ -35,15 +35,20 @@ With the tab bar at the top, WebLibre describes the top position as persistent, 
 Turn on **Settings > Toolbar & Layout > Show Contextual Toolbar** to show an additional bottom toolbar for navigation and actions.
 
 To change its buttons, open **Settings > Toolbar & Layout > Customize Toolbar Buttons**.
+The screen separates buttons into *Enabled* and *Disabled* sections so you can see at a glance which buttons are active and reorder only the ones you actually use.
+
 On that screen you can:
 
-* drag buttons to change their order,
-* turn individual buttons on or off,
+* drag buttons in the *Enabled* section to change their order,
+* move buttons between *Enabled* and *Disabled* to turn them on or off,
 * set a fallback for some buttons, and
 * use **Reset to Defaults** if you want to start over.
 
 Some buttons also show a long-press hint in the customization screen.
 That means pressing and holding the button in the browser can open extra actions.
+
+Available buttons include common navigation and tab actions and a *History* button that opens your browsing history.
+The *History* button is disabled by default; move it to *Enabled* if you want quick history access from the toolbar.
 
 === Fallback Buttons
 
@@ -63,6 +68,8 @@ Examples can include:
 * extra tab creation choices from tab buttons
 * add or remove bookmark actions
 * a hard refresh on reload
+* the *(...)* menu button: long-press to jump straight to *Settings* without opening the menu sheet
+* the tab count button: long-press to open the tab management menu
 
 The customization screen shows these hints so you know which buttons do more than a simple tap.
 

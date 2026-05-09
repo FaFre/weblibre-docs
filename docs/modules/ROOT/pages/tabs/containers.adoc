@@ -141,6 +141,25 @@ Helpful notes:
 * If a site is already assigned somewhere else, WebLibre warns you.
 * Site assignment works even when *Cookie Isolation* is off. In that case the site still opens in that container, but it does not get separate cookies or site data.
 
+=== Wildcard Assignments
+
+Site rules support wildcards so you can match a domain and all of its subdomains in one rule.
+
+* Enter `*.example.com` to match the apex domain *and* every subdomain (`example.com`, `mail.example.com`, `app.example.com`, ...)
+* Exact-origin entries still win over wildcard matches when both apply, so you can fine-tune routing for specific subdomains
+
+This is convenient for services that span many subdomains, such as cloud providers or company tools.
+
+== Unsaved Changes Warning
+
+If you edit a container and press the back button without saving, WebLibre asks what you want to do:
+
+* *Save* the changes
+* *Discard* the changes
+* *Keep editing* and stay on the screen
+
+This avoids accidentally losing changes when you navigate away by reflex.
+
 == Per-Container Tor
 
 If you enable *Use Tor(TM) Proxy* for a cookie-isolated container, tabs in that container use Tor while your other containers can keep using your normal connection.

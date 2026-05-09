@@ -28,6 +28,8 @@
 ** xref:site-controls.adoc[Site Controls]
 ** xref:site-permissions.adoc[Site Permissions]
 ** xref:privacy/web-engine-hardening.adoc[Web Engine Hardening]
+** xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper]
+** xref:privacy/screenshot-protection.adoc[Screenshot Protection]
 * Tor
 ** xref:tor.adoc[Tor Integration]
 * Search

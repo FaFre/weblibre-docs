@@ -1,0 +1,68 @@
+= Intent Gatekeeper
+:description: How to control which Android apps are allowed to open links in WebLibre.
+
+When another app on your device tries to open a link in the browser, WebLibre can ask whether to allow or block it.
+This privacy feature is called the *Intent Gatekeeper*.
+
+It helps when:
+
+* a notification or background app keeps redirecting you into the browser
+* an app opens unexpected links that you did not ask for
+* you want to limit which apps can hand traffic to your browser
+
+== How It Works
+
+When the Intent Gatekeeper is on, WebLibre checks the *source app* every time another Android app tries to open a URL.
+
+For each source app, WebLibre can:
+
+* prompt you the first time and remember the decision
+* allow the app to open links
+* block the app from opening links
+
+You stay in control of the policy per app, not per link.
+
+== Open the Settings
+
+. Go to *Settings > Privacy & Security*
+. Open the *Intent Gatekeeper* screen
+
+From there you can:
+
+* enable or disable the gatekeeper
+* review the list of source apps and their saved decisions
+* change a saved decision back to *Ask* or flip it between *Allow* and *Block*
+
+== Notifications and Quick Replies
+
+When the gatekeeper blocks a link, WebLibre can post a notification with action buttons so you can respond without opening the browser.
+
+The available actions are:
+
+* *Always allow* -- whitelist the source app permanently
+* *Allow once* -- open this single link without saving the decision
+
+*Always allow* appears first in the notification so you do not accidentally tap *Allow once* when you meant to whitelist the app for good.
+
+You can also configure how the gatekeeper communicates with you in *Gatekeeper Notification Options* on the same settings screen.
+
+== Changing or Resetting Decisions
+
+To change what an app is allowed to do:
+
+. Open *Settings > Privacy & Security > Intent Gatekeeper*
+. Find the source app in the list
+. Pick a new decision
+
+If you want every app to ask again the next time it tries to open a link, reset its decision to *Ask*.
+
+== Things to Expect
+
+* The gatekeeper only intercepts links that other apps try to open in WebLibre. It does not affect links you tap inside WebLibre.
+* If you set WebLibre as your default browser, the gatekeeper is what ultimately decides whether a request from another app reaches a tab.
+* Source apps that you have allowed once still have to follow your other settings, such as xref:custom-tabs-and-external-links.adoc[External Link Handling].
+
+== Related Pages
+
+* xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links] -- how WebLibre opens links once they are allowed in
+* xref:privacy/overview.adoc[Privacy & Security Overview]

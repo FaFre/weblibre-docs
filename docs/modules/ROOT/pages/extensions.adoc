@@ -1,21 +1,38 @@
 = Extensions
-:description: How to install and manage extensions in WebLibre.
+:description: How to install and manage extensions, browse the in-app add-on store, and tune uBlock Origin filter lists in WebLibre.
 
 Most mobile browsers on Android either do not support extensions at all or only support a very small set.
 WebLibre uses Mozilla's Gecko engine, so it can run Firefox add-ons.
 
-This page explains what you can do, where to find the right menu, and what to expect on mobile.
+WebLibre includes a fully redesigned in-app extension experience.
+You can browse, search, install, configure, and update add-ons without leaving the app, and you can manage uBlock Origin filter lists from the same place.
 
 == Install an Extension
 
 There are three practical ways to install an extension in WebLibre:
 
 * During xref:getting-started.adoc[first launch], when WebLibre offers to install uBlock Origin
-* From the browser menu under *Extensions* -> *Get Extensions*
+* From the in-app *Add-on Store* under the browser menu's *Extensions* section
 * From a local `.xpi` file in *Settings* -> *Extensions* -> *Install from File*
 
-If you want to browse available add-ons inside the app, use *Get Extensions* from the browser menu.
-The *Settings* -> *Extensions* screen is mainly for installing from a file or changing the extension collection source.
+== Add-on Store
+
+The Add-on Store lets you discover and install add-ons directly inside WebLibre.
+
+. Open the browser menu
+. Open *Extensions*
+. Tap *Add-on Store* (or *Get Extensions*)
+
+On that screen you can:
+
+* browse curated and recommended add-ons
+* switch between segmented categories or app filters
+* search add-ons by name
+* open an add-on detail page for permissions, screenshots, and a description
+
+Tap a screenshot in the detail page to open it in a zoomable overlay; tap again to close it without leaving the detail page.
+
+When you tap *Install*, WebLibre handles the install flow in-app and the add-on appears in your *Manage Extensions* list.
 
 == Recommended: uBlock Origin
 
@@ -34,6 +51,52 @@ In practice, this usually means faster page loads, less data usage, and fewer di
 
 NOTE: WebLibre already includes its own privacy protections, such as tracking protection, HTTPS-only protection, and Global Privacy Control. uBlock Origin complements those protections, but it does not replace them.
 
+== uBlock Origin Filter List Management
+
+When uBlock Origin is installed, WebLibre exposes a dedicated screen for managing filter lists without opening the extension's own settings page.
+
+From this screen you can:
+
+* browse and toggle individual built-in filter lists
+* enable WebLibre's *recommended hardening filter lists* with one action, including extra ad, tracker, cookie, and annoyance blockers
+* add a *custom external filter list* by URL
+* review which lists are currently active
+
+The recommended hardening filters are also the ones offered during xref:getting-started.adoc[onboarding] when you opt in to optimized defaults.
+
+TIP: If a website breaks after enabling more filter lists, disable the most recently enabled list first, then re-enable lists one at a time.
+
+== Manage Installed Extensions
+
+To manage extensions you already installed:
+
+. Open the browser menu
+. Open *Extensions*
+. Tap *Manage Extensions*
+
+The Manage Extensions screen has sections for *Enabled*, *Disabled*, *Recommended*, and *Unsupported* add-ons.
+There is also a one-tap *Update All* action that checks every installed add-on for updates and installs them together.
+
+Tap an add-on to open its detail screen, where you can:
+
+* enable or disable it
+* review the *permissions* it requested
+* open the add-on's own *settings* or *popup* directly inside WebLibre
+* open the add-on's *options page* if it offers one
+* check or trigger an update for that add-on
+* uninstall it
+
+Some add-ons also expose extra entries elsewhere, such as buttons in the toolbar or items inside the page menu.
+
+== Pinned Add-on Bar
+
+You can pin add-ons that show a browser action so they appear in the browser toolbar.
+
+A tap on a pinned add-on opens its popup as a bottom sheet, so you do not have to leave the page to use it.
+This is the fastest way to use add-ons such as content blockers, password managers, or note-taking tools.
+
+To pin or unpin an add-on, use its detail screen.
+
 == Install from a File
 
 If you already have an extension file on your device, you can install it directly.
@@ -45,15 +108,18 @@ Compatible add-ons use the `.xpi` file format.
 
 Most people will only need this if they already downloaded an add-on file elsewhere.
 
-WebLibre also shows an *Allow unsigned extensions* option during file installation.
-Unsigned extensions have not been verified by Mozilla.
-Only use that option if you trust the source of the file.
+=== Allow Unsigned Extensions
 
-If the file does not install, the most common reasons are:
+WebLibre also exposes a permanent *Allow Unsigned Extensions* setting under *Settings* -> *Extensions* -> *Security*.
+
+Unsigned extensions have not been verified by Mozilla.
+Only enable this option if you trust the sources you install from. WebLibre shows security warnings and a confirmation dialog before turning it on.
+
+If a file does not install, the most common reasons are:
 
 * the file is not really a compatible `.xpi` add-on
 * the add-on depends on desktop-only interfaces
-* the add-on is unsigned and you did not explicitly allow that
+* the add-on is unsigned and you have not enabled the *Allow Unsigned Extensions* setting
 
 == Use a Custom Extension Collection
 
@@ -83,22 +149,6 @@ then the values are:
 NOTE: WebLibre restarts after you save a custom collection.
 
 If you later want to go back to the default add-on source, open the same screen and remove the custom collection again.
-
-== Manage Installed Extensions
-
-To manage extensions you already installed:
-
-. Open the browser menu
-. Open *Extensions*
-. Use *Manage Extensions* for the installed add-on list
-
-Depending on the extension, you may also see:
-
-* *Extension settings* for that add-on
-* Buttons or menu entries provided by the extension itself
-* Shortcuts in browser menus or toolbars if the add-on exposes them
-
-Exact options can vary from one extension to another.
 
 == What Works and What May Not
 

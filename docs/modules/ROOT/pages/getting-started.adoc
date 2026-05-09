@@ -19,6 +19,16 @@ The first screen asks you to:
 
 You cannot continue until those documents are accepted.
 
+The welcome screen also shows a *Restore from Backup* option.
+If you already have an encrypted profile backup from another device or a previous install, you can import it here before creating any profile, instead of finishing onboarding first.
+
+== Alpha & Stable Side By Side
+
+You can install the stable and alpha builds of WebLibre at the same time.
+The alpha build appears as a separate app called *WebLibre Alpha* with its own icon, profile data, and settings, so it does not interfere with the stable build.
+
+This is useful if you want to try upcoming features without putting your everyday browsing on the alpha channel.
+
 == Search
 
 Next, WebLibre asks how search should work.
@@ -98,7 +108,10 @@ This page appears in *Custom Setup*.
 WebLibre can install *uBlock Origin*, a well-known content blocker that helps block ads, trackers, and other unwanted page elements.
 For many people, this makes sites cleaner and can reduce data use.
 
-If you choose *Quick Start*, WebLibre installs uBlock Origin automatically at the end of setup.
+The install step also offers an *Optimized Defaults* option.
+When you opt in, WebLibre enables its recommended hardening filter lists for uBlock Origin (extra ad, tracker, cookie, and annoyance blockers) and turns on engine-level privacy hardenings such as *Local Network Access* blocking.
+
+If you choose *Quick Start*, WebLibre installs uBlock Origin automatically at the end of setup with the recommended privacy defaults applied.
 
 == Permissions
 
@@ -109,6 +122,13 @@ At the moment, setup asks about:
 * *Default Browser* if you want links from other apps to open in WebLibre
 
 If you skip either option, you can still turn it on later in Android or WebLibre settings.
+
+== Automatic Preference Migration
+
+WebLibre includes an automatic preference migration system that updates Gecko engine preferences when new features are added in later releases.
+
+You do not need to do anything for this to work.
+After an update, your existing settings are preserved and any new preferences are filled in with the recommended defaults so the browser stays consistent with current expectations.
 
 == What To Do Next
 

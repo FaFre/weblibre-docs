@@ -36,6 +36,8 @@ Use isolated tabs when you want to:
 
 If you do not see isolated-tab options in the app, turn on **Settings > Browsing > Show Isolated Tab UI**.
 
+NOTE: Isolated tabs survive quitting WebLibre. Only **Private** tabs are cleared when the app exits.
+
 == Open the Tab View
 
 To manage tabs in one place, open the tab view by tapping the tab count in the browser.
@@ -65,7 +67,32 @@ Good for research sessions and link trails.
 
 You switch views from the tab view header.
 
+Tree relationships are not limited to the dedicated **Tree** view. **List** and **Grid** can also display tabs as a hierarchy when *Hierarchical Tab View* is enabled, so you can keep the layout you prefer while still seeing which tab opened from which.
+
 Learn more: xref:tabs/tree-view.adoc[Tree View Navigation]
+
+== Auto-Scroll to the Active Tab
+
+Whenever you open the tab view (List, Grid, Tree, or the Quick Tab Switcher), WebLibre smoothly scrolls the currently active tab into view.
+
+You no longer need to hunt for the tab you were just on, even when you have many open tabs.
+
+== Pinned Tabs
+
+Pinned tabs always stay at the top of your tab lists when you have *Sort pinned first* enabled.
+
+This applies consistently across:
+
+* **List** view
+* **Grid** view
+* the **Quick Tab Switcher** bar
+
+You can drag and reorder tabs even when pinned and unpinned tabs are mixed together. WebLibre keeps the pinned section at the top while you reorder.
+
+== Reorder Tabs in Groups
+
+You can manually reorder tabs within container groups, tree branches, or other groupings.
+This gives you full control over the tab order even when grouping is active, not only in the flat list.
 
 == Use Child Tabs with Tree View
 
@@ -127,6 +154,8 @@ You can then adjust:
 
 The **Container Tabs** mode only appears if container UI is enabled.
 
+The Quick Tab Switcher always shows your most recently used tabs first, regardless of your tab bar direction setting, so muscle memory stays consistent. The active tab chip is centered in the bar for visibility.
+
 == Tab Bar and Tab View Layout
 
 You can change how tab controls look and where they appear in **Settings > Toolbar & Layout**.
@@ -140,6 +169,21 @@ Common options include:
 * **Show Favicons in List View** -- shows website icons instead of page thumbnails in list view
 
 If you browse one-handed, **Bottom** is usually easier to reach.
+
+When a tab is inside a xref:tabs/containers.adoc[container], the address/title bar shows a subtle colored border that matches that container's color. This makes it easier to tell at a glance which container you are in.
+
+== New Tab Position
+
+You can decide where new tabs appear in your lists, both for the main tab views and for the Quick Tab Switcher.
+
+Open *Settings > Browsing > New Tab Position* and choose whether new tabs should appear at the *Top/Start* or *Bottom/End* (or *Left/Right*, depending on your tab bar direction).
+
+This lets you control the flow of your browsing: keep new tabs near the active one, or always push them to the far end of the list.
+
+== Stronger Session Restore
+
+WebLibre tracks recently closed tabs internally so the session restore process is more resilient.
+This significantly reduces the chance of duplicate tabs appearing after restart, even when many tabs were open or the app was killed in the background.
 
 == Opening Links Sent from Other Apps
 

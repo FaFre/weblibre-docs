@@ -1,0 +1,40 @@
+= Screenshot Protection
+:description: How to block screenshots and screen recordings of WebLibre on Android.
+
+WebLibre includes a *Screenshot Protection* setting that prevents the operating system and other apps from capturing screenshots or screen recordings while you use the browser.
+
+This is useful when:
+
+* you regularly screen-share with another app and want WebLibre's content excluded
+* you do not want apps with screen-recording permission to capture your browsing
+* you handle sensitive accounts and want an extra UI-level guard
+
+== Turn It On
+
+. Go to *Settings > Privacy & Security*
+. Turn on *Screenshot Protection*
+
+The setting takes effect immediately for new screens. You may need to leave and re-enter a screen for it to apply there.
+
+== What It Does
+
+When the setting is on:
+
+* Android-level screenshots taken inside WebLibre come out blank
+* Screen recordings show a blank frame instead of WebLibre's content
+* Recent-app previews of WebLibre may also appear blank, depending on your device
+
+== What It Does Not Do
+
+Screenshot Protection is a UI-level guard. It does not:
+
+* prevent another device from photographing your screen
+* prevent accessibility services or root-level tools from reading the screen
+* protect content that has already been screenshotted before you turned the setting on
+
+For broader privacy choices, see the xref:privacy/overview.adoc[Privacy & Security Overview].
+
+== Tips
+
+* If a legitimate app you trust needs to record your WebLibre screen (for example, a screen-sharing helper), turn the setting off temporarily and turn it back on afterwards.
+* Combine Screenshot Protection with xref:app-lock.adoc[App Lock] if you want both an unlock barrier and a capture guard.

@@ -6,6 +6,8 @@ Instead of one long flat list, WebLibre groups related tabs into trees so you ca
 
 It is especially useful when you are researching, comparison shopping, or following links through several pages.
 
+Tree relationships are no longer limited to the dedicated **Tree** view. The **List** and **Grid** views can also display tabs hierarchically when *Hierarchical Tab View* is enabled, so you can stay in the layout you prefer.
+
 == Open Tree View
 
 . Open the tab overview by tapping the tab count.
@@ -98,5 +100,6 @@ With Tree view, you can tell at a glance that:
 * **List** is better when you just want to scan many unrelated tabs quickly.
 * **Grid** is better when page previews matter more than relationships.
 * Search and filter controls are not shown in Tree view.
+* If you turn off the hierarchical view, child tabs flatten back into normal tabs instead of staying stuck in tree mode.
 
 Tree view works best when your tabs tell a story of how you explored a topic.

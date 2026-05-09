@@ -1,9 +1,10 @@
 = Web Apps (PWA)
-:description: How to add supported websites to your Android home screen in WebLibre.
+:description: How to add supported websites to your Android home screen in WebLibre, and how to control their name, icon, and storage context.
 
 Some websites can work more like apps on your phone. These are often called Progressive Web Apps, or PWAs.
 
 In WebLibre, supported sites can be added to your Android home screen so you can open them more like a separate app.
+You can choose a custom name, pick how the shortcut stores its data, and even pin the same site multiple times for different accounts.
 
 == What a Web App Is
 
@@ -18,16 +19,59 @@ WebLibre only shows the install option when the current site supports it.
 
 . Open the website you want to install
 . Open the browser menu for the current tab
-. Tap *Add to Home Screen*
-. In the confirmation dialog, tap *Add*
+. Tap **Add to Home Screen**
+. In the install dialog, choose a *Name*, optional *Storage* context, and confirm
 
 After that, Android adds a shortcut for the site to your home screen.
 
-== What to Expect After Installing
+== Customize the Shortcut Name
 
-* The site gets its own home screen shortcut and icon when the site provides one
-* Opening it from the shortcut can feel more like opening an app than reopening a normal tab
-* It is still the website, so its content and features come from the site itself
+The install dialog lets you replace the website's default title with any name you want.
+This is useful when:
+
+* the site's own title is long, generic, or in a different language
+* you want a shorter label that fits on your home screen
+* you are pinning the same site more than once and need to tell shortcuts apart
+
+You can leave the field as the default if the site's own name is already what you want.
+
+== Choose How the Shortcut Stores Data
+
+The install dialog also includes a *Storage* option that decides how cookies, logins, and site data are scoped for that shortcut.
+
+Available choices are:
+
+* **Default** -- normal browser storage, no container
+* **Use an existing container** -- shares cookies and logins with one of your xref:tabs/containers.adoc[containers]
+* **Inherit current isolated session** -- reuses the storage of the isolated session you have open right now
+* **New isolated context** -- creates a fresh isolated storage just for this shortcut
+
+The *new isolated context* option is the right choice for opening a second account on the same site without having to log out of the first one.
+
+If you install from a tab that is already inside a cookie-isolated container, that container is preselected automatically.
+
+== Multiple Shortcuts For The Same Site
+
+You can pin the same website multiple times with different names and storage contexts.
+For example:
+
+* one shortcut for your *personal* account, using the default storage
+* another shortcut for your *work* account, using a *new isolated context* or a dedicated container
+
+Each shortcut keeps its own session, so logging in or out of one does not affect the other.
+
+== Smarter PWA Launches
+
+When you tap a PWA shortcut and that PWA is already running, WebLibre brings the existing instance to the front instead of starting a new one.
+
+If a PWA loses its session because Android stopped the browser in the background, WebLibre's *PWA session recovery* automatically restores it on the next launch instead of dropping you on the main screen or crashing.
+
+PWAs opened from home screen shortcuts also keep your active profile and container associations, so they keep behaving like the tab they were installed from.
+
+== Better Default Icons
+
+Shortcuts now always get an icon, even for sites that do not provide one.
+That makes shortcuts easier to find on the home screen and avoids blank tiles for poorly described sites.
 
 == When the Option Appears
 
@@ -47,6 +91,8 @@ If you do not see *Add to Home Screen*, that site probably does not currently su
 If you install a web app from a tab that is inside a xref:tabs/containers.adoc[container] with *Cookie Isolation* enabled, the installed web app keeps that isolated browsing context.
 That means its cookies and site data stay separated just like regular tabs from that same cookie-isolated container.
 
+You can also pick a container at install time using the *Storage* option, even if the original tab was not inside a container.
+
 == Web Apps and Profiles
 
 Installed web apps also stay tied to the profile they came from.
@@ -61,4 +107,5 @@ Taken together, profile context and container context help the installed web app
 * If the site changes later, the shortcut still opens the live website, not a separate downloaded app
 * To remove a web app, delete its shortcut from Android the same way you remove other home screen shortcuts
 * Site permissions you allow still depend on the website and Android, just like when you use the site in the browser
-* If you care about separation, install the web app from the right profile and container the first time
+* Use *new isolated context* when you want a clean session that will not mix with anything else
+* Use *existing container* when you want the shortcut to share login state with related browser tabs

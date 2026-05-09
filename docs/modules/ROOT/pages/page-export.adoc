@@ -20,6 +20,12 @@ To export the current page:
 
 Use this when you want to keep the page layout, archive a receipt or article, or share a version that is easy to print.
 
+=== Export as Image
+
+**Export as Image** saves the current page as a PNG image to your device.
+
+Unlike *Export as PDF*, the result is a single image file. That makes it convenient when you want to share the captured page in apps that handle images more naturally than PDFs, or when you want a quick visual archive of how the page looked.
+
 === Export as Markdown
 
 **Export as Markdown** saves the page as a Markdown file (`.md`).
@@ -84,6 +90,6 @@ If no eligible devices appear, check that your other device is signed in to the 
 
 == Notes
 
-* The labels in the menu are **Export as PDF**, **Export as Markdown**, **Copy as Markdown**, **Print**, **Share Link**, **Share Screenshot**, **Show QR Code**, and **Send To Device**.
+* The labels in the menu are **Export as PDF**, **Export as Image**, **Export as Markdown**, **Copy as Markdown**, **Print**, **Share Link**, **Share Screenshot**, **Show QR Code**, and **Send To Device**.
 * Markdown options depend on WebLibre having page content available to export. On some pages, the result may be limited or there may be no extracted-content choice.
 * If you want to preserve many tabs for later reading instead of exporting one page, use **Bookmark all** from the tab view actions.

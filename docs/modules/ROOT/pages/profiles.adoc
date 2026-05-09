@@ -67,6 +67,15 @@ After that, the app closes so the next launch opens the selected profile.
 This is expected.
 It helps WebLibre load the selected profile's own data cleanly.
 
+== Quit WebLibre
+
+The profile menu includes a *Quit* button for closing the browser cleanly.
+
+* *Tap* it to see the standard confirmation dialog.
+* *Long-press* it to quit immediately without the confirmation step.
+
+Use long-press when you are sure you want to exit, for example after handling something sensitive.
+
 == Edit, delete, or manage a profile
 
 Open *Manage Profiles* to see all profiles.

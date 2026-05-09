@@ -25,6 +25,7 @@ These features reduce how websites, advertisers, and data brokers follow you acr
 
 * **xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection]** -- Blocks many trackers, cryptominers, fingerprinting scripts, and other known tracking techniques
 * **Bounce Tracking Protection** -- Blocks a common redirect-based tracking trick where you are briefly sent through a tracker before reaching the real site
+* **Third-Party Redirect Blocking** -- Enabled by default. Blocks unwanted third-party redirects to reduce exposure to malicious or tracker-driven detours
 * **xref:privacy/url-cleaning.adoc[Query Parameter Stripping and URL Cleaning]** -- Removes many known tracking parameters from links. In **Privacy & Security**, this appears as **Query Parameter Stripping**. WebLibre also has a separate **URL Cleaner** under **Settings > Browsing**
 * **Global Privacy Control (GPC)** -- Sends a privacy preference to websites telling them not to sell or share your personal data. Some websites and jurisdictions recognize this signal, but support is not universal
 
@@ -35,6 +36,13 @@ WebLibre includes features that make this harder:
 
 * **xref:privacy/fingerprint-protection.adoc[Fingerprint Protection]** -- Reduces how uniquely your browser stands out. Stronger modes can improve privacy, but may cause a few websites to behave oddly
 * **xref:tabs/containers.adoc[Containers]** -- Organize browsing by activity, and with *Cookie Isolation* enabled they separate cookies, logins, and site data into different browsing contexts
+
+=== App-Level Privacy
+
+These features protect WebLibre itself from other apps and capture tools on your device:
+
+* **xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper]** -- Asks before another Android app is allowed to open links in WebLibre, with per-app *Allow* or *Block* decisions
+* **xref:privacy/screenshot-protection.adoc[Screenshot Protection]** -- Blocks screenshots and screen recordings of the browser at the operating-system level
 
 === Data Control
 
@@ -47,6 +55,13 @@ These features help you decide what stays on your device and for how long:
 * **xref:privacy/data-management.adoc#_delete_browsing_data[Delete Browsing Data]** -- Lets you manually clear tabs, history, cookies and site data, cache, permissions, and downloads whenever you want
 
 Learn more: xref:privacy/data-management.adoc[Data Management]
+
+=== Safe Browsing
+
+WebLibre includes safe-browsing protection against known malware and phishing sites.
+
+* The control is exposed as a dedicated setting under *Settings > Privacy & Security*, with separate switches for *malware* and *phishing* protection.
+* You can opt out if you would rather not rely on Google's lists, while keeping the rest of the privacy stack untouched.
 
 === Advanced Hardening
 

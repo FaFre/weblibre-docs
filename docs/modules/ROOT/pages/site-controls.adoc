@@ -20,6 +20,16 @@ That panel can show controls tied to the site you are visiting, not the whole br
 
 If a setting only affects one site, this is usually where WebLibre exposes it.
 
+== Permission Shield Indicator
+
+The small shield icon on your tab title shows your privacy posture for the current site at a glance:
+
+* **Green shield** -- you have *tightened* privacy for this site (for example, by enabling extra protections)
+* **Yellow alert shield** -- you have *loosened* privacy for this site (for example, by allowing a tracker, autoplay, or another permission)
+* **Hidden** -- everything is at default settings for that site
+
+This makes it obvious whether you are using stricter or looser settings than usual without opening the site panel.
+
 == Connection Information
 
 At the top of the site panel, WebLibre can show connection status such as:
@@ -94,14 +104,16 @@ WebLibre can clear data for just the current site without wiping the whole brows
 
 In the site panel, expand **Clear Site Data** and choose what to remove.
 
-The available data types are:
+The data types are organized so it is clear what each option covers:
 
-* **Cookies**
-* **Cached Files**
-* **Site Data**
+* **Site Data** -- the parent option. Includes:
+** **Cookies**
+** **Cached Files**
 * **Auth Sessions**
 
 Then tap **Clear Now** and confirm the action.
+
+WebLibre closes any open tabs that belong to the site before wiping data, so the cleared data cannot be re-created from a still-running session.
 
 This is useful when:
 

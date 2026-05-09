@@ -23,6 +23,8 @@ The choices are:
 
 This is useful for links that come from messaging apps, email apps, social apps, or Android share targets.
 
+When another app *shares* text or a URL into WebLibre (for example via the Android share sheet, or a *PROCESS_TEXT* selection action from another app), the same routing logic applies. Shared text and URLs go through your *External Link Handling* preference and can open in the right container or as a custom tab when appropriate.
+
 == Links That Could Open Another App
 
 Some links inside WebLibre match apps already installed on your device, such as maps, video apps, shopping apps, or social apps.
