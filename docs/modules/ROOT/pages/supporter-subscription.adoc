@@ -1,0 +1,317 @@
+= Supporter Subscription
+:description: What WebLibre Supporter is, why it exists, and what you get -- including WebLibre Search and encrypted account sync.
+
+WebLibre Supporter is an optional paid subscription.
+It funds WebLibre's development and provides the features that need a hosted service to work: **WebLibre Search** and **encrypted account sync**.
+
+You do not need it to use WebLibre.
+The browser and its privacy features are free.
+Supporter is for people who want a better search experience and want to help keep the project independent.
+
+== Why It Exists
+
+Most browsers and search engines are free because *you* are the product.
+They are funded by ads, sponsored results, and building a profile of what you search for and where you go.
+That business model only works if the company watches what you do.
+
+WebLibre takes the opposite approach.
+Instead of selling your attention or your data, it asks the people who get value from it to pay a small, predictable amount.
+
+That choice has a direct benefit for you:
+
+* There is no reason to track you, because tracking is not how the project makes money.
+* Search results can be chosen for quality, not for whoever paid for placement.
+* The project stays independent and can keep its privacy promises.
+
+In short, Supporter exists so WebLibre can offer useful online services without turning you into an advertising target.
+
+== What You Get
+
+Supporter includes two things: a better search experience and encrypted sync for your WebLibre setup.
+
+**WebLibre Search**::
+A private, ad-free search built into WebLibre.
+It blends results from several sources, lets you switch result styles with <<search-modes,search modes>>, can route over Tor, lets you <<private-previews,preview pages safely>>, and -- by design -- keeps your searches <<how-private-search-works,unlinkable to your account>>.
+
+**Encrypted account sync**::
+Store and restore your WebLibre settings and preferences across profiles and devices, <<encrypted-account-sync,encrypted so that only you can read them>>.
+
+You also get the usual account controls: check your status, manage billing, cancel, export your data, and delete your account.
+
+The rest of this page explains how each part works and why it is built this way.
+
+[#weblibre-search]
+== What WebLibre Search Is
+
+WebLibre Search is WebLibre's own search service, built right into the browser.
+It looks and feels like an ordinary search engine, but it works differently under the hood.
+
+A typical search engine sends your query to one company that runs one index and one ranking system.
+WebLibre Search instead asks several independent search sources, blends their results, and applies WebLibre's own ranking on top.
+You get broader coverage and more room for smaller, independent sites to show up -- without configuring any search settings yourself.
+
+It is built around a few simple ideas:
+
+* **Use several sources** instead of trusting a single index.
+* **Rely on stable, well-supported source integrations** for reliable, consistent results.
+* **Make smaller and public-interest sites easier to find**, not just the same large platforms.
+* **Keep paying separate from searching**, so a search can't be linked back to the account that paid for it.
+
+[#how-private-search-works]
+== How Private Search Works
+
+This is the part that makes WebLibre Search different, so it is worth understanding.
+
+A helpful way to picture it: think of an arcade.
+You pay the front desk and get a handful of tokens.
+Later you walk up to a game and drop in a token.
+The game accepts the token and runs -- but it has no idea who bought it.
+The desk knows you paid; the games only see anonymous tokens.
+
+WebLibre Search works the same way:
+
+. While your subscription is active, your account receives **search credits**.
+. WebLibre turns those credits into anonymous **search tokens** and stores them on your device.
+. Once a token is created, it can no longer be linked to your account.
+. When you search, WebLibre spends one token instead of sending your account login.
+. The search runs, and you can load more pages or use result tools from that same search.
+
+The result: your account is used to *receive* credits, but the token *spent* on a search isn't tied to your login.
+By design, a spent token cannot be traced back to the account it came from.
+
+On top of that, the search service is built to avoid keeping raw search logs.
+By default it does not store your search queries, the pages you ask it to fetch, your IP address, or your tokens in its logs.
+
+What this protects you from, and what it doesn't:
+
+* It separates *who paid* from *what was searched*. That link is broken on purpose.
+* It does **not** make you invisible. The search service still has to read your query to answer it, and a query that contains personal details can still identify you.
+* Issuing new tokens needs a signed-in account, because WebLibre has to check that you have credits left.
+* Tor can add network-level privacy, but it is slower and has to be enabled and ready first.
+* No search service can promise perfect anonymity against every possible form of correlation, abuse handling, or legal requirement -- or against information you reveal in the query itself.
+
+=== Credits and Standards
+
+The anonymous tokens behind private search use https://datatracker.ietf.org/doc/rfc9576/[Privacy Pass], an open standard developed at the IETF (RFC 9576).
+
+Credit is due to https://kagi.com/[Kagi] for pioneering the use of Privacy Pass to separate payment from search, an approach WebLibre Search builds on.
+WebLibre's implementation is made possible by the open-source https://github.com/raphaelrobert/privacypass[raphaelrobert/privacypass] library, which handles the underlying token issuance and redemption.
+
+Result aggregation is powered by a WebLibre fork of SearXNG, the open-source metasearch engine.
+
+[#search-modes]
+== Search Modes
+
+Search modes change which kinds of results WebLibre prioritizes.
+You can switch between them at any time without touching technical settings.
+
+**General**::
+Balanced results across the open web.
+The best starting point for everyday searches.
+
+**Independent Web**::
+Favors smaller and less corporate sources.
+Useful when you want to step away from the same big platforms and SEO-heavy pages.
+
+**Small Web**::
+Leans hard toward independent, personal, and niche sites.
+Useful for exploring, researching, or finding less commercial writing.
+
+These are maintained result profiles, not just labels.
+WebLibre can improve them over time on the server side, so search quality can get better without you changing anything or updating the app.
+
+== Where Results Come From
+
+WebLibre Search blends results from a curated mix of sources, which currently can include:
+
+[cols="1,1,2"]
+|===
+|Source |Origin |What it adds
+
+|**Brave Search**
+|🇺🇸 United States
+|Broad web coverage for general results.
+
+|**Mojeek**
+|🇬🇧 United Kingdom
+|An independent search engine with its own index.
+
+|**Marginalia Search**
+|🇸🇪 Sweden
+|Focused on the smaller, more independent web.
+
+|**Wikipedia**
+|🌍 Global (Wikimedia Foundation, US-based)
+|Knowledge panels and article results.
+|===
+
+WebLibre integrates with each source through its official, supported interface.
+This keeps results reliable and consistent, and helps the service stay stable over time.
+
+WebLibre then applies its own ranking to downrank spam and large commercial patterns, and to lift smaller or public-interest sites in the modes where that fits.
+Where a source supports it, sponsored and advertising placements are filtered out, so results are ranked on relevance rather than paid placement.
+
+The sources read your query text because they need it to return results.
+They do not receive your WebLibre Account login, and the token you spent is not linkable back to your account.
+
+The exact source mix can change over time as WebLibre improves the service and as source availability changes.
+
+[#private-previews]
+== Private Previews
+
+WebLibre Search can do more than return a list of links.
+For supported results, WebLibre can fetch a page through its own servers and hand it to you in the form you choose, so you can inspect or save a result before opening the original site yourself.
+
+Every preview is a **static copy** -- a snapshot frozen at the moment WebLibre fetched the page.
+It is not a live, interactive connection to the site, so scripts do not keep running and the page cannot change under you after it is captured.
+
+This gives you a safer way to look at a result:
+
+* The page is fetched away from your device, so the original site does not see your session.
+* The token used for the action is not linkable back to your account.
+* Because the copy is static, a preview reduces direct exposure to a site's scripts, trackers, popups, and fingerprinting attempts.
+* WebLibre blocks requests to unsafe or internal network targets.
+
+=== Preview Modes
+
+You can choose how a page is delivered:
+
+**Extracted Preview**::
+Reader-optimized text and key details, shown directly in the app.
+Best for quickly reading an article without the surrounding clutter.
+
+**Full Page Capture**::
+A self-contained copy of the full page, with its layout and assets, saved for later use.
+Best when you want to keep the page as it looked.
+
+**PDF Snapshot**::
+The page rendered to a PDF.
+Best for offline reading, printing, or sharing.
+
+**Image Snapshot**::
+A full-page image (screenshot) of the rendered page.
+Best for a quick visual record of how the page looked.
+
+=== Respecting the Original Site
+
+Previews come from a prerender pipeline: when you request one, WebLibre fetches the page through its own servers and hands a static snapshot to your device, where the preview is rendered.
+
+What that means in practice:
+
+* **Each preview is transient.** The pipeline fetches the page on demand and discards its copy afterwards, so WebLibre does not keep a lasting copy of other people's pages.
+* **A preview is private to you.** It is produced for the person who requested it -- not shared, indexed, made publicly available, or redistributed to others.
+* **Each request is fetched fresh.** WebLibre pulls the page live from the source for you, rather than re-serving a stored copy to others.
+* **Downloads are single-use.** A finished capture is handed back through a one-time link, not published for the public.
+
+The aim is a private, convenient way to read or save a result while respecting the work of the people who publish it.
+
+[#encrypted-account-sync]
+== Encrypted Account Sync
+
+Supporter also includes encrypted sync for WebLibre's own settings.
+
+When you set it up, WebLibre creates a sync key from your account password on your device.
+Your settings are encrypted *before* they are uploaded, so the server only ever stores encrypted snapshots -- not readable settings.
+
+You can store and restore:
+
+* **Settings snapshots** -- WebLibre settings, including general, search-engine, and Tor-related settings.
+* **Preferences snapshots** -- Lower-level browser-engine preferences from your profile.
+
+This is handy when you use several profiles or devices and want to carry your setup with you.
+
+CAUTION: Because snapshots are encrypted with a key derived from your password, changing or losing that password can make older snapshots impossible to restore. Keep your password safe.
+
+This is separate from xref:firefox-sync.adoc[Sync].
+Sync handles browser data like tabs, bookmarks, and history.
+Account sync handles WebLibre-specific settings and preferences, and is available to active Supporters.
+
+== How It Compares
+
+=== Versus traditional search engines
+
+Traditional search engines are fast, broad, and convenient.
+They also have strong commercial reasons to measure your searches, optimize ad placement, and keep you inside their ecosystem.
+
+[cols="1,2,2"]
+|===
+|Area |Ad-supported search |WebLibre Search
+
+|How it's funded
+|Ads, sponsored results, and placement deals.
+|Supporter subscriptions.
+
+|Main incentive
+|Keep ad and click measurement valuable.
+|Keep giving subscribers a search they want to keep paying for.
+
+|Where results come from
+|Usually one company's own index.
+|A blend of selected sources, ranked by WebLibre.
+
+|Your search identity
+|Searches can be tied to cookies, accounts, IP address, or ad profiles.
+|Searches spend anonymous tokens that can't be linked back to your account.
+
+|What's prioritized
+|Often ads, shopping intent, and engagement.
+|Can deliberately favor independent and smaller sites.
+|===
+
+=== Versus public or self-hosted metasearch
+
+Many privacy-minded users already get their results from a metasearch engine -- either a public instance someone else runs, or one they host themselves.
+WebLibre Search works in the same spirit, but it is built into the browser and takes care of the parts that are otherwise left to you.
+
+**Public instances** are free and need no setup, but you depend on an operator you don't know.
+Shared instances can be slow, intermittently unavailable, or limited by upstream engines, and result quality and uptime vary from one instance to the next.
+
+**Self-hosting** gives you the most control and keeps your queries on infrastructure you trust.
+In return, you set it up, keep it updated, and keep it reachable wherever you want to search from.
+
+There is also a privacy catch that is easy to miss: a metasearch instance only hides you in the crowd of people using it.
+On a busy public instance, your queries blend in with everyone else's.
+On a quiet instance -- and especially one you host yourself -- there is little or no crowd to blend into, so the upstream engines effectively see all the traffic coming from a single source, which can make your searches easier to attribute to you.
+
+WebLibre Search is the managed option:
+
+* It is part of the browser, so there is no instance to find, trust, or maintain.
+* Searches spend anonymous tokens, so they are not tied to your account.
+* WebLibre keeps the source integrations, ranking, previews, and optional Tor routing working for you.
+
+Running or choosing your own metasearch instance is a great fit if you want that level of control.
+WebLibre Search is for people who want a maintained, private search inside the browser without managing any of that.
+
+== How to Subscribe
+
+. Open **Settings > WebLibre Account**.
+. Tap **Sign in to WebLibre Account**.
+. Create an account or sign in.
+. Open the **Subscription** section.
+. Tap **Subscribe**.
+. Review the price, terms, and privacy notice, then complete payment through the checkout.
+. Return to WebLibre. If the status doesn't update right away, refresh it.
+
+Your Supporter status then appears in **Settings > WebLibre Account**.
+The page may keep checking for a short time after checkout, because payment confirmation can arrive a little later than the page return.
+
+== Managing the Subscription
+
+From **Settings > WebLibre Account**, open **Manage Subscription**.
+Depending on your status, you may see:
+
+* **Active** -- Supporter features are available until the shown date.
+* **Will not renew** -- Access continues until the current period ends, then stops.
+* **Paused** -- Access is off until you resume.
+* **Past due** -- A payment failed. Update your payment method to keep access.
+
+To cancel, use **Cancel contracts here** and confirm with **Cancel now**.
+Ordinary cancellation keeps your access until the end of the current billing period.
+You receive an email confirming the cancellation was received.
+
+== If You Don't Subscribe
+
+WebLibre stays a full privacy-focused browser without Supporter.
+Browsing, your privacy controls, and the rest of WebLibre's built-in features all keep working without it.
+
+Supporter is simply for people who want WebLibre Search, encrypted account sync, and a way to fund the browser that doesn't depend on ads or tracking.

@@ -6,6 +6,8 @@
 ** xref:migration.adoc[Switching from Another Browser]
 ** xref:troubleshooting.adoc[Troubleshooting]
 ** xref:error-logs-and-troubleshooting-tools.adoc[Error Logs & Tools]
+* WebLibre Account
+** xref:supporter-subscription.adoc[Supporter Subscription]
 * Profiles & Security
 ** xref:profiles.adoc[Multi-User Profiles]
 ** xref:app-lock.adoc[App Lock]

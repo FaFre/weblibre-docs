@@ -83,6 +83,7 @@ WARNING: F-Droid builds are not compatible with our Google Play or GitHub releas
 
 == Community & Support
 
+* xref:supporter-subscription.adoc[Supporter Subscription] -- Fund the browser and get WebLibre Search and encrypted account sync
 * https://feedback.weblibre.eu/[Feedback Platform] -- Vote on features and share ideas
 * https://matrix.to/#/#weblibre:unredacted.org[Matrix Chat] -- Get help from the community
 * https://github.com/FaFre/WebLibre/issues[GitHub Issues] -- Report bugs
