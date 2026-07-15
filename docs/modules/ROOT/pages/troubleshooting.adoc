@@ -22,7 +22,7 @@ Open the browser menu, open **Extensions**, then use **Manage Extensions** or th
 
 . Try the same page in a different tab context.
 If you opened it in a container, try an unassigned tab or a different container.
-If the tab is routed through Tor, the site may be slower or may block Tor exit nodes.
+If the tab is routed through Tor or another proxy, the site may be slower or may block that connection's exit address.
 
 . If the page still fails only in WebLibre, try another browser.
 That usually points to a site compatibility problem rather than a problem with your connection.
@@ -51,9 +51,9 @@ If login fails, try the site with fewer blockers temporarily:
 The site's saved cookies or site data may be stuck in a bad state.
 Clear that site's data and then sign in again.
 
-**Tor-related checks**::
-Some sites challenge or block Tor traffic during sign-in.
-If you are using Tor, try the same login without Tor to confirm whether that is the cause.
+**Connection-routing checks**::
+Some sites challenge or block Tor and other proxy traffic during sign-in.
+If you are using one, try the same login over a direct connection to confirm whether routing is the cause.
 
 == Tor Is Slow or Not Working
 
@@ -84,6 +84,20 @@ Try switching between Wi-Fi and mobile data.
 Restricting countries can reduce the number of usable relays.
 
 For a full overview, see xref:tor.adoc[Tor Integration].
+
+== A Proxy Will Not Connect or Load Pages
+
+If a custom proxy profile does not work:
+
+. Open **Settings > Proxy > Proxy Connections** and check whether the profile is running.
+. Open the running profile's menu, choose **Test connection**, and check the resulting response time and egress IP.
+. Open **View logs** and filter **Proxy Logs** to **Warning** or **Error**.
+. Confirm the profile's server, port, credentials, and protocol settings.
+. If only one container fails, review its **Proxy Connection** and **Bypass Global Proxy** settings.
+. If all regular tabs are affected, review **Settings > Proxy > Proxy Routing** and temporarily switch away from **Global Routing**.
+
+If the connection works but one site blocks it, use a direct container with **Bypass Global Proxy** instead of disabling routing for every tab.
+See xref:proxy.adoc[Proxy Connections] for routing and import details.
 
 == An Extension Does Not Work
 
@@ -148,6 +162,10 @@ Close tabs you no longer need, especially media-heavy pages.
 Tor adds extra network and encryption work.
 Use it only where you need it instead of leaving all regular tabs routed through Tor.
 
+**Other proxy routing**::
+Proxy performance depends on the server and route you selected.
+Stop profiles you are not using and compare the profile's latency with a direct connection.
+
 **Extensions**::
 Some add-ons inspect every page and use noticeable CPU or memory.
 Try disabling one extension at a time.
@@ -158,6 +176,10 @@ This improves isolation between sites, but it can increase memory use on some de
 **On-Device AI**::
 The feature is optional. Local model work can increase CPU use while those features are active.
 See xref:on-device-ai.adoc[On-Device AI] for the setup flow and feature scope.
+
+**Local Search Index**::
+Indexing visited page text uses local storage and some background work.
+You can disable it or clear indexed content under **Settings > Search > Local Search Index** without deleting normal browsing history.
 
 Quick things to try:
 
@@ -180,8 +202,9 @@ What the choices mean:
 
 * **Lock on Background** asks again whenever WebLibre goes to the background
 * **Lock After Timeout** waits for the selected **Timeout Duration** before locking
+* **Lock on Startup Only** asks once when WebLibre starts, then stays unlocked until the app is fully closed
 
-If the prompts feel too frequent, **Lock After Timeout** is usually the more convenient choice.
+If the prompts feel too frequent, **Lock After Timeout** or **Lock on Startup Only** may be more convenient.
 The default timeout is 5 minutes.
 
 See xref:app-lock.adoc[App Lock] and xref:profiles.adoc[Profiles] for more detail.

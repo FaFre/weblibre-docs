@@ -64,13 +64,14 @@ This page includes settings such as:
 * *Tab Bar Position*
 * *Tab Bar Style*
 * *Show Contextual Toolbar*
-* *Show Quick Tab Switcher Bar*
+* *Tab Stacking*
 * *Bottom Sheet Tab View*
 
 The most visible choice is *Tab Bar Position*:
 
 * *Top* keeps the tab bar at the top of the screen.
 * *Bottom* puts it within easier thumb reach and supports auto-hide.
+* *Left* and *Right* turn the tab bar into a vertical side rail.
 
 You can review the full set later in *Settings > Toolbar & Layout*.
 
@@ -125,7 +126,7 @@ If you skip either option, you can still turn it on later in Android or WebLibre
 
 == Automatic Preference Migration
 
-WebLibre includes an automatic preference migration system that updates Gecko engine preferences when new features are added in later releases.
+WebLibre includes automatic migrations that update browser settings and Gecko engine preferences when features change in later releases.
 
 You do not need to do anything for this to work.
 After an update, your existing settings are preserved and any new preferences are filled in with the recommended defaults so the browser stays consistent with current expectations.
@@ -140,5 +141,7 @@ These pages are useful next steps:
 * xref:search/bangs.adoc[Bang Providers] -- search specific websites directly from the address bar
 * xref:profiles.adoc[Profiles] -- create separate locked spaces for different people or use cases
 * xref:tor.adoc[Tor] -- route sensitive browsing through Tor when needed
+* xref:proxy.adoc[Proxy Connections] -- create or import other proxy profiles and choose their routing
+* xref:gestures.adoc[Gestures] -- draw configurable strokes for navigation, tabs, and page actions
 * xref:firefox-sync.adoc[Sync] -- sync bookmarks, tabs, and more with your other devices
 * xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper] -- decide which Android apps can send links into WebLibre

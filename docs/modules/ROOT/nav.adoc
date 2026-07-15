@@ -32,14 +32,15 @@
 ** xref:privacy/web-engine-hardening.adoc[Web Engine Hardening]
 ** xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper]
 ** xref:privacy/screenshot-protection.adoc[Screenshot Protection]
-* Tor
+* Tor & Proxies
 ** xref:tor.adoc[Tor Integration]
+** xref:proxy.adoc[Proxy Connections]
 * Search
 ** xref:search/local-search.adoc[Personal Local Search]
 ** xref:search/bangs.adoc[Bang Providers]
 ** xref:search/search-modules.adoc[Search Modules]
 * Library
-** xref:home-screen-and-top-sites.adoc[Home Screen & Top Sites]
+** xref:home-screen-and-top-sites.adoc[Home Screen & Shortcuts]
 ** xref:bookmarks.adoc[Bookmarks]
 ** xref:history-downloads.adoc[History & Downloads]
 * Web Feeds
@@ -63,4 +64,5 @@
 ** xref:customization/toolbar.adoc[Toolbar & Layout]
 ** xref:customization/appearance.adoc[Appearance & Themes]
 ** xref:customization/browsing.adoc[Browsing Behavior]
+** xref:gestures.adoc[Gestures]
 ** xref:advanced-settings.adoc[Advanced Settings]

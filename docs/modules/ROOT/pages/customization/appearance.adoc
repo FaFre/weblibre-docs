@@ -15,6 +15,45 @@ In practice, this mainly changes the browser interface. Websites that follow you
 
 Find this in **Settings > General > Theme**.
 
+== Pure Black (OLED)
+
+Turn on **Pure Black (OLED)** to switch dark-mode backgrounds from dark grey to true black.
+
+On phones with OLED or AMOLED screens, true-black pixels are turned off completely, which can save battery and gives deeper blacks.
+Cards and menus stay slightly lighter so you can still tell surfaces apart.
+
+This setting only has a visible effect while the app is in dark mode.
+It also applies to xref:reader-mode.adoc[Reader Mode]'s dark theme.
+
+Find this in **Settings > General > Pure Black (OLED)**.
+
+== Refresh Rate
+
+**Refresh Rate** requests a high or low display refresh rate from Android:
+
+* **System** -- uses your device's default behavior
+* **High** -- can make scrolling and animations smoother on 90 Hz or 120 Hz screens
+* **Low** -- can reduce battery usage
+
+The default is **High**.
+This setting depends on device and Android support, so not every phone will show a difference.
+
+Find this in **Settings > General > Refresh Rate**.
+
+== System Bar Colors
+
+Android's status and navigation bar areas follow the active toolbar or container color.
+WebLibre adjusts their foreground icons for contrast automatically.
+
+== Show Close Button
+
+**Show Close Button** adds an X button to the top-left of the new tab and search screen.
+Tap it to return to the page you were on, without using the system back button or a swipe gesture.
+
+This is especially handy on e-ink devices or if you prefer visible controls over gestures.
+
+Find this in **Settings > General > Show Close Button**.
+
 == User Interface Zoom
 
 **User Interface Zoom** changes the size of WebLibre's own interface, such as buttons, menus, and settings screens. It does not directly change the size of text inside websites.

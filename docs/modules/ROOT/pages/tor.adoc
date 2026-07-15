@@ -3,10 +3,12 @@
 
 WebLibre includes a built-in Tor proxy, so you do not need a separate Tor app just to get started.
 
-You can use it in two ways:
+Tor is one of WebLibre's built-in connection options and appears alongside your xref:proxy.adoc[proxy profiles].
+You can use it in several ways:
 
 * for all regular tabs
 * only for selected xref:tabs/containers.adoc[containers]
+* for private tabs
 
 That makes it practical to keep everyday browsing fast while sending more sensitive browsing through Tor.
 
@@ -34,23 +36,31 @@ Tor is useful, but it is not magic.
 
 For better privacy, combine Tor with WebLibre's xref:privacy/fingerprint-protection.adoc[Fingerprint Protection] and browse without logging into personal accounts when possible.
 
-== Open Tor Settings
+== Start and Stop Tor
 
-In WebLibre, open the browser menu and tap *Tor(TM) Proxy*.
+Tor lives in the *Connections* section of the browser menu, together with your proxy profiles.
 
-The main switch on that screen is *Tor(TM) Service*.
-Turn it on to start Tor.
+. Open the browser menu
+. Expand the *Connections* section
+. Use the toggle on the *Tor(TM) Proxy* row to start or stop Tor
+
+The section also shows how many connections are currently active, and *Manage Connections* opens the full connection list.
+
+To open the Tor settings screen, tap the edit button on the Tor row, or open Tor from **Settings > Proxy > Proxy Connections**, where Tor is listed alongside your proxy profiles.
+The main switch on that screen is the *Tor(TM) Service* toggle.
 
 While Tor is connecting, WebLibre shows a progress bar.
 The first connection may take a little longer than later reconnects.
 
 == Choose How Tabs Use Tor
 
-The *Routing* section controls which tabs go through Tor.
+Which tabs go through Tor is controlled by the shared proxy routing settings in **Settings > Proxy > Proxy Routing**.
+Tor is one of the connections you can select there.
 
 === Container-Based Routing
 
-*Container-Based Routing* sends only tabs in containers that have both *Cookie Isolation* and *Use Tor(TM) Proxy* enabled through Tor.
+With *Container-Based Routing*, only tabs in containers that have a proxy assigned are routed.
+To send a container through Tor, assign Tor as that container's *Proxy Connection* (see below).
 
 This is the most flexible option if you want a mix of normal browsing and Tor browsing in one app.
 
@@ -64,13 +74,14 @@ If you do not see container options in the app, enable *Show Container UI* in br
 
 === Global Routing
 
-*Global Routing* sends all regular tabs through Tor.
+With *Global Routing*, all regular tabs go through the proxy you select under *Proxy for global routing* -- choose Tor there to send everything through Tor.
 
 This is simpler, but usually slower than routing only selected containers.
+Individual containers can still opt out with *Bypass Global Proxy*, which is useful for sites that block Tor.
 
-=== Proxy Private Tabs
+=== Private Tabs
 
-Turn on *Proxy Private Tabs* if you want all private tabs to use Tor too.
+Under *Private Tabs*, you can choose a separate proxy for private tabs -- including Tor.
 
 Private tabs and Tor are different features:
 
@@ -85,10 +96,20 @@ To route only one container through Tor:
 
 . Open your containers
 . Create a new container and turn on *Cookie Isolation*, or open one that already has *Cookie Isolation*
-. Turn on *Use Tor(TM) Proxy*
-. Keep *Container-Based Routing* selected in *Tor(TM) Proxy*
+. Under *Privacy & Security*, tap *Proxy Connection* and choose Tor
+. Keep *Container-Based Routing* selected in **Settings > Proxy > Proxy Routing**
 
-If you select a Tor-enabled container while Tor is not already running, WebLibre can prompt you to enable it.
+If you select a container assigned to Tor while Tor is not already running, WebLibre can prompt you to enable it.
+
+== Onion Sites
+
+WebLibre handles `.onion` addresses in a Tor-friendly way:
+
+* Typing an onion address without `http://` or `https://` opens it over `http://`, matching how many onion services work.
+* WebLibre does not force HTTPS upgrades for `.onion` sites, which improves compatibility with onion services.
+* If you explicitly type an `https://...onion` address, WebLibre keeps HTTPS.
+
+Onion connections are already encrypted end to end inside the Tor network, so plain `http://` onion addresses do not carry the same risk as plain HTTP on the open web.
 
 == Connection Options
 
@@ -174,4 +195,4 @@ For most people, Tor works best for browsing that needs extra privacy, not for e
 * Use *Container-Based Routing* if only some browsing needs Tor.
 * Combine Tor with xref:privacy/fingerprint-protection.adoc[Fingerprint Protection] for better privacy.
 * If Tor will not connect, try *Auto Configure Transport* first.
-* If a site breaks on Tor, try *Request New Identity* or open that site outside Tor.
+* If a site breaks on Tor, try *Request New Identity*, give that site's container *Bypass Global Proxy*, or open the site outside Tor.

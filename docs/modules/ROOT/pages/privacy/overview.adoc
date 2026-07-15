@@ -18,6 +18,7 @@ These features protect traffic between your device and the network:
 * **xref:privacy/dns-over-https.adoc[DNS over HTTPS]** -- Encrypts DNS lookups so your network provider or public Wi-Fi operator cannot easily see the site names your browser is looking up
 * **xref:privacy/https-only.adoc[HTTPS-Only Mode]** -- In the app this appears as **Block insecure HTTP connections**. It upgrades sites to HTTPS when possible and warns or blocks when a site only offers insecure HTTP
 * **xref:tor.adoc[Tor Integration]** -- Routes browsing through the Tor network when you want stronger identity and network privacy. It is slower than a normal connection, so it is best used when you need it
+* **xref:proxy.adoc[Proxy Connections]** -- Routes browsing through your own proxy servers, globally or per container, with support for protocols such as SOCKS, Shadowsocks, VMess, Trojan, and WireGuard
 
 === Tracking Protection
 

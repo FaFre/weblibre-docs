@@ -92,6 +92,9 @@ If you need a refresher on the tab overview and related controls, see xref:tabs/
 
 If you do not want these features, turn off *On-Device AI* in *Settings > Web Content*.
 
+To reclaim the storage used by downloaded models, open **Settings > Advanced** and clear **ML Downloads**.
+Restart WebLibre before using AI features again after clearing.
+
 == When It Is Most Useful
 
 * You have many open tabs and want a faster starting point

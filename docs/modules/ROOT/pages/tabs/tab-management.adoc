@@ -22,6 +22,11 @@ WebLibre describes these as **Private** tabs.
 
 Use private tabs when you want a temporary session that stays separate from your regular tabs.
 
+While private tabs are open, Android shows a persistent notification.
+Tapping or swiping that notification closes all private tabs at once, so you can end a private session without opening the app.
+
+Private tabs are not restored after an app restart.
+
 === Isolated
 
 Isolated tabs are more separated than regular or private tabs.
@@ -144,17 +149,13 @@ This is useful when you want to quickly clean up private tabs or remove older ta
 
 The quick tab switcher adds an extra bar so you can jump between tabs without opening the full tab view.
 
-Turn it on in **Settings > Toolbar & Layout > Show Quick Tab Switcher Bar**.
+How it arranges tabs is controlled by **Settings > Toolbar & Layout > Tab Stacking**, which offers **Accordion**, **Two Rows**, **Recently Used Tabs**, **Container Tabs**, and **Disabled**.
+The container-based modes only appear if container UI is enabled.
 
-You can then adjust:
+You can also reorder tabs directly in the bar by long-pressing and dragging a chip.
+The active tab chip is centered in the bar for visibility.
 
-* **Quick Tab Switcher Mode** -- choose **Recently Used Tabs** or **Container Tabs**
-* **History Fallback in Quick Tab Switcher** -- shows history suggestions when there are no tab chips available
-* **Show Titles in Quick Tab Switcher** -- shows tab titles next to icons
-
-The **Container Tabs** mode only appears if container UI is enabled.
-
-The Quick Tab Switcher always shows your most recently used tabs first, regardless of your tab bar direction setting, so muscle memory stays consistent. The active tab chip is centered in the bar for visibility.
+For all switcher options -- close buttons, titles, depth indicators, and custom action buttons -- see xref:customization/toolbar.adoc[Toolbar & Layout].
 
 == Tab Bar and Tab View Layout
 
@@ -162,7 +163,7 @@ You can change how tab controls look and where they appear in **Settings > Toolb
 
 Common options include:
 
-* **Tab Bar Position** -- **Top** or **Bottom**
+* **Tab Bar Position** -- **Top**, **Bottom**, or a vertical side rail on the **Left** or **Right**
 * **Tab Bar Style** -- **With Title** or **Compact**
 * **Auto Hide Tab Bar** -- hides the tab bar while scrolling
 * **Bottom Sheet Tab View** -- opens the tab view as a bottom sheet instead of full screen
@@ -175,18 +176,22 @@ When a tab is inside a xref:tabs/containers.adoc[container], the address/title b
 Long-pressing the URL in the tab bar copies it to your clipboard.
 This is useful when you want to share or save the current page address without opening the address bar or menu.
 
-== New Tab Position
+== Tab Ordering
 
-You can decide where new tabs appear in your lists, both for the main tab views and for the Quick Tab Switcher.
+You can decide how tabs are ordered, both for the main tab views and for the quick tab switcher.
 
-Open *Settings > Browsing > New Tab Position* and choose whether new tabs should appear at the *Top/Start* or *Bottom/End* (or *Left/Right*, depending on your tab bar direction).
+Open *Settings > Browsing* and set *Tab List Direction* and *Tab Bar Direction* to *Newest first* or *Oldest first*.
 
-This lets you control the flow of your browsing: keep new tabs near the active one, or always push them to the far end of the list.
+This lets you choose whether the newest tabs appear first or last in the list and switcher.
 
 == Stronger Session Restore
 
 WebLibre tracks recently closed tabs internally so the session restore process is more resilient.
 This significantly reduces the chance of duplicate tabs appearing after restart, even when many tabs were open or the app was killed in the background.
+
+During startup, saved tabs can appear early as temporary tab chips while the browser engine finishes restoring them.
+If you tap a tab that is still restoring, WebLibre queues your selection and opens it as soon as it becomes available.
+Private tabs are not restored, matching the private browsing behavior.
 
 == Opening Links Sent from Other Apps
 
@@ -197,6 +202,7 @@ Choices are:
 * **Prompt** -- ask each time
 * **Regular** -- always open in a regular tab
 * **Private** -- always open in a private tab
+* **Isolated** -- always open in an isolated tab when **Show Isolated Tab UI** is enabled
 
 Find it in **Settings > Browsing > External Link Handling**.
 

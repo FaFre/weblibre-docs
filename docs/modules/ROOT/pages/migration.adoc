@@ -22,6 +22,7 @@ What usually needs to be set up again:
 * **Tab and toolbar layout**
 * **Privacy settings**
 * **Containers and profiles**
+* **Proxy profiles and gesture bindings**
 
 TIP: In WebLibre, open **Bookmarks** and use **Import > HTML** to bring in a bookmarks file. During import, you can choose **Merge** to keep existing bookmarks or **Replace** to erase them first.
 
@@ -68,6 +69,7 @@ Review xref:quick-start.adoc[Privacy Setup] so you know how WebLibre handles DNS
 
 **Layout and tab handling**::
 Check **Settings > Toolbar & Layout** if you want the tab bar, tab overview, or general controls to feel closer to your previous setup.
+The tab bar can sit at the top or bottom or become a left or right side rail, and **Tab Stacking** controls the extra quick-switcher bar.
 
 **Containers and profiles**::
 Use xref:tabs/containers.adoc[containers] when you want separate logins for different activities, and turn on *Cookie Isolation* in the containers where that separation matters.
@@ -87,11 +89,11 @@ xref:tabs/containers.adoc[Containers] can separate cookies, logins, and site dat
 **Profiles**::
 xref:profiles.adoc[Profiles] give you a larger separation boundary for different people or distinct setups.
 
-**Optional built-in Tor routing**::
-WebLibre can route all regular tabs through xref:tor.adoc[Tor] or only selected containers.
+**Built-in Tor and proxy routing**::
+WebLibre can route all regular tabs, private tabs, or selected cookie-isolated containers through xref:tor.adoc[Tor] or a custom xref:proxy.adoc[proxy connection].
 
-**Local search and feed integration**::
-The address bar can search your own tabs, bookmarks, history, and feed articles before you fall back to a web search.
+**Full-text local search and feed integration**::
+The address bar can search your own tabs, bookmarks, history, feed articles, and the locally indexed text of pages you visited before you fall back to a web search.
 
 == Make WebLibre Feel Familiar
 
@@ -102,7 +104,10 @@ If you want the browser to feel settled quickly, these are the highest-value adj
 * **Settings > Privacy & Security > Enhanced Tracking Protection** -- Use **Standard** or **Strict** based on how aggressive you want the blocking to be
 * **Settings > Extensions** -- Install the few extensions you actually depend on
 * **Settings > Firefox Sync** -- Sign in if you want tabs, bookmarks, and history on your other devices
+* **Settings > Proxy** -- Import or create connections and choose global, private-tab, or container-based routing
 * xref:tabs/containers.adoc[Containers] -- Create two or three containers for the activities you want to separate
+
+The main **Settings** screen also has a global search field. Results show the category and section, then open and highlight the exact setting you choose.
 
 == Quick Migration Checklist
 
@@ -130,6 +135,9 @@ If you want the browser to feel settled quickly, these are the highest-value adj
 
 |Try containers
 |Create 2-3 containers for work, personal, shopping, or banking
+
+|Configure a proxy
+|Go to **Settings > Proxy**, if you use one
 |===
 
 == A Practical Setup Order
@@ -139,7 +147,7 @@ Start small and keep the changes practical:
 . Install WebLibre, import bookmarks, and follow the xref:quick-start.adoc[Privacy Setup]
 . Adjust search, toolbar layout, and one or two extensions you actually use
 . Create a few containers for your regular activities
-. Explore Tor, profiles, feeds, and optional AI features if they fit your workflow
+. Explore Tor or proxies, xref:gestures.adoc[gestures], profiles, feeds, and optional AI features if they fit your workflow
 
 For many people, containers are the biggest long-term change.
 They can feel unusual at first, but cookie-isolated containers are one of WebLibre's most useful privacy features.

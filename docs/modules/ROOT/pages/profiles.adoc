@@ -17,9 +17,9 @@ Each profile has its own data and settings, including things like:
 * installed extensions
 * RSS feeds
 * bang providers and user bangs
-* many browser settings and preferences
+* browser settings and preferences
 
-Nothing important is meant to carry over between profiles.
+Browsing data does not carry over between profiles unless you intentionally import, restore, or sync it.
 For example, signing in to a website in one profile does not sign you in inside another profile.
 
 == When to use profiles
@@ -101,6 +101,7 @@ To enable it:
 . Choose an *Auto-lock Behavior*:
 .. *Lock on Background* locks when WebLibre goes into the background.
 .. *Lock After Timeout* locks after inactivity, with a timeout such as 1 minute, 5 minutes, 15 minutes, or 1 hour.
+.. *Lock on Startup Only* asks once when the app starts and stays unlocked until the app is fully closed.
 
 When a locked profile opens again, WebLibre shows *Profile is locked* until you unlock it.
 

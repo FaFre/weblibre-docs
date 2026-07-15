@@ -7,6 +7,8 @@ When you type in *Search or enter URL*, it can show matches from sections such a
 Local results come from data already stored on your device.
 If you also enable a *Default Autocomplete Provider*, WebLibre can additionally fetch web suggestions from that provider.
 
+With the *Local Search Index* enabled, WebLibre can even search the full text of pages you visited -- entirely on your device.
+
 == What Local Search Can Find
 
 The address bar can show several kinds of results at the same time.
@@ -20,6 +22,7 @@ The *Tabs* section can match:
 * text saved from page content
 
 This is useful when you remember a phrase from a page, but not the site name.
+When an open-tab result matches saved page text, WebLibre offers to find that text in the page after switching to the tab.
 
 [NOTE]
 ====
@@ -45,6 +48,15 @@ This makes your feed list easier to reuse like a personal reading archive.
 
 The *History* section shows pages from your browsing history that match what you typed.
 Results usually appear with the page title and address.
+
+When the *Local Search Index* is enabled, history matches can also come from the indexed page content, not just titles and addresses.
+
+=== Popular Sites
+
+WebLibre can also suggest well-known websites as you type, even if they are not in your browsing history yet.
+On a fresh install, typing `git` can already complete to `github.com`.
+
+These suggestions come from a built-in list, not from a web service, so nothing you type is sent anywhere for them.
 
 === Bang Providers
 
@@ -100,6 +112,25 @@ You can change the order of the search sections and hide sections you do not use
 
 This changes the order of sections such as *Tabs*, *Bookmarks*, *Articles*, and *History*.
 
+== Local Search Index
+
+The *Local Search Index* is enabled by default and lets WebLibre search the content of pages you visited, not just their titles and addresses.
+Visited pages are indexed locally, so content search works without sending any data off your device.
+
+Manage it in **Settings > Search > Local Search Index**:
+
+* *Enable local search index* -- turns content indexing on or off. Turning it off stops indexing but does not delete existing entries
+* *Index private tabs* -- includes pages opened in private tabs in the index. Off by default.
+* *Indexed pages* -- shows how many pages are currently searchable, with a *Clear* action that removes all indexed content while keeping your normal history
+
+Some more details:
+
+* Stale entries are pruned automatically, so the index stays lean.
+* You can exclude individual containers with the *Exclude from Search Index* option in the container editor. See xref:tabs/containers.adoc[Containers].
+* Clearing your browsing history also clears the local search index.
+
+When a **History** result matches indexed page text, opening it also opens **Find in Page** with your query so you can locate the matching passage.
+
 == Clipboard Suggestions
 
 If you copied a link before opening the address bar, WebLibre can offer *Fill link from clipboard*.
@@ -118,6 +149,9 @@ Built-in provider options are available, and you can also leave this disabled fo
 
 This setting affects suggestions while typing.
 Your *Default Search Provider* can still be something different.
+
+WebLibre can also complete addresses inline as you type, using your history and the built-in popular sites list.
+If you turn on **Settings > Search > Autocomplete on enter**, pressing enter accepts the current inline suggestion instead of searching for the literal text you typed.
 
 == Custom Search Engines
 

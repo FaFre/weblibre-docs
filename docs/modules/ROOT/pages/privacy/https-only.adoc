@@ -50,6 +50,15 @@ Most modern websites already support HTTPS, so you usually will not notice any d
 If an older site only works over HTTP, it may fail to open when this setting is enabled.
 That usually means the site does not offer an encrypted connection.
 
+== Onion Sites Are Treated Differently
+
+WebLibre does not force HTTPS upgrades for `.onion` addresses, because many Tor onion services only work over `http://`.
+
+Connections to onion services are already encrypted end to end inside the Tor network, so this exception does not carry the same risk as plain HTTP on the open web.
+If you explicitly type an `https://...onion` address, WebLibre keeps HTTPS.
+
+See xref:tor.adoc[Tor Integration] for details.
+
 == When to Use Which Mode
 
 * Choose **Enabled** if you want WebLibre to prefer secure connections everywhere

@@ -44,11 +44,21 @@ This can help on pages that are almost article-like, but it can also increase th
 
 On supported pages, Reader Mode usually gives you:
 
-* a cleaner reading layout
+* a cleaner reading layout with comfortable spacing and typography
+* edge-to-edge images, cleanly formatted quotes and lists, and code blocks that wrap instead of spilling off-screen
 * fewer visual distractions
 * a better source for exporting simplified text
 
 It is a reading-focused view, not an exact copy of the original website design.
+
+== Appearance Controls
+
+While reading, a floating appearance button gives you font and theme controls.
+Tap it once to open the controls, and tap it again to close them.
+
+If you have **Pure Black (OLED)** enabled in xref:customization/appearance.adoc[Appearance & Themes], the reader's dark theme uses true black instead of dark grey -- easier on the eyes at night and easier on the battery on OLED screens.
+
+If you hide the toolbar while in reader mode, a small show-toolbar button appears above the appearance button so you can always bring the toolbar back.
 
 == When Reader Mode Is Not a Good Fit
 

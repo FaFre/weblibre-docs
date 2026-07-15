@@ -17,15 +17,15 @@ Some sites may need an exception or a less strict setting to work normally.
 
 **Containers with real separation**::
 Use xref:tabs/containers.adoc[Containers] to split browsing by activity, such as work, shopping, or social media.
-With *Cookie Isolation* enabled, containers keep cookies and logins separate, can open assigned sites automatically, can clear their data on exit, and can route only that container through Tor.
+With *Cookie Isolation* enabled, containers keep cookies and logins separate, can open assigned sites automatically, can clear their data on exit, and can route only that container through Tor or a proxy.
 
 **Isolated tabs**::
 Use xref:tabs/tab-management.adoc[isolated tabs] when you want a fresh one-off session without creating a profile or container first.
 Each isolated tab gets its own separate session, which is useful for second accounts, temporary logins, or testing how a site behaves for a new visitor.
 
-**Built-in Tor proxy**::
-WebLibre includes a built-in xref:tor.adoc[Tor] option.
-You can route all regular tabs through Tor, or use container-based routing so only selected cookie-isolated containers use it.
+**Built-in Tor and proxy support**::
+WebLibre includes a built-in xref:tor.adoc[Tor] option and a full xref:proxy.adoc[proxy client] supporting protocols such as SOCKS, Shadowsocks, VMess, Trojan, and WireGuard.
+You can route all regular tabs through Tor or a proxy, or use container-based routing so only selected cookie-isolated containers are routed.
 
 **Firefox-compatible extensions on Gecko**::
 WebLibre is built on Mozilla's Gecko engine.
@@ -37,6 +37,7 @@ This is useful for sharing a device, creating a guest setup, or separating work 
 
 **Search your device before the web**::
 The address bar can show matches from your open tabs, bookmarks, browsing history, and saved feed articles before you choose a web search.
+With the optional xref:search/local-search.adoc[local search index], WebLibre can even search the full text of pages you visited, entirely on your device.
 You can also customize which sections appear in search results and on the start screen.
 
 **Bang providers**::
@@ -61,7 +62,8 @@ Sign in to xref:firefox-sync.adoc[Sync] to synchronize tabs, bookmarks, and hist
 
 * Some privacy features can make a site behave differently. If a page does not load correctly, try changing the relevant privacy setting or adding an exception.
 * Features such as page translation or xref:on-device-ai.adoc[On-Device AI] may need to download models before first use.
-* Tor, Sync, DNS over HTTPS, and extensions can improve privacy or convenience, but they each connect to their own networks or services when you use them.
+* Tor, proxies, Sync, DNS over HTTPS, and extensions can improve privacy or convenience, but they each connect to their own networks or services when you use them.
+* The main Settings screen has a search field that finds entries across all categories and jumps straight to the matching setting.
 
 == Getting Started
 

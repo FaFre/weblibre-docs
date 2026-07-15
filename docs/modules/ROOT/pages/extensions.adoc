@@ -97,6 +97,18 @@ This is the fastest way to use add-ons such as content blockers, password manage
 
 To pin or unpin an add-on, use its detail screen.
 
+Two details keep the toolbar and menus tidy:
+
+* Add-ons pinned to the toolbar no longer appear again in the overflow menu.
+* Disabled add-ons are hidden from the pinned bar and the extension shortcut menu until you enable them again.
+
+== Bookmark Access for Extensions
+
+Extensions can read and organize your bookmarks through the standard WebExtension bookmarks interface, which is rare among mobile Gecko browsers.
+This enables bookmark sync tools such as *floccus* to work in WebLibre.
+
+When you add or edit a bookmark in the app, extensions are notified instantly, so sync stays up to date.
+
 == Install from a File
 
 If you already have an extension file on your device, you can install it directly.

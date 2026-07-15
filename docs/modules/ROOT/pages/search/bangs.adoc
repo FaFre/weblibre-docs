@@ -52,6 +52,22 @@ When the field is empty, WebLibre shows a quick row based on your default or mos
 As you type, the bang results can change so you can search for providers by name, category, domain, or trigger.
 ====
 
+Two behaviors make switching providers easier:
+
+* Switching providers keeps your typed text, so you can change engines without retyping the query. Only URLs are cleared.
+* Selecting a suggested bang highlights the existing query, so you can immediately replace it or submit it with the new provider.
+
+== Reverse Bang Matching
+
+WebLibre can also work backwards from a search URL to a bang.
+
+If you paste or navigate to a URL that matches a bang's search template -- for example `https://www.google.com/search?q=hello` -- WebLibre recognizes the pattern, pre-selects that bang, and swaps the URL for the extracted query (`hello`).
+You can then edit the query or send it to a different provider.
+
+Matching normalizes common `www.`, bare-domain, and `m.` variants and supports templates that place the query in the URL query, path, or fragment.
+
+If you wanted the original URL instead, the first press of the clear button restores it; a second press clears the field.
+
 == Search On This Site vs All Providers
 
 When you open search while already viewing a page, WebLibre can show two bang areas:
@@ -213,6 +229,8 @@ The custom bang editor also exposes a few format flags:
 
 Most sites work with the default behavior.
 These flags are useful when a specific site expects search URLs in a non-standard format.
+
+New and edited custom bangs use safe URL encoding by default, and accidental leading or trailing spaces in names, triggers, and URLs are ignored when saving.
 
 == Edit or Remove User Bangs
 

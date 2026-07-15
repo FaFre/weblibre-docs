@@ -21,6 +21,7 @@ When you type in the address bar, WebLibre can group matches into sections such 
 * **Bookmarks**
 * **Articles**
 * **History**
+* **Popular Sites**
 
 These are the same sections described in xref:search/local-search.adoc[Local Search in the Address Bar].
 
@@ -30,7 +31,9 @@ Before you type anything, WebLibre can also show quick sections in the start or 
 
 Current built-in sections include:
 
-* **Top Sites**
+* **Recent Searches**
+* **Frequent Bangs**
+* **Shortcuts**
 * **Recent Tabs**
 * **Recent History**
 * **History Highlights**
@@ -41,7 +44,13 @@ These help you jump back into recent or important browsing without typing a sear
 
 == What These Sections Mean
 
-**Top Sites**::
+**Recent Searches**::
+Queries you recently submitted from the search screen. You can clear them through xref:privacy/data-management.adoc[Data Management].
+
+**Frequent Bangs**::
+Bang providers WebLibre has learned that you use often. Private-tab searches do not update this ranking.
+
+**Shortcuts**::
 Quick-launch tiles for frequently used, pinned, default, or suggested sites.
 
 **Recent Tabs**::
@@ -80,19 +89,19 @@ WebLibre treats typed-search sections and empty-state sections as different grou
 That means you can:
 
 * keep search-result modules focused on *Tabs*, *Bookmarks*, *Articles*, and *History*
-* keep the empty state focused on quick access areas like *Top Sites* or *Recent Tabs*
+* keep the empty state focused on quick access areas like *Shortcuts* or *Recent Tabs*
 
 This helps the browser feel useful both before and after you start typing.
 
-== Top Sites Inside Search Modules
+== Shortcuts Inside Search Modules
 
-The **Top Sites** module has a few extra behaviors:
+The **Shortcuts** module has a few extra behaviors:
 
 * some tiles can be pinned
 * some can be edited or removed
 * persisted tiles can be reordered
 
-For more on that, see xref:home-screen-and-top-sites.adoc[Home Screen & Top Sites].
+For more on that, see xref:home-screen-and-top-sites.adoc[Home Screen & Shortcuts].
 
 == Related Features
 
@@ -110,5 +119,5 @@ Those live under **Settings > Search**.
 
 * Put the sections you use most at the top so they appear first
 * Hide sections you rarely use to reduce scanning noise
-* Keep **Top Sites** visible if you want a start page that feels more like a launch surface
+* Keep **Shortcuts** visible if you want a start page that feels more like a launch surface
 * Keep **Bookmarks** and **History** visible in typed search if you often remember only part of a page title or address

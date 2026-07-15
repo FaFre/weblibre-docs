@@ -6,16 +6,16 @@ Each one shows you which features to use and how to set them up.
 
 NOTE: If you do not see container options in the tab or menu UI, turn on **Show Container UI** in **Settings > Browsing** first.
 
-== Browse Anonymously
+== Browse More Anonymously
 
-You want to research a sensitive topic, visit a site privately, or browse without being tracked.
+You want to research a sensitive topic, visit a site privately, or reduce how easily browsing can be linked to you.
 
 **Setup:**
 
-. Enable xref:tor.adoc[Tor] in settings
+. Open the browser menu, expand **Connections**, and start xref:tor.adoc[Tor]
 . Create a container called "Anonymous"
 . Turn on **Cookie Isolation** for that container
-. Turn on the Tor proxy option for that container
+. Set the container's **Proxy Connection** to Tor
 . Enable xref:privacy/fingerprint-protection.adoc#_resist_fingerprinting[Resist Fingerprinting]
 
 **When browsing:**
@@ -67,7 +67,8 @@ You want to research something without it being connected to your identity or re
 
 . Create a container such as "Research" or "Sensitive"
 . Turn on **Cookie Isolation** for that container
-. Turn on the Tor proxy option for that container
+. Start Tor from the browser menu's **Connections** section
+. Set the container's **Proxy Connection** to Tor
 . Enable xref:privacy/fingerprint-protection.adoc#_resist_fingerprinting[Resist Fingerprinting]
 
 **The workflow:**
@@ -79,11 +80,13 @@ You want to research something without it being connected to your identity or re
 
 **Alternative: Isolated tabs**
 
-For even more separation, use isolated tabs instead:
+For one-off storage separation, you can use isolated tabs instead:
 
 . Open an xref:tabs/tab-management.adoc#_isolated[isolated tab]
 . Use it for a one-off session you do not plan to keep
 . Close it when you are done so that isolated session ends
+
+NOTE: An isolated tab is not routed through Tor automatically. Use the Tor-assigned container above when network routing matters, or configure a broader routing mode under **Settings > Proxy > Proxy Routing**.
 
 == Share a Device with Family
 
@@ -143,7 +146,7 @@ You want to shop online without advertisers following you around, and without pr
 
 **Even more privacy:**
 
-. Use xref:tor.adoc[Tor] for the Shopping container
+. Start xref:tor.adoc[Tor] and choose it as the Shopping container's **Proxy Connection**
 . This also hides your normal IP address from the shopping site, but may make checkout or fraud checks harder
 
 == Read News Without Algorithms
@@ -229,13 +232,13 @@ Containers are better if you do this regularly or want site assignments.
 |Goal |Key Features
 
 |Anonymous browsing
-|Tor, Resist Fingerprinting, Containers or Isolated Tabs
+|Tor-assigned cookie-isolated container, Resist Fingerprinting
 
 |Work/Personal separation
 |Containers, Profiles
 
 |Sensitive research
-|Tor-enabled container, Resist Fingerprinting, Isolated Tabs
+|Tor-assigned cookie-isolated container, Resist Fingerprinting
 
 |Family device sharing
 |Profiles, App Lock

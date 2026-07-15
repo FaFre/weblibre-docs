@@ -28,12 +28,14 @@ What helps:
 
 * xref:privacy/dns-over-https.adoc[DNS over HTTPS] -- encrypts the site-name lookups your browser makes
 * xref:privacy/https-only.adoc[HTTPS-Only Mode] -- in the app this appears as *Block insecure HTTP connections* and helps keep traffic encrypted
+* xref:proxy.adoc[Proxy Connections] -- with an encrypted proxy protocol or transport, hides destinations from the local network by sending browser traffic through a server you choose
 * xref:tor.adoc[Tor Integration] -- hides your destinations from the network by routing traffic through Tor
 
 What to expect:
 
 * DNS over HTTPS helps with DNS lookups, but it does not make you anonymous
 * *Block insecure HTTP connections* protects against plain HTTP, not against tracking by the site you visit
+* A proxy shifts trust from your local network to the proxy operator; plain SOCKS or HTTP proxy connections may still expose destination information locally, and a proxy is not the same as Tor anonymity
 * Tor gives much stronger network privacy, but it is slower
 
 Best fit: everyday privacy from your ISP or safer browsing on networks you do not trust.
@@ -88,6 +90,7 @@ What helps:
 
 * xref:privacy/dns-over-https.adoc[DNS over HTTPS]
 * xref:privacy/https-only.adoc[Block insecure HTTP connections]
+* xref:proxy.adoc[Proxy Connections], when you trust the proxy operator
 * xref:tor.adoc[Tor Integration]
 
 Best fit: browsing on networks you do not control.
@@ -121,11 +124,12 @@ What helps:
 
 * xref:privacy/tracking-protection.adoc[Enhanced Tracking Protection and related tracking defenses]
 * xref:privacy/tracking-protection.adoc#_query_parameter_stripping[Query Parameter Stripping]
-* xref:search/local-search.adoc[Personal Local Search Engine] -- address-bar results for your own tabs, bookmarks, feeds, and history stay on your device
+* xref:search/local-search.adoc[Personal Local Search Engine] -- address-bar results for your own tabs, bookmarks, feeds, history, and indexed page text stay on your device
 
 What to expect:
 
 * Local search is private because it is on-device, but web searches still go to the search engine you choose
+* The full-text index stores page content locally until its history is cleared, the index is cleared, or stale entries are pruned; private-tab indexing is off by default
 * If you enable external search suggestions, those suggestions use outside providers
 
 Best fit: shrinking your overall data trail, especially during normal day-to-day browsing.
@@ -177,6 +181,12 @@ Best fit: shrinking your overall data trail, especially during normal day-to-day
 |None
 |Medium to strong
 |Signs you out or clears tabs, depending on what you choose
+
+|Proxy Connection
+|Strong with an encrypted proxy transport
+|Low by itself
+|None
+|Requires trusting the proxy operator
 
 |Tor Integration
 |Strong

@@ -2,7 +2,7 @@
 :description: How to use containers in WebLibre to organize tabs and optionally isolate cookies and site data.
 
 Containers help you separate different kinds of browsing inside WebLibre.
-You can use them to keep work sites away from personal sites, send one container through Tor, or make certain sites always open in the same place.
+You can use them to keep work sites away from personal sites, send one container through Tor or a proxy, or make certain sites always open in the same place.
 
 Important: containers do not isolate cookies by default.
 A new container starts as an organization and routing tool.
@@ -29,17 +29,22 @@ That makes it easier to stay organized, and when you turn on *Cookie Isolation*,
 
 Some container features always work:
 
-* *Name* and color
+* *Name*, color, and icon
 * *Assigned Sites*
+* *Pin Container* and manual reordering
+* *Exclude from Search Index*
 * selecting the container for new tabs
 * grouping tabs under that container in the UI
-* subtle colored border on the address bar when browsing in that container
+* container-colored address bar border and tab bar tint when browsing in that container
 
 Other features only work when *Cookie Isolation* is enabled for that container:
 
 * *Cookie Isolation*
-* *Use Tor(TM) Proxy*
+* *Proxy Connection* (route the container through Tor or a proxy profile)
+* *Bypass Global Proxy*
 * *Clear Data on Exit*
+* *Exclude from History*
+* *Strict Mode*
 * separate cookies, saved logins, and site data
 * *Clear Container Data*
 
@@ -49,10 +54,21 @@ A non-isolated container is still useful for organization and site assignment, b
 With *Cookie Isolation* turned on, websites in one container cannot use the cookies or site data from another container.
 For example, if you sign in to a site in your *Work* container, that sign-in does not automatically carry over to your *Personal* container.
 
-== Container Colors on the Address Bar
+== Container Colors and Icons
 
-When you browse in a container, the address bar shows a subtle colored border matching the container's theme color.
+When you browse in a container, the address bar shows a subtle colored border matching the container's theme color, and the tab bar area is tinted with the same color.
 This makes it easy to recognize which container you are in without checking the container menu.
+
+Each container can also have its own icon.
+The icon appears in the container bar, the container list, and tab indicators.
+You pick it from a searchable grid of Material Design Icons in the container editor.
+
+Container colors come in two modes:
+
+* standard seeded colors from the built-in palette
+* custom colors with direct hex and HSL controls, for exact color matching
+
+To change either, open the container editor and tap the large icon and color preview, then choose *Change Color* or *Change Icon*.
 
 == A Practical Example
 
@@ -68,7 +84,7 @@ Then you can:
 * keep work logins in *Work*
 * keep store tracking in *Shopping*
 * reserve *Banking* for sensitive sites
-* optionally send only one container through Tor
+* optionally send only one container through Tor or a proxy
 
 This does not make you invisible, but it can reduce how much different sites learn from each other.
 
@@ -83,17 +99,21 @@ One reliable way to manage containers is:
 
 When creating a container, you can set:
 
-* *Name* -- a label such as `Work` or `Shopping`
-* *Select Color* -- helps you recognize the container quickly on the address bar and in the UI
+* *Container Name* -- a label such as `Work` or `Shopping`
+* color and icon -- tap the large preview to open *Change Color* and *Change Icon*
+* *Pin Container* -- keeps this container at the top of lists
 * *Cookie Isolation* -- gives the container its own cookies and site data
-* *Use Tor(TM) Proxy* -- routes this container through Tor
+* *Proxy Connection* -- routes this container through Tor or a proxy profile
 * *Clear Data on Exit* -- clears cookies and site data when the app closes
+* *Exclude from Search Index* -- skips pages in this container from the local search index
+* *Exclude from History* -- keeps pages in this container out of browsing history
+* *Strict Mode* -- only allows assigned sites to load in this container
 * *Assigned Sites* -- automatically sends chosen sites to this container
 
-When editing an existing container, always expect name, color, and assigned-site management to be available.
-Tor and per-container data clearing only make sense for containers that already have *Cookie Isolation*.
+When editing an existing container, always expect name, appearance, pinning, and assigned-site management to be available.
+Proxy routing, per-container data clearing, history exclusion, and strict mode only make sense for containers that already have *Cookie Isolation*.
 
-Note: *Use Tor(TM) Proxy* and *Clear Data on Exit* depend on *Cookie Isolation*. If cookie isolation is off, those options are not active for that container because there is no separate browsing context to route or clear.
+Note: *Proxy Connection*, *Clear Data on Exit*, *Exclude from History*, and *Strict Mode* depend on *Cookie Isolation*. If cookie isolation is off, those options are not active for that container because there is no separate browsing context to route, clear, or restrict.
 
 == Use a Container for Tabs
 
@@ -168,18 +188,61 @@ If you edit a container and press the back button without saving, WebLibre asks 
 
 This avoids accidentally losing changes when you navigate away by reflex.
 
-== Per-Container Tor
+== Pin and Reorder Containers
 
-If you enable *Use Tor(TM) Proxy* for a cookie-isolated container, tabs in that container use Tor while your other containers can keep using your normal connection.
+Turn on *Pin Container* to keep a container at the top of container lists.
+Pinned containers show a pin icon on the container chip and a *Pinned* badge in the container list.
+
+You can also reorder containers manually: long-press and drag container chips in the bottom container bar, or use the drag handles in the container list.
+The order persists across sessions.
+
+== Per-Container Proxy Routing
+
+If you set a *Proxy Connection* for a cookie-isolated container, tabs in that container route their traffic through that connection -- Tor or any of your proxy profiles -- while other containers keep using your normal connection.
 
 Example:
 
 * *Personal* uses your regular connection
-* *Sensitive* uses *Cookie Isolation* plus *Use Tor(TM) Proxy*
+* *Sensitive* uses *Cookie Isolation* plus Tor as its *Proxy Connection*
+* *Remote* uses *Cookie Isolation* plus a WireGuard proxy profile
 
-This lets you mix regular and Tor-routed browsing in the same browser.
+This lets you mix regular, Tor-routed, and proxy-routed browsing in the same browser.
 
-Learn more: xref:tor.adoc[Tor Integration]
+If global proxy routing is enabled instead, a container can opt out with *Bypass Global Proxy*.
+That container then connects directly -- useful for sites that block Tor or proxy traffic.
+A container cannot bypass the global proxy and have its own proxy assignment at the same time.
+
+Learn more: xref:tor.adoc[Tor Integration] and xref:proxy.adoc[Proxy Connections]
+
+== Strict Mode
+
+*Strict Mode* turns a container into an allowlist-only space.
+
+When enabled, only sites assigned to that container are allowed to load there.
+Unassigned sites are blocked instead of loading inside the strict container.
+Sites assigned to another container are still redirected or handled according to their assignment.
+
+This is useful for containers that should stay clean, such as a *Banking* container that should only ever open your bank's sites.
+
+*Strict Mode* requires *Cookie Isolation*.
+
+== Exclude from History
+
+With *Exclude from History* enabled, pages opened in that container are not recorded in browsing history.
+
+This is separate from *Exclude from Search Index*: it prevents the container's visits from being recorded in browser history at all, not just from the local search index.
+
+*Exclude from History* requires *Cookie Isolation*.
+
+== Exclude from Search Index
+
+WebLibre can index the pages you visit locally so you can search their content later (see xref:search/local-search.adoc[Local Search]).
+
+Turn on *Exclude from Search Index* to keep a container's pages out of that index.
+Existing indexed entries that only come from that container are removed immediately.
+If you disable the option again, eligible pages that are still open can be indexed again.
+
+This option does not require cookie isolation.
 
 == Clear Data on Exit
 
@@ -193,14 +256,20 @@ This is useful for:
 
 It is a good choice when you want a container to start fresh the next time you use it.
 
+== Delete a Container
+
+When you delete a container, WebLibre can also offer to delete that container's browsing history.
+If you keep the history, those visits stay in the History screen but are shown without a container label.
+
 == Things to Expect
 
 * Containers help with separation, but a plain container is not the same as an isolated browsing context.
 * Turn on *Cookie Isolation* for any container where separate logins or cookies matter.
 * If you need one-off isolation without creating a container first, use xref:tabs/tab-management.adoc[isolated tabs].
 * You can combine containers with private tabs.
-* Colors help you recognize containers on the address bar, in container lists, and in related tab UI.
-* The address bar border color changes to match your active container.
+* Colors and icons help you recognize containers on the address bar, in container lists, and in related tab UI.
+* The address bar border and tab bar tint change to match your active container.
+* New visits record which container they came from, so you can filter xref:history-downloads.adoc[History] by container.
 
 == Tips
 
@@ -208,6 +277,8 @@ It is a good choice when you want a container to start fresh the next time you u
 * Turn on *Cookie Isolation* for any container where separate logins matter.
 * Use *Assigned Sites* for sites you open repeatedly.
 * Use wildcard patterns in assigned sites to cover multiple related domains.
+* Use *Strict Mode* for containers that should only ever load their assigned sites.
 * Use *Clear Data on Exit* for temporary or sensitive browsing.
 * Use *Assign Container* when a tab was opened in the wrong place.
+* Pin the containers you use most so they stay at the top of lists.
 * Watch the address bar color to confirm you are in the right container.

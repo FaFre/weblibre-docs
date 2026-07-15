@@ -66,11 +66,22 @@ Available options include:
 
 CAUTION: Experimental settings may affect stability, compatibility, or performance. If you notice problems, turn them off again and restart the browser.
 
+== Unmount Engine Off-Screen
+
+**Unmount Engine Off-Screen** frees the web engine while a full-screen overlay -- such as Settings, Search, or the tab view -- is covering it.
+
+On Android 12 and lower, WebLibre always does this as a platform workaround.
+On Android 13 and newer, enabling the setting can free resources while another full-screen view is open, but the page may reload when you return to it.
+Leave it off on Android 13 and newer unless memory pressure is a problem on your device.
+
+Find it in **Settings > Advanced**.
+
 == Troubleshooting Tools
 
 The **Developer Tools** section inside **Settings > Advanced** also includes a few items that can help when something is not working as expected:
 
 * **Icon Cache** -- Clears stored site icons if a favicon looks wrong or out of date.
+* **ML Downloads** -- Clears downloaded AI models and runtime files. Restart WebLibre before using AI features again.
 * **Error Logs** -- Lets you view and copy logs when reporting a problem.
 * **Reset UI** -- Rebuilds the browser interface, which may help if part of the app looks stuck or broken.
 

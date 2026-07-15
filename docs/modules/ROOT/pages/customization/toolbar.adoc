@@ -1,5 +1,5 @@
 = Toolbar & Layout
-:description: How to customize WebLibre's tab bar, toolbar, quick tab switcher, and tab view.
+:description: How to customize WebLibre's tab bar, toolbar, tab stacking, and tab view.
 
 Use **Settings > Toolbar & Layout** to change how WebLibre places tabs and toolbar controls on screen.
 These options mainly affect comfort, reachability, and how much page space the browser uses.
@@ -10,8 +10,21 @@ Open **Settings > Toolbar & Layout > Tab Bar Position** and choose one of these 
 
 * **Top** -- Keeps the tab bar at the top of the screen.
 * **Bottom** -- Places the tab bar at the bottom for easier one-handed reach.
+* **Left** / **Right** -- Turns the tab bar into a vertical side rail.
 
 If you prefer using the phone with one hand, **Bottom** is usually the easier option.
+
+=== Vertical Side Rail
+
+With **Left** or **Right**, WebLibre shows a vertical rail along the side of the screen.
+The rail combines tabs, the address and search controls, toolbar actions, contextual actions, and pinned add-ons in one column.
+
+A few things work differently on the rail:
+
+* Swipe the rail away to hide it, and swipe vertically on it to switch tabs.
+* Because the rail is narrow, tab titles and inline close buttons may be hidden to save space. Tab actions stay available through the tab menus.
+* Tab nesting is shown as a compact corner badge on the favicon instead of chevrons.
+* The **Two Rows** tab stacking mode does not fit on the rail, so it falls back to the Accordion layout there.
 
 == Tab Bar Style
 
@@ -74,17 +87,38 @@ Examples can include:
 
 The customization screen shows these hints so you know which buttons do more than a simple tap.
 
-== Quick Tab Switcher
+While a page is loading, the normal reload button changes to an X. Tap it to stop the current page load; when loading finishes, it becomes the reload button again.
 
-Turn on **Settings > Toolbar & Layout > Show Quick Tab Switcher Bar** to show an extra bar for jumping between tabs without opening the full tab view.
+== Quick Tab Switcher and Tab Stacking
 
-You can then adjust these related options:
+The quick tab switcher is an extra bar for jumping between tabs without opening the full tab view.
+How it arranges tabs is controlled by **Settings > Toolbar & Layout > Tab Stacking**:
 
-* **Quick Tab Switcher Mode** -- Choose **Recently Used Tabs** or **Container Tabs**.
+* **Accordion** -- Shows containers as chips and expands the selected container's tabs inline. Long-press a container header to open that container's settings.
+* **Two Rows** -- Shows tabs of the selected container on one row and recently used tabs on another.
+* **Recently Used Tabs** -- Shows recently used tabs across all containers.
+* **Container Tabs** -- Shows the ordered tabs of the selected container.
+* **Disabled** -- Hides the quick tab switcher bar.
+
+The container-based choices are hidden when **Show Container UI** is off. If one was already selected before container UI was disabled, the switcher falls back to **Recently Used Tabs**.
+
+New installs default to **Accordion**. When you upgrade, WebLibre automatically maps the older Quick Tab Switcher enabled state and mode to the corresponding **Tab Stacking** choice.
+
+You can adjust these related options:
+
 * **History Fallback in Quick Tab Switcher** -- Shows browsing history suggestions when there are no tab chips to show.
 * **Show Titles in Quick Tab Switcher** -- Shows tab titles next to icons.
+* **Title Width in Quick Tab Switcher** -- Sets the maximum width of tab titles on switcher chips.
+* **Hierarchy Depth in Quick Tab Switcher** -- Controls how many nesting chevrons appear on chips when hierarchical tabs are used. Set it to 0 to hide depth indicators. Deep nesting collapses into a single chevron with a count badge.
+* **Close Buttons on All Tabs** -- Shows a close button on every switcher chip. The active tab always gets one.
+* **Customize Switcher Buttons** -- Chooses which action buttons appear at the end of the switcher bar. This is configured separately from the contextual toolbar, and none are shown until you enable them.
 
-The **Container Tabs** mode only appears if container UI is enabled elsewhere in the app.
+A few more behaviors worth knowing:
+
+* Long-press and drag chips to reorder tabs directly in the switcher bar. Pinned-tab ordering is respected.
+* Container chips show tab counts and use the container's color, and the bar area is tinted to match the active container.
+* Closing tabs from the switcher uses the same confirmation and undo behavior as the regular tab menu.
+* Pinned, private, isolated, and nested tabs are marked so you can tell them apart at a glance.
 
 == Tab View
 
@@ -101,4 +135,6 @@ If **Bottom Sheet Tab View** is off, the tab view opens full screen.
 * Use the contextual toolbar if you want more navigation power without opening menus as often
 * Use fallbacks to avoid wasting space on state-dependent buttons
 * Keep long-press-capable buttons visible if you use their extra actions often
+* Try **Accordion** tab stacking if you organize tabs into containers, and **Recently Used Tabs** if you mostly jump between a few recent pages
+* Try the **Left** or **Right** tab bar position on larger screens or in landscape
 * Use **Reset to Defaults** if the toolbar starts to feel harder to use than before

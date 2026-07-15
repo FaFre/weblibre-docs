@@ -68,6 +68,13 @@ If a PWA loses its session because Android stopped the browser in the background
 
 PWAs opened from home screen shortcuts also keep your active profile and container associations, so they keep behaving like the tab they were installed from.
 
+Login, payment, and other flows that use `window.open` or popup windows stay within the PWA flow instead of being lost behind the standalone window.
+
+== Fullscreen Video and Picture-in-Picture
+
+Fullscreen video in a WebLibre web app can enter Android Picture-in-Picture when you press Home or switch apps, then return to the same PWA when you come back.
+Permission prompts do not trigger Picture-in-Picture by themselves.
+
 == Better Default Icons
 
 Shortcuts now always get an icon, even for sites that do not provide one.

@@ -1,10 +1,10 @@
-= Home Screen & Top Sites
-:description: How WebLibre's home surface, quotes, quick actions, and Top Sites work.
+= Home Screen & Shortcuts
+:description: How WebLibre's home surface, quotes, quick actions, and Shortcuts work.
 
 WebLibre has two nearby but different "start" experiences:
 
 * the browser home surface you see in an empty tab or empty container
-* the searchable start view that can show **Top Sites** and other quick sections
+* the searchable start view that can show **Shortcuts** and other quick sections
 
 This page explains what appears there and how to make use of it.
 
@@ -12,14 +12,24 @@ This page explains what appears there and how to make use of it.
 
 When WebLibre has no active page to show, it can open a simple home surface instead of a blank screen.
 
-Depending on context, you may see:
+The quick actions -- **New tab**, **View tabs**, and **Resume last tab** -- sit near the top of the screen where they are easy to reach.
+Depending on context, you may also see:
 
 * the normal WebLibre brand header
 * a container-specific header if you are inside a container
 * a quote card
-* quick actions such as **New tab**, **View tabs**, or **Resume last tab**
 
 The quote card includes **Refresh quote** if you want a different one.
+
+== Support WebLibre Banner
+
+The home surface can show a dismissible **Support WebLibre** card.
+It explains the optional Supporter subscription, which funds development and powers the features that need a hosted service (WebLibre Search and encrypted account sync).
+
+The browser and all its privacy features remain free and need no subscription.
+The banner hides automatically once you dismiss it or if you are already a supporter.
+
+Learn more: xref:supporter-subscription.adoc[Supporter Subscription]
 
 == Container-Aware Home State
 
@@ -33,62 +43,63 @@ For example, it can show:
 
 That helps the empty state feel tied to the container you are working in instead of feeling like a generic browser screen.
 
-== Top Sites
+== Shortcuts
 
-**Top Sites** are quick-launch tiles for pages you open often.
+**Shortcuts** are quick-launch tiles for pages you open often.
 
-In current WebLibre builds, Top Sites appear in the start or empty search experience, not as the same thing as bookmarks.
+Shortcuts appear in the start or empty search experience, and they are not the same thing as bookmarks.
 They are meant for fast access, while xref:bookmarks.adoc[Bookmarks] are better for long-term saved pages and folder organization.
 
-Top Sites can come from different sources:
+Shortcuts can come from different sources:
 
-* pinned sites you chose yourself
+* sites you pinned yourself
 * built-in default sites
 * history-based suggestions
 
 Some tiles may show a pin badge or a default-site badge so you can tell where they came from.
 
-== Open a Top Site
+== Open a Shortcut
 
 To use one:
 
 . Open the start or search view
-. Find the **Top Sites** section
+. Find the **Shortcuts** section
 . Tap the tile you want
 
 WebLibre opens that page directly.
 
-== Pin, Edit, or Remove a Top Site
+== Pin, Edit, or Remove a Shortcut
 
-Top Site tiles support extra actions through their menu.
+You can pin the current page from the browser menu with **Pin to Shortcuts**.
 
+Shortcut tiles also support extra actions through their menu.
 Depending on the kind of tile, you may see:
 
 * **Pin**
 * **Edit**
 * **Remove**
 
-Pinned sites are good for pages you want to keep available even if your browsing history changes.
+Pinned shortcuts are good for pages you want to keep available even if your browsing history changes.
 
-If you edit a Top Site, you can change its title or address.
-If you remove one, WebLibre hides it from the Top Sites area.
+If you edit a shortcut, you can change its title or address.
+If you remove one, WebLibre hides it from the Shortcuts area.
 
-== Reorder Top Sites
+== Reorder Shortcuts
 
-If you have enough persisted Top Sites, WebLibre can let you reorder them.
+If you have enough persisted shortcuts, WebLibre can let you reorder them.
 
 To do that:
 
-. Open the **Top Sites** section
+. Open the **Shortcuts** section
 . Turn on reordering mode
 . Drag and drop the tiles into the order you want
 
-Only persisted Top Sites take part in reordering.
+Only persisted shortcuts take part in reordering.
 History-based suggestions may still appear, but they are not the same as your manually ordered pinned set.
 
-== How Top Sites Differ from Bookmarks
+== How Shortcuts Differ from Bookmarks
 
-Top Sites are best for:
+Shortcuts are best for:
 
 * frequently opened pages
 * a small quick-access set
@@ -101,12 +112,14 @@ Bookmarks are better for:
 * imports and exports
 * large organized collections
 
-If you want a page to stay permanently easy to find, save it as a xref:bookmarks.adoc[bookmark] even if it also appears in Top Sites.
+If you want a page to stay permanently easy to find, save it as a xref:bookmarks.adoc[bookmark] even if it also appears in Shortcuts.
 
 == Related Search Sections
 
 The same start area can also show other quick sections, such as:
 
+* **Recent Searches**
+* **Frequent Bangs**
 * **Recent Tabs**
 * **Recent History**
 * **History Highlights**
@@ -117,7 +130,7 @@ You can learn more about those in xref:search/search-modules.adoc[Search Modules
 
 == Tips
 
-* Use Top Sites for quick access and bookmarks for long-term organization
+* Use Shortcuts for quick access and bookmarks for long-term organization
 * Pin the pages you want to keep stable even when your browsing habits change
 * Refresh the quote if you use the home surface as a calm starting page
 * If you prefer fewer sections in the start area, reorder or hide them through xref:search/search-modules.adoc[Search Modules]

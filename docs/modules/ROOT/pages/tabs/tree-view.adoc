@@ -77,6 +77,20 @@ It is helpful when you want to keep a new search or page attached to the current
 
 NOTE: The setting adds the child-tab creation option. Tree view can also show relationships created when you open links in new tabs.
 
+== Rearrange the Hierarchy Manually
+
+You are not stuck with the relationships WebLibre records automatically.
+Long-press a tab to find two submenus:
+
+* **Hierarchy** -- contains **Change parent...**, which opens a picker of possible parent tabs, and **Detach from parent**, which makes the tab standalone again.
+* **Reorder** -- contains **Move up** and **Move down** to shift the tab among its siblings.
+
+You can also reparent tabs by drag and drop: dropping one tab onto another asks whether you want to **Create container** (group both in a new container) or **Assign new parent** (make the dropped tab a child of the other).
+
+When you drag tabs to new positions in the tab view, WebLibre reassigns parent relationships based on where you drop them, with guards that prevent circular chains.
+
+Once you rearrange a tree manually, your arrangement is treated as authoritative -- engine-side state changes will not silently overwrite it.
+
 == Reorder Tabs in Groups
 
 You can manually reorder tabs within a group even when they are in a hierarchical structure.
@@ -89,6 +103,13 @@ To reorder tabs:
 
 This works the same whether the hierarchy display is on or off.
 For more on reordering, see xref:tabs/tab-power-features.adoc[Advanced Tab Actions].
+
+== Depth Indicators in the Quick Tab Switcher
+
+When hierarchical tabs are enabled, the quick tab switcher shows chevron-style depth badges on tab chips so you can see nesting depth at a glance.
+Deep nesting collapses into a single chevron with a count badge, such as `>5`.
+
+You can control how many chevrons appear -- or hide them -- with **Settings > Toolbar & Layout > Hierarchy Depth in Quick Tab Switcher**.
 
 == Using Tree View Day to Day
 

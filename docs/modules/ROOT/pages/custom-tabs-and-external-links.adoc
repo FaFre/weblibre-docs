@@ -28,10 +28,11 @@ The choices are:
 * **Prompt** -- ask each time
 * **Regular** -- always open in a regular tab
 * **Private** -- always open in a private tab
+* **Isolated** -- always open in an isolated tab (shown when **Show Isolated Tab UI** is enabled)
 
 This is useful for links that come from messaging apps, email apps, social apps, or Android share targets.
 
-When another app *shares* text or a URL into WebLibre (for example via the Android share sheet, or a *PROCESS_TEXT* selection action from another app), the same routing logic applies. Shared text and URLs go through your *External Link Handling* preference and can open in the right container or as a custom tab when appropriate.
+When another app *shares* text or a URL into WebLibre (for example via the Android share sheet, or a *PROCESS_TEXT* selection action from another app), the same routing logic applies. Site assignments can still send matching URLs to their assigned container, while the separate **Custom Tabs** setting decides whether another app may use the lightweight overlay.
 
 == Links That Could Open Another App
 
@@ -85,12 +86,22 @@ In practice, that usually means:
 
 This is useful for one-off reads, sign-in confirmations, or checking a page without leaving the original app for long.
 
+=== Turn Custom Tabs Off
+
+The **Custom Tabs** setting controls whether other apps may open links this way at all.
+
+It is enabled by default.
+When you turn it off, links and shared URLs sent to WebLibre open as normal tabs in the main browser instead of the lightweight overlay.
+
+Find it in **Settings > Browsing > Custom Tabs**.
+
 == Which Setting Matters When
 
 Use this rule of thumb:
 
 * **Intent Gatekeeper** -- controls *whether* another app is allowed to send a link into WebLibre at all
 * **External Link Handling** -- a link is coming *into* WebLibre from another app and was already allowed in; decide which tab type to use
+* **Custom Tabs** -- controls whether other apps may open links as a lightweight in-app tab at all
 * **Open Links in Apps** -- a link inside WebLibre might leave the browser for another app
 * **Open in App** -- one-time manual action for a specific link
 * **Open in custom tab** -- one-time action for a lighter browser window

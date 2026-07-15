@@ -52,11 +52,20 @@ If you choose **Custom**, WebLibre shows more detailed options:
 
 * **Block Cookies** with a **Cookie Policy** such as **Total Cookie Protection (Recommended)** or **All third-party cookies**
 * **Block Tracking Content** in **All tabs** or **Private tabs only**
+* **Ads, Analytics, and Social Trackers** -- a separate switch for advertising, analytics, and social tracker categories
 * Toggles for **Cryptominers**, **Known Fingerprinters**, and **Redirect Trackers**
 * **Suspected Fingerprinters** protection in **All tabs** or **Private tabs only**
 * Compatibility options named **Fix website major issues** and **Fix website minor issues**
 
 If you are not sure what to pick, leave these at their defaults or use **Strict** instead.
+
+== Content Blocking Database
+
+**Content Blocking Database** makes Enhanced Tracking Protection use GeckoView's local blocker lists for categories such as ads, analytics, and social trackers.
+
+Find it in **Settings > Privacy & Security > Content Blocking Database**.
+
+NOTE: Changing this setting requires an app restart.
 
 == Query Parameter Stripping
 

@@ -17,6 +17,7 @@ To set it up:
 . Choose what to clear:
 ** **Open tabs**
 ** **Browsing history**
+** **Recent searches**
 ** **Cookies and site data**
 ** **Cached images and files**
 ** **Site permissions**
@@ -120,7 +121,8 @@ If you want to clear data immediately, go to **Settings > Privacy & Security > D
 You can choose any combination of:
 
 * **Open tabs** -- closes all open tabs
-* **Browsing history** -- deletes saved browsing history
+* **Browsing history** -- deletes saved browsing history. This also clears the local search index so no page content stays searchable
+* **Recent searches** -- clears your recent search entries
 * **Cookies and site data** -- signs you out of most sites and removes stored website data. Affected tabs are closed first so old data does not reappear
 * **Cached images and files** -- removes temporary files stored to speed up browsing
 * **Site permissions** -- resets saved permission choices such as camera, microphone, or location access

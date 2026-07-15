@@ -26,6 +26,10 @@ Open a group if you want to review or change one area at a time.
 Some entries are marked **Optional** in the app.
 These are more aggressive changes that may cause compatibility problems, so they are not enabled by the one-tap hardening actions.
 
+**Locked items**::
+Some preferences are locked: they show a padlock icon and cannot be edited.
+WebLibre locks a large set of telemetry, experiment, and tracking preferences so that engine updates cannot silently re-enable them.
+
 **Reset all preferences**::
 The menu on the hardening screen includes **Reset all preferences**, which clears your user-defined web engine hardening changes and returns those preferences to their defaults.
 
@@ -50,6 +54,7 @@ Tighten certificate checks, HTTPS behavior, and secure connection rules.
 **Privacy** and **Resist Fingerprinting**::
 Reduce cross-site leakage and make your browser harder to identify uniquely.
 For more on fingerprinting defenses, see xref:privacy/fingerprint-protection.adoc[Fingerprint Protection].
+The strictest cross-origin referer option (only sending a cross-origin referer when the host matches) is an optional, opt-in choice because it breaks some websites that depend on referer information.
 
 **WebGL**, **WebRTC**, **API Restrictions**, and **Attack Surface Reduction**::
 Limit or harden web features that can expose device details or increase the risk from malicious content.

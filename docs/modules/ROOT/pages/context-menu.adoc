@@ -16,7 +16,7 @@ You will not see every option every time.
 
 Long-press a regular web link to see actions such as:
 
-* **Open in new tab** -- Opens the link in a background tab
+* **Open in new tab** -- Opens the link in a background tab. You can also choose a different tab type here, such as a private or isolated tab, where those are available.
 * **Open in container** -- Opens the link in a specific xref:tabs/containers.adoc[container]. This appears only when **Show Container UI** is enabled.
 * **Copy link** -- Copies the link address
 * **Copy link text** -- Copies the text you see on the page, not the address behind it

@@ -1,0 +1,148 @@
+= Proxy Connections
+:description: How to create, import, and route traffic through proxy profiles in WebLibre.
+
+WebLibre includes a built-in proxy client based on the sing-box runtime.
+You can create multiple proxy profiles, run them side by side, and decide exactly which tabs use which connection.
+
+Together with the built-in xref:tor.adoc[Tor integration], this lets you mix normal, Tor-routed, and proxy-routed browsing in one app:
+
+* route all regular tabs through one proxy
+* route only selected xref:tabs/containers.adoc[containers] through a proxy
+* give private tabs their own proxy choice
+
+== Supported Protocols
+
+Proxy profiles support a wide range of protocols:
+
+* SOCKS and HTTP
+* Shadowsocks, VMess, VLESS, Trojan
+* Hysteria, Hysteria2, TUIC, and Naive
+* SSH
+* WireGuard
+* ShadowTLS and AnyTLS
+
+Each profile runs as its own managed tunnel with a live status indicator, latency measurement, and egress IP display.
+
+== What a Proxy Helps With
+
+A proxy changes how your traffic leaves the app.
+Websites see the proxy's address instead of your own.
+With an appropriately encrypted proxy protocol or transport, your local network sees a connection to the proxy instead of the sites you visit.
+
+A proxy is not the same as anonymity:
+
+* plain SOCKS and HTTP proxy connections do not encrypt the proxy handshake, so the local network may still see destination information
+* the proxy operator can see destination metadata and any content that is not protected by HTTPS, so only use servers you trust
+* websites can still recognize you through logins and browser fingerprinting
+* a proxy does not make unsafe sites or downloads safe
+
+For stronger anonymity properties, xref:tor.adoc[Tor] is usually the better choice.
+Proxies are most useful for trusted self-hosted servers, network flexibility, and separating browsing identities per container.
+
+== Manage Proxy Profiles
+
+Open **Settings > Proxy > Proxy Connections** to see all profiles, including Tor.
+
+On this screen you can:
+
+* see each profile with a protocol badge and connection status
+* start or stop individual profiles
+* open a running profile's menu and choose **Test connection** to measure an end-to-end response time
+* see the egress IP after a successful connection test
+* stop all running connections at once
+* open the proxy log viewer with **View logs**
+
+You can also reach connection management from the browser menu: the **Connections** section shows Tor and proxy profiles that are assigned to a routing mode, with a connected count and **Manage Connections** for the full list.
+
+NOTE: **Test connection** sends several HTTPS requests through the selected connection to Mullvad's connectivity endpoint at `am.i.mullvad.net`. Mullvad receives the tested exit IP. The result measures the full HTTP route through the proxy, not only the distance to the proxy server.
+
+== Add a Proxy Profile
+
+Tap **Add Profile** on the **Proxy Connections** screen and choose how to add it:
+
+* **Enter manually** -- fill in a structured form for the chosen protocol
+* **Subscription** -- fetch from a subscription URL (a v2rayN-style Base64-encoded list of proxy URIs); you can select which entries to import. Only proxy nodes are imported; subscription routing rules are ignored
+* **Scan QR** -- import a profile shared from another device
+* **Clipboard** -- paste a share link or URI; WebLibre auto-detects formats such as `ss://`, `vmess://`, and `trojan://`
+* **Import file** -- load a WireGuard configuration file or a sing-box outbound JSON configuration
+
+When creating a profile manually, you set a **Profile Name**, choose the **Protocol**, and fill in the server details.
+The protocol is fixed once a profile is created.
+You can also set a **DNS Override** per profile; leave it off to use automatic DNS handling.
+
+== Proxy Routing
+
+Open **Settings > Proxy > Proxy Routing** to choose which tabs use which connection.
+
+=== Regular Tabs
+
+The **Regular Tabs Routing Mode** offers two options:
+
+* **Container-Based Routing** -- only tabs in containers with a proxy assigned are routed. Everything else uses the normal connection.
+* **Global Routing** -- all regular tabs go through one selected proxy, unless a container bypasses it.
+
+With **Global Routing**, pick the proxy under **Proxy for global routing**.
+
+=== Private Tabs
+
+Private tabs have their own proxy selection under **Private Tabs**.
+You can send private tabs through a different proxy than regular tabs, or leave them on the normal connection.
+
+Private tabs and proxies are different features: private tabs mainly limit what is kept locally on your device, while a proxy changes how traffic leaves the app.
+
+== Per-Container Proxy Routing
+
+Each cookie-isolated container can have its own proxy:
+
+. Open the container editor for a container with **Cookie Isolation** enabled
+. Under **Privacy & Security**, tap **Proxy Connection**
+. Choose a proxy profile or Tor
+
+Tabs in that container then route their traffic through the assigned proxy.
+This is the most flexible setup: your everyday container can use a normal connection while a research container goes through Tor or a proxy of your choice.
+
+=== Bypass Global Proxy
+
+A container can also do the opposite.
+Turn on **Bypass Global Proxy** in the container editor to let that container connect directly even when **Global Routing** is enabled.
+
+This is useful for sites that block proxy or Tor traffic, while all your other tabs stay proxied.
+A container cannot bypass the global proxy and have its own proxy assignment at the same time.
+
+== DNS Leak Protection
+
+When a tab is routed through a proxy, WebLibre also guards its DNS lookups per request and per container, so name resolution does not leak outside the proxy for routed tabs.
+
+== Share a Proxy Profile
+
+You can export a profile as a `weblibre-proxy://` link:
+
+* copy it to the clipboard, or
+* share it via the Android share sheet
+
+WARNING: Shared profile links can contain server credentials. Only share them over channels you trust.
+
+== Proxy Logs
+
+The **Proxy Logs** screen shows real-time output from the proxy runtime.
+
+You can:
+
+* filter lines by log level
+* copy all visible lines
+* share the log output
+
+This is the first place to look when a proxy connects but pages do not load, or when a profile fails to start.
+
+== What to Expect
+
+* Proxy speed depends on the server, protocol overhead, your route to the proxy, and the proxy's route to the destination.
+* Some sites block traffic from known proxy or VPN addresses. Use **Bypass Global Proxy** on a container for those sites.
+* Latency chips give a quick health check, but real page loads also depend on the route between the proxy and the site.
+* If a profile stops working after an app restart, check the **Proxy Logs** for errors and re-test the latency.
+
+== Related Pages
+
+* xref:tor.adoc[Tor Integration]
+* xref:tabs/containers.adoc[Containers]
+* xref:privacy/dns-over-https.adoc[DNS over HTTPS]

@@ -54,7 +54,18 @@ The bookmark manager includes tools that help when your saved pages start to gro
 * **Hide Empty Folders** can reduce clutter in the main tree
 * **Sort** can use **Default**, **Title A-Z**, **Title Z-A**, **URL A-Z**, **URL Z-A**, **Newest First**, or **Oldest First**
 
+Your sorting and **Folders Only** choices are remembered, so the list looks the same after you restart the app.
+
 This is useful when you want to quickly clean up old bookmarks, find a saved site by name, or review the newest items you added.
+
+== Bookmarks and Extensions
+
+Extensions can read and organize your bookmarks through the standard WebExtension bookmarks interface.
+Bookmark sync tools such as *floccus* can keep your WebLibre bookmarks in sync with other browsers or a self-hosted server.
+
+When you add or edit a bookmark in WebLibre, extensions are notified immediately, so sync tools stay up to date without manual refreshes.
+
+See xref:extensions.adoc[Extensions] for how to install add-ons.
 
 == Bookmark Actions
 

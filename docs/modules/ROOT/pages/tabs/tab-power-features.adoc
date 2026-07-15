@@ -46,18 +46,14 @@ You can also reorder tabs *within* a group when grouping or hierarchical view is
 
 If WebLibre says reordering is unavailable, switch back to the default manual tab mode first.
 
-== Create a Container by Dragging Tabs Together
+== Drag One Tab Onto Another
 
-WebLibre can also create a new container by dragging one tab onto another.
+Dropping one tab onto another opens a choice sheet with two options:
 
-In that workflow:
+* **Create container** -- groups both tabs in a new container. WebLibre collects both tab titles, prepares the container, and lets you confirm or edit the details before both tabs are assigned to it.
+* **Assign new parent** -- makes the dropped tab a child of the other tab, which is useful for organizing tab trees (see xref:tabs/tree-view.adoc[Tree View]).
 
-* WebLibre collects both tab titles
-* it prepares a new container
-* you can confirm or edit the container details
-* both tabs are assigned to that container after you save
-
-This is useful when two or more tabs clearly belong together and you decide mid-session that they should become a container.
+Creating a container this way is useful when two or more tabs clearly belong together and you decide mid-session that they should become a container.
 
 For more on containers themselves, see xref:tabs/containers.adoc[Containers].
 

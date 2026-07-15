@@ -58,10 +58,33 @@ It controls how links sent *to* WebLibre from other apps are opened.
 * **Prompt** -- ask each time
 * **Regular** -- always open in a regular tab
 * **Private** -- always open in a private tab
+* **Isolated** -- always open in an isolated tab (shown when **Show Isolated Tab UI** is enabled)
 
 This is useful if you regularly open links from messaging apps, email, or other Android apps.
 
 Find it in **Settings > Browsing > External Link Handling**.
+
+== Custom Tabs
+
+**Custom Tabs** controls whether other apps can open links in a lightweight in-app tab instead of the main browser.
+
+When it is off, links and shared URLs sent to WebLibre open as normal tabs in the main browser instead.
+It is enabled by default.
+
+Find it in **Settings > Browsing > Custom Tabs**.
+For the full picture of external link flows, see xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links].
+
+== Desktop Mode
+
+WebLibre can request the desktop version of websites globally, per site, or per tab.
+
+* **Always Request Desktop Site** -- opens every new tab in desktop mode by default. Changing it also switches your already-open tabs.
+* **Desktop Mode Sites** -- a list of sites that always load in desktop mode, regardless of the global setting. Subdomains are included automatically, so adding `example.com` also covers `m.example.com` and `shop.example.com`.
+
+You can add the current site to the list from the page menu by turning on **Always use desktop site**, or manage the full list in settings.
+A per-tab desktop toggle stays available in the browser menu for one-off switches and takes precedence over the global and per-site defaults.
+
+Find both in **Settings > Browsing > Desktop Mode**.
 
 == New Tab Default
 
@@ -77,19 +100,17 @@ Find it in **Settings > Browsing > New Tab Default**.
 
 For a closer look at the differences, see xref:tabs/tab-management.adoc[Tab Management].
 
-== New Tab Position
+== Tab Ordering
 
-**New Tab Position** controls where newly created tabs appear in your tab list.
+Two settings control how tabs are ordered:
 
-* **First** -- puts new tabs at the start
-* **End** -- puts new tabs at the end
+* **Tab List Direction** -- how tabs are ordered in the tab list view
+* **Tab Bar Direction** -- how tabs are ordered in the tab bar and quick tab switcher
 
-Choose the option that matches how you scan your tabs. This setting also affects the horizontal order in the Quick Tab Switcher: with *First*, new tabs appear to the left; with *End*, to the right.
+Both offer **Newest first** and **Oldest first**.
+Choose the combination that matches how you scan your tabs.
 
-You can also set the overall **Tab Direction** to control whether tabs flow from top to bottom or from left to right, depending on your layout preference.
-
-Find **New Tab Position** in **Settings > Browsing > New Tab Position**.
-Find **Tab Direction** in **Settings > Browsing > Tab Direction**.
+Find both in **Settings > Browsing**.
 
 == Container and Isolated Tab Controls
 
@@ -145,3 +166,11 @@ To add it:
 . Tap **Widgets**
 . Look for WebLibre in the widget list
 . Drag it where you want it
+
+The widget can be resized horizontally to fit your home screen layout.
+
+== Multi-Window and Picture-in-Picture
+
+WebLibre supports Android split-screen, freeform, and pop-up windows and adapts as the window is resized.
+Fullscreen video can continue in Android Picture-in-Picture when you press Home or switch apps, then return to WebLibre when you reopen it.
+Permission prompts do not trigger Picture-in-Picture by themselves.

@@ -31,6 +31,7 @@ Each entry shows:
 * the page address
 * the visit time
 * the visit type
+* the xref:tabs/containers.adoc[container] the visit came from, when one was recorded
 
 The visit types currently exposed in the filter menu are:
 
@@ -40,6 +41,13 @@ The visit types currently exposed in the filter menu are:
 
 If you tap a history entry, WebLibre opens it again in a regular tab.
 
+[NOTE]
+====
+Container labels only apply to visits recorded after containers became history-aware.
+Existing history from older versions is not retroactively assigned to containers.
+Container history labels are local to WebLibre and do not sync across devices.
+====
+
 == What Downloads Shows
 
 The **Downloads** screen shows download records saved by WebLibre.
@@ -47,7 +55,10 @@ The **Downloads** screen shows download records saved by WebLibre.
 This is the list of downloads the browser remembers.
 It is not the same thing as browsing your whole device storage in a file manager.
 
-If you tap a download entry, WebLibre opens its recorded address in a regular tab.
+If you tap a download entry, WebLibre opens the downloaded file with the matching system app.
+
+While browsing, WebLibre also tells you how downloads went: a **Download completed** snackbar appears with an **Open** action when a download finishes, and failed downloads show a clear **Download failed** message instead of failing silently.
+Built-in downloads use the resolved filename and are saved in Android's system **Downloads** directory.
 
 [NOTE]
 ====
@@ -93,6 +104,17 @@ That makes it easier to answer questions such as:
 
 The **Downloads** screen does not show these history-specific visit-type filters because it is already scoped to download entries.
 
+== Filter History by Container
+
+The filter menu on the **History** screen also includes container filtering, so you can review only the visits recorded in one xref:tabs/containers.adoc[container].
+
+Two related behaviors are worth knowing:
+
+* When a container filter is active, clearing history only clears that container's history.
+* When you delete a container, WebLibre offers to also delete that container's history. If you keep it, those visits remain but are shown without a container.
+
+If you want a container to never record history at all, enable **Exclude from History** in that container's settings.
+
 == Reset Filters
 
 If the list looks incomplete after filtering:
@@ -100,7 +122,7 @@ If the list looks incomplete after filtering:
 . Open the filter menu
 . Tap **Reset Filter**
 
-That clears the text filter and any active date or visit-type filters.
+That clears the text, date, visit-type, and container filters.
 
 == Delete One Entry
 

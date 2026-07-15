@@ -69,11 +69,20 @@ If there are no matching log entries, WebLibre shows **No logs available**.
 **Settings > Advanced** also includes a few additional tools:
 
 * **Icon Cache** -- useful when a site's favicon looks stale or wrong
+* **ML Downloads** -- clears downloaded on-device AI models and runtime files
 * **Reset UI** -- useful when part of the app looks visually stuck
 * **Experimental Features** -- useful only when you are intentionally testing lower-level behavior
 
 These are not everyday settings.
 Use them when you have a clear reason.
+
+== Proxy Logs
+
+Proxy and Tor runtime messages have a separate live viewer under **Settings > Proxy > Proxy Connections > View logs**.
+Use **Proxy Logs** when a connection will not start or reports as connected but pages do not load.
+You can filter by level, copy or share the visible output, and clear the log.
+
+See xref:proxy.adoc#_proxy_logs[Proxy Logs] for the connection-specific workflow.
 
 == A Practical Workflow
 

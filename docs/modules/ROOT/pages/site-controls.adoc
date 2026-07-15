@@ -111,9 +111,12 @@ The data types are organized so it is clear what each option covers:
 ** **Cached Files**
 * **Auth Sessions**
 
+You can also enable **Close tab after clearing** if you want the current tab closed once the data is gone.
+If you leave it off, WebLibre reloads the current tab after clearing.
+
 Then tap **Clear Now** and confirm the action.
 
-WebLibre closes any open tabs that belong to the site before wiping data, so the cleared data cannot be re-created from a still-running session.
+WebLibre detaches open sessions for the same site before wiping data so they cannot immediately recreate it.
 
 This is useful when:
 
@@ -125,6 +128,8 @@ This is useful when:
 ====
 This is narrower than **Delete Browsing Data** in settings.
 It targets the current site's data instead of the whole browser.
+
+For a tab in a cookie-isolated container, Gecko cannot combine host-specific clearing with that container context. WebLibre therefore clears the selected data across that container, not only for the current host.
 ====
 
 == Third-Party Redirect Blocking
