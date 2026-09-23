@@ -39,6 +39,9 @@ jobs:
       - name: Generate site
         run: npm exec antora -- generate antora-playbook.yml --clean
 
+      - name: Prepare legacy redirects and text sitemap
+        run: node prepare-site.js
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
