@@ -53,7 +53,7 @@ This file is the operating guide for coding and documentation agents in this rep
 - Build the full site, then inspect the relevant generated page under `build/site/`.
 - Example: `docs/modules/ROOT/pages/quick-start.adoc` -> `build/site/quick-start.html`.
 - For nested pages, keep the same relative structure, e.g. `docs/modules/ROOT/pages/privacy/overview.adoc` -> `build/site/privacy/overview.html`.
-- `node prepare-site.js` also adds redirects for former `/weblibre/...` URLs and creates `build/site/sitemap.txt`.
+- `node prepare-site.js` also adds redirects for former `/weblibre/...` URLs.
 
 ### Recommended workflow
 - Before editing, read the target page and nearby pages in the same section.

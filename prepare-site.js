@@ -19,8 +19,6 @@ if (sitemapUrls.length === 0) {
   throw new Error('Antora sitemap contains no page URLs.')
 }
 
-fs.writeFileSync(path.join(siteDir, 'sitemap.txt'), `${sitemapUrls.join('\n')}\n`)
-
 const sourcePages = listFiles(pagesDir).filter((file) => file.endsWith('.adoc'))
 const expectedUrls = new Set()
 
@@ -52,7 +50,7 @@ for (const assetDir of ['_', '_images', '_attachments']) {
   }
 }
 
-console.log(`Prepared ${sourcePages.length} legacy page redirects and a ${sitemapUrls.length}-URL text sitemap.`)
+console.log(`Prepared ${sourcePages.length} legacy page redirects and validated ${sitemapUrls.length} sitemap URLs.`)
 
 function listFiles (directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

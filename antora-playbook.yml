@@ -6,7 +6,6 @@ site:
     Allow: /
 
     Sitemap: https://docs.weblibre.eu/sitemap.xml
-    Sitemap: https://docs.weblibre.eu/sitemap.txt
 
 antora:
   extensions:
