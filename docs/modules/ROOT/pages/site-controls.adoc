@@ -9,6 +9,7 @@ Use it when you want to:
 * check whether the connection is secure
 * disable or re-enable tracking protection for one site
 * review saved permissions for that site
+* decide whether links from that site can open another app
 * change autoplay behavior
 * clear site-specific data without clearing the whole browser
 
@@ -85,6 +86,12 @@ If there are no saved decisions yet, WebLibre may show **No permissions set for 
 You can still use **Show all** to review the full list.
 
 For general permission behavior, see xref:site-permissions.adoc[Site Permissions].
+
+== App Links For One Site
+
+Under **App Links** in the site panel, choose **Follow default**, **Open in app**, or **Keep in browser**. Use this when you want one site to behave differently from **Settings > Browsing > Open Links in Apps**. You can remove saved site rules from **Remembered site rules** in those browsing settings.
+
+Opening a link in another app can expose your activity to that app. In a private tab, a Tor- or proxy-routed tab, or a strict container, WebLibre asks before opening it regardless of an automatic-open setting. For the full set of choices, see xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links].
 
 == Autoplay For One Site
 

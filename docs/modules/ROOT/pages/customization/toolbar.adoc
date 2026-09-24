@@ -21,7 +21,7 @@ The rail combines tabs, the address and search controls, toolbar actions, contex
 
 A few things work differently on the rail:
 
-* Swipe the rail away to hide it, and swipe vertically on it to switch tabs.
+* Swipe the rail toward the screen edge to hide it, swipe inward (toward the center of the screen) to open the tab view, and swipe vertically on it to switch tabs.
 * Because the rail is narrow, tab titles and inline close buttons may be hidden to save space. Tab actions stay available through the tab menus.
 * Tab nesting is shown as a compact corner badge on the favicon instead of chevrons.
 * The **Two Rows** tab stacking mode does not fit on the rail, so it falls back to the Accordion layout there.
@@ -42,6 +42,7 @@ This gives more room to the page content.
 
 When you scroll back, the tab bar appears again.
 With the tab bar at the top, WebLibre describes the top position as persistent, so auto-hide is most useful with the bottom layout.
+You can also swipe the tab bar toward its screen edge to hide it and inward to open the tab view.
 
 == Contextual Toolbar
 
@@ -60,7 +61,7 @@ On that screen you can:
 Some buttons also show a long-press hint in the customization screen.
 That means pressing and holding the button in the browser can open extra actions.
 
-Available buttons include common navigation and tab actions and a *History* button that opens your browsing history.
+Available buttons include common navigation and tab actions, QR scanning, voice search, and a *History* button that opens your browsing history.
 The *History* button is disabled by default; move it to *Enabled* if you want quick history access from the toolbar.
 
 === Fallback Buttons
@@ -110,7 +111,7 @@ You can adjust these related options:
 * **Show Titles in Quick Tab Switcher** -- Shows tab titles next to icons.
 * **Title Width in Quick Tab Switcher** -- Sets the maximum width of tab titles on switcher chips.
 * **Hierarchy Depth in Quick Tab Switcher** -- Controls how many nesting chevrons appear on chips when hierarchical tabs are used. Set it to 0 to hide depth indicators. Deep nesting collapses into a single chevron with a count badge.
-* **Close Buttons on All Tabs** -- Shows a close button on every switcher chip. The active tab always gets one.
+* **Close Buttons on Tab Chips** -- Shows close buttons on the active chip only, on every chip, or on none. When hidden, use a long-press menu or swipe the bar to close a tab.
 * **Customize Switcher Buttons** -- Chooses which action buttons appear at the end of the switcher bar. This is configured separately from the contextual toolbar, and none are shown until you enable them.
 
 A few more behaviors worth knowing:
@@ -129,6 +130,10 @@ In **Settings > Toolbar & Layout**, you can change how it appears:
 * **Show Favicons in List View** -- Uses website icons instead of page thumbnails in the tab list view.
 
 If **Bottom Sheet Tab View** is off, the tab view opens full screen.
+
+== Customize the Browser Menu
+
+Tap **Customize menu** at the bottom of the browser menu, or open **Customize Menu** from Settings. Drag to reorder sections and the items inside them, and hide sections or individual items you do not use. You can also reorder items within a submenu. Use **Reset to Defaults** to restore the original menu layout.
 
 == Tips
 

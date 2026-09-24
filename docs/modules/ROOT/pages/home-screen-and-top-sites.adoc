@@ -1,18 +1,18 @@
 = Home Screen & Shortcuts
 :description: How WebLibre's home surface, quotes, quick actions, and Shortcuts work.
 
-WebLibre has two nearby but different "start" experiences:
+WebLibre has two related start pages:
 
-* the browser home surface you see in an empty tab or empty container
-* the searchable start view that can show **Shortcuts** and other quick sections
+* the home page shown when there is no tab to display
+* the new-tab page shown when you open a new tab
 
-This page explains what appears there and how to make use of it.
+Both offer search and useful sections, but you can customize their sections separately.
 
 == Browser Home
 
-When WebLibre has no active page to show, it can open a simple home surface instead of a blank screen.
+By default, WebLibre shows the home page when you open the app without a tab or close your last tab.
 
-The quick actions -- **New tab**, **View tabs**, and **Resume last tab** -- sit near the top of the screen where they are easy to reach.
+The search field offers voice search and QR scanning. Below it, the page can show sections such as **Quick Actions**, **Shortcuts**, **Recent Tabs**, and a daily quote. Quick actions include **New tab**, **View tabs**, and **Resume last tab** when available.
 Depending on context, you may also see:
 
 * the normal WebLibre brand header
@@ -20,6 +20,21 @@ Depending on context, you may also see:
 * a quote card
 
 The quote card includes **Refresh quote** if you want a different one.
+
+== Choose What Opens Without a Tab
+
+In **Settings > Home & New Tab > When there is no tab to show**, choose the home page (default), resume your last tab, or open an address you enter. Turn on **Apply when the last tab closes** if you also want that choice when you close the last tab in a container, instead of opening a tab from another container. That option is off by default.
+
+== Customize the Start Pages
+
+Open **Settings > Home & New Tab** to adjust these separately:
+
+* **Customize home sections** -- reorder, hide, or reset the sections on the home page
+* **Customize new tab sections** -- set a different order and visibility for new tabs
+* **Search bar position** -- follow the tab bar (default), pin search to the top of the home page, or use the tab bar's address field
+* **Wallpaper** -- choose a background image and adjust blur or dimming so text stays readable
+
+You can set a different wallpaper for a container in its editor. Search-result sections shown *after* you start typing are configured separately; see xref:search/search-modules.adoc[Search Modules].
 
 == Support WebLibre Banner
 
@@ -83,6 +98,8 @@ Pinned shortcuts are good for pages you want to keep available even if your brow
 
 If you edit a shortcut, you can change its title or address.
 If you remove one, WebLibre hides it from the Shortcuts area.
+Tap the **+** tile in **Shortcuts** to add one yourself by entering a title and address, without waiting for a suggested site.
+You can also hide suggestions from an entire site at once. Removed shortcuts stay hidden rather than reappearing when your history changes.
 
 == Reorder Shortcuts
 

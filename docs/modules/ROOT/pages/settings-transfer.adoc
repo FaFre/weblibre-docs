@@ -1,0 +1,28 @@
+= Export & Import Settings
+:description: How to move WebLibre settings between profiles or devices without restoring a full profile backup.
+
+Use **Settings > General > Export & Import Settings** to move selected settings to another WebLibre installation or profile. You can save an export as a file or copy it to the clipboard, then import from either source.
+
+== Export Settings
+
+. Open **Settings > General > Export & Import Settings**.
+. Select **App settings**, **Gecko preferences**, or both. Gecko preferences are the advanced engine preferences you changed by hand.
+. Tap **Save file** and choose a folder, or tap **Copy** to put the export on the clipboard.
+
+You can change the saved export folder from the screen's menu. Keep the exported file somewhere you can reach from the other device if you plan to move it.
+
+== Import Settings
+
+. On the receiving profile or device, open **Settings > General > Export & Import Settings**.
+. Tap **Open file** to select an export, or **Paste** if you copied it.
+. Review the available sections and choose which ones to apply.
+
+Review your settings after import, especially any privacy or connection choices that depend on the new device.
+
+== What Is Not Included
+
+This transfers settings, not tabs, history, bookmarks, saved logins, or your account sign-in. It is not a full backup. For browsing data, use xref:profiles.adoc[profile backups], xref:bookmarks.adoc[bookmark export], or xref:firefox-sync.adoc[Firefox Sync] as appropriate.
+
+Some preferences stay on the original device, including web search preferences, the home and new-tab section layouts, menu order, and pinned add-ons. Wallpaper images are not included either. Set these up again on the receiving device.
+
+An export may contain connection details or other sensitive preferences. Review it before sharing it or pasting it into another app. For a complete copy of a profile, use an encrypted profile backup instead.

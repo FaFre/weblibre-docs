@@ -113,25 +113,20 @@ If your phone or tablet does not support it, or it is not set up in Android, pro
 
 == Back up a profile
 
-You can create an encrypted backup of an individual profile.
+You can create an encrypted backup of an individual profile. For the current profile, use **Settings > General > Back up this profile**; for another profile, open **Manage Profiles** and select it.
 
-. Open *Manage Profiles*.
-. Open the profile you want to back up.
-. Tap *Backup*.
-. Enter a password.
+. Open **Back up this profile** or select the profile in *Manage Profiles* and tap *Backup*.
 . Optionally leave *Verify Backup Integrity* turned on so WebLibre checks that the backup can be restored.
-. Optionally enable *Skip Cache Directories* to exclude temporary data like page caches, icons, and thumbnails. This makes backups smaller and faster, but cached data will not be restored.
-. Optionally tap *Change Backup Directory* to store the backup outside the app's internal storage. Backups stored outside the app survive even if you uninstall WebLibre.
-. Tap *Backup*.
+. Tap *Backup* and select a backup folder if WebLibre asks you to choose one. To change the folder later, open *Backups* in *Manage Profiles* and use the folder button.
+. Confirm the restart. After restarting, WebLibre asks you to set the backup password and then creates the encrypted file.
 
 You need that password later to restore the backup.
 Without it, the backup cannot be opened.
+Temporary caches are skipped automatically, so they are rebuilt as you browse after restoring.
 
 [NOTE]
 =====
-You cannot back up the profile that is currently active.
-If you need to back up your current profile, switch to a different one first.
-If no other profile exists, create a new profile (it can be temporary), switch to it, then back up the original profile from *Manage Profiles*.
+WebLibre explains when it needs to restart to back up or restore a profile. Save anything in private tabs first: they do not survive an app restart, and this applies to your *active* profile even when you are backing up a different, idle one. The restart also clears any container currently set to **Clear Data on Exit**.
 =====
 
 == Restore a backup
@@ -139,17 +134,13 @@ If no other profile exists, create a new profile (it can be temporary), switch t
 . Open *Manage Profiles*.
 . Open the *Backups* screen from the toolbar icon.
 . Tap the backup file you want to restore.
-. Enter the backup password.
 . Choose one of these options:
-.. *Create New User* restores the backup as a new profile with a new name.
-.. *Restore & Replace* restores the backup using the profile already stored inside the backup, and replaces that existing profile if it is already on the device.
+.. *Create a new profile* restores it as a new profile. Enter its name and the backup password on this screen.
+.. *Replace an existing profile* overwrites the profile you select. WebLibre restarts and asks for the backup password during the restore.
 . Tap *Restore*.
 
-[NOTE]
-====
-You cannot use *Restore & Replace* on the profile that is currently active.
-If needed, switch to a different profile first.
-====
+WebLibre explains when it needs to restart to replace a profile. Restoring over an existing profile replaces its browsing data, so check the profile you selected before confirming.
+Restoring into a new profile does not copy WebLibre account sign-in, Firefox Sync sign-in, or saved proxy connection details from the backup; sign in and reconfigure connections again if you need them. Replacing an existing profile restores the account, sync, and proxy data included in the backup.
 
 == Profiles, containers, and isolated tabs
 

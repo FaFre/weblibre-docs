@@ -41,7 +41,7 @@ In WebLibre, **Incognito Mode** is a cleanup rule for the whole browser. After a
 
 If you use xref:tabs/containers.adoc[containers], each cookie-isolated container can have its own **Clear Data on Exit** setting.
 
-This setting is narrower than browser-wide Incognito Mode. It clears that container's **cookies and site data** after the app is closed and started again, while other containers can keep their data.
+This setting is narrower than browser-wide Incognito Mode. It clears that container's **cookies and site data** when you quit WebLibre, while other containers can keep their data.
 
 Typical examples:
 
@@ -57,7 +57,7 @@ To configure it:
 [NOTE]
 ====
 For containers, **Clear Data on Exit** refers to cookies and site data for that container. It is not the same as clearing all tabs, history, cache, permissions, or downloads for the whole browser.
-If **Cookie Isolation** is off, the container does not have a separate cookie jar to clear.
+If **Cookie Isolation** is off, the container does not have a separate cookie jar to clear. **Exclude from History** is a different container setting and works without cookie isolation.
 ====
 
 === A practical setup
@@ -140,15 +140,15 @@ You can choose where WebLibre stores profile backups instead of relying on the d
 To change the backup location:
 
 . Open *Manage Profiles*
-. Open the profile you want to back up
-. Tap *Change Backup Directory*
+. Open *Backups* from the toolbar
+. Tap the folder button
 . Select a folder on your device or external storage
 
 Backups stored outside the app survive even if you uninstall WebLibre. Old backups in the previous location are migrated automatically when you select a new directory.
 
-== Skip Cache Directories
+== Temporary Data in Backups
 
-When creating a backup, you can enable *Skip Cache Directories* to exclude temporary browser data such as page caches, icons, and thumbnails.
+Profile backups automatically skip temporary browser data such as page caches, icons, and thumbnails.
 
 This significantly reduces the backup file size and speeds up backup creation.
 The trade-off is that cached images and other temporary data will not be restored from that backup; the browser will rebuild them as you browse.

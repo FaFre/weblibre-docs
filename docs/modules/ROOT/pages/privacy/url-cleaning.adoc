@@ -35,8 +35,9 @@ When URL Cleaner is enabled and WebLibre finds removable tracking parameters in 
 
 * **Tracking detected** before the cleaned link is applied
 * **URL cleaned** after the cleaned link has been applied
+* **URL partially cleaned** when only some detected parameters were removed
 
-You can tap that row to review the detected parameters.
+You can tap that row to review the detected parameters. If a removed parameter is needed, such as a referral code, restore that parameter before opening the link. The indicator updates to reflect whether the URL is fully or partly cleaned.
 
 === Settings
 

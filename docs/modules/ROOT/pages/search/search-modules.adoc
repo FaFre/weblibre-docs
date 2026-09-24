@@ -27,7 +27,7 @@ These are the same sections described in xref:search/local-search.adoc[Local Sea
 
 == Start-Screen Modules
 
-Before you type anything, WebLibre can also show quick sections in the start or empty search state.
+Before you type anything on the new-tab page, WebLibre can show quick sections.
 
 Current built-in sections include:
 
@@ -41,6 +41,8 @@ Current built-in sections include:
 * **Containers**
 
 These help you jump back into recent or important browsing without typing a search first.
+
+The separate home page shows **Quick Actions**, **Shortcuts**, **Recent Tabs**, and a daily **Quote** by default. You can also enable other sections there, such as **Recent History** or **Containers**. **Quick Actions** is only available on the home page; the quote can also be enabled on the new-tab page. See xref:home-screen-and-top-sites.adoc[Home Screen & Shortcuts].
 
 == What These Sections Mean
 
@@ -71,6 +73,7 @@ Container shortcuts so you can jump into a specific browsing context quickly.
 == Customize Sections
 
 WebLibre lets you reorder sections and hide the ones you do not use.
+The home page and new-tab page can also have different section layouts. Configure them in **Settings > Home & New Tab**; reset a layout there if you want to start again.
 
 To customize them:
 
@@ -81,10 +84,11 @@ To customize them:
 . Tap **Done**
 
 The order and visibility are saved for you.
+Use **Reset to Defaults** in section customization if you want the original order and visibility back.
 
 == Search Modules and Start Modules Are Separate
 
-WebLibre treats typed-search sections and empty-state sections as different groups.
+WebLibre treats typed-search sections and start-page sections as different groups. The home page and new-tab page can also be configured independently.
 
 That means you can:
 

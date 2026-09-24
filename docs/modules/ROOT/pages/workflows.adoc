@@ -86,7 +86,7 @@ For one-off storage separation, you can use isolated tabs instead:
 . Use it for a one-off session you do not plan to keep
 . Close it when you are done so that isolated session ends
 
-NOTE: An isolated tab is not routed through Tor automatically. Use the Tor-assigned container above when network routing matters, or configure a broader routing mode under **Settings > Proxy > Proxy Routing**.
+NOTE: An isolated tab is not routed through Tor automatically. You can assign Tor to that tab from **Connections**, or use the Tor-assigned container above for repeated browsing.
 
 == Share a Device with Family
 

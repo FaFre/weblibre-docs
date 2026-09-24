@@ -154,8 +154,15 @@ The container-based modes only appear if container UI is enabled.
 
 You can also reorder tabs directly in the bar by long-pressing and dragging a chip.
 The active tab chip is centered in the bar for visibility.
+Swiping or using next/previous tab actions follows the order you see, including sorting and grouping. Under **Settings > Browsing > Sequential Tab Navigation**, **Continue Into Next Container** controls whether stepping past a container's edge enters the next one (on by default). **Loop Around** separately controls whether stepping past the last tab wraps to the first (off by default).
 
 For all switcher options -- close buttons, titles, depth indicators, and custom action buttons -- see xref:customization/toolbar.adoc[Toolbar & Layout].
+
+In the tab overview, swipe with two fingers to change containers or pinch to change the tab layout. Long-press a tab group for its actions, including creating a tab, pinning, bookmarking, editing, or clearing its data.
+
+== Background Tabs
+
+Under **Settings > Browsing > Background Tab Behavior**, choose what happens when an action such as **Open in New Tab** opens a tab without selecting it. By default, WebLibre keeps you on the current page and offers a **Switch** action; you can instead switch to the new tab immediately. An action explicitly labeled **Open in Background** still leaves the new tab in the background.
 
 == Tab Bar and Tab View Layout
 

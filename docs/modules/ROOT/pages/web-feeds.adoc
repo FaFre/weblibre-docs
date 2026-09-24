@@ -118,6 +118,7 @@ There is no separate WebLibre account or cloud feed service required.
 
 However, feed updates still come from the websites you subscribe to.
 That means those sites, and your network connection, can still see requests for their feed URLs just like normal website requests.
+Feed refreshes follow WebLibre's global Tor or proxy routing policy, not a connection assigned only to a particular tab or container. See xref:proxy.adoc[Proxy Connections] for routing options.
 
 == Practical tips
 

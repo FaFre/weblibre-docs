@@ -9,6 +9,7 @@ You can use it in several ways:
 * for all regular tabs
 * only for selected xref:tabs/containers.adoc[containers]
 * for private tabs
+* for an isolated tab with its own connection
 
 That makes it practical to keep everyday browsing fast while sending more sensitive browsing through Tor.
 
@@ -48,6 +49,7 @@ The section also shows how many connections are currently active, and *Manage Co
 
 To open the Tor settings screen, tap the edit button on the Tor row, or open Tor from **Settings > Proxy > Proxy Connections**, where Tor is listed alongside your proxy profiles.
 The main switch on that screen is the *Tor(TM) Service* toggle.
+You can also turn on **Start Automatically** if you want Tor to begin connecting when WebLibre opens.
 
 While Tor is connecting, WebLibre shows a progress bar.
 The first connection may take a little longer than later reconnects.
@@ -89,6 +91,10 @@ Private tabs and Tor are different features:
 * Tor changes how your traffic leaves the app
 
 Using both together can be useful, but one does not replace the other.
+
+=== Isolated Tabs
+
+You can select Tor for an individual isolated tab from **Connections**, independently of its container. A tab assigned to Tor waits if Tor is not ready rather than loading directly; start Tor to continue. See xref:proxy.adoc[Proxy Connections] for more on connection status and routing.
 
 == Use Tor With Containers
 

@@ -44,12 +44,28 @@ Find it in **Settings > Browsing > Open Links in Apps**.
 
 The choices are:
 
-* **Always** -- open the matching app without asking
-* **Ask before opening** -- show a prompt first
+* **Always** -- open the matching app without asking in ordinary browsing
+* **Ask before opening** -- show a prompt first (the default)
 * **Never** -- stay inside WebLibre
 
 Choose **Never** if you want WebLibre to stay in control.
 Choose **Always** if you usually prefer the dedicated app.
+
+=== Remember a Site's Choice
+
+When WebLibre asks about opening an app, you can choose **Remember for this site**. Manage or remove saved choices under **Settings > Browsing > Open Links in Apps > Remembered site rules**. You can also set a site's preference directly in its site settings: **Follow default**, **Open in app**, or **Keep in browser**.
+
+By default, the page continues loading while you decide. Turn on **Wait for your answer** if you want it to pause until you respond. Dismissing a prompt without choosing does not save a decision.
+
+Some sign-in flows need a link back from another app. **Allow login app callbacks** is on by default to support these even when **Open Links in Apps** is set to **Never**. You can turn it off in the same settings if you do not want that exception.
+
+If a link points to an app you have not installed and has no web fallback, **Offer app store fallback** can offer to open the app store. It is off by default; enable it in the same browsing settings if you want that choice. It only applies when **Open Links in Apps** is set to **Always** or **Ask before opening** -- it has nothing to offer a fallback for when set to **Never**.
+
+=== Private and Container Rules
+
+In private browsing, over Tor or a proxy, or inside a strict container, WebLibre asks before opening another app even if your default is **Always**. It does not offer to remember the answer in those contexts. Custom Tabs follow the selected mode unless another protection applies. Opening a native app can reveal your activity to that app and may link browsing identities you intended to keep separate.
+
+Cookie-isolated containers can have their own App Links mode and remembered site rules. Configure these in the container settings if one container should keep links in WebLibre while another uses native apps. Certain sensitive links, such as cryptocurrency wallet links, always require an explicit choice and cannot be remembered, regardless of the default.
 
 == Open in App
 
@@ -85,6 +101,8 @@ In practice, that usually means:
 * less context switching than opening a full browser session
 
 This is useful for one-off reads, sign-in confirmations, or checking a page without leaving the original app for long.
+
+If a Custom Tab is routed through Tor or a proxy when WebLibre is starting, it waits for the connection rather than silently sending the link directly. If you choose an option to open it normally instead, check whether that changes the route before continuing. See xref:proxy.adoc[Proxy Connections].
 
 === Turn Custom Tabs Off
 

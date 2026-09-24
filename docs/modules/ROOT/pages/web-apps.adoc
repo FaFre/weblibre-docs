@@ -68,6 +68,8 @@ If a PWA loses its session because Android stopped the browser in the background
 
 PWAs opened from home screen shortcuts also keep your active profile and container associations, so they keep behaving like the tab they were installed from.
 
+If the shortcut uses Tor or a proxy, WebLibre starts that connection automatically and waits before loading the page, without asking first. If the connection cannot start, the shortcut does not fall back to a direct connection. See xref:proxy.adoc[Proxy Connections].
+
 Login, payment, and other flows that use `window.open` or popup windows stay within the PWA flow instead of being lost behind the standalone window.
 
 == Fullscreen Video and Picture-in-Picture

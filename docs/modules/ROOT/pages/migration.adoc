@@ -19,12 +19,12 @@ What usually moves easily:
 What usually needs to be set up again:
 
 * **Extensions**
-* **Tab and toolbar layout**
-* **Privacy settings**
+* **Tab and toolbar layout, privacy settings** -- use xref:settings-transfer.adoc[Export & Import Settings] if you have a WebLibre setup on another device; otherwise set these up again
 * **Containers and profiles**
 * **Proxy profiles and gesture bindings**
 
 TIP: In WebLibre, open **Bookmarks** and use **Import > HTML** to bring in a bookmarks file. During import, you can choose **Merge** to keep existing bookmarks or **Replace** to erase them first.
+Large imports show progress while WebLibre processes the file in the background.
 
 == Bring Over Your Bookmarks
 
@@ -52,6 +52,7 @@ WebLibre currently syncs:
 * History
 
 If you do not want to use sync, you can still import bookmarks manually and rebuild the rest of your setup over time.
+For a move from another WebLibre installation, an xref:profiles.adoc[encrypted profile backup] carries more data than a settings export, while xref:settings-transfer.adoc[Export & Import Settings] moves only selected preferences.
 
 == Recreate Your Everyday Setup
 

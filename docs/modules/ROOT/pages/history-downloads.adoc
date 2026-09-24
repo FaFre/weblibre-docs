@@ -73,11 +73,11 @@ Both screens support a text filter.
 To use it:
 
 . Open the screen you want
-. Tap the filter button
-. Choose **Text Filter**
+. Tap **Search history** or **Search downloads** in the top bar
 . Type part of the title, file name, or address
 
 This helps when you know roughly what something was called but do not want to scroll through everything.
+Tap the same button to clear your query. If the field is already empty, tap it again to close search.
 
 == Filter by Date
 
@@ -122,7 +122,7 @@ If the list looks incomplete after filtering:
 . Open the filter menu
 . Tap **Reset Filter**
 
-That clears the text, date, visit-type, and container filters.
+That clears the search text and closes the search field, as well as resetting the date, visit-type, and container filters. You can also clear just the search text with the search button in the top bar.
 
 == Delete One Entry
 

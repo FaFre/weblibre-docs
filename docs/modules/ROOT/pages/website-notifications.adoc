@@ -1,0 +1,30 @@
+= Website Notifications
+:description: How to receive website push notifications through UnifiedPush in WebLibre.
+
+WebLibre can show notifications from websites even when the browser is closed. Delivery uses UnifiedPush rather than Google's push service. You choose a separate delivery app (a *distributor*), such as ntfy, to carry those messages.
+
+Website notifications are optional. A site cannot send them until you grant that site's permission, and delivery also depends on a distributor and Android's notification permission.
+
+== Set Up Delivery
+
+. Install a UnifiedPush distributor app if you do not already have one. Follow that app's setup instructions; some distributors use a service you choose or host yourself.
+. Open **Settings > Notifications** in WebLibre.
+. Under **UnifiedPush Distributor**, choose the installed delivery app.
+. Under **Notification Permission**, grant Android's permission if it is not already granted.
+. When a website asks to send notifications, choose whether to allow it.
+
+The settings screen shows whether the distributor is ready and lists your **Site Subscriptions**. If a distributor is unavailable or Android permission is denied, notifications may not appear until you resolve that issue.
+
+== Manage a Site
+
+To stop one website from notifying you, open that site's information panel and change its **Notifications** permission to **Block** or **Ask**. The subscription list in **Settings > Notifications** shows sites using push, but it does not have a per-site unsubscribe button.
+
+To disable website push delivery altogether, use **Disable web push** under **UnifiedPush Distributor**. Your distributor choice and subscriptions are separate for each WebLibre profile.
+
+== What to Expect
+
+* The website, the distributor app, and its delivery service are involved when you enable push. Choose a provider you trust; this feature does not make notifications anonymous.
+* Messages can arrive while WebLibre is closed, but delivery depends on the distributor being available and on Android allowing notifications.
+* Android's notification permission also controls other WebLibre notifications, such as download status. It does not grant permission to individual websites.
+
+See xref:site-permissions.adoc[Site Permissions] to review other permissions a website can request.

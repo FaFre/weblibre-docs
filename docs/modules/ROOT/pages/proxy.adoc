@@ -9,6 +9,7 @@ Together with the built-in xref:tor.adoc[Tor integration], this lets you mix nor
 * route all regular tabs through one proxy
 * route only selected xref:tabs/containers.adoc[containers] through a proxy
 * give private tabs their own proxy choice
+* assign a separate connection to an isolated tab
 
 == Supported Protocols
 
@@ -51,8 +52,11 @@ On this screen you can:
 * see the egress IP after a successful connection test
 * stop all running connections at once
 * open the proxy log viewer with **View logs**
+* turn on **Start Automatically** for a connection you want ready when WebLibre opens
 
 You can also reach connection management from the browser menu: the **Connections** section shows Tor and proxy profiles that are assigned to a routing mode, with a connected count and **Manage Connections** for the full list.
+
+The **Connections** screen also shows the route of the current tab, such as a direct connection, Tor, or a proxy. If its required connection is stopped, it shows that the tab is blocked and offers a way to start it. Assigned connections show what uses them, making it easier to check your routing before browsing.
 
 NOTE: **Test connection** sends several HTTPS requests through the selected connection to Mullvad's connectivity endpoint at `am.i.mullvad.net`. Mullvad receives the tested exit IP. The result measures the full HTTP route through the proxy, not only the distance to the proxy server.
 
@@ -90,6 +94,10 @@ You can send private tabs through a different proxy than regular tabs, or leave 
 
 Private tabs and proxies are different features: private tabs mainly limit what is kept locally on your device, while a proxy changes how traffic leaves the app.
 
+=== Isolated Tabs
+
+An isolated tab can use its own connection, independent of any container it belongs to. Choose its connection from the **Connections** screen when you need both a separate site session and a separate network route. Tabs it opens inherit that route; duplicating the tab carries it to the copy.
+
 == Per-Container Proxy Routing
 
 Each cookie-isolated container can have its own proxy:
@@ -112,6 +120,10 @@ A container cannot bypass the global proxy and have its own proxy assignment at 
 == DNS Leak Protection
 
 When a tab is routed through a proxy, WebLibre also guards its DNS lookups per request and per container, so name resolution does not leak outside the proxy for routed tabs.
+If the required connection is stopped or unavailable, the tab and related requests such as suggestions and site icons are blocked instead of silently using your direct connection. Start the connection to resume loading.
+Suggestions and other lookups associated with a routed tab use its connection while it is running.
+
+When a proxied link opens from another app, a web app, or a home-screen shortcut before the proxy is ready, WebLibre starts the required connection automatically and waits before loading the page. This happens without asking, since the container's proxy assignment is already your instruction; there is no option to open the link on a direct connection instead. If the connection cannot start, the link does not load.
 
 == Share a Proxy Profile
 
@@ -131,6 +143,7 @@ You can:
 * filter lines by log level
 * copy all visible lines
 * share the log output
+* change the recorded detail level when troubleshooting (more detail may slow browsing)
 
 This is the first place to look when a proxy connects but pages do not load, or when a profile fails to start.
 

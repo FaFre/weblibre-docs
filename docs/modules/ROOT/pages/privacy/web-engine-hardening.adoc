@@ -77,6 +77,7 @@ In WebLibre, this setting appears separately as **Fission (Site Isolation)** on 
 
 Site Isolation runs each site in its own separate operating-system process.
 This adds protection if one site is compromised, because it helps isolate it from other sites you have open.
+It is on by default.
 
 Expectation-setting: it uses more memory, and changing it requires an app restart.
 

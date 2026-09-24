@@ -32,7 +32,9 @@ Some container features always work:
 * *Name*, color, and icon
 * *Assigned Sites*
 * *Pin Container* and manual reordering
+* a home-page wallpaper override
 * *Exclude from Search Index*
+* *Exclude from History*
 * selecting the container for new tabs
 * grouping tabs under that container in the UI
 * container-colored address bar border and tab bar tint when browsing in that container
@@ -43,10 +45,10 @@ Other features only work when *Cookie Isolation* is enabled for that container:
 * *Proxy Connection* (route the container through Tor or a proxy profile)
 * *Bypass Global Proxy*
 * *Clear Data on Exit*
-* *Exclude from History*
 * *Strict Mode*
 * separate cookies, saved logins, and site data
 * *Clear Container Data*
+* optional *Isolated App Link Settings* for opening links in other apps
 
 Important: a container only keeps separate logins, cookies, and site data when *Cookie Isolation* is enabled for that container.
 A non-isolated container is still useful for organization and site assignment, but it does not get its own cookie jar.
@@ -69,6 +71,10 @@ Container colors come in two modes:
 * custom colors with direct hex and HSL controls, for exact color matching
 
 To change either, open the container editor and tap the large icon and color preview, then choose *Change Color* or *Change Icon*.
+
+=== Home-Page Wallpaper
+
+In the container editor, open **Wallpaper** under **Display** to choose a background for that container's home page. You can adjust blur and dimming separately. If you do not choose one, the container uses the profile's wallpaper from **Settings > Home & New Tab**.
 
 == A Practical Example
 
@@ -109,11 +115,13 @@ When creating a container, you can set:
 * *Exclude from History* -- keeps pages in this container out of browsing history
 * *Strict Mode* -- only allows assigned sites to load in this container
 * *Assigned Sites* -- automatically sends chosen sites to this container
+* *Wallpaper* -- overrides the profile's home-page background for this container
+* *Isolated App Link Settings* -- lets this container use its own rules for links that may open in other apps
 
 When editing an existing container, always expect name, appearance, pinning, and assigned-site management to be available.
-Proxy routing, per-container data clearing, history exclusion, and strict mode only make sense for containers that already have *Cookie Isolation*.
+Proxy routing, per-container data clearing, and strict mode only make sense for containers that already have *Cookie Isolation*.
 
-Note: *Proxy Connection*, *Clear Data on Exit*, *Exclude from History*, and *Strict Mode* depend on *Cookie Isolation*. If cookie isolation is off, those options are not active for that container because there is no separate browsing context to route, clear, or restrict.
+Note: *Proxy Connection*, *Clear Data on Exit*, *Strict Mode*, and *Isolated App Link Settings* depend on *Cookie Isolation*. *Exclude from History* and a wallpaper override also work without it.
 
 == Use a Container for Tabs
 
@@ -214,6 +222,12 @@ A container cannot bypass the global proxy and have its own proxy assignment at 
 
 Learn more: xref:tor.adoc[Tor Integration] and xref:proxy.adoc[Proxy Connections]
 
+== App Links in a Container
+
+For a container with **Cookie Isolation** enabled, turn on **Isolated App Link Settings** in its editor. Save the container, then edit it again and open **App Link Behavior** to choose whether links should ask, stay in WebLibre, or open in other apps. Its remembered site choices are separate from your browser-wide ones. This is useful if a shopping container should keep links in the browser while a media container may hand links to an installed app.
+
+Even if you choose automatic opening, WebLibre asks before sending links to other apps while browsing over Tor or a proxy or in a strict container. See xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links] for the privacy tradeoffs.
+
 == Strict Mode
 
 *Strict Mode* turns a container into an allowlist-only space.
@@ -232,7 +246,7 @@ With *Exclude from History* enabled, pages opened in that container are not reco
 
 This is separate from *Exclude from Search Index*: it prevents the container's visits from being recorded in browser history at all, not just from the local search index.
 
-*Exclude from History* requires *Cookie Isolation*.
+*Exclude from History* works for any container, including one without *Cookie Isolation*. Turning it on also removes that container's pages from on-device search results. It applies to future visits, including pages opened through pop-ups or links.
 
 == Exclude from Search Index
 

@@ -2,6 +2,7 @@
 :description: How to block screenshots and screen recordings of WebLibre on Android.
 
 WebLibre includes a *Screenshot Protection* setting that prevents the operating system and other apps from capturing screenshots or screen recordings while you use the browser.
+Private tabs also block screenshots by default, even if browser-wide *Screenshot Protection* is off.
 
 This is useful when:
 
@@ -31,6 +32,10 @@ Screenshot Protection is a UI-level guard. It does not:
 * prevent another device from photographing your screen
 * prevent accessibility services or root-level tools from reading the screen
 * protect content that has already been screenshotted before you turned the setting on
+
+== Screenshots in Private Tabs
+
+If you need to capture something in a private tab, turn on **Allow screenshots in private tabs** in **Settings > Privacy & Security**. This is off by default. It does not override browser-wide **Screenshot Protection**: if that setting is on, screenshots remain blocked throughout WebLibre.
 
 For broader privacy choices, see the xref:privacy/overview.adoc[Privacy & Security Overview].
 

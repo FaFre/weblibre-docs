@@ -20,7 +20,7 @@ The first screen asks you to:
 You cannot continue until those documents are accepted.
 
 The welcome screen also shows a *Restore from Backup* option.
-If you already have an encrypted profile backup from another device or a previous install, you can import it here before creating any profile, instead of finishing onboarding first.
+If you already have an encrypted profile backup from another device or a previous install, you can restore it into the profile WebLibre has created for setup. After you confirm and WebLibre restarts, the backup replaces that profile's data and name while keeping its lock. You can also restore a backup later from *Manage Profiles*.
 
 == Alpha & Stable Side By Side
 

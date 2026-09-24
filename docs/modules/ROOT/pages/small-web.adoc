@@ -36,6 +36,8 @@ You can also bookmark pages you enjoy, view your recent discoveries, and switch 
 
 When you exit Small Web mode, the dedicated tab closes and you return to normal browsing.
 
+Requests to fetch Kagi Small Web feeds and Wander console data follow WebLibre's global Tor or proxy routing policy. They do not use a connection assigned only to the current tab or container. See xref:proxy.adoc[Proxy Connections] for routing options.
+
 == Content Sources
 
 Small Web mode pulls content from two independent sources, each with a different approach to curation.

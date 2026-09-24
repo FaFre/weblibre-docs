@@ -33,11 +33,11 @@ If the stroke pattern is already assigned to another action, WebLibre warns you 
 Actions are grouped by category, including:
 
 * **Navigation** -- Back, Forward, Reload
-* **Tabs** -- New Tab, Close Tab, Duplicate Tab, Next Tab, Previous Tab, Last Used Tab, Pin / Unpin Tab
+* **Tabs** -- New Tab, Close Tab, Duplicate Tab, Next Tab, Previous Tab, Last Used Tab, Pin / Unpin Tab, and next or previous container
 * **Page** -- Reader Mode, Desktop Site, Translate, Find in Page, Bookmark, Increase Font, Decrease Font
 * **Scrolling** -- Scroll to Top, Scroll to Bottom, Page Up, Page Down
-* **Open** -- Bookmarks, History
-* App actions such as Minimize and Quit
+* **Open** -- Bookmarks, History, the home page, and the container list
+* App actions such as Minimize, Quit, and hiding or showing the tab bar
 
 == Behavior & Timing
 
@@ -73,6 +73,7 @@ Subdomains are included automatically, so excluding `example.com` also covers `m
 == What to Expect
 
 * Gestures only work on web page content, not on the browser's own screens.
+* In the tab overview, a two-finger swipe switches containers and a pinch changes the tab layout. These do not require a custom stroke binding.
 * Pull-to-refresh is suppressed while you draw gesture strokes near the top of a page, so the two features do not fight each other.
 * If a page behaves oddly with gestures enabled, add it to **Excluded sites** instead of turning the whole feature off.
 

@@ -29,7 +29,7 @@ WebLibre can store permission choices for these site controls:
 |Whether a website can see your geographic location
 
 |**Notifications**
-|Whether a website can send you notifications. WebLibre also has early experimental support for *Web Push* so granted sites can deliver push notifications even when WebLibre is in the background
+|Whether a website can send you notifications. With xref:website-notifications.adoc[UnifiedPush delivery] set up, granted sites can notify you even when WebLibre is closed
 
 |**Persistent Storage**
 |Whether a website can ask to keep site data stored more permanently
@@ -69,6 +69,7 @@ You can change permissions for the site you are currently visiting:
 If no permissions have been saved yet, WebLibre may show **No permissions set for this site**. Use **Show all** to view the full list.
 
 Changes apply to that site only.
+To stop push notifications from a particular site, change its **Notifications** permission here. The subscription list in **Settings > Notifications** is for reviewing sites, not removing them.
 
 == Reset All Saved Site Permissions
 

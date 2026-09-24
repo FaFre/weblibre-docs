@@ -66,6 +66,8 @@ The recommended hardening filters are also the ones offered during xref:getting-
 
 TIP: If a website breaks after enabling more filter lists, disable the most recently enabled list first, then re-enable lists one at a time.
 
+Mozilla removed its built-in automatic cookie-banner handling from the browser engine in WebLibre 0.30.0. If you relied on that behavior, consider a content-blocking extension with cookie-notice filters, such as uBlock Origin. Filter lists may also hide controls a site needs, so adjust them if a page stops working.
+
 == Manage Installed Extensions
 
 To manage extensions you already installed:

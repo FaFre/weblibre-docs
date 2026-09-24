@@ -25,7 +25,7 @@ Each isolated tab gets its own separate session, which is useful for second acco
 
 **Built-in Tor and proxy support**::
 WebLibre includes a built-in xref:tor.adoc[Tor] option and a full xref:proxy.adoc[proxy client] supporting protocols such as SOCKS, Shadowsocks, VMess, Trojan, and WireGuard.
-You can route all regular tabs through Tor or a proxy, or use container-based routing so only selected cookie-isolated containers are routed.
+You can route regular or private tabs, cookie-isolated containers, and individual isolated tabs through different connections. When a required connection is not running, WebLibre blocks that tab's traffic instead of falling back to a direct connection.
 
 **Firefox-compatible extensions on Gecko**::
 WebLibre is built on Mozilla's Gecko engine.
@@ -41,7 +41,7 @@ With the optional xref:search/local-search.adoc[local search index], WebLibre ca
 You can also customize which sections appear in search results and on the start screen.
 
 **Bang providers**::
-Pick a bang provider from the search chips or bang browser to send a search straight to a specific site.
+Type a bang such as `!w` in the address bar, or pick a provider from the search chips or bang browser, to send a search straight to a specific site.
 Built-in providers are available, and you can create your own custom entries.
 
 **Page translation**::
@@ -57,6 +57,9 @@ WebLibre also includes xref:reader-mode.adoc[Reader Mode], xref:web-feeds.adoc[w
 
 **Sync**::
 Sign in to xref:firefox-sync.adoc[Sync] to synchronize tabs, bookmarks, and history with your other devices.
+
+**Website notifications**::
+With a UnifiedPush delivery app configured, xref:website-notifications.adoc[websites you allow] can send notifications even when WebLibre is closed.
 
 == Good to Know
 

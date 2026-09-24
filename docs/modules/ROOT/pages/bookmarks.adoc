@@ -49,14 +49,16 @@ Inside the bookmark manager, you can:
 
 The bookmark manager includes tools that help when your saved pages start to grow:
 
-* **Filter bookmarks** lets you search by title or address
+* **Search bookmarks** in the top bar lets you search by title or address. The same button clears the query, then closes search when it is empty
 * **Folders Only** hides bookmark entries and shows only the folder structure
-* **Hide Empty Folders** can reduce clutter in the main tree
+* **Hide Empty Folders** can hide empty built-in folders from the main tree
 * **Sort** can use **Default**, **Title A-Z**, **Title Z-A**, **URL A-Z**, **URL Z-A**, **Newest First**, or **Oldest First**
+* **Collapse all** closes expanded folders at once
 
-Your sorting and **Folders Only** choices are remembered, so the list looks the same after you restart the app.
+Your sorting and visibility choices are remembered, so the list looks the same after you restart the app.
 
 This is useful when you want to quickly clean up old bookmarks, find a saved site by name, or review the newest items you added.
+If a search looks empty while **Folders Only** is on, switch back to **Show Bookmarks** to see matching entries.
 
 == Bookmarks and Extensions
 
@@ -88,6 +90,11 @@ For folders, WebLibre can also show actions such as:
 * **Delete**
 
 If a folder contains other folders and bookmarks, WebLibre may also offer **Flatten** to move its contents up one level.
+WebLibre shows how many bookmarks a folder contains before you delete it. You can add a bookmark directly to the folder you are viewing.
+
+== Choose How Bookmarks Open
+
+In **Settings > Browsing > Bookmark Open Behavior**, set the default action when you tap a bookmark: ask each time (the default), or open it in a regular tab, private tab, Custom Tab, or isolated tab. This changes the tap action; you can still use a bookmark's menu for other ways to open it.
 
 == Select Multiple Bookmarks
 
@@ -119,6 +126,7 @@ To import:
 
 Use **Merge** when you want to keep your current bookmarks and add the imported ones.
 Use **Replace** when you want to erase your current bookmarks first and start from the imported set.
+For large collections, WebLibre shows progress while it processes the file without freezing the interface. Wait for the import dialog to finish before continuing. An empty or invalid file does not replace your existing bookmarks.
 
 If you are moving from another browser, xref:migration.adoc[Switching from Another Browser] explains the HTML import path in more detail.
 

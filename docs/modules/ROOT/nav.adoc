@@ -29,6 +29,7 @@
 ** xref:privacy/data-management.adoc[Data Management]
 ** xref:site-controls.adoc[Site Controls]
 ** xref:site-permissions.adoc[Site Permissions]
+** xref:website-notifications.adoc[Website Notifications]
 ** xref:privacy/web-engine-hardening.adoc[Web Engine Hardening]
 ** xref:privacy/intent-gatekeeper.adoc[Intent Gatekeeper]
 ** xref:privacy/screenshot-protection.adoc[Screenshot Protection]
@@ -66,3 +67,4 @@
 ** xref:customization/browsing.adoc[Browsing Behavior]
 ** xref:gestures.adoc[Gestures]
 ** xref:advanced-settings.adoc[Advanced Settings]
+** xref:settings-transfer.adoc[Export & Import Settings]

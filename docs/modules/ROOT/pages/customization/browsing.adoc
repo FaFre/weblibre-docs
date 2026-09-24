@@ -34,13 +34,15 @@ Choose **Navigate Sequential Tabs** if you want swiping to work like stepping th
 
 Find it in **Settings > Browsing > Tab Bar Swipe Behavior**.
 
+Under **Settings > Browsing > Sequential Tab Navigation**, **Continue Into Next Container** lets a sequential swipe or next/previous tab gesture move across containers. Turn it off to stay in the current container. **Loop Around** independently makes navigation wrap from the last tab back to the first, and vice versa. Cross-container navigation is on by default; looping is off.
+
 == Open Links in Apps
 
 Some links can open in another app on your device, such as a video app, map app, or social app.
 **Open Links in Apps** controls what happens when you tap those links in WebLibre.
 
-* **Always** -- open the matching app right away
-* **Ask before opening** -- show a prompt first
+* **Always** -- open the matching app right away in ordinary browsing
+* **Ask before opening** -- show a prompt first (the default)
 * **Never** -- keep the link in WebLibre
 
 If you want WebLibre to stay in control, choose **Never**.
@@ -49,6 +51,7 @@ If you usually prefer the dedicated app, choose **Always**.
 You can also use the **Open in App** menu item for one-time overrides regardless of this setting. **Open in App** is a top-level item in the browser menu, so it is easy to find.
 
 Find it in **Settings > Browsing > Open Links in Apps**.
+You can remember decisions for individual sites, set a different rule for a cookie-isolated container, or choose **Wait for your answer** to pause navigation until you respond. Private, Tor, proxy, and strict-container browsing always asks before opening another app. See xref:custom-tabs-and-external-links.adoc[Custom Tabs & External Links] for the details.
 
 == Opening Links From Other Apps
 
@@ -85,6 +88,10 @@ You can add the current site to the list from the page menu by turning on **Alwa
 A per-tab desktop toggle stays available in the browser menu for one-off switches and takes precedence over the global and per-site defaults.
 
 Find both in **Settings > Browsing > Desktop Mode**.
+
+== Zoom on All Websites
+
+Turn on **Zoom on All Websites** in **Settings > Web Content** if you need to pinch-to-zoom on pages that normally block it. It is off by default; forcing zoom can make some page layouts awkward.
 
 == New Tab Default
 
@@ -168,6 +175,7 @@ To add it:
 . Drag it where you want it
 
 The widget can be resized horizontally to fit your home screen layout.
+It follows your device's light or dark theme. On supported Android 12 and newer devices, it can also use your device's dynamic colors.
 
 == Multi-Window and Picture-in-Picture
 

@@ -62,6 +62,8 @@ These suggestions come from a built-in list, not from a web service, so nothing 
 
 Bang providers are not local results, but they appear in the same address-bar workflow.
 When you want to send a query to a specific site, choose a bang chip below the search field or open *Search Bangs* from the chevron button.
+You can also type a trigger directly, such as `!ddg cats` or `cats !ddg`.
+With a bang in the field, local results use the search terms without the bang trigger. An explicitly chosen bang also takes priority over inline URL autocomplete when you submit the search.
 
 If you are already on a page, WebLibre can also show separate *Search On This Site* and *All Providers* bang areas.
 
@@ -150,8 +152,8 @@ Built-in provider options are available, and you can also leave this disabled fo
 This setting affects suggestions while typing.
 Your *Default Search Provider* can still be something different.
 
-WebLibre can also complete addresses inline as you type, using your history and the built-in popular sites list.
-If you turn on **Settings > Search > Autocomplete on enter**, pressing enter accepts the current inline suggestion instead of searching for the literal text you typed.
+WebLibre can also complete addresses inline as you type, using your history and the built-in popular sites list. You can turn off **Popular site suggestions** in **Settings > Search** if you do not want built-in suggestions for sites you have not visited.
+With **Settings > Search > Autocomplete on enter** on (the default), pressing Enter accepts the current inline suggestion instead of searching for the literal text you typed. Turn it off if you prefer the literal input.
 
 == Custom Search Engines
 

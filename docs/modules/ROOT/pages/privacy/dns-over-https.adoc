@@ -54,14 +54,16 @@ WebLibre includes several built-in providers under *DoH Provider*:
 |Community-operated DNS service based in Germany.
 |===
 
-You can also enter a *Custom Resolver URL* if you use another compatible DoH service.
+You can also save custom DoH resolvers alongside the built-in providers. WebLibre keeps up to 16, so you can switch providers without re-entering the URL each time.
 
 == How to Configure
 
 . Go to **Settings > Privacy & Security > DNS over HTTPS**
 . Choose a *Protection Level*
 . Choose a *DoH Provider*
-. Optional: enter a *Custom Resolver URL* instead of a built-in provider
+. Optional: tap **Add Custom Resolver** and enter a resolver URL (and a name if you want), then select it
+
+You can edit or delete a saved resolver. If you delete the one currently selected, WebLibre switches back to its default provider.
 
 DoH is also offered during the xref:getting-started.adoc[onboarding wizard] when you first set up WebLibre.
 
@@ -81,5 +83,5 @@ If a website stops loading after you enable DoH, try these steps:
 
 * Try a different provider
 * Switch from *Max Protection* to *Increased Protection* to allow fallback
-* Check any *Custom Resolver URL* for typing mistakes
+* Check a saved custom resolver's URL for typing mistakes
 * Temporarily turn DoH *Off* to confirm whether it is the cause

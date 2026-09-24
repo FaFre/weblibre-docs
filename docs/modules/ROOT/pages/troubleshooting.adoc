@@ -23,6 +23,7 @@ Open the browser menu, open **Extensions**, then use **Manage Extensions** or th
 . Try the same page in a different tab context.
 If you opened it in a container, try an unassigned tab or a different container.
 If the tab is routed through Tor or another proxy, the site may be slower or may block that connection's exit address.
+Check **Connections**: if a required proxy or Tor connection is stopped, the tab is blocked until you start it. WebLibre will not load it directly as a fallback.
 
 . If the page still fails only in WebLibre, try another browser.
 That usually points to a site compatibility problem rather than a problem with your connection.
@@ -221,12 +222,16 @@ If Android blocks the app entirely, websites cannot alert you through the browse
 . Check the website's own permission.
 If you previously blocked notifications for that site, open the site again and review its **Permissions** in the site information panel.
 
+. Open **Settings > Notifications** and check that a UnifiedPush distributor is installed, selected, and ready. Choose one there if none is configured.
+
+. Check **Notification Permission** on that screen and grant Android's permission if needed.
+
 . If the site lives in a cookie-isolated container with **Clear Data on Exit**, remember that saved site state may be cleared when the app closes.
 
 . Some Android devices limit background activity aggressively.
 If notifications work only while WebLibre is open, battery optimization on your device may be interfering.
 
-For more on permission choices, see xref:site-permissions.adoc[Site Permissions].
+For setup and permission choices, see xref:website-notifications.adoc[Website Notifications] and xref:site-permissions.adoc[Site Permissions].
 
 == Translate Page Is Missing or Unavailable
 

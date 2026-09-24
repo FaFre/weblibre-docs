@@ -78,9 +78,9 @@ Use them when you have a clear reason.
 
 == Proxy Logs
 
-Proxy and Tor runtime messages have a separate live viewer under **Settings > Proxy > Proxy Connections > View logs**.
+Proxy and Tor runtime messages have a separate live viewer under **Settings > Proxy > Proxy Logs**. You can also open it from **Proxy Connections > View logs**.
 Use **Proxy Logs** when a connection will not start or reports as connected but pages do not load.
-You can filter by level, copy or share the visible output, and clear the log.
+You can filter by level, copy or share the visible output, clear the log, and change how much detail is recorded. More detailed logging can slow browsing; return to a less verbose level after troubleshooting.
 
 See xref:proxy.adoc#_proxy_logs[Proxy Logs] for the connection-specific workflow.
 

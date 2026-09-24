@@ -4,12 +4,9 @@
 WebLibre uses *bangs* as site-specific search providers.
 Each bang points to one destination site, such as a reference site, code host, map service, shop, or assistant.
 
-The important difference from many bang systems is the user workflow:
-WebLibre does not primarily expect you to type `!w` or `!gh` into the address bar.
-Instead, the app lets you pick a provider from chips, search the bang catalog, or set a default provider.
+You can type a trigger such as `!w` or `!ddgh` in the address bar, pick a provider chip, search the bang catalog, or set a default provider.
 
-Some bang screens still show a trigger with a leading `!`.
-That trigger is part of the bang definition and helps WebLibre identify or search for the provider, but the day-to-day search flow is chip-based.
+Bang screens show each provider's trigger with a leading `!`.
 
 == What a Bang Does
 
@@ -46,6 +43,10 @@ If you do not choose a specific bang chip, WebLibre falls back to the configured
 
 WebLibre then opens the results on the site connected to that provider.
 
+You can also type the bang in the address bar: `!ddg cats` and `cats !ddg` both search for cats with the `!ddg` provider. The search icon changes to show which provider is selected. Use a chip instead if you do not know the trigger.
+
+Pin the providers you use often to keep them in the quick provider strip. Long-press a bang to pin or unpin it, reset its frequency, edit it where available, or create your own custom bang from it.
+
 [NOTE]
 ====
 When the field is empty, WebLibre shows a quick row based on your default or most-used providers.
@@ -81,8 +82,7 @@ When you open search while already viewing a page, WebLibre can show two bang ar
 Only one of these selections is active at a time.
 If you switch from one tab to the other, WebLibre clears the previous bang selection so the search goes to exactly one provider.
 
-This makes the workflow different from manual `!bang` typing:
-you choose the destination with UI controls first, then submit an ordinary search query.
+You can choose a provider here or type its trigger directly in the address bar.
 
 == Browse and Search the Full Bang Catalog
 
@@ -173,15 +173,14 @@ To add one:
 . Go to *Settings > Search > Custom Search Engines*.
 . Tap the add button.
 . Fill in at least *Name*, *Trigger*, and *URL*.
-. Optionally set a category, subcategory, or formatting flags.
+. Optionally add *Additional triggers*, a category, subcategory, or formatting flags.
 . Save the entry.
 
 After that, the provider appears in *User Bangs* and can be selected from the same bang search and chip-based workflows as built-in providers.
 
 == What the Trigger Is For
 
-Every bang has a *Trigger* field.
-This is still important, but not because you are expected to type it directly into the address bar.
+Every bang has a *Trigger* field. You can type it directly in the address bar with a leading `!`, before or after your query.
 
 In WebLibre, the trigger is mainly used to:
 
@@ -190,8 +189,9 @@ In WebLibre, the trigger is mainly used to:
 * label or describe the provider in detail views
 * support custom and user-created bang definitions
 
-You will often see the trigger displayed with a `!` prefix in bang detail cards.
-That reflects the bang's identity, not the primary search interaction model.
+You will also see the trigger displayed with a `!` prefix in bang detail cards.
+
+For aliases, enter other triggers in *Additional triggers*, separated by spaces or commas. The leading `!` is optional when entering them. For example, you can give the same custom search provider both `!docs` and `!help` without creating two separate entries.
 
 == URL Template Format for User Bangs
 
@@ -247,7 +247,7 @@ The same user-created entries are also exposed through *Bangs > Manage User Bang
 == Practical Tips
 
 * Set a sensible default search provider first, then use bang chips when you want to temporarily search on a different site.
-* If the chip row does not show the provider you want, open *Search Bangs* instead of trying to memorize triggers.
+* If the chip row does not show the provider you want, open *Search Bangs* or type its trigger if you know it.
 * Check *Search On This Site* when you are already on a page and want a same-site search flow.
 * Use custom user bangs for documentation sites, stores, forums, or internal tools you search repeatedly.
 * If recommendations feel stale, clear *Bang Frequencies* and let WebLibre learn again from current usage.
